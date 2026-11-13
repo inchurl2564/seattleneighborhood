@@ -1,6 +1,6 @@
-:root{--bg:#f3f6f4;--surface:#fff;--surface-2:#e9efec;--line:#d3ddd8;--ink:#15211e;--muted:#5a6b66;--accent:#1d6b58;--accent-ink:#fff;--good:#1d7a4a;--bad:#b0412e;
+:root{--bg:#f4f6f9;--surface:#fff;--surface-2:#e8edf3;--line:#d3dbe5;--ink:#0f1b2d;--muted:#56657a;--accent:#002349;--accent-ink:#fff;--good:#1d7a4a;--bad:#b0412e;
 --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;--body:"Public Sans","Segoe UI",system-ui,-apple-system,sans-serif}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1514;--surface:#161e1c;--surface-2:#1d2826;--line:#2c3a37;--ink:#e4ece9;--muted:#97a8a3;--accent:#5cc3a3;--accent-ink:#06201a;--good:#5fc58f;--bad:#ec7c66;color-scheme:dark}}
+@media (prefers-color-scheme:dark){:root{--bg:#0c121b;--surface:#131b27;--surface-2:#1b2534;--line:#2a3647;--ink:#e6ecf4;--muted:#9aa8ba;--accent:#8fb3e3;--accent-ink:#071629;--good:#5fc58f;--bad:#ec7c66;color-scheme:dark}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 var(--body);padding:24px max(16px,env(safe-area-inset-left,0px)) 48px}
 main,header.site,footer.site{max-width:860px;margin:0 auto}
 header.site{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px;font-size:14px}

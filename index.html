@@ -12,26 +12,26 @@
 <style>
 /* Layout: sticky preference rail on the left; map + ranked list on the right; detail drawer slides over the list. */
 :root{
-  --bg:#f3f6f4; --surface:#ffffff; --surface-2:#e9efec; --line:#d3ddd8;
-  --ink:#15211e; --muted:#5a6b66; --accent:#1d6b58; --accent-ink:#ffffff;
-  --map-bg:#e9ebe4; --city-fill:#f3f5f0; --city-line:#9fb1aa; --water:#bcd6e3; --water-ink:#4f7a92; --road:#c49a5a;
-  --r0:#eef3e9; --r1:#cfe3cf; --r2:#9fcbb0; --r3:#63aa8f; --r4:#2f8370; --r5:#0f5546;
+  --bg:#f4f6f9; --surface:#ffffff; --surface-2:#e8edf3; --line:#d3dbe5;
+  --ink:#0f1b2d; --muted:#56657a; --accent:#002349; --accent-ink:#ffffff;
+  --map-bg:#ebebe6; --city-fill:#f6f6f2; --city-line:#a7b1bd; --water:#d6dde4; --water-ink:#5b6b7c; --road:#c49a5a; --sel:#b8860b;
+  --r0:#eef2f7; --r1:#cfdbea; --r2:#9db6d4; --r3:#6489b8; --r4:#2f5a92; --r5:#0b2f5e;
   --good:#1d7a4a; --warn:#a2650b; --bad:#b0412e;
   --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
   --body:"Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
   --radius:10px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0f1514; --surface:#161e1c; --surface-2:#1d2826; --line:#2c3a37;
-  --ink:#e4ece9; --muted:#97a8a3; --accent:#5cc3a3; --accent-ink:#06201a;
-  --map-bg:#161b1a; --city-fill:#1b2221; --city-line:#40524d; --water:#16303d; --water-ink:#7fa9c0; --road:#8d7345;
-  --r0:#1c2a27; --r1:#1f3d35; --r2:#24584a; --r3:#2f7a63; --r4:#4aa385; --r5:#8fd9b9;
+  --bg:#0c121b; --surface:#131b27; --surface-2:#1b2534; --line:#2a3647;
+  --ink:#e6ecf4; --muted:#9aa8ba; --accent:#8fb3e3; --accent-ink:#071629;
+  --map-bg:#141920; --city-fill:#181e26; --city-line:#3d4a5b; --water:#1f2833; --water-ink:#8a9bb0; --road:#8d7345; --sel:#e3c766;
+  --r0:#18222e; --r1:#1b3048; --r2:#234569; --r3:#2f5f8f; --r4:#4f84bd; --r5:#9cc0ea;
   --good:#5fc58f; --warn:#e0a548; --bad:#ec7c66; color-scheme:dark }}
 :root[data-theme="dark"]{
-  --bg:#0f1514; --surface:#161e1c; --surface-2:#1d2826; --line:#2c3a37;
-  --ink:#e4ece9; --muted:#97a8a3; --accent:#5cc3a3; --accent-ink:#06201a;
-  --map-bg:#161b1a; --city-fill:#1b2221; --city-line:#40524d; --water:#16303d; --water-ink:#7fa9c0; --road:#8d7345;
-  --r0:#1c2a27; --r1:#1f3d35; --r2:#24584a; --r3:#2f7a63; --r4:#4aa385; --r5:#8fd9b9;
+  --bg:#0c121b; --surface:#131b27; --surface-2:#1b2534; --line:#2a3647;
+  --ink:#e6ecf4; --muted:#9aa8ba; --accent:#8fb3e3; --accent-ink:#071629;
+  --map-bg:#141920; --city-fill:#181e26; --city-line:#3d4a5b; --water:#1f2833; --water-ink:#8a9bb0; --road:#8d7345; --sel:#e3c766;
+  --r0:#18222e; --r1:#1b3048; --r2:#234569; --r3:#2f5f8f; --r4:#4f84bd; --r5:#9cc0ea;
   --good:#5fc58f; --warn:#e0a548; --bad:#ec7c66; color-scheme:dark }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -1523,7 +1523,7 @@ function paintMap(ranked){
     const p = l.feature.properties, s = byId.get(p.id), sel = p.id===selected;
     l.setStyle(s==null
       ? {fillColor:css('--city-fill'), fillOpacity:.9, color:css('--city-line'), weight:.6, dashArray:'2 3'}
-      : {fillColor:colorFor(s,lo,hi), fillOpacity:.92, color: sel? css('--ink') : css('--surface'), weight: sel?2.5:.8, dashArray:null});
+      : {fillColor:colorFor(s,lo,hi), fillOpacity:.92, color: sel? css('--sel') : css('--surface'), weight: sel?3:.8, dashArray:null});
     if(sel) l.bringToFront();
   });
 }
