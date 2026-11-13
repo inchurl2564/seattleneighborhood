@@ -1138,6 +1138,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <div class="res-top">
       <button class="btn ghost" id="toMatches" type="button">← Back to matches</button>
       <span class="sub" id="detailCrumb"></span>
+      <a class="btn ghost" id="guideLink" href="neighborhoods/">Full guide to this neighborhood</a>
     </div>
     <div id="mapSlotDetail"></div>
     <section class="detail" id="detail" aria-live="polite"></section>
@@ -1169,6 +1170,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   </div>
   <footer class="sitefoot">
     <p><b>For research only.</b> This is not real estate, legal, financial or tax advice. Scores are estimates built from public data that may be incomplete or out of date. Verify school assignments with the school district, crime with local police, and listings and prices with a licensed real estate professional before making decisions.</p>
+    <p><a href="neighborhoods/">Browse guides to all 155 neighborhoods</a> — home prices, schools, safety, transit and parks for each.</p>
     <p>Neighborhood rankings use schools, safety, prices, amenities and similar factors. They never use race, color, religion, national origin, sex, disability or familial status, in keeping with the federal Fair Housing Act.</p>
     <p>Data: home values, listings and days on market from <a href="https://www.zillow.com/research/data/" target="_blank" rel="noopener">Zillow Research</a>; recorded sales from the King County Assessor; school test scores from the Washington Office of Superintendent of Public Instruction; school locations from NCES; crime from Seattle and Bellevue police open data and the FBI Crime Data Explorer; Census Bureau American Community Survey and TIGER boundaries; EPA National Walkability Index; King County Metro and Sound Transit schedules; King County, Seattle, Bellevue, Kirkland, Redmond and Issaquah GIS; and stores, gyms and restaurants © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors (ODbL). Map library: Leaflet.</p>
   </footer>
@@ -1929,6 +1931,8 @@ function update(){
   document.getElementById('stepCount').textContent = `${ranked.length} neighborhoods`;
   document.getElementById('mbarCount').textContent = `${ranked.length} of ${FEATS.length} fit`;
   document.getElementById('mbarTop').textContent = top ? `Top: ${top.name}, ${top.city}` : 'Loosen a filter to see matches';
+  { const gp = ALLP.find(x=>x.id===selected), gl = document.getElementById('guideLink');
+    if(gp && gl){ gl.href = 'neighborhoods/' + (gp.name + ' ' + gp.city).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '/'; gl.textContent = `Full guide to ${gp.name}`; } }
   { const i = ranked.findIndex(r=>r.p.id===selected), sp = ALLP.find(x=>x.id===selected);
     document.getElementById('detailCrumb').textContent = sp ? (i>=0 ? `Match #${i+1} of ${ranked.length}` : 'Outside your current filters') : ''; }
   document.getElementById('resSummary').textContent = `${ranked.length} of ${FEATS.length} neighborhoods fit your filters, ranked by your priorities.`;
