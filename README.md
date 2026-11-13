@@ -31,6 +31,7 @@ average using the visitor's slider settings.
 | `build.py` | Combines the downloaded public data into `data.json`. |
 | `fetch_data.sh`, `fetch_extra.py`, `arcfetch.py` | Download every public dataset into `raw/`. |
 | `make_page.py` | Puts `data.json` into `template.html` and writes `index.html`. |
+| `config.json` | Site address and agent details (name, brokerage, email, profile link, optional Formspree form ID) used by the lead forms. |
 | `make_guides.py` | Writes a guide page per neighborhood (`neighborhoods/<name>-<city>/`), the guide index and `sitemap.xml`. |
 | `neighborhoods/` | The generated neighborhood guide pages. |
 | `sitemap.xml` | List of all pages for search engines. |
@@ -47,6 +48,14 @@ python3 make_guides.py    # writes the neighborhood guide pages and sitemap.xml
 
 Move the date windows in the scripts forward when refreshing (crime from Nov 2025, FBI year 2025,
 OSPI 2024-25, the transit service day, and the Assessor sales window).
+
+## Lead forms
+
+Every neighborhood page (in the app and the guides) and the Results page have a contact form for the agent
+named in `config.json`. With `formspree_id` empty, the form opens the visitor's email app with a ready-to-send
+message that includes their budget, priorities, top matches and saved favorites. To receive submissions
+directly instead, create a form at formspree.io, put its ID in `config.json`, and rerun `make_page.py` and
+`make_guides.py`.
 
 ## Data sources
 

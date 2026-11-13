@@ -3,7 +3,10 @@ import os
 here = os.path.dirname(os.path.abspath(__file__))
 t = open(os.path.join(here, 'template.html')).read()
 d = open(os.path.join(here, 'data.json')).read().replace('</', '<\\/')
-page = t.replace('/*DATA*/', d)
+import json
+cfg_path = os.path.join(here, 'config.json')
+agent = json.load(open(cfg_path)).get('agent') if os.path.exists(cfg_path) else None
+page = t.replace('/*DATA*/', d).replace('/*AGENT*/null', json.dumps(agent).replace('</', '<\\/') if agent else 'null')
 split = page.index('<div class="wrap">')
 head, body = page[:split], page[split:]
 html = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'

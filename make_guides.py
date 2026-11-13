@@ -97,6 +97,7 @@ ul.near a small{display:block;color:var(--muted)}
 .cities{columns:2 240px;column-gap:28px}.cities h2{break-before:column;margin-top:0}.cities ul{padding-left:18px;margin:0 0 18px}.cities a{color:var(--accent)}
 footer.site{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}footer.site a{color:var(--accent)}
 .note{font-size:13px;color:var(--muted)}
+.leadform{display:grid;gap:10px;max-width:520px}.leadform label{display:grid;gap:4px;font-size:13px;font-weight:600}.leadform input,.leadform textarea{font:inherit;font-weight:400;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}.leadform .consent{display:flex;gap:8px;font-weight:400;align-items:flex-start}.leadform button{justify-self:start;cursor:pointer;font:inherit;font-weight:600}
 """
 
 FOOT = """<footer class="site">
@@ -110,15 +111,34 @@ FOOT = """<footer class="site">
 def agent_footer():
     a = CFG.get('agent')
     if not a: return ''
-    return f"<p>Brought to you by {esc(a['name'])}, {esc(a['brokerage'])}.</p>"
+    prof = f' · <a href="{esc(a["profile_url"])}">View my profile</a>' if a.get('profile_url') else ''
+    return f'<p style="color:var(--ink)">Brought to you by <b>{esc(a["name"])}</b>, {esc(a["brokerage"])}{prof} · <a href="mailto:{esc(a["email"])}">{esc(a["email"])}</a></p>'
 
 
 def agent_box(p):
     a = CFG.get('agent')
     if not a: return ''
-    return (f'<section class="agent" aria-label="Talk to a local agent"><h2 style="margin-top:0">Thinking about {esc(p["name"])}?</h2>'
-            f'<p>{esc(a["name"])}, {esc(a["brokerage"])}, can walk you through homes for sale, recent sales and what to know before you buy here.</p>'
-            f'<div class="cta"><a class="btn" href="{esc(a.get("contact_url", "mailto:" + a.get("email", "")))}">Ask about {esc(p["name"])}</a></div></section>')
+    from urllib.parse import quote
+    first = a.get('first_name') or a['name'].split()[0]
+    intro = (f'<h2 style="margin-top:0">Thinking about {esc(p["name"])}?</h2>'
+             f'<p>{esc(a["name"])}, {esc(a["brokerage"])}, can walk you through homes for sale, recent sales and what to know before you buy here.</p>')
+    privacy = (f'<p class="note">Your details go only to {esc(a["name"])} at {esc(a["brokerage"])} to answer your request. They are not sold or shared.</p>')
+    if a.get('formspree_id'):
+        form = (f'<form action="https://formspree.io/f/{esc(a["formspree_id"])}" method="POST" class="leadform">'
+                f'<input type="hidden" name="_subject" value="Question about {esc(p["name"])}, {esc(p["city"])}">'
+                f'<input type="hidden" name="neighborhood" value="{esc(p["name"])}, {esc(p["city"])}">'
+                '<label>Your name<input name="name" required autocomplete="name"></label>'
+                '<label>Email<input name="email" type="email" required autocomplete="email"></label>'
+                '<label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label>'
+                f'<label>Message<textarea name="message" rows="3">Hi {esc(first)}, I\'d like to learn more about {esc(p["name"])}.</textarea></label>'
+                f'<label class="consent"><input type="checkbox" name="consent" value="yes" required> I agree to be contacted by {esc(a["name"])} of {esc(a["brokerage"])} about my home search.</label>'
+                f'<button class="btn" type="submit">Ask {esc(first)} about {esc(p["name"])}</button></form>')
+    else:
+        subject = quote(f'Question about {p["name"]}, {p["city"]}')
+        body = quote(f'Hi {first},\n\nI\'d like to learn more about {p["name"]} in {p["city"]}.\n\nName:\nPhone (optional):\nWhen I\'m hoping to buy:\n\n'
+                     f'(Sent from the {p["name"]} guide on Seattle Neighborhood Match. I agree to be contacted about my home search.)')
+        form = f'<div class="cta"><a class="btn" href="mailto:{esc(a["email"])}?subject={subject}&amp;body={body}">Ask {esc(first)} about {esc(p["name"])}</a></div>'
+    return f'<section class="agent" aria-label="Talk to a local agent">{intro}{form}{privacy}</section>'
 
 
 def page(p):

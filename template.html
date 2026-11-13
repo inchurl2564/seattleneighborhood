@@ -129,6 +129,30 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .live b{font-family:var(--display);font-size:16px;margin-right:8px}
 .live span{color:var(--muted)}
 .respage{display:grid;gap:20px}
+.agentcard{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--radius);padding:14px 18px;max-width:1100px;width:100%;justify-self:center}
+.agentcard p{margin:2px 0 0;color:var(--muted);font-size:13px;max-width:70ch}
+.agentcard b{font-family:var(--display);font-size:16px}
+.agentcard .btn{cursor:pointer;font:inherit;font-weight:600}
+.agentfoot{color:var(--ink)!important}
+dialog.contact{overflow-y:auto;overscroll-behavior:contain;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);padding:0;width:min(560px,calc(100vw - 24px));max-height:calc(100vh - 24px)}
+dialog.contact::backdrop{background:rgb(0 0 0 / .45)}
+dialog.contact form{display:grid;gap:12px;padding:18px 20px}
+.ct-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.ct-head h2{font-size:19px}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:520px){.ct-grid{grid-template-columns:1fr}}
+dialog.contact label{display:grid;gap:4px;font-size:13px;font-weight:600}
+dialog.contact .opt{font-weight:400;color:var(--muted)}
+dialog.contact input:not([type=checkbox]),dialog.contact select,dialog.contact textarea{font:inherit;font-weight:400;font-size:14px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 10px;width:100%}
+dialog.contact textarea{resize:vertical}
+.ct-consent{display:flex!important;grid-template-columns:none;align-items:flex-start;gap:8px!important;font-weight:400!important}
+.ct-consent input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--accent)}
+.ct-summary summary{cursor:pointer;font-size:12.5px;color:var(--muted)}
+.ct-summary pre{white-space:pre-wrap;font:12px/1.5 var(--body);color:var(--muted);background:var(--surface-2);border-radius:8px;padding:8px 10px;margin:6px 0 0;max-height:180px;overflow:auto}
+.ct-err{color:var(--bad);font-size:13px;margin:0}
+.ct-actions{display:flex;gap:8px}
+.ct-actions .btn{cursor:pointer;font:inherit;font-weight:600}
+.ct-done{background:var(--surface-2);border-radius:8px;padding:12px 14px;font-size:14px}
 .mapcredit{position:absolute;right:0;bottom:0;z-index:1000;background:color-mix(in srgb,var(--surface) 85%,transparent);color:var(--muted);font-size:10.5px;padding:2px 6px;border-top-left-radius:6px}
 .mapcredit a{color:inherit}
 @media (max-width:600px){.respage .mapcredit{position:static;border-radius:0;border-top:1px solid var(--line)}}
@@ -1133,12 +1157,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
     </div>
     <div id="mapSlotDetail"></div>
     <section class="detail" id="detail" aria-live="polite"></section>
+    <section class="agentcard" id="agentDetail" hidden></section>
   </div>
   <div id="resultsPage" class="respage" hidden>
     <div class="res-top">
       <div><h2>Your results</h2><span class="sub" id="resSummary"></span></div>
       <span style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn ghost" href="#priorities">Edit priorities</a><a class="btn ghost" href="#filters">Edit filters</a></span>
     </div>
+    <section class="agentcard" id="agentResults" hidden></section>
     <div id="mapSlotResults"></div>
       <section class="compare" id="compare" hidden aria-labelledby="cmpTitle"></section>
       <div class="results">
@@ -1159,7 +1185,27 @@ svg.leaflet-image-layer.leaflet-interactive path {
         <p>Neighborhood boundaries come from each city's GIS (Seattle Neighborhood Map Atlas, Bellevue, Kirkland, Redmond and Issaquah neighborhood maps). Sammamish and Mercer Island do not publish neighborhood maps, so their areas are approximate groupings of census tracts. Neighborhoods with fewer than 600 residents (mostly parks and industrial land) are left out. Census values are blended from tracts and block groups by population. This is a prototype; verify anything important with the original source.</p>
       </details>
   </div>
+  <dialog class="contact" id="contactDlg" aria-labelledby="ctTitle">
+    <form id="contactForm" method="dialog" novalidate>
+      <div class="ct-head"><h2 id="ctTitle">Contact</h2><button type="button" class="back" id="ctClose" aria-label="Close">Close</button></div>
+      <p class="sub" id="ctIntro"></p>
+      <div class="ct-grid">
+        <label for="ctName">Your name<input id="ctName" name="name" autocomplete="name" required></label>
+        <label for="ctEmail">Email<input id="ctEmail" name="email" type="email" autocomplete="email" required></label>
+        <label for="ctPhone"><span>Phone <span class="opt">(optional)</span></span><input id="ctPhone" name="phone" type="tel" autocomplete="tel"></label>
+        <label for="ctWhen">When are you hoping to buy?<select id="ctWhen" name="timeline"><option>Just exploring</option><option>Within 3 months</option><option>3 to 6 months</option><option>6 to 12 months</option><option>More than a year</option></select></label>
+      </div>
+      <label for="ctMsg">Message<textarea id="ctMsg" name="message" rows="4"></textarea></label>
+      <details class="ct-summary"><summary>What's included</summary><pre id="ctSummary"></pre></details>
+      <label class="ct-consent" for="ctConsent"><input type="checkbox" id="ctConsent" name="consent" required> <span id="ctConsentText"></span></label>
+      <p class="sub" id="ctPrivacy"></p>
+      <p class="ct-err" id="ctErr" role="alert" hidden></p>
+      <div class="ct-actions"><button type="submit" class="btn" id="ctSend">Send</button><button type="button" class="btn ghost" id="ctCancel">Cancel</button></div>
+      <div class="ct-done" id="ctDone" hidden></div>
+    </form>
+  </dialog>
   <footer class="sitefoot">
+    <p class="agentfoot" id="agentFoot" hidden></p>
     <p><b>For research only.</b> This is not real estate, legal, financial or tax advice. Scores are estimates built from public data that may be incomplete or out of date. Verify school assignments with the school district, crime with local police, and listings and prices with a licensed real estate professional before making decisions.</p>
     <p><a href="neighborhoods/">Browse guides to all 155 neighborhoods</a> — home prices, schools, safety, transit and parks for each.</p>
     <p>Neighborhood rankings use schools, safety, prices, amenities and similar factors. They never use race, color, religion, national origin, sex, disability or familial status, in keeping with the federal Fair Housing Act.</p>
@@ -1186,6 +1232,7 @@ if(typeof structuredClone !== 'function'){ window.structuredClone = function(v){
 (function(){
 const DATA = JSON.parse(document.getElementById('nbhd-data').textContent);
 const FEATS = DATA.neighborhoods.features;
+const AGENT = /*AGENT*/null;
 const M = DATA.meta;
 const CRITS = [
   {key:'schools', name:'School quality', src:'WA state test scores (OSPI '+M.ospi_year+') for the levels you pick', def:8},
@@ -1915,7 +1962,7 @@ function update(){
   const sig = ranked.slice(0, 20).map(r=>r.p.id+':'+Math.round(r.s)).join(',') + '|' + ranked.length;
   if(window.__lastSig && sig !== window.__lastSig && step !== 'results'){ const mc = document.getElementById('mapcard'); mc.classList.add('flash'); clearTimeout(window.__flashT); window.__flashT = setTimeout(()=>mc.classList.remove('flash'), 500); }
   window.__lastSig = sig;
-  paintMap(ranked); renderList(ranked); renderDetail(ranked); save(); drawPois(); syncSaveUi();
+  paintMap(ranked); renderList(ranked); renderDetail(ranked); save(); drawPois(); syncSaveUi(); if(typeof renderAgentCards==='function') renderAgentCards();
   const top = ranked[0]?.p;
   document.getElementById('liveCount').textContent = `${ranked.length} of ${FEATS.length} neighborhoods fit`;
   document.getElementById('liveTop').textContent = top ? `Top match: ${top.name}, ${top.city} (${Math.round(ranked[0].s)})` : 'Loosen a filter to see matches';
@@ -2082,7 +2129,94 @@ function initGuide(){
   ask(0);
 }
 
-initGuide();
+
+/* ----- contact the agent (lead capture) ----- */
+function matchSummary(p){
+  const L = [];
+  if(p) L.push(`Neighborhood: ${p.name}, ${p.city} (match ${Math.round(scoreOf(p))}; typical home value ${money(p.price)})`);
+  L.push(`Budget: ${document.getElementById('budgetOut').textContent}`);
+  const pri = CRITS.filter(c=>state.w[c.key]>0).sort((a,b)=>state.w[b.key]-state.w[a.key]).map(c=>`${c.name} ${state.w[c.key]}/10`);
+  if(pri.length) L.push('Priorities: ' + pri.join(', '));
+  if(state.w.schools>0) L.push('School levels: ' + state.levels.map(k=>LEVELS.find(l=>l[0]===k)[1]).join(', '));
+  if(state.work) L.push(`Workplace: ${state.workLabel || 'pin on map'}`);
+  const mins = MINS.filter(x=>state.m[x.key]!=null).map(x=>`${MIN_LABEL[x.key]||x.name} ${x.fmt(state.m[x.key])}`);
+  const dists = DISTS.filter(x=>state.d[x.key]!=null && (x.key!=='work_mi' || state.work)).map(x=>`${x.name} within ${state.d[x.key]} mi`);
+  if(mins.length || dists.length) L.push('Must-haves: ' + [...mins, ...dists].join('; '));
+  if(state.cities.length < CITIES.length) L.push('Cities: ' + state.cities.join(', '));
+  const top = lastRanked.slice(0, 8).map((r,i)=>`${i+1}. ${r.p.name}, ${r.p.city} (match ${Math.round(r.s)}, ${money(r.p.price)})`);
+  if(top.length) L.push(`Top matches (${lastRanked.length} of ${FEATS.length} fit):\n` + top.join('\n'));
+  const saved = state.saved.map(id=>ALLP.find(x=>x.id===id)).filter(Boolean).map(x=>`${x.name}, ${x.city}`);
+  if(saved.length) L.push('Saved favorites: ' + saved.join('; '));
+  return L.join('\n');
+}
+let contactCtx = null;
+function openContact(kind, p){
+  if(!AGENT) return;
+  const dlg = document.getElementById('contactDlg');
+  contactCtx = {kind, p};
+  document.getElementById('ctTitle').textContent = kind==='nb' ? `Ask ${AGENT.first_name} about ${p.name}` : `Send your matches to ${AGENT.first_name}`;
+  document.getElementById('ctIntro').textContent = kind==='nb'
+    ? `${AGENT.name}, ${AGENT.brokerage}, can tell you about homes for sale, recent sales and what to know before buying in ${p.name}.`
+    : `${AGENT.name}, ${AGENT.brokerage}, will review your matches and follow up with homes for sale and advice for your search.`;
+  document.getElementById('ctMsg').value = kind==='nb' ? `Hi ${AGENT.first_name}, I'd like to learn more about ${p.name} in ${p.city}.` : `Hi ${AGENT.first_name}, here are my neighborhood matches. I'd love your advice.`;
+  document.getElementById('ctSummary').textContent = matchSummary(kind==='nb' ? p : null);
+  document.getElementById('ctConsentText').textContent = `I agree to be contacted by ${AGENT.name} of ${AGENT.brokerage} by email or phone about my home search.`;
+  document.getElementById('ctPrivacy').textContent = `Your details go only to ${AGENT.name} at ${AGENT.brokerage} to answer your request. They are not sold or shared.` +
+    (AGENT.formspree_id ? '' : ' Tapping Send opens your email app with the message ready to send.');
+  document.getElementById('ctSend').textContent = AGENT.formspree_id ? 'Send' : 'Open email to send';
+  document.getElementById('ctErr').hidden = true; document.getElementById('ctDone').hidden = true;
+  document.getElementById('contactForm').querySelectorAll('.ct-grid, label[for=ctMsg], .ct-summary, .ct-consent, #ctPrivacy, .ct-actions').forEach(el=>el.hidden = false);
+  if(typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open','');
+  document.getElementById('ctName').focus();
+}
+function closeContact(){ const dlg = document.getElementById('contactDlg'); if(dlg.close) dlg.close(); else dlg.removeAttribute('open'); }
+document.getElementById('ctClose').onclick = closeContact;
+document.getElementById('ctCancel').onclick = closeContact;
+document.getElementById('contactForm').addEventListener('submit', async e=>{
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim(), err = document.getElementById('ctErr');
+  const show = m => { err.textContent = m; err.hidden = false; };
+  if(!v('ctName')) return show('Please add your name.');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('ctEmail'))) return show('Please add a valid email address so ' + AGENT.first_name + ' can reply.');
+  if(!document.getElementById('ctConsent').checked) return show('Please check the box to agree to be contacted.');
+  err.hidden = true;
+  const p = contactCtx?.p, subject = contactCtx?.kind==='nb' ? `Question about ${p.name}, ${p.city}` : 'My neighborhood matches';
+  const body = `${v('ctMsg')}\n\nName: ${v('ctName')}\nEmail: ${v('ctEmail')}${v('ctPhone') ? '\nPhone: ' + v('ctPhone') : ''}\nTimeline: ${v('ctWhen')}\n\n${document.getElementById('ctSummary').textContent}\n\nSent from Seattle Neighborhood Match. The sender agreed to be contacted.`;
+  const done = msg => { const d = document.getElementById('ctDone'); d.textContent = msg; d.hidden = false;
+    document.getElementById('contactForm').querySelectorAll('.ct-grid, label[for=ctMsg], .ct-summary, .ct-consent, #ctPrivacy, .ct-actions').forEach(el=>el.hidden = true); };
+  if(AGENT.formspree_id){
+    const send = document.getElementById('ctSend'); send.disabled = true; send.textContent = 'Sending…';
+    try{
+      const r = await fetch('https://formspree.io/f/' + encodeURIComponent(AGENT.formspree_id), {method:'POST', headers:{'Accept':'application/json','Content-Type':'application/json'},
+        body: JSON.stringify({name:v('ctName'), email:v('ctEmail'), phone:v('ctPhone'), timeline:v('ctWhen'), _subject:subject, message:body})});
+      if(!r.ok) throw new Error('status ' + r.status);
+      done(`Thanks, ${v('ctName').split(' ')[0]}! Your message is on its way to ${AGENT.name}, who will reply by email${v('ctPhone') ? ' or phone' : ''}.`);
+    } catch(ex){ show(`Your message didn't send. Please try again, or email ${AGENT.email} directly.`); }
+    finally { send.disabled = false; send.textContent = 'Send'; }
+  } else {
+    const u = `mailto:${AGENT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.__lastMailto = u;   /* kept for testing */
+    const a = document.createElement('a'); a.href = u; a.style.display = 'none'; document.body.appendChild(a); a.click(); a.remove();
+    done(`Your email app should open with the message ready. Just tap send. If nothing opened, email ${AGENT.email} directly.`);
+  }
+});
+function renderAgentCards(){
+  if(!AGENT) return;
+  const esc = s => String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const foot = document.getElementById('agentFoot');
+  foot.hidden = false;
+  foot.innerHTML = `Brought to you by <b>${esc(AGENT.name)}</b>, ${esc(AGENT.brokerage)}${AGENT.profile_url ? ` · <a href="${esc(AGENT.profile_url)}" target="_blank" rel="noopener">View my profile</a>` : ''} · <a href="mailto:${esc(AGENT.email)}">${esc(AGENT.email)}</a>`;
+  const res = document.getElementById('agentResults');
+  res.hidden = false;
+  res.innerHTML = `<div><b>Want a local expert's take on these matches?</b><p>${esc(AGENT.name)}, ${esc(AGENT.brokerage)}, can share homes for sale, recent sales and insider knowledge for your top neighborhoods.</p></div><button type="button" class="btn" data-contact="results">Send my matches to ${esc(AGENT.first_name)}</button>`;
+  const p = ALLP.find(x=>x.id===selected), det = document.getElementById('agentDetail');
+  if(p){ det.hidden = false;
+    det.innerHTML = `<div><b>Thinking about ${esc(p.name)}?</b><p>${esc(AGENT.name)}, ${esc(AGENT.brokerage)}, can walk you through homes for sale, recent sales and what to know before you buy here.</p></div><button type="button" class="btn" data-contact="nb">Ask ${esc(AGENT.first_name)} about ${esc(p.name)}</button>`; }
+}
+document.addEventListener('click', e=>{ const b = e.target.closest('[data-contact]'); if(!b) return;
+  openContact(b.dataset.contact, b.dataset.contact==='nb' ? ALLP.find(x=>x.id===selected) : null); });
+
+initGuide(); renderAgentCards();
 function startOver(){
   const keep = state.saved;
   state = structuredClone(DEFAULT); state.saved = keep;
