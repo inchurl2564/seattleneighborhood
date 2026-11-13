@@ -148,6 +148,10 @@ body.has-mbar .sitefoot{padding-bottom:8px}
 .detailpage #map{height:min(42vh,380px);min-height:260px}
 .row .go{color:var(--muted);font-size:18px;margin-left:4px}
 .list-head .hint2{font-size:12px;color:var(--muted)}
+@media (max-width:700px){
+  .layout > .main{display:none}
+  body.pickmode .layout > .main{display:grid}
+}
 .mapcard.flash{box-shadow:0 0 0 3px var(--accent);transition:box-shadow .2s}
 .mapcard{transition:box-shadow .6s}
 @media (prefers-reduced-motion:reduce){.mapcard,.mapcard.flash{transition:none}}
@@ -1427,7 +1431,9 @@ DATA.cities.forEach(c=>{
   const pos = {Seattle:[47.665,-122.42], Bellevue:[47.59,-122.205], Kirkland:[47.705,-122.175], Redmond:[47.705,-122.09], Issaquah:[47.52,-122.07], Sammamish:[47.645,-121.99], 'Mercer Island':[47.56,-122.262]}[c.name] || [g.lat,g.lng];
   L.tooltip({permanent:true, direction:'center', className:'citylabel', interactive:false}).setLatLng(pos).setContent(c.name).addTo(map);
 });
-const fit = ()=> map.fitBounds(nbLayer.getBounds(), {padding:[12,12], animate:false});
+const mapHasSize = () => { const el = map.getContainer(); return el.offsetWidth > 0 && el.offsetHeight > 0; };
+let pendingView = null;   // 'fit' or a neighborhood id, applied once the map is visible
+const fit = ()=> { if(!mapHasSize()){ pendingView = 'fit'; return; } pendingView = null; map.fitBounds(nbLayer.getBounds(), {padding:[12,12], animate:false}); };
 const waterLayer = L.geoJSON({type:'FeatureCollection', features:DATA.basemap.water.map(w=>({type:'Feature', properties:{name:w.name}, geometry:w.geometry}))},
   {pane:'waterPane', interactive:false, style:()=>({stroke:false, fillColor:css('--water'), fillOpacity:1})}).addTo(map);
 const roadLayer = L.geoJSON({type:'FeatureCollection', features:DATA.basemap.roads.map(r=>({type:'Feature', properties:{kind:r.kind}, geometry:r.geometry}))},
@@ -1436,7 +1442,7 @@ const roadLayer = L.geoJSON({type:'FeatureCollection', features:DATA.basemap.roa
   L.tooltip({permanent:true, direction:'center', className:'waterlabel', interactive:false}).setLatLng([la,lo]).setContent(n).addTo(map));
 [['I-5',47.70,-122.322],['I-405',47.655,-122.185],['I-90',47.578,-122.13],['SR 520',47.638,-122.205],['SR 99',47.71,-122.345]].forEach(([n,la,lo])=>
   L.tooltip({permanent:true, direction:'center', className:'roadlabel', interactive:false, pane:'tooltipPane'}).setLatLng([la,lo]).setContent(n).addTo(map));
-const roadStyle = () => { const z = map.getZoom(), close = z >= 12.5;
+const roadStyle = () => { const z = map._loaded ? map.getZoom() : 0, close = z >= 12.5;
   roadLayer.setStyle(f=>({color:css('--road'), weight: f.properties.kind==='primary' ? (close?1.6:2.2) : (close?1:1.2), opacity: close ? .5 : .75})); };
 map.on('zoomend', roadStyle);
 fit();
@@ -1817,11 +1823,14 @@ new WorkCtl({position:'topleft'}).addTo(map);
 const workBtn = document.getElementById('workBtn'), workClear = document.getElementById('workClear');
 function startPick(){
   if(step==='results'){ /* map is on this step too */ }
-  picking = true; workBtn.setAttribute('aria-pressed','true'); workBtn.textContent = 'Click the map where you work';
+  picking = true; workBtn.setAttribute('aria-pressed','true');
+  workBtn.textContent = matchMedia('(hover: none)').matches ? 'Tap the map where you work (tap here to cancel)' : 'Click the map where you work';
+  document.body.classList.add('pickmode');
+  requestAnimationFrame(()=>{ map.invalidateSize({pan:false, animate:false}); if(step!=='detail') fit(); });
   document.getElementById('map').classList.add('picking');
   document.getElementById('mapcard').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth', block:'center'});
 }
-function stopPick(){ picking = false; workBtn.setAttribute('aria-pressed','false'); document.getElementById('map').classList.remove('picking'); syncWorkUi(); }
+function stopPick(){ picking = false; document.body.classList.remove('pickmode'); workBtn.setAttribute('aria-pressed','false'); document.getElementById('map').classList.remove('picking'); syncWorkUi(); }
 function syncWorkUi(){
   workBtn.textContent = state.work ? 'Move my workplace' : 'Set my workplace'; workClear.hidden = !state.work;
   if(state.work){
@@ -1878,7 +1887,7 @@ function route(){
 window.addEventListener('hashchange', route);
 let listScroll = null, detailDepth = 0;
 function openNb(id){ nbLayer.eachLayer(l=>l.closeTooltip()); if(step==='results') listScroll = window.scrollY; location.hash = 'nb-' + id; }
-function zoomTo(id){ nbLayer.eachLayer(l=>{ if(l.feature.properties.id===id){
+function zoomTo(id){ if(!mapHasSize()){ pendingView = id; return; } pendingView = null; nbLayer.eachLayer(l=>{ if(l.feature.properties.id===id){
   const bb = l.getBounds(), p = l.feature.properties;
   if(p.pois) for(const k of ['elem','mid','high','grocery','park','rail','hosp','lib']){ const v = p.pois[k]; if(v) bb.extend([v[0], v[1]]); }
   map.fitBounds(bb, {maxZoom:14, padding:[30,30], animate:false}); } }); }
@@ -1917,7 +1926,8 @@ function update(){
 }
 renderCrits(); renderMins(); renderDists(); renderChips(); update(); route(); syncWorkUi();
 window.addEventListener('resize', ()=>map.invalidateSize({pan:false, animate:false}));
-if('ResizeObserver' in window){ let rz; new ResizeObserver(()=>{ cancelAnimationFrame(rz); rz = requestAnimationFrame(()=>map.invalidateSize({pan:false, animate:false})); }).observe(document.getElementById('map')); }
+if('ResizeObserver' in window){ let rz; new ResizeObserver(()=>{ cancelAnimationFrame(rz); rz = requestAnimationFrame(()=>{ if(!mapHasSize()) return; map.invalidateSize({pan:false, animate:false});
+    if(pendingView==='fit') fit(); else if(pendingView!=null) zoomTo(pendingView); else if(!map._loaded) fit(); }); }).observe(document.getElementById('map')); }
 /* ----- guided questions ----- */
 const CRIT_KEYS = CRITS.map(c=>c.key);
 const snapNear = (arr, v) => arr.reduce((b,x)=> Math.abs(x-v) < Math.abs(b-v) ? x : b);
