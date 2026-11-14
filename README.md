@@ -33,21 +33,33 @@ average using the visitor's slider settings.
 | `make_page.py` | Puts `data.json` into `template.html` and writes `index.html`. |
 | `config.json` | Site address and agent details (name, brokerage, email, profile link, optional Formspree form ID) used by the lead forms. |
 | `make_guides.py` | Writes a guide page per neighborhood (`neighborhoods/<name>-<city>/`), the guide index and `sitemap.xml`. |
+| `fetch_wiki.py`, `get_photos.py` | Find each neighborhood's Wikipedia intro and lead photo (`wiki.json`), and download the photos into `img/`. |
+| `photos.py` | Decides which photo and intro each neighborhood shows (license, review status), and makes the small card copies in `img/card/`. |
+| `img/` | Neighborhood photos from Wikimedia Commons, each credited where it appears. |
 | `neighborhoods/` | The generated neighborhood guide pages. |
 | `sitemap.xml` | List of all pages for search engines. |
 
 ## Refreshing the data
 
 ```bash
-pip install pandas geopandas shapely pyproj pyogrio
+pip install pandas geopandas shapely pyproj pyogrio pillow
 bash fetch_data.sh        # downloads about 400 MB into raw/ (not committed)
 python3 build.py          # writes data.json
+python3 fetch_wiki.py     # optional: Wikipedia intros and photo credits (wiki.json)
+python3 get_photos.py     # optional: downloads approved photos into img/
 python3 make_page.py      # writes index.html
 python3 make_guides.py    # writes the neighborhood guide pages and sitemap.xml
 ```
 
 Move the date windows in the scripts forward when refreshing (crime from Nov 2025, FBI year 2025,
 OSPI 2024-25, the transit service day, and the Assessor sales window).
+
+## Photos
+
+Photos come from Wikimedia Commons and are used only when their license allows commercial use with credit
+(CC BY, CC BY-SA, CC0 or public domain). Each one is credited (author, license, link) on the card and page
+where it appears. To remove a photo, set `"photo_vetoed": true` on its entry in `wiki.json`; to hold one for
+review, set `"photo_hold": true`. Then rerun `make_page.py` and `make_guides.py`.
 
 ## Lead forms
 

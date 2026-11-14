@@ -2,7 +2,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&display=swap">
 <style>
 /* Layout: sticky preference rail on the left; map + ranked list on the right; detail drawer slides over the list. */
 :root{
@@ -188,6 +188,7 @@ body.has-mbar .sitefoot{padding-bottom:8px}
   .mbar b{font-family:var(--display);font-size:15px}
   .mbar #mbarTop{font-size:12px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   body.has-mbar{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+  html:has(body.has-mbar){scroll-padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
   .live{display:none}
 }
 @media (pointer:coarse){
@@ -1052,17 +1053,111 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .poikey > span{display:inline-flex;align-items:center;gap:5px}
 .poikey .pin{width:18px;height:18px;font-size:9px;border-width:1.5px;box-shadow:none;flex:none}
 @media (prefers-reduced-motion:reduce){.leaflet-zoom-anim .leaflet-zoom-animated{transition:none}}
+/* ===== Editorial theme: serif headings, navy and gold, photo cards ===== */
+:root{--display:Charter,"Bitstream Charter","Iowan Old Style","Sitka Text",Cambria,Georgia,serif;--gold:#a8822f;--radius:2px}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#ffffff}}
+:root[data-theme="light"]{--bg:#ffffff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--gold:#d9bf7f}}
+:root[data-theme="dark"]{--gold:#d9bf7f}
+body{overflow-x:clip;margin:0}
+h1,h2,h3{font-weight:400;letter-spacing:0}
+.kick{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 8px}
+.citybar{margin:-20px calc(50% - 50vw) 0;background:#002349;color:#fff;text-align:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:9px 16px}
+header.top{align-items:center;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.brand{font:400 21px/1.2 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);text-decoration:none}
+.toplinks{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.toplinks a,.linkbtn{font:500 12px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none;background:none;border:0;padding:4px 0;cursor:pointer}
+.toplinks a:hover,.linkbtn:hover{color:var(--gold)}
+.intro-hero{max-width:780px;padding-top:4px}
+.intro-hero h1{font:400 clamp(30px,4.4vw,50px)/1.1 var(--display);color:var(--accent);margin:0 0 12px}
+.intro-hero .intro{font-size:16.5px;line-height:1.55;color:var(--muted);margin:0;max-width:62ch}
+body:not(.step-priorities) .intro-hero{display:none}
+.steps{gap:0;border-bottom:1px solid var(--line)}
+.steps a{border:0;border-radius:0;background:none;padding:12px 6px 14px}
+.steps a span:last-child{font:400 18px/1.25 var(--display)}
+.steps small{font-family:var(--body);font-size:12px}
+.steps .sn{border-radius:0;border:1px solid var(--line);font:400 15px var(--display)}
+.steps a[aria-current="step"]{border:0;box-shadow:inset 0 -2px 0 var(--gold)}
+.steps a:hover{background:none}.steps a:hover span:last-child{color:var(--gold)}
+.btn{border-radius:0;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:600;padding:11px 18px}
+.btn.ghost{border-color:var(--accent)}
+.rail,.assist,.detail,.agentcard,.mapcard,.live{border-radius:0}
+.rail h2,.assist-head h2{font-size:22px;color:var(--accent)}
+.guide-choices button{border-radius:0;padding:10px 16px}
+.agentcard{border-left:3px solid var(--gold)}
+.agentcard b{font:400 21px var(--display);color:var(--accent)}
+.res-top h2{font-size:clamp(28px,3.4vw,36px);color:var(--accent)}
+/* first step: a photo instead of the map */
+.sethero{margin:0;display:none}
+.sethero img{display:block;width:100%;height:min(70vh,620px);object-fit:cover}
+.sethero figcaption{font-size:11px;color:var(--muted);padding:6px 2px}
+.sethero figcaption a{color:inherit}
+body.step-priorities:not(.pickmode) .sethero{display:block}
+body.step-priorities:not(.pickmode) #mapcard{display:none}
+/* result cards */
+.respage .list{background:none;border:0;overflow:visible}
+.respage .list-head{padding:4px 0 14px}
+.list-head h2{font-size:28px;color:var(--accent)}
+ol.rank.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:24px;padding:0}
+ol.rank.cards li{border:0;display:block;position:relative}
+ol.rank.cards li.empty{grid-column:1/-1}
+.row.pcard{display:flex;flex-direction:column;align-items:stretch;padding:0;gap:0;height:100%;border:1px solid var(--line);background:var(--surface);transition:box-shadow .2s}
+.row.pcard:hover{background:var(--surface);box-shadow:0 14px 34px rgba(0,35,73,.12)}
+.row.pcard[aria-current="true"]{background:var(--surface);box-shadow:none}
+.pc-media{position:relative;display:block;aspect-ratio:400/220;overflow:hidden;background:var(--map-bg)}
+.pc-media img,.pc-media .mm{display:block;width:100%;height:100%;object-fit:cover}
+.pc-badge{position:absolute;left:0;bottom:0;background:#002349;color:#fff;padding:6px 12px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase}
+.pc-badge b{font:400 19px var(--display);letter-spacing:0;margin-right:5px}
+.pc-rank{position:absolute;left:0;top:0;min-width:30px;height:30px;padding:0 7px;display:grid;place-items:center;background:rgba(255,255,255,.94);color:#002349;font:400 15px var(--display)}
+.pc-credit{position:absolute;right:0;bottom:0;font-size:9.5px;line-height:1.4;color:#fff;background:rgba(0,0,0,.45);padding:1px 6px;max-width:55%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pc-body{display:flex;flex-direction:column;padding:16px 18px 18px;flex:1;min-width:0}
+.pc-body .kick{margin:0 0 2px;font-size:10.5px}
+.pc-body .nm{font:400 25px/1.15 var(--display);color:var(--accent)}
+.pc-price{color:var(--muted);font-size:14px;margin:4px 0 12px}.pc-price b{color:var(--ink);font-weight:600}
+.pc-facts{display:grid;border-top:1px solid var(--gold);padding-top:8px}
+.pc-facts span{display:flex;justify-content:space-between;gap:8px;font-size:13.5px;padding:2px 0}.pc-facts i{font-style:normal;color:var(--muted)}.pc-facts b{font-weight:600}
+.pc-extra{font-size:12.5px;color:var(--muted);margin-top:8px}
+.pcard .tags{margin:8px 0 14px}
+.pc-go{margin-top:auto;align-self:flex-start;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--gold);padding-bottom:2px}
+ol.rank.cards .heart{position:absolute;right:10px;top:10px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.94);color:#002349;font-size:18px;z-index:2;display:grid;place-items:center}
+ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b0412e}
+.mm-land{fill:var(--map-bg)}.mm-other{fill:var(--city-fill);stroke:var(--city-line);stroke-width:.8}.mm-water{fill:var(--water)}
+.mm-road{fill:none;stroke:var(--road);stroke-width:1;opacity:.75}.mm-major{stroke-width:2}
+.mm-this{fill:var(--accent);fill-opacity:.85;stroke:var(--sel);stroke-width:2}
+.more{border-top:0;margin-top:16px;text-transform:uppercase;letter-spacing:.14em;font-size:12px}
+/* neighborhood page header with photo */
+.dhead:empty{display:none}
+.dhead{padding:0;gap:0;overflow:hidden}
+.dhead .d-head{padding:18px}
+.d-photo{margin:0;border-bottom:1px solid var(--line)}
+.d-photo img{display:block;width:100%;height:auto;max-height:440px;object-fit:cover}
+.d-photo figcaption{font-size:11.5px;color:var(--muted);padding:6px 12px}.d-photo figcaption a{color:inherit}
+.d-head h2{font-size:clamp(28px,3.6vw,38px);color:var(--accent)}
+.d-head .big{font-weight:400}
+.tabs button{font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.tabs button[aria-selected="true"]{border-bottom-color:var(--gold)}
+@media (max-width:700px){
+  header.top{flex-wrap:nowrap}
+  .brand{font-size:14px;letter-spacing:.1em}
+  .toplinks{gap:14px;flex-wrap:nowrap}.toplinks a,.toplinks .linkbtn{display:none}
+  .toplinks .btn{padding:9px 12px;font-size:11px}
+  .citybar{font-size:9px;letter-spacing:.12em;padding:7px 10px;line-height:1.6}
+  .intro-hero h1{font-size:30px}.intro-hero .intro{font-size:15px}
+  ol.rank.cards{grid-template-columns:1fr;gap:18px}
+}
 </style>
 
 <div class="wrap">
+  <div class="citybar">Seattle · Bellevue · Mercer Island · Kirkland · Redmond · Issaquah · Sammamish</div>
   <header class="top">
-    <div>
-      <div class="cities">Seattle · Bellevue · Mercer Island · Kirkland · Redmond · Issaquah · Sammamish</div>
-      <h1>Seattle Neighborhood Match</h1>
-      <p class="intro">Tell us what matters in your next home. We score 155 neighborhoods from public data on schools, safety, walkability, transit, prices, income and access to care, and rank them for you.</p>
-    </div>
-    <button class="btn ghost" id="startOver" type="button">Start over</button>
+    <a class="brand" href="#priorities">Seattle Neighborhood Match</a>
+    <nav class="toplinks" aria-label="Site"><a href="neighborhoods/">Neighborhoods</a><button type="button" class="linkbtn" data-contact="results" id="topContact" hidden>Contact</button><button class="btn ghost" id="startOver" type="button">Start over</button></nav>
   </header>
+  <div class="intro-hero" id="introHero">
+    <p class="kick">Find your place in Seattle and the Eastside</p>
+    <h1>The right neighborhood, chosen with care.</h1>
+    <p class="intro">Tell us what matters in your next home. We compare 155 neighborhoods on schools, safety, walkability, commute, parks and price, and rank them for you.</p>
+  </div>
   <div class="confirm" id="startConfirm" hidden role="alertdialog" aria-labelledby="soText">
     <span id="soText"><b>Start over?</b> This clears your interview answers, priorities, budget, filters, cities and workplace. Your saved neighborhoods are kept.</span>
     <span class="confirm-actions"><button class="btn" id="soYes" type="button">Yes, start over</button><button class="btn ghost" id="soNo" type="button">Cancel</button></span>
@@ -1130,6 +1225,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     </aside>
 
     <div class="main" id="mapSlotSetup">
+      <figure class="sethero" id="setHero"><img src="img/denny-triangle-seattle.jpg" alt="Seattle skyline over the Denny Triangle and South Lake Union" width="1200" height="797"><figcaption>Photo: SounderBruce · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a> · via <a href="https://commons.wikimedia.org/wiki/File:Denny_Triangle_and_South_Lake_Union_skyline,_from_Westlake_%26_Galer_(2018).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>
       <div class="mapcard" id="mapcard">
         <div id="map" role="region" aria-label="Map of neighborhoods colored by match score"></div>
         <div class="legend" aria-hidden="true">
@@ -1155,6 +1251,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       <span class="sub" id="detailCrumb"></span>
       <a class="btn ghost" id="guideLink" href="neighborhoods/">Full guide to this neighborhood</a>
     </div>
+    <section class="detail dhead" id="detailHead"></section>
     <div id="mapSlotDetail"></div>
     <section class="detail" id="detail" aria-live="polite"></section>
     <section class="agentcard" id="agentDetail" hidden></section>
@@ -1233,6 +1330,8 @@ if(typeof structuredClone !== 'function'){ window.structuredClone = function(v){
 const DATA = JSON.parse(document.getElementById('nbhd-data').textContent);
 const FEATS = DATA.neighborhoods.features;
 const AGENT = /*AGENT*/null;
+const PHOTOS = /*PHOTOS*/{};
+const escH = s => String(s==null?'':s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const M = DATA.meta;
 const CRITS = [
   {key:'schools', name:'School quality', src:'WA state test scores (OSPI '+M.ospi_year+') for the levels you pick', def:8},
@@ -1550,9 +1649,45 @@ function tagsFor(p){
   const weak = on.filter(c=>state.w[c.key]>=6 && p.scores[c.key]<30).slice(0,2);
   return strong.map(c=>`<span class="tag strong">${c.name}</span>`).join('') + weak.map(c=>`<span class="tag weak">Weak: ${c.name.toLowerCase()}</span>`).join('');
 }
+/* ----- result cards: photo when we have one, otherwise a small map of the neighborhood ----- */
+const MM_W = 400, MM_H = 220, mmCache = {};
+function bboxOf(g){ let a=[180,90,-180,-90]; const walk = c => { if(typeof c[0]==='number'){ if(c[0]<a[0])a[0]=c[0]; if(c[1]<a[1])a[1]=c[1]; if(c[0]>a[2])a[2]=c[0]; if(c[1]>a[3])a[3]=c[1]; } else c.forEach(walk); }; walk(g.coordinates); return a; }
+const MM_NB = FEATS.map(f=>({id:f.properties.id, g:f.geometry, b:bboxOf(f.geometry)}));
+const MM_WATER = DATA.basemap.water.map(w=>({g:w.geometry, b:bboxOf(w.geometry)}));
+const MM_ROADS = DATA.basemap.roads.map(r=>({g:r.geometry, b:bboxOf(r.geometry), major:r.kind==='primary'}));
+function miniMap(p){
+  if(mmCache[p.id]) return mmCache[p.id];
+  const me = MM_NB.find(x=>x.id===p.id), [x0,y0,x1,y1] = me.b;
+  const cx = (x0+x1)/2, cy = (y0+y1)/2, k = Math.cos(cy*Math.PI/180);
+  const spanH = Math.max((y1-y0)*2.2, (x1-x0)*k*2.2*MM_H/MM_W, 0.012), spanW = spanH*MM_W/MM_H/k;
+  const v = [cx-spanW/2, cy-spanH/2, cx+spanW/2, cy+spanH/2];
+  const hit = b => b[2]>=v[0] && b[0]<=v[2] && b[3]>=v[1] && b[1]<=v[3];
+  const pt = c => ((c[0]-v[0])/spanW*MM_W).toFixed(1)+','+((v[3]-c[1])/spanH*MM_H).toFixed(1);
+  const ring = r => 'M'+r.map(pt).join('L')+'Z';
+  const poly = g => (g.type==='Polygon' ? [g.coordinates] : g.type==='MultiPolygon' ? g.coordinates : []).map(pg=>pg.map(ring).join('')).join('');
+  const line = g => (g.type==='LineString' ? [g.coordinates] : g.type==='MultiLineString' ? g.coordinates : []).map(l=>'M'+l.map(pt).join('L')).join('');
+  const others = MM_NB.filter(x=>x.id!==p.id && hit(x.b)).map(x=>poly(x.g)).join('');
+  const water = MM_WATER.filter(x=>hit(x.b)).map(x=>poly(x.g)).join('');
+  const roads = MM_ROADS.filter(x=>hit(x.b)).map(x=>`<path class="mm-road${x.major?' mm-major':''}" d="${line(x.g)}"/>`).join('');
+  return mmCache[p.id] = `<svg class="mm" viewBox="0 0 ${MM_W} ${MM_H}" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect class="mm-land" width="${MM_W}" height="${MM_H}"/><path class="mm-other" d="${others}"/><path class="mm-water" d="${water}"/>${roads}<path class="mm-this" d="${poly(me.g)}"/></svg>`;
+}
+function cardMedia(p){
+  const ph = PHOTOS[p.id];
+  return ph ? `<img src="img/card/${ph.file}" alt="" loading="lazy" width="600" height="${Math.round(ph.h/2)}"><span class="pc-credit">Photo: ${escH(ph.by)}, ${escH(ph.lic)}</span>` : miniMap(p);
+}
+function cardHTML(p, s, i, extra){
+  return `<li class="pc"><button class="row pcard ${eligible(p)?'':'outside'}" type="button" data-id="${p.id}" aria-current="${p.id===selected}">
+    <span class="pc-media">${cardMedia(p)}<span class="pc-badge"><b class="num">${Math.round(s)}</b> Match</span><span class="pc-rank num">${i+1}</span></span>
+    <span class="pc-body"><span class="kick">${p.district && p.district!==p.name ? p.district+', ' : ''}${p.city}</span><span class="nm">${p.name}</span>
+      <span class="pc-price">Typical home <b class="num">${money(p.price)}</b></span>
+      <span class="pc-facts"><span><i>Schools</i><b class="num">${pctTxt(schoolRaw(p))}</b></span><span><i>Walkability</i><b class="num">${Math.round(p.walk)}/20</b></span><span><i>Nearest park</i><b class="num">${p.park_mi} mi</b></span></span>
+      ${extra ? `<span class="pc-extra">${extra}</span>` : ''}<span class="tags">${tagsFor(p)}</span>
+      <span class="pc-go">Explore ${p.name} →</span></span>
+  </button>${heartBtn(p)}</li>`;
+}
 function renderList(ranked){
   const back = document.getElementById('backBtn');
-  back.hidden = !listMode && !savedOnly; rankEl.classList.toggle('cat', !!listMode);
+  back.hidden = !listMode && !savedOnly; rankEl.classList.toggle('cat', !!listMode); rankEl.classList.toggle('cards', !listMode);
   if(listMode){
     const st = STATS[listMode], rows = categoryRows(listMode);
     document.getElementById('listTitle').textContent = st.title;
@@ -1569,23 +1704,14 @@ function renderList(ranked){
     const rows = state.saved.map(id=>ALLP.find(p=>p.id===id)).filter(Boolean).map(p=>({p, s:scoreOf(p)})).sort((a,b)=>b.s-a.s);
     document.getElementById('listTitle').textContent = 'Your saved neighborhoods';
     document.getElementById('listCount').textContent = rows.length ? `${rows.length} saved. Faded ones are outside your current filters.` : 'Nothing saved yet. Tap ♡ on any neighborhood to save it.';
-    rankEl.innerHTML = rows.map((r,i)=>`
-    <li><button class="row ${eligible(r.p)?'':'outside'}" type="button" data-id="${r.p.id}" aria-current="${r.p.id===selected}">
-      <span class="rk num">${i+1}</span>
-      <span><span class="nm">${r.p.name}</span><br><span class="sub">${r.p.city} · ${money(r.p.price)}</span><span class="tags">${tagsFor(r.p)}</span></span>
-      <span class="score num">${Math.round(r.s)}<small>match</small></span>
-    </button>${heartBtn(r.p)}</li>`).join('');
+    rankEl.innerHTML = rows.map((r,i)=>cardHTML(r.p, r.s, i, '')).join('');
     moreBtn.hidden = true; return;
   }
   document.getElementById('listTitle').textContent = 'Best matches';
   document.getElementById('listCount').textContent = `${ranked.length} of ${FEATS.length} neighborhoods`;
   if(!ranked.length){ rankEl.innerHTML = '<li class="empty">No neighborhoods fit. Loosen your budget, minimums or distance limits, or add a city.</li>'; moreBtn.hidden = true; return; }
-  rankEl.innerHTML = ranked.slice(0, showN).map((r,i)=>`
-    <li><button class="row" type="button" data-id="${r.p.id}" aria-current="${r.p.id===selected}">
-      <span class="rk num">${i+1}</span>
-      <span><span class="nm">${r.p.name}</span><br><span class="sub">${r.p.district && r.p.district!==r.p.name ? r.p.district+', ' : ''}${r.p.city} · ${money(r.p.price)}${r.p.for_sale!=null?` · ~${Math.round(r.p.for_sale)} for sale`:''}${budgetOn() && r.p.sales_k.length>=5?` · ${salesInBudget(r.p)} sold in your range`:''}</span><span class="tags">${tagsFor(r.p)}</span></span>
-      <span class="score num">${Math.round(r.s)}<small>match</small></span>
-    </button>${heartBtn(r.p)}</li>`).join('');
+  rankEl.innerHTML = ranked.slice(0, showN).map((r,i)=>cardHTML(r.p, r.s, i,
+    [r.p.for_sale!=null ? `About ${Math.round(r.p.for_sale)} for sale` : '', budgetOn() && r.p.sales_k.length>=5 ? `${salesInBudget(r.p)} sold in your range` : ''].filter(Boolean).join(' · '))).join('');
   document.getElementById('listCount').textContent += ' · Tap one to see its details';
   moreBtn.hidden = ranked.length <= 12;
   moreBtn.textContent = showN >= ranked.length ? 'Show top 12' : `Show all ${ranked.length}`;
@@ -1755,6 +1881,7 @@ function whyHTML(p){
   if(fails.length) html += '<b class="out">Outside your filters because</b><ul>' + fails.map(f=>li(f,'minus')).join('') + '</ul>';
   return html + '</div>';
 }
+document.getElementById('detailHead').addEventListener('click', e=>{ const sv = e.target.closest('[data-save-d]'); if(sv) toggleSave(+sv.dataset.saveD); });
 detailEl.addEventListener('click', e=>{ const sv = e.target.closest('[data-save-d]'); if(sv){ toggleSave(+sv.dataset.saveD); return; } const b = e.target.closest('[data-tab]'); if(!b) return; detailTab = b.dataset.tab; renderDetail(lastRanked); document.getElementById('tab-'+detailTab)?.focus(); });
 detailEl.addEventListener('keydown', e=>{ const b = e.target.closest('[data-tab]'); if(!b || !['ArrowLeft','ArrowRight'].includes(e.key)) return;
   const all = [...detailEl.querySelectorAll('[data-tab]')], i = all.indexOf(b), n = all[(i + (e.key==='ArrowRight'?1:-1) + all.length) % all.length];
@@ -1763,7 +1890,7 @@ detailEl.addEventListener('keydown', e=>{ const b = e.target.closest('[data-tab]
 function barRow(c){ const p = ALLP.find(x=>x.id===selected); const x = rankOf(BAR_STAT[c.key], p) || {r:'—', n:ALLP.length, tie:false}; return `<div class="bar ${state.w[c.key]?'':'off'}"><span>${c.name}</span><span class="track"><span class="fill" style="width:${p.scores[c.key]}%;display:block"></span></span><b class="num">${p.scores[c.key]}</b><button type="button" class="rank rklink" data-stat="${BAR_STAT[c.key]}" aria-label="${x.tie?'Tied for ':''}#${x.r} of ${x.n}. See all neighborhoods ranked by ${c.name.toLowerCase()}">#${x.r}${x.tie?'=':''} / ${x.n}</button></div>`; }
 function renderDetail(ranked){
   const p = (FEATS.find(f=>f.properties.id===selected)||{}).properties;
-  if(!p){ detailEl.innerHTML = '<div class="empty">Select a neighborhood on the map or in the list to see its details.</div>'; return; }
+  if(!p){ document.getElementById('detailHead').innerHTML = ''; detailEl.innerHTML = '<div class="empty">Select a neighborhood on the map or in the list to see its details.</div>'; return; }
   const r = ranked.findIndex(x=>x.p.id===p.id);
   const s = scoreOf(p);
   const yoy = p.price && p.price_prev ? (p.price/p.price_prev-1)*100 : null;
@@ -1822,11 +1949,13 @@ function renderDetail(ranked){
     <div class="notice"><b>Registered sex offenders</b><span>Washington does not allow bulk use of registry data, so it is not part of these scores. Search a specific address on the official registries: <a href="https://www.nsopw.gov/" target="_blank" rel="noopener">National Sex Offender Public Website</a> or the <a href="https://www.waspc.org/" target="_blank" rel="noopener">Washington Association of Sheriffs and Police Chiefs</a>.</span></div>` + asof(`crime FBI 2025 citywide rates; Seattle and Bellevue police incidents ${M.crime_window.split(' (')[0]}; Census ACS ${M.acs_year}`)],
   ];
   if(!tabs.some(x=>x[0]===detailTab)) detailTab = 'overview';
-  detailEl.innerHTML = `    <div class="d-head">
+  const ph = PHOTOS[p.id];
+  document.getElementById('detailHead').innerHTML = (ph ? `<figure class="d-photo"><img src="img/${ph.file}" alt="${p.name}, ${p.city}" width="1200" height="${ph.h}"><figcaption>Photo: ${escH(ph.by)} · ${ph.lic_url?`<a href="${escH(ph.lic_url)}" target="_blank" rel="noopener">${escH(ph.lic)}</a>`:escH(ph.lic)} · via <a href="${escH(ph.page)}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>` : '') + `    <div class="d-head">
       <div><h2>${p.name}</h2><div class="sub">${p.district && p.district!==p.name ? p.district+', ' : ''}${p.city}${p.approx?' <span class="pill">approximate area</span>':''} · ${p.pop.toLocaleString()} residents</div>
       <div class="sub">${r>=0 ? `Ranked #${r+1} of ${ranked.length} for your priorities` : 'Outside your current filters'}</div></div>
       <div style="display:grid;justify-items:end;gap:4px"><div class="big num">${Math.round(s)}<small>match</small></div><button type="button" class="d-save" data-save-d="${p.id}" aria-pressed="${isSaved(p.id)}">${isSaved(p.id)?'♥ Saved':'♡ Save'}</button></div>
-    </div>
+    </div>`;
+  detailEl.innerHTML = `
     <div class="tabs" role="tablist" aria-label="Neighborhood details">${tabs.map(([k,n])=>`<button type="button" role="tab" id="tab-${k}" data-tab="${k}" aria-selected="${k===detailTab}" tabindex="${k===detailTab?0:-1}">${n}</button>`).join('')}</div>
     ${tabs.map(([k,,html])=>`<div class="tabpanel" role="tabpanel" aria-labelledby="tab-${k}" ${k===detailTab?'':'hidden'}>${html}</div>`).join('')}`;
 }
@@ -1912,6 +2041,7 @@ function route(){
   document.getElementById('setup').hidden = !setup;
   document.getElementById('resultsPage').hidden = step!=='results';
   document.getElementById('detailPage').hidden = step!=='detail';
+  document.body.classList.remove('step-priorities','step-filters','step-results','step-detail'); document.body.classList.add('step-'+step);
   document.getElementById('mbar').hidden = !setup; document.body.classList.toggle('has-mbar', setup);
   document.querySelectorAll('.page').forEach(s=> s.hidden = s.dataset.page!==step);
   if(step==='filters' && prev!=='filters') renderFilters();
@@ -1927,7 +2057,7 @@ function route(){
   const moved = mc.parentElement !== slot;
   if(moved) slot.prepend(mc);
   if(step==='detail'){ detailTab = (prev==='detail' && nb) ? detailTab : 'overview'; update(); }
-  requestAnimationFrame(()=>{ map.invalidateSize({pan:false, animate:false}); if(step==='detail') zoomTo(selected); else if(moved) fit(); drawPois(); });
+  requestAnimationFrame(()=>{ map.invalidateSize({pan:false, animate:false}); if(step==='detail') zoomTo(selected); else if(moved || prev==='priorities') fit(); drawPois(); });
   if(step==='results' && prev!=='results' && lastRanked.length && !lastRanked.some(r=>r.p.id===selected)){ selected = lastRanked[0].p.id; update(); }
   if(step==='results' && prev==='detail' && listScroll!=null){ const y = listScroll; setTimeout(()=>window.scrollTo({top:y}), 0); }
   else if(prev!==step || step==='detail') window.scrollTo({top:0});
@@ -2203,6 +2333,7 @@ document.getElementById('contactForm').addEventListener('submit', async e=>{
 function renderAgentCards(){
   if(!AGENT) return;
   const esc = s => String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const tc = document.getElementById('topContact'); tc.hidden = false; tc.textContent = 'Contact ' + AGENT.first_name;
   const foot = document.getElementById('agentFoot');
   foot.hidden = false;
   foot.innerHTML = `Brought to you by <b>${esc(AGENT.name)}</b>, ${esc(AGENT.brokerage)}${AGENT.profile_url ? ` · <a href="${esc(AGENT.profile_url)}" target="_blank" rel="noopener">View my profile</a>` : ''} · <a href="mailto:${esc(AGENT.email)}">${esc(AGENT.email)}</a>`;

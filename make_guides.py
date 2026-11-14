@@ -163,6 +163,26 @@ footer.site{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);fo
 @media (prefers-color-scheme:dark){.m-land{fill:#141920}.m-other{fill:#181e26;stroke:#3d4a5b}.m-water{fill:#1c3243}.m-road{stroke:#8d7345}
 .m-this{fill:#4f84bd;stroke:#e3c766}.m-pin circle{fill:#131b27;stroke:#e6ecf4}.m-pin text{fill:#e6ecf4}}
 .leadform{display:grid;gap:10px;max-width:520px}.leadform label{display:grid;gap:4px;font-size:13px;font-weight:600}.leadform input,.leadform textarea{font:inherit;font-weight:400;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}.leadform .consent{display:flex;gap:8px;font-weight:400;align-items:flex-start}.leadform button{justify-self:start;cursor:pointer;font:inherit;font-weight:600}
+/* editorial theme, matching the main site */
+:root{--display:Charter,"Bitstream Charter","Iowan Old Style","Sitka Text",Cambria,Georgia,serif;--gold:#a8822f}
+@media (prefers-color-scheme:light){:root{--bg:#fff}}
+@media (prefers-color-scheme:dark){:root{--gold:#d9bf7f}}
+body{padding-top:0;overflow-x:clip}
+.citybar{margin:0 calc(50% - 50vw);background:#002349;color:#fff;text-align:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:9px 16px}
+header.site{padding:18px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
+header.site .brand{font:400 19px/1.2 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+header.site nav{display:flex;gap:20px;flex-wrap:wrap}header.site nav a{font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+header.site nav a:hover{color:var(--gold)}
+h1,h2{font-weight:400;letter-spacing:0;color:var(--accent)}h1{font-size:clamp(32px,5.4vw,48px);line-height:1.1}h2{font-size:26px;margin-top:36px}
+.eyebrow{color:var(--gold);letter-spacing:.2em;font-weight:600;font-size:11.5px}
+.btn{border-radius:0;text-transform:uppercase;letter-spacing:.12em;font-size:12px;padding:12px 18px}
+.fact,.hero,table,ul.near a,.agent,.leadform input,.leadform textarea{border-radius:0}
+.fact b{font-weight:400;color:var(--accent)}
+.agent{border-left:3px solid var(--gold)}
+ul.near a{font:400 18px/1.3 var(--display);color:var(--accent)}ul.near a small{font:13px var(--body);color:var(--muted)}
+.cities{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px 28px;columns:auto}.cities h2{font-size:24px;break-before:auto}
+.lede a,main p a{color:var(--accent)}
+@media (max-width:600px){.citybar{font-size:9px;letter-spacing:.12em;padding:7px 10px;line-height:1.6}header.site .brand{font-size:15px;letter-spacing:.1em}header.site nav a{font-size:11px}}
 """
 
 FOOT = """<footer class="site">
@@ -206,39 +226,15 @@ def agent_box(p):
     return f'<section class="agent" aria-label="Talk to a local agent">{intro}{form}{privacy}</section>'
 
 
-WIKI = {}
-_wp = os.path.join(HERE, 'wiki.json')
-if os.path.exists(_wp): WIKI = json.load(open(_wp))
-OK_LICENSES = ('cc by', 'cc-by', 'cc0', 'public domain', 'pd')
-
-
-def wiki_for(p):
-    w = WIKI.get(f"{p['name']}|{p['city']}")
-    return w if w and not w.get('error') else None
-
-
-# Articles under another name that describe exactly this neighborhood (not a larger area around it)
-SAME_PLACE = {'Central Business District|Seattle', 'Harrison/Denny-Blaine|Seattle', 'Holly Park|Seattle'}
-
-
-def broader_area(p, w):
-    """Name of the larger area when the matched article covers more than this neighborhood, else None."""
-    key = f"{p['name']}|{p['city']}"
-    base = re.sub(r',.*$', '', w['title'])
-    simple = lambda t: re.sub(r'[^a-z]', '', t.lower())
-    if key in SAME_PLACE or simple(p['name'].split('/')[0]) in simple(base): return None
-    return base
+from photos import WIKI, wiki_for, broader_area, photo_for
 
 
 def hero(p):
-    w = wiki_for(p)
-    cr = (w or {}).get('credit') or {}
-    lic = (cr.get('license') or '').lower()
-    if w and w.get('photo_file') and not w.get('photo_vetoed') and not w.get('photo_hold') and lic.startswith(OK_LICENSES) and not broader_area(p, w):
-        who = esc(cr.get('artist') or 'Unknown author')
-        lic_link = f'<a href="{esc(cr["license_url"])}">{esc(cr["license"])}</a>' if cr.get('license_url') else esc(cr.get('license', ''))
-        return (f'<figure class="hero"><img src="../../img/{esc(w["photo_file"])}" alt="{esc(p["name"])}, {esc(p["city"])}" loading="eager" width="1200" height="{w.get("photo_h", 675)}">'
-                f'<figcaption>Photo: {who} · {lic_link} · via <a href="{esc(cr.get("file_page", ""))}">Wikimedia Commons</a></figcaption></figure>'
+    ph = photo_for(p)
+    if ph:
+        lic_link = f'<a href="{esc(ph["lic_url"])}">{esc(ph["lic"])}</a>' if ph['lic_url'] else esc(ph['lic'])
+        return (f'<figure class="hero"><img src="../../img/{esc(ph["file"])}" alt="{esc(p["name"])}, {esc(p["city"])}" loading="eager" width="1200" height="{ph["h"]}">'
+                f'<figcaption>Photo: {esc(ph["by"])} · {lic_link} · via <a href="{esc(ph["page"])}">Wikimedia Commons</a></figcaption></figure>'
                 f'<figure class="hero">{svg_map(p)}</figure>')
     return f'<figure class="hero">{svg_map(p)}</figure>'
 
@@ -282,7 +278,8 @@ def page(p):
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">{json.dumps(ld)}</script>
 </head><body>
-<header class="site"><a href="../../">← Seattle Neighborhood Match</a><a href="../">All neighborhoods</a></header>
+<div class="citybar">Seattle · Bellevue · Mercer Island · Kirkland · Redmond · Issaquah · Sammamish</div>
+<header class="site"><a class="brand" href="../../">Seattle Neighborhood Match</a><nav><a href="../">All neighborhoods</a><a href="../../">Find your match</a></nav></header>
 <main>
 <div class="eyebrow">{where}</div>
 <h1>Living in {nm}</h1>
@@ -367,7 +364,8 @@ def index_page():
 <link rel="canonical" href="{BASE}neighborhoods/">
 <link rel="stylesheet" href="style.css">
 </head><body>
-<header class="site"><a href="../">← Seattle Neighborhood Match</a></header>
+<div class="citybar">Seattle · Bellevue · Mercer Island · Kirkland · Redmond · Issaquah · Sammamish</div>
+<header class="site"><a class="brand" href="../">Seattle Neighborhood Match</a><nav><a href="../">Find your match</a></nav></header>
 <main>
 <h1>Seattle-area neighborhood guides</h1>
 <p class="lede">Home prices, schools, safety, walkability, transit and parks for {N} neighborhoods, built from public data. Want them ranked for you? <a href="../">Answer a few questions</a>.</p>
