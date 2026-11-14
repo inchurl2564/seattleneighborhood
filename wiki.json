@@ -994,8 +994,7 @@
    "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Mount_Rainier_27477.JPG/1280px-Mount_Rainier_27477.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "photo_file": "madison-park-seattle.jpg",
-  "photo_h": 900,
-  "photo_hold": true
+  "photo_h": 900
  },
  "Madrona|Seattle": {
   "title": "Madrona, Seattle",
@@ -1629,7 +1628,6 @@
    "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Yesler_Terrace_Visit_w_CM_Mosqueda_%2827547576298%29.jpg/1280px-Yesler_Terrace_Visit_w_CM_Mosqueda_%2827547576298%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "photo_file": "yesler-terrace-seattle.jpg",
-  "photo_h": 800,
-  "photo_hold": true
+  "photo_h": 800
  }
 }
