@@ -1,6 +1,6 @@
 """Find each neighborhood's Wikipedia article, intro text and lead photo (with author and license).
 
-Writes wiki.json, saving after every neighborhood so an interrupted run can resume.
+Writes wiki.json when finished; progress is saved to raw/wiki.partial.json after every neighborhood so an interrupted run can resume.
 Uses Wikipedia's page-summary interface with likely article titles (it is far less rate-limited than search).
 A match must have coordinates within 3 km of the neighborhood's center, so same-named places elsewhere are not used.
 """
@@ -8,6 +8,7 @@ import json, math, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'wiki.json')
+PARTIAL = os.path.join(HERE, 'raw', 'wiki.partial.json')   # progress while running (not committed)
 UA = {'User-Agent': 'neighborhood-guide-builder/1.0 (open-data research tool)'}
 SUMMARY = 'https://en.wikipedia.org/api/rest_v1/page/summary/'
 COMMONS = 'https://commons.wikimedia.org/w/api.php'
@@ -76,8 +77,8 @@ def image_credit(fname):
 
 if __name__ == '__main__':
     data = json.load(open(os.path.join(HERE, 'data.json')))
-    os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    out = json.load(open(OUT)) if os.path.exists(OUT) else {}
+    os.makedirs(os.path.dirname(PARTIAL), exist_ok=True)
+    out = json.load(open(PARTIAL)) if os.path.exists(PARTIAL) else (json.load(open(OUT)) if os.path.exists(OUT) else {})
     for f in data['neighborhoods']['features']:
         p = f['properties']; key = f"{p['name']}|{p['city']}"
         if key in out and 'error' not in (out[key] or {}): continue
@@ -90,7 +91,8 @@ if __name__ == '__main__':
             out[key] = m
         except Exception as e:
             out[key] = {'error': str(e)}
-        json.dump(out, open(OUT, 'w'), indent=1)
+        json.dump(out, open(PARTIAL, 'w'), indent=1)
         print(key, '->', (out[key] or {}).get('title'), flush=True)
+    json.dump(out, open(OUT, 'w'), indent=1)
     found = [k for k, v in out.items() if v and not v.get('error')]
     print('articles', len(found), 'of', len(out), '| with photo', sum(1 for k in found if out[k].get('image')))
