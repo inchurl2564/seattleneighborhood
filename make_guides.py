@@ -55,6 +55,59 @@ def school_avg(p):
     return sum(v) / len(v) if v else None
 
 
+from shapely.geometry import shape, box, mapping
+GEOM = {f['properties']['id']: shape(f['geometry']).buffer(0) for f in DATA['neighborhoods']['features']}
+WATER = [shape(w['geometry']).buffer(0) for w in DATA['basemap']['water']]
+ROADS = [(r['kind'], shape(r['geometry'])) for r in DATA['basemap']['roads']]
+MW, MH = 860, 300
+
+
+def svg_map(p):
+    g = GEOM[p['id']]
+    minx, miny, maxx, maxy = g.bounds
+    cx, cy = (minx + maxx) / 2, (miny + maxy) / 2
+    k = math.cos(math.radians(cy))
+    w, h = (maxx - minx) * k, (maxy - miny)
+    span_h = max(h * 2.2, w * 2.2 * MH / MW, 0.012)          # degrees of latitude shown
+    span_w = span_h * MW / MH / k
+    view = box(cx - span_w / 2, cy - span_h / 2, cx + span_w / 2, cy + span_h / 2)
+    X = lambda x: (x - (cx - span_w / 2)) / span_w * MW
+    Y = lambda y: ((cy + span_h / 2) - y) / span_h * MH
+
+    def ring(coords):
+        return 'M' + 'L'.join(f'{X(x):.1f},{Y(y):.1f}' for x, y in coords) + 'Z'
+
+    def poly_d(geom):
+        geom = geom.intersection(view.buffer(span_h * 0.05))
+        if geom.is_empty: return ''
+        parts = [geom] if geom.geom_type == 'Polygon' else [x for x in getattr(geom, 'geoms', []) if x.geom_type == 'Polygon']
+        return ''.join(ring(pg.exterior.coords) + ''.join(ring(i.coords) for i in pg.interiors) for pg in parts)
+
+    def line_d(geom):
+        geom = geom.intersection(view)
+        if geom.is_empty: return ''
+        parts = [geom] if geom.geom_type == 'LineString' else [x for x in getattr(geom, 'geoms', []) if x.geom_type == 'LineString']
+        return ''.join('M' + 'L'.join(f'{X(x):.1f},{Y(y):.1f}' for x, y in ln.coords) for ln in parts)
+
+    others = ''.join(poly_d(gg) for i, gg in GEOM.items() if i != p['id'] and gg.intersects(view))
+    water = ''.join(poly_d(wg) for wg in WATER if wg.intersects(view))
+    roads = ''.join(f'<path class="m-road{" m-major" if kind == "primary" else ""}" d="{line_d(rg)}"/>' for kind, rg in ROADS if rg.intersects(view))
+    marks, key_items = '', []
+    for key, letter, label in (('elem', 'S', 'Elementary school'), ('park', 'P', 'Park'), ('rail', 'R', 'Light rail or train'), ('grocery', 'G', 'Grocery store')):
+        v = (p.get('pois') or {}).get(key)
+        if not v: continue
+        mx, my = X(v[1]), Y(v[0])
+        if 10 < mx < MW - 10 and 10 < my < MH - 10:
+            marks += f'<g class="m-pin"><circle cx="{mx:.1f}" cy="{my:.1f}" r="9"/><text x="{mx:.1f}" y="{my + 3.6:.1f}" text-anchor="middle">{letter}</text></g>'
+            key_items.append(f'<span><b class="k">{letter}</b>{esc(label)}: {esc(v[2])}</span>')
+    title = f'Map of {p["name"]}, {p["city"]}, with surrounding neighborhoods, water and highways'
+    return (f'<svg class="nbmap" viewBox="0 0 {MW} {MH}" role="img" aria-label="{esc(title)}" preserveAspectRatio="xMidYMid slice">'
+            f'<rect class="m-land" width="{MW}" height="{MH}"/>'
+            f'<path class="m-other" d="{others}"/><path class="m-water" d="{water}"/>{roads}'
+            f'<path class="m-this" d="{poly_d(g)}"/>{marks}</svg>'
+            + (f'<figcaption class="mapkey">{"".join(key_items)}</figcaption>' if key_items else ''))
+
+
 for p in P:
     p['slug'] = slug(p)
     p['school_avg'] = school_avg(p)
@@ -97,6 +150,18 @@ ul.near a small{display:block;color:var(--muted)}
 .cities{columns:2 240px;column-gap:28px}.cities h2{break-before:column;margin-top:0}.cities ul{padding-left:18px;margin:0 0 18px}.cities a{color:var(--accent)}
 footer.site{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}footer.site a{color:var(--accent)}
 .note{font-size:13px;color:var(--muted)}
+.hero{margin:14px 0 8px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+.hero figcaption{font-size:11.5px;color:var(--muted);padding:6px 10px;border-top:1px solid var(--line)}
+.hero figcaption a{color:inherit}
+.hero img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
+.nbmap{display:block;width:100%;height:auto;aspect-ratio:860/300}
+.m-land{fill:#ebebe6}.m-other{fill:#f6f6f2;stroke:#b9c2cd;stroke-width:.8}.m-water{fill:#d6dde4}
+.m-road{fill:none;stroke:#c49a5a;stroke-width:1.1;opacity:.75}.m-major{stroke-width:2.2}
+.m-this{fill:#002349;fill-opacity:.82;stroke:#b8860b;stroke-width:2.5}
+.m-pin circle{fill:#fff;stroke:#0f1b2d;stroke-width:2}.m-pin text{font:700 10.5px var(--body);fill:#0f1b2d}
+.mapkey{display:flex;flex-wrap:wrap;gap:4px 16px}.mapkey span{display:inline-flex;align-items:center;gap:6px}.mapkey .k{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--ink);font-size:10px;color:var(--ink)}
+@media (prefers-color-scheme:dark){.m-land{fill:#141920}.m-other{fill:#181e26;stroke:#3d4a5b}.m-water{fill:#1c3243}.m-road{stroke:#8d7345}
+.m-this{fill:#4f84bd;stroke:#e3c766}.m-pin circle{fill:#131b27;stroke:#e6ecf4}.m-pin text{fill:#e6ecf4}}
 .leadform{display:grid;gap:10px;max-width:520px}.leadform label{display:grid;gap:4px;font-size:13px;font-weight:600}.leadform input,.leadform textarea{font:inherit;font-weight:400;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}.leadform .consent{display:flex;gap:8px;font-weight:400;align-items:flex-start}.leadform button{justify-self:start;cursor:pointer;font:inherit;font-weight:600}
 """
 
@@ -141,6 +206,37 @@ def agent_box(p):
     return f'<section class="agent" aria-label="Talk to a local agent">{intro}{form}{privacy}</section>'
 
 
+WIKI = {}
+_wp = os.path.join(HERE, 'wiki.json')
+if os.path.exists(_wp): WIKI = json.load(open(_wp))
+OK_LICENSES = ('cc by', 'cc-by', 'cc0', 'public domain', 'pd')
+
+
+def wiki_for(p):
+    w = WIKI.get(f"{p['name']}|{p['city']}")
+    return w if w and not w.get('error') else None
+
+
+def hero(p):
+    w = wiki_for(p)
+    cr = (w or {}).get('credit') or {}
+    lic = (cr.get('license') or '').lower()
+    if w and w.get('photo_file') and lic.startswith(OK_LICENSES):
+        who = esc(cr.get('artist') or 'Unknown author')
+        lic_link = f'<a href="{esc(cr["license_url"])}">{esc(cr["license"])}</a>' if cr.get('license_url') else esc(cr.get('license', ''))
+        return (f'<figure class="hero"><img src="../../img/{esc(w["photo_file"])}" alt="{esc(p["name"])}, {esc(p["city"])}" loading="eager" width="1200" height="{w.get("photo_h", 675)}">'
+                f'<figcaption>Photo: {who} · {lic_link} · via <a href="{esc(cr.get("file_page", ""))}">Wikimedia Commons</a></figcaption></figure>'
+                f'<figure class="hero">{svg_map(p)}</figure>')
+    return f'<figure class="hero">{svg_map(p)}</figure>'
+
+
+def about(p):
+    w = wiki_for(p)
+    if not w or not w.get('extract'): return ''
+    return (f'<p>{esc(w["extract"])} <span class="note">(From <a href="{esc(w["url"])}">Wikipedia</a>, '
+            f'<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</span></p>')
+
+
 def page(p):
     s, sc = p['scores'], p['school_avg']
     nm, city = esc(p['name']), esc(p['city'])
@@ -175,6 +271,8 @@ def page(p):
 <main>
 <div class="eyebrow">{where}</div>
 <h1>Living in {nm}</h1>
+{hero(p)}
+{about(p)}
 <p class="lede">{nm} is a neighborhood in {where} with about {p['pop']:,} residents. The typical home value is about <b>{money(p['price'])}</b>{f" ({yoy:+.1f}% over the past year)" if yoy is not None else ''}, and {p['sold_12m']} homes sold in the last 12 months. It is {walk_lvl}, with {crime_lvl}.</p>
 <div class="cta"><a class="btn" href="{app}">See how {nm} fits your priorities</a><a class="btn ghost" href="../../">Find your best-matching neighborhoods</a></div>
 

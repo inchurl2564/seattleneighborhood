@@ -27,4 +27,16 @@ ul.near a small{display:block;color:var(--muted)}
 .cities{columns:2 240px;column-gap:28px}.cities h2{break-before:column;margin-top:0}.cities ul{padding-left:18px;margin:0 0 18px}.cities a{color:var(--accent)}
 footer.site{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}footer.site a{color:var(--accent)}
 .note{font-size:13px;color:var(--muted)}
+.hero{margin:14px 0 8px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+.hero figcaption{font-size:11.5px;color:var(--muted);padding:6px 10px;border-top:1px solid var(--line)}
+.hero figcaption a{color:inherit}
+.hero img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
+.nbmap{display:block;width:100%;height:auto;aspect-ratio:860/300}
+.m-land{fill:#ebebe6}.m-other{fill:#f6f6f2;stroke:#b9c2cd;stroke-width:.8}.m-water{fill:#d6dde4}
+.m-road{fill:none;stroke:#c49a5a;stroke-width:1.1;opacity:.75}.m-major{stroke-width:2.2}
+.m-this{fill:#002349;fill-opacity:.82;stroke:#b8860b;stroke-width:2.5}
+.m-pin circle{fill:#fff;stroke:#0f1b2d;stroke-width:2}.m-pin text{font:700 10.5px var(--body);fill:#0f1b2d}
+.mapkey{display:flex;flex-wrap:wrap;gap:4px 16px}.mapkey span{display:inline-flex;align-items:center;gap:6px}.mapkey .k{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--ink);font-size:10px;color:var(--ink)}
+@media (prefers-color-scheme:dark){.m-land{fill:#141920}.m-other{fill:#181e26;stroke:#3d4a5b}.m-water{fill:#1c3243}.m-road{stroke:#8d7345}
+.m-this{fill:#4f84bd;stroke:#e3c766}.m-pin circle{fill:#131b27;stroke:#e6ecf4}.m-pin text{fill:#e6ecf4}}
 .leadform{display:grid;gap:10px;max-width:520px}.leadform label{display:grid;gap:4px;font-size:13px;font-weight:600}.leadform input,.leadform textarea{font:inherit;font-weight:400;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}.leadform .consent{display:flex;gap:8px;font-weight:400;align-items:flex-start}.leadform button{justify-self:start;cursor:pointer;font:inherit;font-weight:600}

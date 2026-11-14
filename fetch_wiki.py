@@ -1,87 +1,98 @@
 """Find each neighborhood's Wikipedia article, intro text and lead photo (with author and license).
 
-Writes raw/wiki.json. A match must have coordinates near the neighborhood's center and a title that
-contains the neighborhood name, so look-alike articles elsewhere are not used.
+Writes wiki.json, saving after every neighborhood so an interrupted run can resume.
+Uses Wikipedia's page-summary interface with likely article titles (it is far less rate-limited than search).
+A match must have coordinates within 3 km of the neighborhood's center, so same-named places elsewhere are not used.
 """
-import json, math, os, re, time, urllib.parse, urllib.request
+import json, math, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.join(HERE, 'wiki.json')
 UA = {'User-Agent': 'neighborhood-guide-builder/1.0 (open-data research tool)'}
-API = 'https://en.wikipedia.org/w/api.php'
+SUMMARY = 'https://en.wikipedia.org/api/rest_v1/page/summary/'
 COMMONS = 'https://commons.wikimedia.org/w/api.php'
 
 
-def get(url, params):
-    q = url + '?' + urllib.parse.urlencode({**params, 'format': 'json', 'formatversion': 2})
-    for i in range(4):
+def fetch(url):
+    for attempt in range(4):
         try:
-            with urllib.request.urlopen(urllib.request.Request(q, headers=UA), timeout=60) as r:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
                 return json.load(r)
-        except Exception as e:
-            time.sleep(2 * (i + 1)); err = e
-    raise err
+        except urllib.error.HTTPError as e:
+            if e.code == 404: return None
+            if e.code == 429:
+                time.sleep(min(30, int(e.headers.get('Retry-After') or 10))); continue
+            time.sleep(3)
+        except Exception:
+            time.sleep(3)
+    return None
 
 
 def km(a, b):
     return 6371 * math.hypot(math.radians(a[1] - b[1]) * math.cos(math.radians(a[0])), math.radians(a[0] - b[0]))
 
 
-def norm(s):
-    return re.sub(r'[^a-z0-9]', '', s.lower().replace('&', 'and'))
+def candidates(p):
+    names = [p['name']] + [s.strip() for s in p['name'].split('/') if s.strip() != p['name']]
+    names = [re.sub(r'\s*\(.*\)$', '', n) for n in names]
+    out = []
+    for n in names:
+        if n.lower() in ('downtown', 'north end (west)', 'north end (central)', 'north end (east)', 'south end'): n = f'{n}'
+        out += [f'{n}, {p["city"]}, Washington', f'{n}, {p["city"]}', f'{n} ({p["city"]})', f'{n}, Washington', n]
+        if p['city'] == 'Seattle' and p.get('district') and p['district'] != n:
+            out.append(f'{n}, {p["district"]}')
+    seen, uniq = set(), []
+    for c in out:
+        if c not in seen: seen.add(c); uniq.append(c)
+    return uniq
 
 
 def find(p):
-    lat, lon = p['center'][1], p['center'][0]
-    name = re.sub(r'\s*/.*$', '', p['name'])          # "Cougar Mountain / Lakemont" -> "Cougar Mountain"
-    queries = [f'{name}, {p["city"]}, Washington', f'{name} {p["city"]} neighborhood', f'{name}, Washington']
-    seen = set()
-    for q in queries:
-        res = get(API, {'action': 'query', 'list': 'search', 'srsearch': q, 'srlimit': 5})
-        titles = [r['title'] for r in res['query']['search'] if r['title'] not in seen]
-        seen.update(titles)
-        if not titles: continue
-        info = get(API, {'action': 'query', 'titles': '|'.join(titles), 'prop': 'coordinates|pageimages|extracts|info',
-                         'exintro': 1, 'explaintext': 1, 'exsentences': 3, 'piprop': 'name|thumbnail', 'pithumbsize': 1200,
-                         'inprop': 'url', 'redirects': 1})
-        pages = {pg['title']: pg for pg in info['query'].get('pages', []) if not pg.get('missing')}
-        for t in titles:
-            pg = pages.get(t)
-            if not pg or not pg.get('coordinates'): continue
-            c = pg['coordinates'][0]
-            d = km((lat, lon), (c['lat'], c['lon']))
-            if d > 3.0: continue
-            if norm(name) not in norm(pg['title']): continue
-            return {'title': pg['title'], 'url': pg.get('fullurl'), 'km_from_center': round(d, 2),
-                    'extract': (pg.get('extract') or '').strip(), 'image': pg.get('pageimage'), 'thumb': (pg.get('thumbnail') or {}).get('source')}
+    here = (p['center'][1], p['center'][0])
+    for title in candidates(p):
+        s = fetch(SUMMARY + urllib.parse.quote(title.replace(' ', '_'), safe=''))
+        time.sleep(0.3)
+        if not s or s.get('type') != 'standard' or not s.get('coordinates'): continue
+        c = s['coordinates']; d = km(here, (c['lat'], c['lon']))
+        if d > 3.0: continue
+        img = (s.get('originalimage') or {}).get('source')
+        fname = urllib.parse.unquote(img.rsplit('/', 1)[-1]) if img else None
+        return {'title': s['title'], 'url': s['content_urls']['desktop']['page'], 'km_from_center': round(d, 2),
+                'extract': s.get('extract', '').strip(), 'image': fname, 'thumb': (s.get('thumbnail') or {}).get('source')}
     return None
 
 
 def image_credit(fname):
-    r = get(COMMONS, {'action': 'query', 'titles': 'File:' + fname, 'prop': 'imageinfo', 'iiprop': 'url|extmetadata|size|mime'})
+    q = COMMONS + '?' + urllib.parse.urlencode({'action': 'query', 'titles': 'File:' + fname, 'prop': 'imageinfo',
+                                                 'iiprop': 'url|extmetadata|size|mime', 'iiurlwidth': 1200, 'format': 'json', 'formatversion': 2})
+    r = fetch(q)
+    if not r: return None
     pg = r['query']['pages'][0]
     if 'imageinfo' not in pg: return None
     ii = pg['imageinfo'][0]; md = ii.get('extmetadata', {})
-    clean = lambda v: re.sub(r'<[^>]+>', '', (md.get(v) or {}).get('value', '')).strip()
+    clean = lambda v: re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', (md.get(v) or {}).get('value', ''))).strip()
     return {'file_page': ii.get('descriptionurl'), 'artist': clean('Artist'), 'license': clean('LicenseShortName'),
-            'license_url': clean('LicenseUrl'), 'mime': ii.get('mime'), 'width': ii.get('width')}
+            'license_url': clean('LicenseUrl'), 'mime': ii.get('mime'), 'width': ii.get('width'), 'height': ii.get('height'),
+            'thumb_1200': ii.get('thumburl')}
 
 
 if __name__ == '__main__':
     data = json.load(open(os.path.join(HERE, 'data.json')))
-    out = {}
+    os.makedirs(os.path.dirname(OUT), exist_ok=True)
+    out = json.load(open(OUT)) if os.path.exists(OUT) else {}
     for f in data['neighborhoods']['features']:
         p = f['properties']; key = f"{p['name']}|{p['city']}"
+        if key in out and 'error' not in (out[key] or {}): continue
         try:
             m = find(p)
-            if m and m['image'] and not m['image'].lower().endswith(('.svg', '.png')):
+            if m and m['image'] and m['image'].lower().endswith(('.jpg', '.jpeg', '.webp', '.tif', '.tiff')):
                 m['credit'] = image_credit(m['image'])
             elif m:
-                m['image'] = None   # maps and diagrams (SVG/PNG) are not neighborhood photos
+                m['image'] = None   # maps, logos and diagrams (SVG/PNG/GIF) are not neighborhood photos
             out[key] = m
         except Exception as e:
             out[key] = {'error': str(e)}
-        time.sleep(0.2)
-    os.makedirs(os.path.join(HERE, 'raw'), exist_ok=True)
-    json.dump(out, open(os.path.join(HERE, 'raw', 'wiki.json'), 'w'), indent=1)
+        json.dump(out, open(OUT, 'w'), indent=1)
+        print(key, '->', (out[key] or {}).get('title'), flush=True)
     found = [k for k, v in out.items() if v and not v.get('error')]
     print('articles', len(found), 'of', len(out), '| with photo', sum(1 for k in found if out[k].get('image')))
