@@ -33,14 +33,12 @@ def km(a, b):
 
 
 def candidates(p):
-    names = [p['name']] + [s.strip() for s in p['name'].split('/') if s.strip() != p['name']]
-    names = [re.sub(r'\s*\(.*\)$', '', n) for n in names]
-    out = []
-    for n in names:
-        if n.lower() in ('downtown', 'north end (west)', 'north end (central)', 'north end (east)', 'south end'): n = f'{n}'
-        out += [f'{n}, {p["city"]}, Washington', f'{n}, {p["city"]}', f'{n} ({p["city"]})', f'{n}, Washington', n]
-        if p['city'] == 'Seattle' and p.get('district') and p['district'] != n:
-            out.append(f'{n}, {p["district"]}')
+    """Most likely article titles first, at most three, to keep requests (and rate-limit waits) low."""
+    n = re.sub(r'\s*\(.*\)$', '', p['name'].split('/')[0].strip())
+    if p['city'] == 'Seattle':
+        out = [f'{n}, Seattle', f'{n}, Seattle, Washington', n]
+    else:
+        out = [f'{n}, {p["city"]}, Washington', f'{n}, Washington', f'{n}, {p["city"]}']
     seen, uniq = set(), []
     for c in out:
         if c not in seen: seen.add(c); uniq.append(c)

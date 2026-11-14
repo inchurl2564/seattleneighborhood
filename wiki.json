@@ -1,0 +1,20 @@
+{
+ "BelRed|Bellevue": null,
+ "Bridle Trails|Bellevue": {
+  "title": "Bridle Trails, Washington",
+  "url": "https://en.wikipedia.org/wiki/Bridle_Trails%2C_Washington",
+  "km_from_center": 2.02,
+  "extract": "The Bridle Trails neighborhood can refer to a neighborhood which intersects with the following cities: Bellevue, Washington; Kirkland, Washington; or Redmond, Washington. It is so named for being adjacent to Bridle Trails State Park. Many of the properties in these neighborhoods have equestrian facilities such as barns and pastures.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Bridle_Trails_State_Park_sign.jpg/330px-Bridle_Trails_State_Park_sign.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Cougar Mountain / Lakemont|Bellevue": null,
+ "Crossroads|Bellevue": {
+  "title": "Crossroads, Bellevue",
+  "url": "https://en.wikipedia.org/wiki/Crossroads%2C_Bellevue",
+  "km_from_center": 0.3,
+  "extract": "Crossroads is a neighborhood in Bellevue, Washington. It is situated in the north and eastern portion of the city, lying south of Bellevue-Redmond Road, east of Bellevue's Wilburton neighborhood, and north of Lake Hills.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Bellevue%2C_WA_%E2%80%94_Crossroads_Park_sign.jpg/330px-Bellevue%2C_WA_%E2%80%94_Crossroads_Park_sign.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ }
+}
