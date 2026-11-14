@@ -217,11 +217,24 @@ def wiki_for(p):
     return w if w and not w.get('error') else None
 
 
+# Articles under another name that describe exactly this neighborhood (not a larger area around it)
+SAME_PLACE = {'Central Business District|Seattle', 'Harrison/Denny-Blaine|Seattle', 'Holly Park|Seattle'}
+
+
+def broader_area(p, w):
+    """Name of the larger area when the matched article covers more than this neighborhood, else None."""
+    key = f"{p['name']}|{p['city']}"
+    base = re.sub(r',.*$', '', w['title'])
+    simple = lambda t: re.sub(r'[^a-z]', '', t.lower())
+    if key in SAME_PLACE or simple(p['name'].split('/')[0]) in simple(base): return None
+    return base
+
+
 def hero(p):
     w = wiki_for(p)
     cr = (w or {}).get('credit') or {}
     lic = (cr.get('license') or '').lower()
-    if w and w.get('photo_file') and lic.startswith(OK_LICENSES):
+    if w and w.get('photo_file') and lic.startswith(OK_LICENSES) and not broader_area(p, w):
         who = esc(cr.get('artist') or 'Unknown author')
         lic_link = f'<a href="{esc(cr["license_url"])}">{esc(cr["license"])}</a>' if cr.get('license_url') else esc(cr.get('license', ''))
         return (f'<figure class="hero"><img src="../../img/{esc(w["photo_file"])}" alt="{esc(p["name"])}, {esc(p["city"])}" loading="eager" width="1200" height="{w.get("photo_h", 675)}">'
@@ -233,7 +246,9 @@ def hero(p):
 def about(p):
     w = wiki_for(p)
     if not w or not w.get('extract'): return ''
-    return (f'<p>{esc(w["extract"])} <span class="note">(From <a href="{esc(w["url"])}">Wikipedia</a>, '
+    area = broader_area(p, w)
+    lead = f'<strong>{esc(p["name"])} is part of the larger {esc(area)} area.</strong> ' if area else ''
+    return (f'<p>{lead}{esc(w["extract"])} <span class="note">(From <a href="{esc(w["url"])}">Wikipedia</a>, '
             f'<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</span></p>')
 
 

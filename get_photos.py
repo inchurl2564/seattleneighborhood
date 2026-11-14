@@ -25,6 +25,15 @@ def jpeg_size(b):
     return None
 
 
+def commons_url(fname, width):
+    """Address of a Commons file on upload.wikimedia.org: the original if small, else the standard 1280px thumbnail."""
+    import hashlib, urllib.parse
+    name = fname.replace(' ', '_'); h = hashlib.md5(name.encode('utf-8')).hexdigest()
+    q = urllib.parse.quote(name)
+    if width and width <= 1280: return f'https://upload.wikimedia.org/wikipedia/commons/{h[0]}/{h[:2]}/{q}'
+    return f'https://upload.wikimedia.org/wikipedia/commons/thumb/{h[0]}/{h[:2]}/{q}/1280px-{q}'
+
+
 def slug(key):
     name, city = key.split('|')
     return re.sub(r'[^a-z0-9]+', '-', f'{name} {city}'.lower()).strip('-')
@@ -32,30 +41,38 @@ def slug(key):
 
 if __name__ == '__main__':
     wiki = json.load(open(WIKI)); os.makedirs(IMG, exist_ok=True)
+    todo = [k for k, w in wiki.items() if w and not w.get('error') and ((w.get('credit') or {}).get('thumb_1200'))
+            and ((w['credit'].get('license') or '').lower().startswith(OK))]
+    # Wikimedia throttles bursts (HTTP 429), so go slowly and come back to throttled photos on a later pass
+    for rnd in range(6):
+        left = [k for k in todo if not os.path.exists(os.path.join(IMG, slug(k) + '.jpg'))]
+        if not left: break
+        print(f'pass {rnd + 1}: {len(left)} to fetch', flush=True)
+        for key in left:
+            w = wiki[key]
+            url = commons_url(w['image'], w['credit'].get('width') or 0)
+            try:
+                with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
+                    data = r.read()
+            except urllib.error.HTTPError as e:
+                print(' ', key, e.code, flush=True); time.sleep(20 if e.code == 429 else 2); continue
+            except Exception as e:
+                print(' ', key, e, flush=True); time.sleep(5); continue
+            if not (data[:2] == b'\xff\xd8' or data[:8] == b'\x89PNG\r\n\x1a\n'): continue
+            # shrink to a web-friendly JPEG (1200px wide) so guide pages load fast on phones
+            from PIL import Image
+            import io
+            im = Image.open(io.BytesIO(data)).convert('RGB')
+            if im.width > 1200: im = im.resize((1200, round(im.height * 1200 / im.width)), Image.LANCZOS)
+            im.save(os.path.join(IMG, slug(key) + '.jpg'), 'JPEG', quality=72, optimize=True, progressive=True)
+            print(' ok', key, flush=True); time.sleep(4)
     got = 0
-    for key, w in wiki.items():
-        cr = (w or {}).get('credit') or {}
-        if not w or w.get('error') or not cr.get('thumb_1200'): continue
-        if not (cr.get('license') or '').lower().startswith(OK): continue
-        existing = [x for x in (slug(key) + '.jpg', slug(key) + '.png') if os.path.exists(os.path.join(IMG, x))]
-        fname = existing[0] if existing else None
-        if not fname:
-            for attempt in range(4):
-                try:
-                    with urllib.request.urlopen(urllib.request.Request(cr['thumb_1200'], headers=UA), timeout=60) as r:
-                        data = r.read()
-                    break
-                except urllib.error.HTTPError as e:
-                    time.sleep(min(30, int(e.headers.get('Retry-After') or 10)) if e.code == 429 else 3); data = None
-                except Exception:
-                    time.sleep(3); data = None
-            if not data or not (data[:2] == b'\xff\xd8' or data[:8] == b'\x89PNG\r\n\x1a\n'): continue
-            fname = slug(key) + ('.jpg' if data[:2] == b'\xff\xd8' else '.png')
-            open(os.path.join(IMG, fname), 'wb').write(data); time.sleep(0.5)
-        raw = open(os.path.join(IMG, fname), 'rb').read()
-        size = jpeg_size(raw) if raw[:2] == b'\xff\xd8' else struct.unpack('>II', raw[16:24])
-        w['photo_file'] = fname
-        w['photo_h'] = round(1200 * size[1] / size[0]) if size else 800
+    for key in todo:
+        fname = slug(key) + '.jpg'
+        if not os.path.exists(os.path.join(IMG, fname)): continue
+        size = jpeg_size(open(os.path.join(IMG, fname), 'rb').read())
+        wiki[key]['photo_file'] = fname
+        wiki[key]['photo_h'] = round(1200 * size[1] / size[0]) if size else 800
         got += 1
     json.dump(wiki, open(WIKI, 'w'), indent=1)
     print('photos ready:', got)
