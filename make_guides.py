@@ -149,7 +149,7 @@ ul.near a small{display:block;color:var(--muted)}
 .agent{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:16px 18px;margin:28px 0}
 .cities{columns:2 240px;column-gap:28px}.cities h2{break-before:column;margin-top:0}.cities ul{padding-left:18px;margin:0 0 18px}.cities a{color:var(--accent)}
 footer.site{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}footer.site a{color:var(--accent)}
-.note{font-size:13px;color:var(--muted)}
+.note{font-size:13px;color:var(--muted)}.note a{color:inherit}
 .hero{margin:14px 0 8px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
 .hero figcaption{font-size:11.5px;color:var(--muted);padding:6px 10px;border-top:1px solid var(--line)}
 .hero figcaption a{color:inherit}
@@ -234,7 +234,7 @@ def hero(p):
     w = wiki_for(p)
     cr = (w or {}).get('credit') or {}
     lic = (cr.get('license') or '').lower()
-    if w and w.get('photo_file') and lic.startswith(OK_LICENSES) and not broader_area(p, w):
+    if w and w.get('photo_file') and not w.get('photo_vetoed') and not w.get('photo_hold') and lic.startswith(OK_LICENSES) and not broader_area(p, w):
         who = esc(cr.get('artist') or 'Unknown author')
         lic_link = f'<a href="{esc(cr["license_url"])}">{esc(cr["license"])}</a>' if cr.get('license_url') else esc(cr.get('license', ''))
         return (f'<figure class="hero"><img src="../../img/{esc(w["photo_file"])}" alt="{esc(p["name"])}, {esc(p["city"])}" loading="eager" width="1200" height="{w.get("photo_h", 675)}">'

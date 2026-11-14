@@ -41,7 +41,8 @@ def slug(key):
 
 if __name__ == '__main__':
     wiki = json.load(open(WIKI)); os.makedirs(IMG, exist_ok=True)
-    todo = [k for k, w in wiki.items() if w and not w.get('error') and ((w.get('credit') or {}).get('thumb_1200'))
+    # photo_vetoed: removed after review, never downloaded again
+    todo = [k for k, w in wiki.items() if w and not w.get('error') and not w.get('photo_vetoed') and ((w.get('credit') or {}).get('thumb_1200'))
             and ((w['credit'].get('license') or '').lower().startswith(OK))]
     # Wikimedia throttles bursts (HTTP 429), so go slowly and come back to throttled photos on a later pass
     for rnd in range(6):

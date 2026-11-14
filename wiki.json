@@ -5,8 +5,20 @@
   "url": "https://en.wikipedia.org/wiki/Bridle_Trails%2C_Washington",
   "km_from_center": 2.02,
   "extract": "The Bridle Trails neighborhood can refer to a neighborhood which intersects with the following cities: Bellevue, Washington; Kirkland, Washington; or Redmond, Washington. It is so named for being adjacent to Bridle Trails State Park. Many of the properties in these neighborhoods have equestrian facilities such as barns and pastures.",
-  "image": null,
-  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Bridle_Trails_State_Park_sign.jpg/330px-Bridle_Trails_State_Park_sign.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  "image": "Bridle_Trails_State_Park_sign.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Bridle_Trails_State_Park_sign.jpg/330px-Bridle_Trails_State_Park_sign.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Bridle_Trails_State_Park_sign.jpg",
+   "artist": "Mccunicano",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 4032,
+   "height": 3024,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Bridle_Trails_State_Park_sign.jpg/1280px-Bridle_Trails_State_Park_sign.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "bridle-trails-bellevue.jpg",
+  "photo_h": 900
  },
  "Cougar Mountain / Lakemont|Bellevue": null,
  "Crossroads|Bellevue": {
@@ -14,7 +26,1610 @@
   "url": "https://en.wikipedia.org/wiki/Crossroads%2C_Bellevue",
   "km_from_center": 0.3,
   "extract": "Crossroads is a neighborhood in Bellevue, Washington. It is situated in the north and eastern portion of the city, lying south of Bellevue-Redmond Road, east of Bellevue's Wilburton neighborhood, and north of Lake Hills.",
+  "image": "Bellevue,_WA_\u2014_Crossroads_Park_sign.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Bellevue%2C_WA_%E2%80%94_Crossroads_Park_sign.jpg/330px-Bellevue%2C_WA_%E2%80%94_Crossroads_Park_sign.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Bellevue,_WA_%E2%80%94_Crossroads_Park_sign.jpg",
+   "artist": "Steven Pavlov",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 1942,
+   "height": 1294,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Bellevue%2C_WA_%E2%80%94_Crossroads_Park_sign.jpg/1280px-Bellevue%2C_WA_%E2%80%94_Crossroads_Park_sign.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "crossroads-bellevue.jpg",
+  "photo_h": 800
+ },
+ "Downtown|Bellevue": null,
+ "Eastgate|Bellevue": {
+  "title": "Eastgate, Bellevue",
+  "url": "https://en.wikipedia.org/wiki/Eastgate%2C_Bellevue",
+  "km_from_center": 0.47,
+  "extract": "Eastgate is a neighborhood of Bellevue, Washington, United States. The population was 4,958 at the 2010 census. It was annexed by Bellevue in 2012.",
+  "image": "EastgateAerial.png",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/EastgateAerial.png/330px-EastgateAerial.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:EastgateAerial.png",
+   "artist": "USGS EnviroMapperm Screen Capture by Kgrr (talk) 12:19, 21 April 2008 (UTC)",
+   "license": "Public domain",
+   "license_url": "",
+   "mime": "image/png",
+   "width": 599,
+   "height": 354,
+   "thumb_1200": "https://upload.wikimedia.org/wikipedia/commons/3/32/EastgateAerial.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  }
+ },
+ "Factoria|Bellevue": {
+  "title": "Factoria, Bellevue",
+  "url": "https://en.wikipedia.org/wiki/Factoria%2C_Bellevue",
+  "km_from_center": 0.45,
+  "extract": "Factoria is a mixed-use suburban neighborhood in south Bellevue, Washington and is one of the city's significant commercial districts. Originally timberland from the 1890s to 1920s and later envisioned as an industrial center, Factoria has since the 1960s evolved into commercial and residential development. Factoria was annexed into Bellevue in 1993. The core neighborhood is bounded by Interstate 90 to the north, Interstate 405 to the west, Newport Way to the east, and Coal Creek Parkway to the south.",
+  "image": "Factoria_Bellevue_2020.png",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Factoria_Bellevue_2020.png/330px-Factoria_Bellevue_2020.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Factoria_Bellevue_2020.png",
+   "artist": "CommunistSquared",
+   "license": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "mime": "image/png",
+   "width": 4000,
+   "height": 2250,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Factoria_Bellevue_2020.png/1280px-Factoria_Bellevue_2020.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "factoria-bellevue.jpg",
+  "photo_h": 675
+ },
+ "Lake Hills|Bellevue": {
+  "title": "Lake Hills, Bellevue",
+  "url": "https://en.wikipedia.org/wiki/Lake_Hills%2C_Bellevue",
+  "km_from_center": 0.54,
+  "extract": "Lake Hills is a neighborhood in Bellevue, Washington. It lies to the south of the Crossroads and north of the Eastgate neighborhoods.",
+  "image": "2018_Lake_Hills_sign.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/2018_Lake_Hills_sign.jpg/330px-2018_Lake_Hills_sign.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:2018_Lake_Hills_sign.jpg",
+   "artist": "Mark Yasuda",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 4032,
+   "height": 3024,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/2018_Lake_Hills_sign.jpg/1280px-2018_Lake_Hills_sign.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "lake-hills-bellevue.jpg",
+  "photo_h": 900
+ },
+ "Newport|Bellevue": {
+  "title": "Newport, Bellevue",
+  "url": "https://en.wikipedia.org/wiki/Newport%2C_Bellevue",
+  "km_from_center": 0.94,
+  "extract": "Newport is a neighborhood in Bellevue, Washington. It comprises the Newport Shores district along the Lake Washington shore, and the Newport Hills/Lake Heights areas east of Interstate 405.",
+  "image": "2021_Newport_Hills_neighborhood_sign_in_Bellevue_Washington.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/2021_Newport_Hills_neighborhood_sign_in_Bellevue_Washington.jpg/330px-2021_Newport_Hills_neighborhood_sign_in_Bellevue_Washington.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:2021_Newport_Hills_neighborhood_sign_in_Bellevue_Washington.jpg",
+   "artist": "Mark Yasuda",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 4032,
+   "height": 3024,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/2021_Newport_Hills_neighborhood_sign_in_Bellevue_Washington.jpg/1280px-2021_Newport_Hills_neighborhood_sign_in_Bellevue_Washington.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "newport-bellevue.jpg",
+  "photo_h": 900
+ },
+ "Northeast Bellevue|Bellevue": null,
+ "Northwest Bellevue|Bellevue": null,
+ "Somerset|Bellevue": {
+  "title": "Somerset, Washington",
+  "url": "https://en.wikipedia.org/wiki/Somerset%2C_Washington",
+  "km_from_center": 0.3,
+  "extract": "Somerset is a neighborhood in Bellevue, Washington. It contains Forest Ridge School of the Sacred Heart, Eastgate Park, and Somerset Elementary School. The hill called Somerset tops out just under 1,000 feet.",
   "image": null,
-  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Bellevue%2C_WA_%E2%80%94_Crossroads_Park_sign.jpg/330px-Bellevue%2C_WA_%E2%80%94_Crossroads_Park_sign.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Map_of_Washington_highlighting_King_County.svg/330px-Map_of_Washington_highlighting_King_County.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "West Bellevue|Bellevue": null,
+ "West Lake Sammamish|Bellevue": null,
+ "Wilburton|Bellevue": {
+  "title": "Wilburton, Washington",
+  "url": "https://en.wikipedia.org/wiki/Wilburton%2C_Washington",
+  "km_from_center": 1.01,
+  "extract": "Wilburton is a neighborhood in Bellevue, Washington, United States. It is situated to the east of downtown Bellevue, and to the west of the Crossroads and Lake Hills neighborhoods. Wilburton started out as an old logging camp, and was annexed by Bellevue in 1967. Currently, 3,790 people live in Wilburton.",
+  "image": "2021_Wilburton_community_sign_in_Bellevue_Washington.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/2021_Wilburton_community_sign_in_Bellevue_Washington.jpg/330px-2021_Wilburton_community_sign_in_Bellevue_Washington.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:2021_Wilburton_community_sign_in_Bellevue_Washington.jpg",
+   "artist": "Mark Yasuda",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 4032,
+   "height": 3024,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/2021_Wilburton_community_sign_in_Bellevue_Washington.jpg/1280px-2021_Wilburton_community_sign_in_Bellevue_Washington.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "wilburton-bellevue.jpg",
+  "photo_h": 900
+ },
+ "Woodridge|Bellevue": null,
+ "Central Issaquah|Issaquah": null,
+ "Issaquah Highlands|Issaquah": null,
+ "Issaquah Valley|Issaquah": null,
+ "Montreux|Issaquah": null,
+ "North Issaquah|Issaquah": null,
+ "Olde Town|Issaquah": null,
+ "Providence Point|Issaquah": null,
+ "South Lake Sammamish|Issaquah": null,
+ "Squak Mountain|Issaquah": null,
+ "Sycamore|Issaquah": null,
+ "Talus|Issaquah": null,
+ "Bridle Trails|Kirkland": {
+  "title": "Bridle Trails, Washington",
+  "url": "https://en.wikipedia.org/wiki/Bridle_Trails%2C_Washington",
+  "km_from_center": 0.91,
+  "extract": "The Bridle Trails neighborhood can refer to a neighborhood which intersects with the following cities: Bellevue, Washington; Kirkland, Washington; or Redmond, Washington. It is so named for being adjacent to Bridle Trails State Park. Many of the properties in these neighborhoods have equestrian facilities such as barns and pastures.",
+  "image": "Bridle_Trails_State_Park_sign.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Bridle_Trails_State_Park_sign.jpg/330px-Bridle_Trails_State_Park_sign.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Bridle_Trails_State_Park_sign.jpg",
+   "artist": "Mccunicano",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 4032,
+   "height": 3024,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Bridle_Trails_State_Park_sign.jpg/1280px-Bridle_Trails_State_Park_sign.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "bridle-trails-kirkland.jpg",
+  "photo_h": 900
+ },
+ "Central Houghton|Kirkland": null,
+ "Everest|Kirkland": null,
+ "Finn Hill|Kirkland": {
+  "title": "Inglewood-Finn Hill, Washington",
+  "url": "https://en.wikipedia.org/wiki/Inglewood-Finn_Hill%2C_Washington",
+  "km_from_center": 1.58,
+  "extract": "Inglewood-Finn Hill was a census-designated place (CDP) in King County, Washington, United States. The population was 22,707 at the 2010 census. The community was largely annexed into neighboring Kirkland in 2011.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/King_County_Washington_Incorporated_and_Unincorporated_areas_Inglewood-Finn_Hill_Highlighted.svg/330px-King_County_Washington_Incorporated_and_Unincorporated_areas_Inglewood-Finn_Hill_Highlighted.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Highlands|Kirkland": null,
+ "Juanita|Kirkland": {
+  "title": "Juanita, Kirkland, Washington",
+  "url": "https://en.wikipedia.org/wiki/Juanita%2C_Kirkland%2C_Washington",
+  "km_from_center": 0.67,
+  "extract": "Juanita is a neighborhood of Kirkland, Washington located along the northeast edge of Lake Washington. The area, one of the Eastside's most historic, was an unincorporated area governed by King County until it was gradually annexed by Kirkland in 1967, 1988, and 2011.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/King_County_Washington_Incorporated_and_Unincorporated_areas_Juanita_Highlighted.svg/330px-King_County_Washington_Incorporated_and_Unincorporated_areas_Juanita_Highlighted.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Kingsgate|Kirkland": {
+  "title": "Kingsgate, Kirkland, Washington",
+  "url": "https://en.wikipedia.org/wiki/Kingsgate%2C_Kirkland%2C_Washington",
+  "km_from_center": 0.22,
+  "extract": "Kingsgate is a neighborhood of Kirkland, Washington, United States. It was annexed by Kirkland on June 1, 2011. Prior to the annexation, Kingsgate was a census-designated place (CDP).",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/King_County_Washington_Incorporated_and_Unincorporated_areas_Kingsgate_Highlighted.svg/330px-King_County_Washington_Incorporated_and_Unincorporated_areas_Kingsgate_Highlighted.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Lakeview|Kirkland": null,
+ "Market|Kirkland": null,
+ "Moss Bay|Kirkland": null,
+ "Norkirk|Kirkland": null,
+ "North Rose Hill|Kirkland": null,
+ "South Rose Hill|Kirkland": null,
+ "Totem Lake|Kirkland": null,
+ "Mid-Island South|Mercer Island": null,
+ "North End (Central)|Mercer Island": null,
+ "North End (East)|Mercer Island": null,
+ "North End (West)|Mercer Island": null,
+ "South End|Mercer Island": null,
+ "Town Center / Mid-Island|Mercer Island": null,
+ "Bear Creek|Redmond": null,
+ "Downtown|Redmond": null,
+ "Education Hill|Redmond": null,
+ "Grass Lawn|Redmond": null,
+ "Idylwood|Redmond": null,
+ "North Redmond|Redmond": null,
+ "Overlake|Redmond": {
+  "title": "Overlake, Washington",
+  "url": "https://en.wikipedia.org/wiki/Overlake%2C_Washington",
+  "km_from_center": 2.19,
+  "extract": "Overlake is the name for a region comprising parts of eastern Bellevue and southern Redmond, Washington. It is in the vicinity of Microsoft's main corporate campus and is officially defined as a neighborhood consisting of the parts of Redmond lying south of Northeast 60th Street and between 148th Avenue Northeast and Bellevue-Redmond Road. The Overlake area, so named because it is located across Lake Washington from Seattle, straddles the boundaries of Bellevue and Redmond and is considered to have its own identity distinct from those of both cities.",
+  "image": "2018_Overlake_Plaza_sign.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/2018_Overlake_Plaza_sign.jpg/330px-2018_Overlake_Plaza_sign.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:2018_Overlake_Plaza_sign.jpg",
+   "artist": "Mark Yasuda",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 3085,
+   "height": 1977,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/2018_Overlake_Plaza_sign.jpg/1280px-2018_Overlake_Plaza_sign.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "overlake-redmond.jpg",
+  "photo_h": 769
+ },
+ "SE Redmond|Redmond": null,
+ "Sammamish Valley|Redmond": null,
+ "Willows / Rose Hill|Redmond": null,
+ "Beaver Lake / East|Sammamish": null,
+ "Inglewood / North Sammamish|Sammamish": null,
+ "Klahanie / Southeast|Sammamish": {
+  "title": "Klahanie, Washington",
+  "url": "https://en.wikipedia.org/wiki/Klahanie%2C_Washington",
+  "km_from_center": 0.09,
+  "extract": "Klahanie is a planned community in Sammamish, Washington, United States. The population was 10,674 at the 2010 census. Prior to its annexation by the city of Sammamish in 2016, Klahanie was a census-designated place (CDP) in unincorporated King County.",
+  "image": null,
+  "thumb": null
+ },
+ "Lake Sammamish Shore (West)|Sammamish": null,
+ "Pine Lake / Town Center|Sammamish": null,
+ "Sahalee / Northeast|Sammamish": null,
+ "Alki|Seattle": {
+  "title": "Alki Point, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Alki_Point%2C_Seattle",
+  "km_from_center": 0.61,
+  "extract": "Alki Point is a neighborhood in western Seattle, Washington. It is a point jutting into Puget Sound, the westernmost landform in the city's West Seattle district. Alki is the peninsular neighborhood on Alki Point. Alki was the original settlement in what was to become the city of Seattle. It was part of the city of West Seattle from 1902 until that city's annexation by Seattle in 1907.",
+  "image": "West_Seattle_with_Elliott_Bay_and_Downtown_Seattle.png",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/West_Seattle_with_Elliott_Bay_and_Downtown_Seattle.png/330px-West_Seattle_with_Elliott_Bay_and_Downtown_Seattle.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:West_Seattle_with_Elliott_Bay_and_Downtown_Seattle.png",
+   "artist": "Michael Brophy",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "mime": "image/png",
+   "width": 4000,
+   "height": 2658,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/West_Seattle_with_Elliott_Bay_and_Downtown_Seattle.png/1280px-West_Seattle_with_Elliott_Bay_and_Downtown_Seattle.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "alki-seattle.jpg",
+  "photo_h": 798
+ },
+ "Arbor Heights|Seattle": {
+  "title": "Arbor Heights, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Arbor_Heights%2C_Seattle",
+  "km_from_center": 0.32,
+  "extract": "Arbor Heights is a neighborhood of West Seattle in Seattle, Washington, made up of the area south of SW Roxbury Street, north and east of Puget Sound, but excluding the downhill portion on the west side of this region.\n It is the southernmost section of West Seattle.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/House_damaged_by_landslide%2C_1962_%284821645754%29.gif/330px-House_damaged_by_landslide%2C_1962_%284821645754%29.gif?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Atlantic|Seattle": {
+  "title": "Atlantic, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Atlantic%2C_Seattle",
+  "km_from_center": 0.92,
+  "extract": "Atlantic is a neighborhood in the Central District of Seattle, Washington, United States. It is the northernmost neighborhood in the Rainier Valley area, located between Mount Baker Ridge and Beacon Hill, and may also be considered part of South Seattle. It is home to the Judkins Park neighborhood.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Seattle_-_Atlantic_map.jpg/330px-Seattle_-_Atlantic_map.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Ballard|Seattle": {
+  "title": "Ballard, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Ballard%2C_Seattle",
+  "km_from_center": 0.59,
+  "extract": "Ballard is a neighborhood in northwestern Seattle, Washington, United States. Formerly an independent city, the City of Seattle's official boundaries define it as bounded to the north by Crown Hill, to the east by Greenwood, Phinney Ridge and Fremont, to the south by the Lake Washington Ship Canal, and to the west by Puget Sound's Shilshole Bay. Like many neighborhoods in Seattle, its boundaries are loosely defined; these are the ones recognized by the city's municipal departments.",
+  "image": "Ballard_Locks.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Ballard_Locks.jpg/330px-Ballard_Locks.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Ballard_Locks.jpg",
+   "artist": "Seachaz",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 1923,
+   "height": 1440,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Ballard_Locks.jpg/1280px-Ballard_Locks.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "ballard-seattle.jpg",
+  "photo_h": 899
+ },
+ "Belltown|Seattle": {
+  "title": "Belltown, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Belltown%2C_Seattle",
+  "km_from_center": 0.15,
+  "extract": "Belltown is the most densely populated neighborhood in Seattle, Washington, United States, located on the city's downtown waterfront on land that was artificially flattened as part of a regrading project. Formerly a low-rent, semi-industrial arts district, in recent decades it has transformed into a neighborhood of trendy restaurants, boutiques, nightclubs, and residential towers as well as warehouses and art galleries. The area is named after William Nathaniel Bell, on whose land claim the neighborhood was built.",
+  "image": "Apartment_building_in_Belltown_with_cruise_ship_in_background_-_Seattle.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Apartment_building_in_Belltown_with_cruise_ship_in_background_-_Seattle.jpg/330px-Apartment_building_in_Belltown_with_cruise_ship_in_background_-_Seattle.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Apartment_building_in_Belltown_with_cruise_ship_in_background_-_Seattle.jpg",
+   "artist": "M.O. Stevens",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "mime": "image/jpeg",
+   "width": 2755,
+   "height": 2384,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Apartment_building_in_Belltown_with_cruise_ship_in_background_-_Seattle.jpg/1280px-Apartment_building_in_Belltown_with_cruise_ship_in_background_-_Seattle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "belltown-seattle.jpg",
+  "photo_h": 1039
+ },
+ "Bitter Lake|Seattle": {
+  "title": "Bitter Lake, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Bitter_Lake%2C_Seattle",
+  "km_from_center": 0.71,
+  "extract": "Bitter Lake is a neighborhood in Seattle, Washington, United States, named after its most notable feature, Bitter Lake. It was a mostly natural forest of Douglas-fir and Western Redcedar, inhabited by Native Americans, until the late 19th century. Development especially picked up when the Seattle-to-Everett Interurban streetcar reached the lake in 1906. A sawmill operated in the area until 1913, when most of the trees had been cut down.",
+  "image": "Bitter_Lake,_Seattle.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Bitter_Lake%2C_Seattle.jpg/330px-Bitter_Lake%2C_Seattle.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Bitter_Lake,_Seattle.jpg",
+   "artist": "ECTran71",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 4032,
+   "height": 3024,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Bitter_Lake%2C_Seattle.jpg/1280px-Bitter_Lake%2C_Seattle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "bitter-lake-seattle.jpg",
+  "photo_h": 900
+ },
+ "Briarcliff|Seattle": {
+  "title": "Briarcliff, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Briarcliff%2C_Seattle",
+  "km_from_center": 0.34,
+  "extract": "Briarcliff is a neighborhood in Seattle, Washington. The city's Department of Neighborhoods places Briarcliff on the west side of Magnolia, south of Discovery Park.",
+  "image": "Briarcliff_Magnolia_Seattle_aerial.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Briarcliff_Magnolia_Seattle_aerial.jpg/330px-Briarcliff_Magnolia_Seattle_aerial.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Briarcliff_Magnolia_Seattle_aerial.jpg",
+   "artist": "Dicklyon",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 1385,
+   "height": 2456,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Briarcliff_Magnolia_Seattle_aerial.jpg/1280px-Briarcliff_Magnolia_Seattle_aerial.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "briarcliff-seattle.jpg",
+  "photo_h": 2128
+ },
+ "Brighton|Seattle": {
+  "title": "Brighton, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Brighton%2C_Seattle",
+  "km_from_center": 0.76,
+  "extract": "Brighton is a primarily residential neighborhood in southern Seattle, Washington, part of the greater Rainier Valley district and centered about a mile and a half south of the Columbia City neighborhood.",
+  "image": null,
+  "thumb": null
+ },
+ "Broadview|Seattle": {
+  "title": "Broadview, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Broadview%2C_Seattle",
+  "km_from_center": 0.16,
+  "extract": "Broadview is a neighborhood in northwestern Seattle, Washington, United States. It is at the northwestern corner of the city, adjacent to Puget Sound and the city of Shoreline to the north. The neighborhood is predominantly residential and includes portions of Carkeek Park.",
+  "image": "BroadviewView.JPG",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/BroadviewView.JPG/330px-BroadviewView.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:BroadviewView.JPG",
+   "artist": "Nick towne98",
+   "license": "CC BY 3.0",
+   "license_url": "https://creativecommons.org/licenses/by/3.0",
+   "mime": "image/jpeg",
+   "width": 3072,
+   "height": 1728,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/BroadviewView.JPG/1280px-BroadviewView.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "broadview-seattle.jpg",
+  "photo_h": 675
+ },
+ "Broadway|Seattle": null,
+ "Bryant|Seattle": {
+  "title": "Bryant, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Bryant%2C_Seattle",
+  "km_from_center": 0.18,
+  "extract": "Bryant is a residential neighborhood in northeastern Seattle, Washington. According to the City of Seattle's neighborhood maps, it is bounded by 35th Avenue NE and NE 45th Place on the west, beyond which is Ravenna; Sand Point Way NE and 45th Ave NE on the east, beyond which are Laurelhurst and Windermere; and NE 75th Street and NE 65th Street on the north, beyond which are View Ridge and Wedgwood.",
+  "image": "Seattle_-_Bryant_School_05.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Seattle_-_Bryant_School_05.jpg/330px-Seattle_-_Bryant_School_05.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_-_Bryant_School_05.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2592,
+   "height": 1944,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Seattle_-_Bryant_School_05.jpg/1280px-Seattle_-_Bryant_School_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "bryant-seattle.jpg",
+  "photo_h": 900
+ },
+ "Cedar Park|Seattle": {
+  "title": "Cedar Park, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Cedar_Park%2C_Seattle",
+  "km_from_center": 0.08,
+  "extract": "Cedar Park is a neighborhood in the Lake City district of Seattle, Washington. The name generally refers to the residential neighborhoods east of Lake City adjoining Lake Washington.",
+  "image": "Cedar_Park_play_area,_Seattle,_2016-10-29.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Cedar_Park_play_area%2C_Seattle%2C_2016-10-29.jpg/330px-Cedar_Park_play_area%2C_Seattle%2C_2016-10-29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Cedar_Park_play_area,_Seattle,_2016-10-29.jpg",
+   "artist": "Sage Ross",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 3264,
+   "height": 2448,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Cedar_Park_play_area%2C_Seattle%2C_2016-10-29.jpg/1280px-Cedar_Park_play_area%2C_Seattle%2C_2016-10-29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "cedar-park-seattle.jpg",
+  "photo_h": 900
+ },
+ "Central Business District|Seattle": {
+  "title": "Downtown Seattle",
+  "url": "https://en.wikipedia.org/wiki/Downtown_Seattle",
+  "km_from_center": 0.15,
+  "extract": "Downtown is the central business district of Seattle, Washington. It is fairly compact compared with other city centers on the U.S. West Coast due to its geographical situation, being hemmed in on the north and east by hills, on the west by Elliott Bay, and on the south by reclaimed land that was once tidal flats. It is bounded on the north by Denny Way, beyond which are Lower Queen Anne, Seattle Center, and South Lake Union; on the east by Interstate 5, beyond which is Capitol Hill to the northeast and Central District to the east; on the south by S Dearborn Street, beyond which is Sodo; and on the west by Elliott Bay, a part of Puget Sound.",
+  "image": "Seattle_downtown_neighborhoods.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Seattle_downtown_neighborhoods.jpg/330px-Seattle_downtown_neighborhoods.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_downtown_neighborhoods.jpg",
+   "artist": "Office of the Seattle City Clerk",
+   "license": "Public domain",
+   "license_url": "",
+   "mime": "image/jpeg",
+   "width": 1242,
+   "height": 1062,
+   "thumb_1200": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Seattle_downtown_neighborhoods.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  }
+ },
+ "Columbia City|Seattle": {
+  "title": "Columbia City, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Columbia_City%2C_Seattle",
+  "km_from_center": 0.12,
+  "extract": "Columbia City is a neighborhood in southeastern Seattle, Washington, within the city's Rainier Valley district. It has a landmark-protected historic business district and is one of the few Seattle neighborhoods with a long history of ethnic and income diversity.",
+  "image": "Rainier_Valley_Cultural_Center.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Rainier_Valley_Cultural_Center.jpg/330px-Rainier_Valley_Cultural_Center.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Rainier_Valley_Cultural_Center.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2592,
+   "height": 1944,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Rainier_Valley_Cultural_Center.jpg/1280px-Rainier_Valley_Cultural_Center.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "columbia-city-seattle.jpg",
+  "photo_h": 900
+ },
+ "Crown Hill|Seattle": {
+  "title": "Crown Hill, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Crown_Hill%2C_Seattle",
+  "km_from_center": 0.28,
+  "extract": "Crown Hill is a neighborhood in the city of Seattle, Washington, United States.",
+  "image": "Seattle_-_Holman_Road,_1959.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Seattle_-_Holman_Road%2C_1959.jpg/330px-Seattle_-_Holman_Road%2C_1959.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_-_Holman_Road,_1959.jpg",
+   "artist": "Seattle Municipal Archives",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "mime": "image/jpeg",
+   "width": 1457,
+   "height": 990,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Seattle_-_Holman_Road%2C_1959.jpg/1280px-Seattle_-_Holman_Road%2C_1959.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "crown-hill-seattle.jpg",
+  "photo_h": 816
+ },
+ "Denny Triangle|Seattle": {
+  "title": "Denny Triangle, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Denny_Triangle%2C_Seattle",
+  "km_from_center": 0.35,
+  "extract": "The Denny Triangle is a neighborhood in Seattle, Washington, United States, that stretches north of Downtown Seattle to the grounds of the Seattle Center. Its generally flat terrain was originally a steep hill, taken down as part of a mammoth construction project in the first decades of the 20th century known as the Denny Regrade, which is another name for the neighborhood on the regraded area. The name Denny Triangle, referring to the northeastern portion of this regrading project, is a term that has gained currency as this neighborhood has seen increasing development in the first decades of the 21st century.",
+  "image": "Denny_Triangle_and_South_Lake_Union_skyline,_from_Westlake_&_Galer_(2018).jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Denny_Triangle_and_South_Lake_Union_skyline%2C_from_Westlake_%26_Galer_%282018%29.jpg/330px-Denny_Triangle_and_South_Lake_Union_skyline%2C_from_Westlake_%26_Galer_%282018%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Denny_Triangle_and_South_Lake_Union_skyline,_from_Westlake_%26_Galer_(2018).jpg",
+   "artist": "SounderBruce",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 4738,
+   "height": 3146,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Denny_Triangle_and_South_Lake_Union_skyline%2C_from_Westlake_%26_Galer_%282018%29.jpg/1280px-Denny_Triangle_and_South_Lake_Union_skyline%2C_from_Westlake_%26_Galer_%282018%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "denny-triangle-seattle.jpg",
+  "photo_h": 797
+ },
+ "Dunlap|Seattle": {
+  "title": "Dunlap, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Dunlap%2C_Seattle",
+  "km_from_center": 0.37,
+  "extract": "Dunlap is a neighborhood in southern Seattle, Washington, just north of Rainier Beach. It is home to Dunlap Elementary School, part of the Seattle Public Schools. Dunlap is named after Joseph Dunlap, the first homesteader in the area.",
+  "image": "Seattle_-_Dunlap_School_02.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Seattle_-_Dunlap_School_02.jpg/330px-Seattle_-_Dunlap_School_02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_-_Dunlap_School_02.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 3264,
+   "height": 2448,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Seattle_-_Dunlap_School_02.jpg/1280px-Seattle_-_Dunlap_School_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "dunlap-seattle.jpg",
+  "photo_h": 900
+ },
+ "East Queen Anne|Seattle": null,
+ "Eastlake|Seattle": {
+  "title": "Eastlake, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Eastlake%2C_Seattle",
+  "km_from_center": 0.54,
+  "extract": "Eastlake is a neighborhood in Seattle, Washington, so named because of its location on the eastern shore of Lake Union. Its main thoroughfare is Eastlake Avenue E., which runs from Howell Street at the northeast corner of Downtown north over the University Bridge to the University District, where it connects to Roosevelt Way N.E. and 11th Avenue N.E. A second thoroughfare is Boylston Avenue E.; as an arterial, it parallels Interstate 5 for the four blocks between E. Newton Street to the south and E. Roanoke Street to the north, acting as an extension of Capitol Hill's Lakeview Boulevard E.",
+  "image": "Lake-Union-3141.JPG",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Lake-Union-3141.JPG/330px-Lake-Union-3141.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Lake-Union-3141.JPG",
+   "artist": "Vladimir Menkov",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2048,
+   "height": 1536,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Lake-Union-3141.JPG/1280px-Lake-Union-3141.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "eastlake-seattle.jpg",
+  "photo_h": 900
+ },
+ "Fairmount Park|Seattle": {
+  "title": "Fairmount Park, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Fairmount_Park%2C_Seattle",
+  "km_from_center": 0.71,
+  "extract": "The Fairmount Park is a neighborhood of West Seattle in Seattle, Washington. It runs southwest along both sides of Fauntleroy Way, from SW Graham Street in the south to SW Edmunds Street in the north. Neighborhood features include Fairmount Playfield, a city park, and Fairmount Park Elementary School, part of the Seattle Public Schools system.",
+  "image": "Seattle_-_Fairmount_Park_01.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Seattle_-_Fairmount_Park_01.jpg/330px-Seattle_-_Fairmount_Park_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_-_Fairmount_Park_01.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "mime": "image/jpeg",
+   "width": 4288,
+   "height": 2848,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Seattle_-_Fairmount_Park_01.jpg/1280px-Seattle_-_Fairmount_Park_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "fairmount-park-seattle.jpg",
+  "photo_h": 797
+ },
+ "Fauntleroy|Seattle": {
+  "title": "Fauntleroy, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Fauntleroy%2C_Seattle",
+  "km_from_center": 0.42,
+  "extract": "Fauntleroy is a neighborhood in the southwest corner of Seattle, Washington. Part of West Seattle and situated on Puget Sound's Fauntleroy Cove, it faces Vashon Island, Blake Island, and the Kitsap Peninsula to the west. On sunny days, many locations in the neighborhood offer views of the Olympic Mountains, which are about 40 miles (64\u00a0km) to the west. The neighborhood adjoins Lincoln Park to the north, Fauntlee Hills to the east, and Arbor Heights to the south. Within Fauntleroy is an area known as Endolyne. Fauntleroy is home to an eponymous Washington State Ferries terminal, providing service to Vashon Island and Southworth.",
+  "image": "Fauntleroy_Endolyne_01.JPG",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Fauntleroy_Endolyne_01.JPG/330px-Fauntleroy_Endolyne_01.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Fauntleroy_Endolyne_01.JPG",
+   "artist": "Rr parker",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "mime": "image/jpeg",
+   "width": 1280,
+   "height": 960,
+   "thumb_1200": "https://upload.wikimedia.org/wikipedia/commons/3/38/Fauntleroy_Endolyne_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  }
+ },
+ "First Hill|Seattle": {
+  "title": "First Hill, Seattle",
+  "url": "https://en.wikipedia.org/wiki/First_Hill%2C_Seattle",
+  "km_from_center": 0.09,
+  "extract": "First Hill is a neighborhood in Seattle, Washington, United States. It is named for the hill on which it is located, which in turn is so named for being the first hill encountered while traveling east from downtown Seattle toward Lake Washington.\nFirst Hill is bounded on the west by Interstate 5, beyond which is Downtown, on the north by E. Pike and E. Madison Streets, beyond which is Capitol Hill, and on the south by Yesler Way, beyond which is the International District. The City of Seattle provides conflicting information about its eastern limit, beyond which are Cherry Hill and the Central District. Some describe it as being bounded by Broadway and Boren Avenues, while others describe it as being bounded by 12th Avenue.",
+  "image": "Seattle_-_Stacy_Mansion_02.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Seattle_-_Stacy_Mansion_02.jpg/330px-Seattle_-_Stacy_Mansion_02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_-_Stacy_Mansion_02.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2592,
+   "height": 1944,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Seattle_-_Stacy_Mansion_02.jpg/1280px-Seattle_-_Stacy_Mansion_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "first-hill-seattle.jpg",
+  "photo_h": 900
+ },
+ "Fremont|Seattle": {
+  "title": "Fremont, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Fremont%2C_Seattle",
+  "km_from_center": 0.8,
+  "extract": "Fremont is a neighborhood in northern Seattle, Washington, United States. Originally a separate city, it was annexed to Seattle in 1891. It is named after Fremont, Nebraska, the hometown of two of its founders: Luther H. Griffith and Edward Blewett.",
+  "image": "Seattle_-_Fremont_Cut_from_Eliza_Ferry_Leary_House_01.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Seattle_-_Fremont_Cut_from_Eliza_Ferry_Leary_House_01.jpg/330px-Seattle_-_Fremont_Cut_from_Eliza_Ferry_Leary_House_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_-_Fremont_Cut_from_Eliza_Ferry_Leary_House_01.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "mime": "image/jpeg",
+   "width": 4288,
+   "height": 2848,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Seattle_-_Fremont_Cut_from_Eliza_Ferry_Leary_House_01.jpg/1280px-Seattle_-_Fremont_Cut_from_Eliza_Ferry_Leary_House_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "fremont-seattle.jpg",
+  "photo_h": 797
+ },
+ "Gatewood|Seattle": {
+  "title": "Gatewood, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Gatewood%2C_Seattle",
+  "km_from_center": 0.36,
+  "extract": "Gatewood is a neighborhood of West Seattle in Seattle, Washington. Situated on the highest hill in Seattle it overlooks Puget Sound, the Olympic Mountains, and downtown Seattle. It is generally bounded to the north and south by Raymond and Thistle Streets respectively, to the east by 35th Avenue, and the west by California Avenue and Fauntleroy Way. The neighborhood's landmarks include the Gatewood School, currently an elementary school. It is minutes from Lincoln Park.",
+  "image": "Seattle_-_Gatewood_School_03.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Seattle_-_Gatewood_School_03.jpg/330px-Seattle_-_Gatewood_School_03.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_-_Gatewood_School_03.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 3264,
+   "height": 2448,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Seattle_-_Gatewood_School_03.jpg/1280px-Seattle_-_Gatewood_School_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "gatewood-seattle.jpg",
+  "photo_h": 900
+ },
+ "Genesee|Seattle": {
+  "title": "Genesee, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Genesee%2C_Seattle",
+  "km_from_center": 0.14,
+  "extract": "Genesee is a neighborhood of West Seattle in Seattle, Washington. It extends north from SW Genesee St. to SW Charlestown St., and west from 46th to 56th Avenues SW. The neighborhood includes Ercolini Park and the new Genesee Hill Elementary School. It should not be confused with Genesee Park, in Rainier Valley.",
+  "image": "Genesee_Elementary_School,_1976_(28920792594).jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Genesee_Elementary_School%2C_1976_%2828920792594%29.jpg/330px-Genesee_Elementary_School%2C_1976_%2828920792594%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Genesee_Elementary_School,_1976_(28920792594).jpg",
+   "artist": "Seattle Municipal Archives from Seattle, WA",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "mime": "image/jpeg",
+   "width": 1200,
+   "height": 820,
+   "thumb_1200": "https://upload.wikimedia.org/wikipedia/commons/7/78/Genesee_Elementary_School%2C_1976_%2828920792594%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "photo_file": "genesee-seattle.jpg",
+  "photo_h": 820
+ },
+ "Georgetown|Seattle": {
+  "title": "Georgetown, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Georgetown%2C_Seattle",
+  "km_from_center": 0.29,
+  "extract": "Georgetown is a neighborhood in southern Seattle, Washington, United States. It is bounded on the north by the mainlines of the BNSF Railway and Union Pacific Railroad, beyond which is the Industrial District; on the west by the Duwamish River, across which is South Park; on the east by Interstate 5, beyond which is Beacon Hill; and on the south by Boeing Field.",
+  "image": "Seattle_Georgetown_01.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Seattle_Georgetown_01.jpg/330px-Seattle_Georgetown_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_Georgetown_01.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2592,
+   "height": 1944,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Seattle_Georgetown_01.jpg/1280px-Seattle_Georgetown_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "georgetown-seattle.jpg",
+  "photo_h": 900
+ },
+ "Green Lake|Seattle": {
+  "title": "Green Lake, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Green_Lake%2C_Seattle",
+  "km_from_center": 0.43,
+  "extract": "Green Lake is a neighborhood in north central Seattle, Washington. Its centerpiece is the lake and park after which it is named.",
+  "image": "Green_Lake_Library-1.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Green_Lake_Library-1.jpg/330px-Green_Lake_Library-1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Green_Lake_Library-1.jpg",
+   "artist": "Shakespeare at English Wikipedia",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "mime": "image/jpeg",
+   "width": 2560,
+   "height": 1920,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Green_Lake_Library-1.jpg/1280px-Green_Lake_Library-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "green-lake-seattle.jpg",
+  "photo_h": 900
+ },
+ "Greenwood|Seattle": {
+  "title": "Greenwood, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Greenwood%2C_Seattle",
+  "km_from_center": 0.4,
+  "extract": "Greenwood is a neighborhood in north central Seattle, Washington, United States. The intersection of Greenwood Avenue North and North 85th Street is the commercial center. Greenwood is known for its numerous bars, restaurants, coffee houses, theatres and specialty stores. Greenwood's main thoroughfares are Greenwood Avenue North and N. 85th streets.",
+  "image": "Aerial_-_Greenwood,_Seattle,_1969.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Aerial_-_Greenwood%2C_Seattle%2C_1969.jpg/330px-Aerial_-_Greenwood%2C_Seattle%2C_1969.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Aerial_-_Greenwood,_Seattle,_1969.jpg",
+   "artist": "Seattle Municipal Archives",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "mime": "image/jpeg",
+   "width": 1200,
+   "height": 801,
+   "thumb_1200": "https://upload.wikimedia.org/wikipedia/commons/3/33/Aerial_-_Greenwood%2C_Seattle%2C_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "photo_file": "greenwood-seattle.jpg",
+  "photo_h": 801
+ },
+ "Haller Lake|Seattle": {
+  "title": "Haller Lake, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Haller_Lake%2C_Seattle",
+  "km_from_center": 0.7,
+  "extract": "Haller Lake is a small lake and neighborhood in north central Seattle, Washington, named for Theodore N. Haller, who platted the neighborhood in 1905. His father, Granville O. Haller, was one of Seattle's early settlers, an army officer who amassed a large estate in the region.",
+  "image": "Haller_Lake.JPG",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Haller_Lake.JPG/330px-Haller_Lake.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Haller_Lake.JPG",
+   "artist": "Thomasedavis at English Wikipedia",
+   "license": "Public domain",
+   "license_url": "",
+   "mime": "image/jpeg",
+   "width": 472,
+   "height": 296,
+   "thumb_1200": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Haller_Lake.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  }
+ },
+ "Harrison/Denny-Blaine|Seattle": {
+  "title": "Denny-Blaine, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Denny-Blaine%2C_Seattle",
+  "km_from_center": 0.4,
+  "extract": "Denny-Blaine is a neighborhood in east central Seattle, Washington. It is bounded on the east by Lake Washington; on the south by E. Howell Street, beyond which is Madrona; on the west by 32nd Avenue, beyond which is Madison Valley; and on the north by Lake Washington Boulevard E., Hillside Drive E., and E. Prospect Street, beyond which are Washington Park and Madison Park.",
+  "image": "Denny_Blaine.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Denny_Blaine.jpg/330px-Denny_Blaine.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Denny_Blaine.jpg",
+   "artist": "Visitor7",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "mime": "image/jpeg",
+   "width": 3291,
+   "height": 2194,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Denny_Blaine.jpg/1280px-Denny_Blaine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "harrison-denny-blaine-seattle.jpg",
+  "photo_h": 800
+ },
+ "High Point|Seattle": {
+  "title": "West Seattle",
+  "url": "https://en.wikipedia.org/wiki/West_Seattle",
+  "km_from_center": 2.4,
+  "extract": "West Seattle is a conglomeration of neighborhoods in Seattle, Washington, United States. It comprises two of the thirteen districts, Delridge and Southwest, and encompasses all of Seattle west of the Duwamish River. It was incorporated as an independent town in 1902 before being annexed by Seattle five years later. Among the area's attractions are its saltwater beach parks along Elliott Bay and Puget Sound, including Alki Beach Park and Lincoln Park. The area is also known for its views of the Olympic Mountains to the west and the Cascade Range to the east. One-third of Seattle's green space and urban forest is located in West Seattle, much of it in the West Duwamish Greenbelt.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Seattle_Map_-_West_Seattle.png/330px-Seattle_Map_-_West_Seattle.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Highland Park|Seattle": {
+  "title": "Delridge, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Delridge%2C_Seattle",
+  "km_from_center": 1.57,
+  "extract": "Delridge is a district in Seattle, Washington, United States that stretches along Delridge Way, an arterial that follows the eastern slope of the valley of Longfellow Creek, from near its source just within the southern city limits north to the West Seattle Bridge over the Duwamish River. It is generally associated with the neighboring district of West Seattle, or even considered a sub-district of West Seattle.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Seattle_Map_-_Delridge.png/330px-Seattle_Map_-_Delridge.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Holly Park|Seattle": {
+  "title": "NewHolly, Seattle",
+  "url": "https://en.wikipedia.org/wiki/NewHolly%2C_Seattle",
+  "km_from_center": 0.17,
+  "extract": "NewHolly is a neighborhood in southeastern Seattle, Washington, United States. It is part of Seattle's South End.",
+  "image": "New_Holly_Residential_Street_with_bike_sharrows_(4575703584)_(2).jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/New_Holly_Residential_Street_with_bike_sharrows_%284575703584%29_%282%29.jpg/330px-New_Holly_Residential_Street_with_bike_sharrows_%284575703584%29_%282%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:New_Holly_Residential_Street_with_bike_sharrows_(4575703584)_(2).jpg",
+   "artist": "Brett VA",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "mime": "image/jpeg",
+   "width": 1000,
+   "height": 750,
+   "thumb_1200": "https://upload.wikimedia.org/wikipedia/commons/2/26/New_Holly_Residential_Street_with_bike_sharrows_%284575703584%29_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  }
+ },
+ "Industrial District|Seattle": {
+  "title": "Industrial District, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Industrial_District%2C_Seattle",
+  "km_from_center": 0.16,
+  "extract": "The Industrial District is a neighborhood and the principal industrial area of Seattle, Washington. It is bounded on the west by the Duwamish River and Elliott Bay, beyond which lies Delridge of West Seattle; on the east by Interstate 5, beyond which lies Beacon Hill; on the north by S King and S Dearborn Streets, beyond which lie Pioneer Square and southwest International District of Downtown; and on the south by the main lines of the BNSF Railway and Union Pacific Railroad, or about S Lucille Street, beyond which is Georgetown. SoDo is the name of the northwest portion of the neighborhood, named for its being South of Downtown. SoDo is the location of T-Mobile Park, home of the Seattle Mariners, and Lumen Field, home of the Seattle Seahawks and Seattle Sounders FC. Lumen Field was also the site of the former Kingdome.",
+  "image": "Oldinsseattle.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Oldinsseattle.jpg/330px-Oldinsseattle.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Oldinsseattle.jpg",
+   "artist": "GSA",
+   "license": "Public domain",
+   "license_url": "",
+   "mime": "image/jpeg",
+   "width": 600,
+   "height": 453,
+   "thumb_1200": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Oldinsseattle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "photo_file": "industrial-district-seattle.jpg",
+  "photo_h": 906
+ },
+ "Interbay|Seattle": {
+  "title": "Interbay, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Interbay%2C_Seattle",
+  "km_from_center": 0.61,
+  "extract": "Interbay is a neighborhood in northwestern Seattle, Washington. It consists of the valley between Queen Anne Hill on the east and Magnolia on the west, plus filled-in areas of Smith Cove and Salmon Bay. The neighborhood is bounded on the north by Salmon Bay, part of the Lake Washington Ship Canal, across which is Ballard; on the south by what remains of Smith Cove, an inlet of Elliott Bay; on the east by 15th Avenue W. and Elliott Avenue W.; and on the west by the BNSF Railway. The Ballard Bridge crosses the ship canal from Interbay to Ballard.",
+  "image": "Seattle_Fishermen's_Terminal_at_sunset_07.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Seattle_Fishermen%27s_Terminal_at_sunset_07.jpg/330px-Seattle_Fishermen%27s_Terminal_at_sunset_07.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_Fishermen%27s_Terminal_at_sunset_07.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2592,
+   "height": 1944,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Seattle_Fishermen%27s_Terminal_at_sunset_07.jpg/1280px-Seattle_Fishermen%27s_Terminal_at_sunset_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "interbay-seattle.jpg",
+  "photo_h": 900
+ },
+ "International District|Seattle": {
+  "title": "Chinatown\u2013International District, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Chinatown%E2%80%93International_District%2C_Seattle",
+  "km_from_center": 0.04,
+  "extract": "The Chinatown\u2013International District is a neighborhood of Seattle, Washington. It is the center of the city's Asian American community. Within the district are the three neighborhoods known as Chinatown, Japantown and Little Saigon, named for the concentration of businesses owned by people of Chinese, Japanese and Vietnamese descent, respectively. The geographic area also once included Manilatown.",
+  "image": "Seattle_-_Chinatown_gate_04.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Seattle_-_Chinatown_gate_04.jpg/330px-Seattle_-_Chinatown_gate_04.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_-_Chinatown_gate_04.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2592,
+   "height": 1944,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Seattle_-_Chinatown_gate_04.jpg/1280px-Seattle_-_Chinatown_gate_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "international-district-seattle.jpg",
+  "photo_h": 900
+ },
+ "Laurelhurst|Seattle": {
+  "title": "Laurelhurst, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Laurelhurst%2C_Seattle",
+  "km_from_center": 0.23,
+  "extract": "Laurelhurst is a residential neighborhood in northeastern Seattle, Washington, US. It is bounded on the northeast by Ivanhoe Place N.E., beyond which is Windermere; on the northwest by Sand Point Way N.E. and N.E. 45th Street, beyond which are Hawthorne Hills, Ravenna, and University Village; on the west by Mary Gates Memorial Drive N.E., beyond which is the East Campus of the University of Washington; on the southwest by Union Bay; and on the east by Lake Washington. Seattle Children's Hospital is located in its northwest corner. Once a seasonal campground of the Duwamish people, the neighborhood has been a part of Seattle since its annexation in 1910.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Seattle_Map_-_Laurelhurst.png/330px-Seattle_Map_-_Laurelhurst.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Lawton Park|Seattle": {
+  "title": "Magnolia, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Magnolia%2C_Seattle",
+  "km_from_center": 1.21,
+  "extract": "Magnolia is the second largest neighborhood of Seattle, Washington, by area, located northwest of downtown. It occupies a hilly headland overlooking Puget Sound. Magnolia has been a part of the city since 1891. Much of the headland is taken up by Discovery Park, formerly the U.S. Army's Fort Lawton.",
+  "image": "Seattle-Columbia-look-north-2319.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Seattle-Columbia-look-north-2319.jpg/330px-Seattle-Columbia-look-north-2319.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle-Columbia-look-north-2319.jpg",
+   "artist": "Vmenkov",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 1600,
+   "height": 1200,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Seattle-Columbia-look-north-2319.jpg/1280px-Seattle-Columbia-look-north-2319.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "lawton-park-seattle.jpg",
+  "photo_h": 900
+ },
+ "Leschi|Seattle": {
+  "title": "Leschi, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Leschi%2C_Seattle",
+  "km_from_center": 0.12,
+  "extract": "Leschi is a neighborhood in the city of Seattle, Washington, United States. Located on the western shore of Lake Washington, the residential neighborhood was named by its 19th-century developer for Chief Leschi of the Nisqually tribe, who was executed by territorial authorities in 1858 in Pierce County, Washington.",
+  "image": "Leschi_marina_05.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Leschi_marina_05.jpg/330px-Leschi_marina_05.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Leschi_marina_05.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2592,
+   "height": 1944,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Leschi_marina_05.jpg/1280px-Leschi_marina_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "leschi-seattle.jpg",
+  "photo_h": 900
+ },
+ "Licton Springs|Seattle": {
+  "title": "Licton Springs, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Licton_Springs%2C_Seattle",
+  "km_from_center": 0.12,
+  "extract": "Licton Springs or North College Park is a neighborhood in the informal Northgate district of North Seattle. It is bounded by Interstate 5 to the east, beyond which is Maple Leaf neighborhood and the Northgate Mall; Aurora Avenue N to the west, beyond which is Greenwood; N 85th Street to the south, beyond which is Green Lake, and N Northgate Way to the north, beyond which is Haller Lake.",
+  "image": "Licton_Springs_Park_03.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Licton_Springs_Park_03.jpg/330px-Licton_Springs_Park_03.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Licton_Springs_Park_03.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "mime": "image/jpeg",
+   "width": 6000,
+   "height": 4000,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Licton_Springs_Park_03.jpg/1280px-Licton_Springs_Park_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "licton-springs-seattle.jpg",
+  "photo_h": 800
+ },
+ "Lower Queen Anne|Seattle": {
+  "title": "Lower Queen Anne, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Lower_Queen_Anne%2C_Seattle",
+  "km_from_center": 0.4,
+  "extract": "Lower Queen Anne is a neighborhood in northwestern Seattle, Washington, at the base of Queen Anne Hill. While its boundaries are not precise, the toponym usually refers to the shopping, office, and residential districts to the north and west of Seattle Center. The neighborhood is connected to Upper Queen Anne\u2014the shopping district at the top of the hill\u2014by an extremely steep section of Queen Anne Avenue N. known as the Counterbalance, in memory of the cable cars that once ran up and down it.",
+  "image": "Lower_Queen_Anne,_Seattle.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Lower_Queen_Anne%2C_Seattle.jpg/330px-Lower_Queen_Anne%2C_Seattle.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Lower_Queen_Anne,_Seattle.jpg",
+   "artist": "Wknight94",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "mime": "image/jpeg",
+   "width": 3072,
+   "height": 2304,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Lower_Queen_Anne%2C_Seattle.jpg/1280px-Lower_Queen_Anne%2C_Seattle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "lower-queen-anne-seattle.jpg",
+  "photo_h": 900
+ },
+ "Loyal Heights|Seattle": {
+  "title": "Loyal Heights, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Loyal_Heights%2C_Seattle",
+  "km_from_center": 0.06,
+  "extract": "Loyal Heights is a neighborhood in Seattle, Washington. It is considered part of greater Ballard.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Seattle_-_Loyal_Heights_map.jpg/330px-Seattle_-_Loyal_Heights_map.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Madison Park|Seattle": {
+  "title": "Madison Park, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Madison_Park%2C_Seattle",
+  "km_from_center": 0.64,
+  "extract": "Madison Park is a neighborhood in eastern Seattle, Washington, United States. It is named after the city park at the foot of Madison Street on the Lake Washington shore. The neighborhood is generally bounded on the east by Lake Washington; on the south by East Prospect Street, beyond which is Denny-Blaine; on the west by Lake Washington Boulevard E.; and on the north by Union Bay. Madison Park generally consists of single-family housing with a small business district near the park.",
+  "image": "Mount_Rainier_27477.JPG",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Mount_Rainier_27477.JPG/330px-Mount_Rainier_27477.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Mount_Rainier_27477.JPG",
+   "artist": "Walter Siegmund",
+   "license": "CC BY 2.5",
+   "license_url": "https://creativecommons.org/licenses/by/2.5",
+   "mime": "image/jpeg",
+   "width": 2560,
+   "height": 1920,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Mount_Rainier_27477.JPG/1280px-Mount_Rainier_27477.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "madison-park-seattle.jpg",
+  "photo_h": 900,
+  "photo_hold": true
+ },
+ "Madrona|Seattle": {
+  "title": "Madrona, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Madrona%2C_Seattle",
+  "km_from_center": 0.06,
+  "extract": "Madrona is a mostly residential neighborhood in east Seattle, Washington. It is bounded on the east by Lake Washington; on the south by E. Cherry Street, beyond which is Leschi; on the west by Martin Luther King Jr. Way, beyond which is the Central District; and on the north by E. Howell Street, beyond which is Denny-Blaine.",
+  "image": "Raymond-Ogden_Mansion_03.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Raymond-Ogden_Mansion_03.jpg/330px-Raymond-Ogden_Mansion_03.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Raymond-Ogden_Mansion_03.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2592,
+   "height": 1944,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Raymond-Ogden_Mansion_03.jpg/1280px-Raymond-Ogden_Mansion_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "madrona-seattle.jpg",
+  "photo_h": 900
+ },
+ "Mann|Seattle": null,
+ "Maple Leaf|Seattle": {
+  "title": "Maple Leaf, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Maple_Leaf%2C_Seattle",
+  "km_from_center": 0.41,
+  "extract": "Maple Leaf is a mostly residential neighborhood located in northeast Seattle.",
+  "image": "Maple_Leaf_Park_Seattle.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Maple_Leaf_Park_Seattle.jpg/330px-Maple_Leaf_Park_Seattle.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Maple_Leaf_Park_Seattle.jpg",
+   "artist": "",
+   "license": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "mime": "image/jpeg",
+   "width": 7728,
+   "height": 5152,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Maple_Leaf_Park_Seattle.jpg/1280px-Maple_Leaf_Park_Seattle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "maple-leaf-seattle.jpg",
+  "photo_h": 800
+ },
+ "Matthews Beach|Seattle": {
+  "title": "Matthews Beach, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Matthews_Beach%2C_Seattle",
+  "km_from_center": 0.68,
+  "extract": "Matthews Beach is a neighborhood in Seattle, Washington; it and Meadowbrook are the southern neighborhoods of the annexed township of Lake City (1954). Matthews Beach lies about 2 miles (3.2\u00a0km) northeast of the University of Washington, about 8 miles (13\u00a0km) northeast of Downtown.",
+  "image": "Seattle_-_Matthews_Beach_Park_02.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Seattle_-_Matthews_Beach_Park_02.jpg/330px-Seattle_-_Matthews_Beach_Park_02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_-_Matthews_Beach_Park_02.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 4288,
+   "height": 2848,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Seattle_-_Matthews_Beach_Park_02.jpg/1280px-Seattle_-_Matthews_Beach_Park_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "matthews-beach-seattle.jpg",
+  "photo_h": 797
+ },
+ "Meadowbrook|Seattle": {
+  "title": "Meadowbrook, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Meadowbrook%2C_Seattle",
+  "km_from_center": 0.15,
+  "extract": "Meadowbrook is a neighborhood in the Lake City district of Seattle, Washington. Meadowbrook is centered on open fields adjacent to the Community Center, Meadowbrook swimming pool, and Nathan Hale High School. It is bounded on the south by NE 95th Street and the Wedgwood neighborhood, on the north by NE 120th Street and Cedar Park, on the west by Lake City Way NE and Victory Heights, and on the east by 35th Avenue NE and Matthews Beach.",
+  "image": "Seattle_-_autumn,_looking_north_on_35th_NE_near_NE_98th_-_01.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Seattle_-_autumn%2C_looking_north_on_35th_NE_near_NE_98th_-_01.jpg/330px-Seattle_-_autumn%2C_looking_north_on_35th_NE_near_NE_98th_-_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_-_autumn,_looking_north_on_35th_NE_near_NE_98th_-_01.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY 3.0",
+   "license_url": "https://creativecommons.org/licenses/by/3.0",
+   "mime": "image/jpeg",
+   "width": 4288,
+   "height": 2848,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Seattle_-_autumn%2C_looking_north_on_35th_NE_near_NE_98th_-_01.jpg/1280px-Seattle_-_autumn%2C_looking_north_on_35th_NE_near_NE_98th_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "meadowbrook-seattle.jpg",
+  "photo_h": 797
+ },
+ "Mid-Beacon Hill|Seattle": null,
+ "Minor|Seattle": null,
+ "Montlake|Seattle": {
+  "title": "Montlake, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Montlake%2C_Seattle",
+  "km_from_center": 0.4,
+  "extract": "Montlake is a wealthy residential neighborhood in central Seattle, Washington. It is located along the Montlake Cut of the Lake Washington Ship Canal, bounded to the north by Portage Bay, to the east by the Washington Park Arboretum, and to the south and west by Interlaken Park. Capitol Hill is on its south and west sides, and the University of Washington campus lies across the Montlake Cut to the north. State Route 520 runs through the northern tip of Montlake, isolating four blocks from the rest of the neighborhood. The (unofficial) City Clerk's map of Montlake considers it to extend further west, past Interlaken Park, extending to Broadway Avenue E. and, between Lynn Street and State Route 520, all the way to Interstate 5.",
+  "image": "Seattle_Yacht_Club_06.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Seattle_Yacht_Club_06.jpg/330px-Seattle_Yacht_Club_06.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_Yacht_Club_06.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2592,
+   "height": 1944,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Seattle_Yacht_Club_06.jpg/1280px-Seattle_Yacht_Club_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "montlake-seattle.jpg",
+  "photo_h": 900
+ },
+ "Mount Baker|Seattle": {
+  "title": "Mount Baker, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Mount_Baker%2C_Seattle",
+  "km_from_center": 0.54,
+  "extract": "Mount Baker is a neighborhood in southeastern Seattle, Washington. The neighborhood's name comes from the view of Mount Baker in Whatcom County, that is seen by looking north over Lake Washington. It is bounded by Lake Washington to the east, Interstate 90 and then Leschi to the north, Rainier Valley to the west, and Columbia City to the south. The neighborhood has a community club and a rowing team. It hosts Seattle's annual Seafair, which includes an airshow featuring the U.S. Navy Blue Angels, hydroplane races, a fireworks show, and other festivities. Franklin High School and Garfield High School serve this area. It is part of Seattle's South End.",
+  "image": "Mount_Baker_neighborhood_and_Lake_Washington.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Mount_Baker_neighborhood_and_Lake_Washington.jpg/330px-Mount_Baker_neighborhood_and_Lake_Washington.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Mount_Baker_neighborhood_and_Lake_Washington.jpg",
+   "artist": "Dicklyon",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 1540,
+   "height": 1099,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Mount_Baker_neighborhood_and_Lake_Washington.jpg/1280px-Mount_Baker_neighborhood_and_Lake_Washington.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "mount-baker-seattle.jpg",
+  "photo_h": 856
+ },
+ "North Admiral|Seattle": {
+  "title": "North Admiral, Seattle",
+  "url": "https://en.wikipedia.org/wiki/North_Admiral%2C_Seattle",
+  "km_from_center": 0.54,
+  "extract": "North Admiral is the oldest neighborhood in West Seattle, Washington. In the early 1900s, it was connected to Seattle by ferries and a cable car. These ferries included the paddle steamers City of Seattle and West Seattle.",
+  "image": "Alki_Ave_SW_and_Harbor_Ave_SW_in_West_Seattle.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Alki_Ave_SW_and_Harbor_Ave_SW_in_West_Seattle.jpg/330px-Alki_Ave_SW_and_Harbor_Ave_SW_in_West_Seattle.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Alki_Ave_SW_and_Harbor_Ave_SW_in_West_Seattle.jpg",
+   "artist": "Ron Clausen",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 2272,
+   "height": 1704,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Alki_Ave_SW_and_Harbor_Ave_SW_in_West_Seattle.jpg/1280px-Alki_Ave_SW_and_Harbor_Ave_SW_in_West_Seattle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_vetoed": true
+ },
+ "North Beach/Blue Ridge|Seattle": null,
+ "North Beacon Hill|Seattle": null,
+ "North Delridge|Seattle": {
+  "title": "Delridge, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Delridge%2C_Seattle",
+  "km_from_center": 2.9,
+  "extract": "Delridge is a district in Seattle, Washington, United States that stretches along Delridge Way, an arterial that follows the eastern slope of the valley of Longfellow Creek, from near its source just within the southern city limits north to the West Seattle Bridge over the Duwamish River. It is generally associated with the neighboring district of West Seattle, or even considered a sub-district of West Seattle.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Seattle_Map_-_Delridge.png/330px-Seattle_Map_-_Delridge.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "North Queen Anne|Seattle": null,
+ "Olympic Hills|Seattle": {
+  "title": "Olympic Hills, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Olympic_Hills%2C_Seattle",
+  "km_from_center": 0.03,
+  "extract": "Olympic Hills is a neighborhood in the Lake City district of Seattle, Washington.",
+  "image": "Thornton_Creek_at_NE_125_St._in_Seattle,_2016-10-29.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Thornton_Creek_at_NE_125_St._in_Seattle%2C_2016-10-29.jpg/330px-Thornton_Creek_at_NE_125_St._in_Seattle%2C_2016-10-29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Thornton_Creek_at_NE_125_St._in_Seattle,_2016-10-29.jpg",
+   "artist": "Sage Ross",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 3264,
+   "height": 2448,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Thornton_Creek_at_NE_125_St._in_Seattle%2C_2016-10-29.jpg/1280px-Thornton_Creek_at_NE_125_St._in_Seattle%2C_2016-10-29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "olympic-hills-seattle.jpg",
+  "photo_h": 900
+ },
+ "Phinney Ridge|Seattle": {
+  "title": "Phinney Ridge, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Phinney_Ridge%2C_Seattle",
+  "km_from_center": 0.45,
+  "extract": "Phinney Ridge is a neighborhood in north central Seattle, Washington, United States. It is named after the ridge which runs north and south, separating Ballard from Green Lake, from approximately N. 45th to N. 70th Street. The ridge, in turn, is named after Guy C. Phinney, lumber mill owner and real estate developer, whose estate was bought by the city and turned into Woodland Park in 1899. Phinney's estate had included a private menagerie, and the western half of the park became what is now the Woodland Park Zoo.",
+  "image": "Phinney_Ridge_Seattle.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Phinney_Ridge_Seattle.jpg/330px-Phinney_Ridge_Seattle.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Phinney_Ridge_Seattle.jpg",
+   "artist": "Shakespeare at English Wikipedia",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 800,
+   "height": 372,
+   "thumb_1200": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Phinney_Ridge_Seattle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  }
+ },
+ "Pike-Market|Seattle": null,
+ "Pinehurst|Seattle": {
+  "title": "Pinehurst, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Pinehurst%2C_Seattle",
+  "km_from_center": 0.42,
+  "extract": "Pinehurst is a neighborhood in the Northgate area of Seattle, Washington, United States. It is bounded by NE 145th Street to the north, NE Northgate Way to the south, I-5 to the west, and Lake City Way to the east. These boundaries were determined by the Pinehurst Community Council. Pinehurst's northern boundary of NE 145th Street makes Pinehurst one of the northernmost neighborhoods in the city of Seattle.",
+  "image": null,
+  "thumb": null
+ },
+ "Pioneer Square|Seattle": {
+  "title": "Pioneer Square, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Pioneer_Square%2C_Seattle",
+  "km_from_center": 0.33,
+  "extract": "Pioneer Square is a neighborhood in the southwest corner of downtown Seattle, Washington, US. It was once the heart of the city: Seattle's founders settled there in 1852, following a brief six-month settlement at Alki Point on the far side of Elliott Bay. The early structures in the neighborhood were mostly wooden, and nearly all burned in the Great Seattle Fire of 1889. By the end of 1890, dozens of brick and stone buildings had been erected in their stead; to this day, the architectural character of the neighborhood derives from these late 19th century buildings, mostly examples of Richardsonian Romanesque.",
+  "image": "Pioneer_Square_from_Columbia_Center.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Pioneer_Square_from_Columbia_Center.jpg/330px-Pioneer_Square_from_Columbia_Center.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Pioneer_Square_from_Columbia_Center.jpg",
+   "artist": "Toohool",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 4002,
+   "height": 2626,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Pioneer_Square_from_Columbia_Center.jpg/1280px-Pioneer_Square_from_Columbia_Center.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "pioneer-square-seattle.jpg",
+  "photo_h": 788
+ },
+ "Portage Bay|Seattle": {
+  "title": "Portage Bay",
+  "url": "https://en.wikipedia.org/wiki/Portage_Bay",
+  "km_from_center": 0.44,
+  "extract": "Portage Bay is a body of water, often thought of as the eastern arm of Lake Union, that forms a part of the Lake Washington Ship Canal in Seattle, Washington.",
+  "image": "Seattle_Univ_Bridge_03A.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Seattle_Univ_Bridge_03A.jpg/330px-Seattle_Univ_Bridge_03A.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_Univ_Bridge_03A.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2543,
+   "height": 1479,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Seattle_Univ_Bridge_03A.jpg/1280px-Seattle_Univ_Bridge_03A.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "portage-bay-seattle.jpg",
+  "photo_h": 698
+ },
+ "Rainier Beach|Seattle": {
+  "title": "Rainier Beach, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Rainier_Beach%2C_Seattle",
+  "km_from_center": 0.55,
+  "extract": "Rainier Beach is a set of neighborhoods in Seattle, Washington, that are mostly residential. Also called Atlantic City, Rainier Beach can include Dunlap, Pritchard Island, and Rainier View neighborhoods.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Seattle_-_Rainier_Beach_map.jpg/330px-Seattle_-_Rainier_Beach_map.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Rainier View|Seattle": {
+  "title": "Rainier Beach, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Rainier_Beach%2C_Seattle",
+  "km_from_center": 0.92,
+  "extract": "Rainier Beach is a set of neighborhoods in Seattle, Washington, that are mostly residential. Also called Atlantic City, Rainier Beach can include Dunlap, Pritchard Island, and Rainier View neighborhoods.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Seattle_-_Rainier_Beach_map.jpg/330px-Seattle_-_Rainier_Beach_map.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Ravenna|Seattle": {
+  "title": "Ravenna, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Ravenna%2C_Seattle",
+  "km_from_center": 0.06,
+  "extract": "Ravenna is a neighborhood in northeastern Seattle, Washington named after Ravenna, Italy. Though Ravenna is considered a residential neighborhood, it also is home to several businesses, many of which are located in the University Village, a shopping mall.",
+  "image": "Cowen_Park_Bridge_01_-_colormapped.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Cowen_Park_Bridge_01_-_colormapped.jpg/330px-Cowen_Park_Bridge_01_-_colormapped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Cowen_Park_Bridge_01_-_colormapped.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2592,
+   "height": 1944,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Cowen_Park_Bridge_01_-_colormapped.jpg/1280px-Cowen_Park_Bridge_01_-_colormapped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "ravenna-seattle.jpg",
+  "photo_h": 900
+ },
+ "Riverview|Seattle": {
+  "title": "Delridge, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Delridge%2C_Seattle",
+  "km_from_center": 1.48,
+  "extract": "Delridge is a district in Seattle, Washington, United States that stretches along Delridge Way, an arterial that follows the eastern slope of the valley of Longfellow Creek, from near its source just within the southern city limits north to the West Seattle Bridge over the Duwamish River. It is generally associated with the neighboring district of West Seattle, or even considered a sub-district of West Seattle.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Seattle_Map_-_Delridge.png/330px-Seattle_Map_-_Delridge.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Roosevelt|Seattle": {
+  "title": "Roosevelt, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Roosevelt%2C_Seattle",
+  "km_from_center": 0.29,
+  "extract": "Roosevelt is a neighborhood in northern Seattle, Washington. Its main thoroughfare, originally 10th Avenue, was renamed Roosevelt Way upon Theodore Roosevelt's death in 1919. The neighborhood received the name as the result of a Community Club contest held eight years later, in 1927.",
+  "image": "Roosevelt_High_School_(Seattle).jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Roosevelt_High_School_%28Seattle%29.jpg/330px-Roosevelt_High_School_%28Seattle%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Roosevelt_High_School_(Seattle).jpg",
+   "artist": "Shakespeare (talk)",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "mime": "image/jpeg",
+   "width": 3264,
+   "height": 2176,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Roosevelt_High_School_%28Seattle%29.jpg/1280px-Roosevelt_High_School_%28Seattle%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "roosevelt-seattle.jpg",
+  "photo_h": 800
+ },
+ "Roxhill|Seattle": {
+  "title": "Delridge, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Delridge%2C_Seattle",
+  "km_from_center": 1.35,
+  "extract": "Delridge is a district in Seattle, Washington, United States that stretches along Delridge Way, an arterial that follows the eastern slope of the valley of Longfellow Creek, from near its source just within the southern city limits north to the West Seattle Bridge over the Duwamish River. It is generally associated with the neighboring district of West Seattle, or even considered a sub-district of West Seattle.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Seattle_Map_-_Delridge.png/330px-Seattle_Map_-_Delridge.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "SODO|Seattle": {
+  "title": "SoDo, Seattle",
+  "url": "https://en.wikipedia.org/wiki/SoDo%2C_Seattle",
+  "km_from_center": 0.47,
+  "extract": "SoDo is a neighborhood in Seattle, Washington, that makes up part of the city's Industrial District. It is bounded on the north by South King Street, beyond which is Pioneer Square; on the south by South Spokane Street, beyond which is more of the Industrial District; on the west by the Duwamish River, across which is West Seattle; and on the east by Metro Transit's Downtown Seattle Transit Tunnel and SoDo Busway, beyond which is the International District and the rest of the Industrial District.",
+  "image": "Seattle-Columbia-Center-looking-south-2323.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Seattle-Columbia-Center-looking-south-2323.jpg/330px-Seattle-Columbia-Center-looking-south-2323.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle-Columbia-Center-looking-south-2323.jpg",
+   "artist": "Vmenkov",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 1600,
+   "height": 1200,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Seattle-Columbia-Center-looking-south-2323.jpg/1280px-Seattle-Columbia-Center-looking-south-2323.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "sodo-seattle.jpg",
+  "photo_h": 900
+ },
+ "Sand Point|Seattle": {
+  "title": "Sand Point, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Sand_Point%2C_Seattle",
+  "km_from_center": 0.13,
+  "extract": "Sand Point is a neighborhood in Seattle, Washington, United States, named after and consisting mostly of the Sand Point peninsula that juts into Lake Washington, which is itself largely given over to Magnuson Park. Its southern boundary can be said to be N.E. 65th Street, beyond which are Windermere and Hawthorne Hills; its northern boundary, N.E. 95th Street, beyond which is Lake City. The western limit of the neighborhood, beyond which are View Ridge and Wedgwood, is not fixed and can be said to be anywhere up the hill that extends west from Sand Point Way N.E. as far as 35th Avenue N.E. It is also the former home of Seattle Naval Air Station.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Seattle_Map_-_Sand_Point.png/330px-Seattle_Map_-_Sand_Point.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Seaview|Seattle": {
+  "title": "Seaview, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Seaview%2C_Seattle",
+  "km_from_center": 0.37,
+  "extract": "Seaview is a neighborhood in West Seattle, Washington. Seaview is bordered by Puget Sound to the west, the Alki and Genesee neighborhoods to the north, Fairmount Park to the east, and Gatewood to the south.",
+  "image": "Aerial_view_of_Seaview,_Seattle.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Aerial_view_of_Seaview%2C_Seattle.jpg/330px-Aerial_view_of_Seaview%2C_Seattle.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Seaview,_Seattle.jpg",
+   "artist": "Dcoetzee",
+   "license": "Public domain",
+   "license_url": "",
+   "mime": "image/jpeg",
+   "width": 3048,
+   "height": 2148,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Aerial_view_of_Seaview%2C_Seattle.jpg/1280px-Aerial_view_of_Seaview%2C_Seattle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "seaview-seattle.jpg",
+  "photo_h": 846
+ },
+ "Seward Park|Seattle": {
+  "title": "Seward Park, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Seward_Park%2C_Seattle",
+  "km_from_center": 0.26,
+  "extract": "Seward Park is a neighborhood in southeastern Seattle, Washington, just west of Seward Park. It is part of Seattle's South End. The park occupies all of Bailey Peninsula.",
+  "image": "Aerial_view_of_Seward_Park,_Seattle.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Aerial_view_of_Seward_Park%2C_Seattle.jpg/330px-Aerial_view_of_Seward_Park%2C_Seattle.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Seward_Park,_Seattle.jpg",
+   "artist": "Dcoetzee",
+   "license": "Public domain",
+   "license_url": "",
+   "mime": "image/jpeg",
+   "width": 1312,
+   "height": 944,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Aerial_view_of_Seward_Park%2C_Seattle.jpg/1280px-Aerial_view_of_Seward_Park%2C_Seattle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "seward-park-seattle.jpg",
+  "photo_h": 863
+ },
+ "South Beacon Hill|Seattle": null,
+ "South Delridge|Seattle": {
+  "title": "Delridge, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Delridge%2C_Seattle",
+  "km_from_center": 1.06,
+  "extract": "Delridge is a district in Seattle, Washington, United States that stretches along Delridge Way, an arterial that follows the eastern slope of the valley of Longfellow Creek, from near its source just within the southern city limits north to the West Seattle Bridge over the Duwamish River. It is generally associated with the neighboring district of West Seattle, or even considered a sub-district of West Seattle.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Seattle_Map_-_Delridge.png/330px-Seattle_Map_-_Delridge.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "South Lake Union|Seattle": {
+  "title": "South Lake Union, Seattle",
+  "url": "https://en.wikipedia.org/wiki/South_Lake_Union%2C_Seattle",
+  "km_from_center": 0.55,
+  "extract": "South Lake Union is a neighborhood in central Seattle, Washington, named for its location at the southern tip of Lake Union.",
+  "image": "South_Lake_Union_neighborhood_from_Stratus_building.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/South_Lake_Union_neighborhood_from_Stratus_building.jpg/330px-South_Lake_Union_neighborhood_from_Stratus_building.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:South_Lake_Union_neighborhood_from_Stratus_building.jpg",
+   "artist": "Dicklyon",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 2595,
+   "height": 1983,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/South_Lake_Union_neighborhood_from_Stratus_building.jpg/1280px-South_Lake_Union_neighborhood_from_Stratus_building.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "south-lake-union-seattle.jpg",
+  "photo_h": 917
+ },
+ "South Park|Seattle": {
+  "title": "South Park, Seattle",
+  "url": "https://en.wikipedia.org/wiki/South_Park%2C_Seattle",
+  "km_from_center": 0.2,
+  "extract": "South Park is a neighborhood in Seattle, Washington. It is located just south of Georgetown across the Duwamish River, and just north of the city of Tukwila. Its main thoroughfares are West Marginal Way S., S. Cloverdale Street and 14th Ave. S (north-and-south). South Park connects to Georgetown by two bridges at 1st Ave S. at the northmost end of the neighborhood, and the South Park Bridge at the north end of 14th Ave. South.",
+  "image": "Duwamish_River_at_South_Park.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Duwamish_River_at_South_Park.jpg/330px-Duwamish_River_at_South_Park.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Duwamish_River_at_South_Park.jpg",
+   "artist": "Benjamin Cody",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2401,
+   "height": 1771,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Duwamish_River_at_South_Park.jpg/1280px-Duwamish_River_at_South_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "south-park-seattle.jpg",
+  "photo_h": 885
+ },
+ "Southeast Magnolia|Seattle": {
+  "title": "Magnolia, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Magnolia%2C_Seattle",
+  "km_from_center": 1.06,
+  "extract": "Magnolia is the second largest neighborhood of Seattle, Washington, by area, located northwest of downtown. It occupies a hilly headland overlooking Puget Sound. Magnolia has been a part of the city since 1891. Much of the headland is taken up by Discovery Park, formerly the U.S. Army's Fort Lawton.",
+  "image": "Seattle-Columbia-look-north-2319.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Seattle-Columbia-look-north-2319.jpg/330px-Seattle-Columbia-look-north-2319.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle-Columbia-look-north-2319.jpg",
+   "artist": "Vmenkov",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 1600,
+   "height": 1200,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Seattle-Columbia-look-north-2319.jpg/1280px-Seattle-Columbia-look-north-2319.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "southeast-magnolia-seattle.jpg",
+  "photo_h": 900
+ },
+ "Stevens|Seattle": null,
+ "Sunset Hill|Seattle": {
+  "title": "Sunset Hill, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Sunset_Hill%2C_Seattle",
+  "km_from_center": 0.24,
+  "extract": "Sunset Hill is an area located in the northwest corner of the Ballard neighborhood of Seattle, Washington. It is home to the Sunset Hill Community Association. Founded in 1922, it was one of the first Seattle neighborhood associations. It is also home to the Sunset Hill Viewpoint Park, located at 7531 34th Ave NW. This park provides a scenic overlook onto the Shilshole and Elliott bays and provides a popular vantage point for photographs of the Olympic Mountains.",
+  "image": "Sunset_Hill_Park_1.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Sunset_Hill_Park_1.jpg/330px-Sunset_Hill_Park_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Sunset_Hill_Park_1.jpg",
+   "artist": "Dennis Bratland",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "mime": "image/jpeg",
+   "width": 2917,
+   "height": 1923,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Sunset_Hill_Park_1.jpg/1280px-Sunset_Hill_Park_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "sunset-hill-seattle.jpg",
+  "photo_h": 791
+ },
+ "University District|Seattle": {
+  "title": "University District, Seattle",
+  "url": "https://en.wikipedia.org/wiki/University_District%2C_Seattle",
+  "km_from_center": 1.14,
+  "extract": "The University District is a neighborhood and a major district in central northeastern Seattle, Washington, comprising several distinct neighborhoods. The main campus of the University of Washington (UW) is located in the district, lending its name to both the district as well as University Way NE. The neighborhood lies north of Portage Bay and the Lake Washington Ship Canal and generally east of Interstate 5.",
+  "image": "University_District_Seattle,_May_2024.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/University_District_Seattle%2C_May_2024.jpg/330px-University_District_Seattle%2C_May_2024.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:University_District_Seattle,_May_2024.jpg",
+   "artist": "Spicypepper999",
+   "license": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "mime": "image/jpeg",
+   "width": 1920,
+   "height": 1080,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/University_District_Seattle%2C_May_2024.jpg/1280px-University_District_Seattle%2C_May_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "university-district-seattle.jpg",
+  "photo_h": 675
+ },
+ "University Heights|Seattle": {
+  "title": "University District, Seattle",
+  "url": "https://en.wikipedia.org/wiki/University_District%2C_Seattle",
+  "km_from_center": 1.71,
+  "extract": "The University District is a neighborhood and a major district in central northeastern Seattle, Washington, comprising several distinct neighborhoods. The main campus of the University of Washington (UW) is located in the district, lending its name to both the district as well as University Way NE. The neighborhood lies north of Portage Bay and the Lake Washington Ship Canal and generally east of Interstate 5.",
+  "image": "University_District_Seattle,_May_2024.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/University_District_Seattle%2C_May_2024.jpg/330px-University_District_Seattle%2C_May_2024.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:University_District_Seattle,_May_2024.jpg",
+   "artist": "Spicypepper999",
+   "license": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "mime": "image/jpeg",
+   "width": 1920,
+   "height": 1080,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/University_District_Seattle%2C_May_2024.jpg/1280px-University_District_Seattle%2C_May_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "university-heights-seattle.jpg",
+  "photo_h": 675
+ },
+ "Victory Heights|Seattle": {
+  "title": "Victory Heights, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Victory_Heights%2C_Seattle",
+  "km_from_center": 0.87,
+  "extract": "Victory Heights is a neighborhood in the Lake City district of Seattle, Washington.",
+  "image": null,
+  "thumb": null
+ },
+ "View Ridge|Seattle": {
+  "title": "View Ridge, Seattle",
+  "url": "https://en.wikipedia.org/wiki/View_Ridge%2C_Seattle",
+  "km_from_center": 0.57,
+  "extract": "View Ridge is a neighborhood in north Seattle, Washington. As with all Seattle neighborhoods, its boundaries are not fixed, but can be thought of as NE 65th Street in the south, 40th and 45th Avenues NE in the west, the Sand Point Country Club in the north, and Sand Point Way NE in the east. Many homes offer views of Lake Washington, Mount Rainier, and the Cascade Range. View Ridge Elementary School is located within the neighborhood, and the neighborhood also offers a large park and playfield across the street from the elementary school. The View Ridge Swim and Tennis Club is located on the eastern edge of View Ridge, and the Sand Point Country Club is located on the northern edge.",
+  "image": "Seattle_-_View_Ridge,_1966_(28811146872).jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Seattle_-_View_Ridge%2C_1966_%2828811146872%29.jpg/330px-Seattle_-_View_Ridge%2C_1966_%2828811146872%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_-_View_Ridge,_1966_(28811146872).jpg",
+   "artist": "Seattle Municipal Archives from Seattle, WA",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "mime": "image/jpeg",
+   "width": 1200,
+   "height": 799,
+   "thumb_1200": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Seattle_-_View_Ridge%2C_1966_%2828811146872%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  }
+ },
+ "Wallingford|Seattle": {
+  "title": "Wallingford, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Wallingford%2C_Seattle",
+  "km_from_center": 0.34,
+  "extract": "Wallingford is a neighborhood in north central Seattle, lying on a hill above the north shore of Lake Union about four miles from the downtown core. The neighborhood developed quickly during the early 20th century after the establishment of the University of Washington to the east. With trolley tracks laid through the neighborhood as early as 1907, Wallingford is a classic streetcar suburb, typified by its many 1920s era box houses and bungalows. Commercial development is primarily concentrated along North 45th Street where a number of iconic structures stand including the neon \"WALLINGFORD\" sign, the Wallingford Center, and the original Dick's Drive-In. With its central location, numerous public amenities, including the Gas Works Park, and views of both the Olympic and Cascade mountains, Wallingford has long been home to many middle and upper-class families. While Wallingford is mostly residential in nature, the neighborhood's southern edge, along Lake Union, has historically been an industrial and commercial business strip. In recent years, numerous office buildings have been developed as an extension of the burgeoning business center in neighboring Fremont. In 2014 Brooks Sports moved its headquarters from Bothell to a new six-story office building at the southwestern edge of Wallingford.",
+  "image": "Seattle_-_Wallingford_sign_01.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Seattle_-_Wallingford_sign_01.jpg/330px-Seattle_-_Wallingford_sign_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_-_Wallingford_sign_01.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2592,
+   "height": 1944,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Seattle_-_Wallingford_sign_01.jpg/1280px-Seattle_-_Wallingford_sign_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "wallingford-seattle.jpg",
+  "photo_h": 900
+ },
+ "Wedgwood|Seattle": {
+  "title": "Wedgwood, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Wedgwood%2C_Seattle",
+  "km_from_center": 0.43,
+  "extract": "Wedgwood is a middle-class residential neighborhood of northeast Seattle, Washington with a modest commercial strip. Wedgwood is located about two miles (3.2\u00a0km) north, and slightly east, of the University of Washington; it is about six miles (9.7\u00a0km) northeast of Downtown. The neighborhood is typical of Seattle neighborhoods in having more than one name and having different, overlapping, but well-documented definitions of the neighborhood.",
+  "image": "Picardo_Farm_03.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Picardo_Farm_03.jpg/330px-Picardo_Farm_03.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Picardo_Farm_03.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 2592,
+   "height": 1944,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Picardo_Farm_03.jpg/1280px-Picardo_Farm_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "wedgwood-seattle.jpg",
+  "photo_h": 900
+ },
+ "West Queen Anne|Seattle": null,
+ "West Woodland|Seattle": null,
+ "Westlake|Seattle": {
+  "title": "Westlake, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Westlake%2C_Seattle",
+  "km_from_center": 0.13,
+  "extract": "Westlake is a neighborhood in Seattle, Washington. It was named after its location on the western shore of Lake Union. It is a relatively narrow neighborhood, there being only a few blocks between the shoreline and its western limit at Aurora Avenue N., beyond which is Queen Anne. To the south beyond Aloha Street is South Lake Union, and to the north across the Fremont Cut is Fremont. Its main thoroughfares are Dexter and Westlake Avenues N..",
+  "image": "Seattle_-_West_Lake_Union_pano_02.jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Seattle_-_West_Lake_Union_pano_02.jpg/330px-Seattle_-_West_Lake_Union_pano_02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Seattle_-_West_Lake_Union_pano_02.jpg",
+   "artist": "Joe Mabel",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "mime": "image/jpeg",
+   "width": 4288,
+   "height": 2848,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Seattle_-_West_Lake_Union_pano_02.jpg/1280px-Seattle_-_West_Lake_Union_pano_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "westlake-seattle.jpg",
+  "photo_h": 797
+ },
+ "Whittier Heights|Seattle": {
+  "title": "Whittier Heights, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Whittier_Heights%2C_Seattle",
+  "km_from_center": 0.09,
+  "extract": "Whittier Heights is a neighborhood in Seattle, Washington. It is considered part of greater Ballard.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Seattle_-_Whittier_Heights_map.jpg/330px-Seattle_-_Whittier_Heights_map.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Windermere|Seattle": {
+  "title": "Windermere, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Windermere%2C_Seattle",
+  "km_from_center": 0.66,
+  "extract": "Windermere is a residential neighborhood in northeastern Seattle, Washington, named after Windermere in England's Lake District. It is bounded on the north by Magnuson Park, part of Sand Point; on the northwest by Sand Point Way N.E., beyond which is Hawthorne Hills; on the southwest by Ivanhoe Place N.E., beyond which is Laurelhurst; and on the southeast by Lake Washington. The area has been a part of Seattle since 1910.",
+  "image": null,
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Seattle_Map_-_Windermere.png/330px-Seattle_Map_-_Windermere.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+ },
+ "Yesler Terrace|Seattle": {
+  "title": "Yesler Terrace, Seattle",
+  "url": "https://en.wikipedia.org/wiki/Yesler_Terrace%2C_Seattle",
+  "km_from_center": 0.08,
+  "extract": "Yesler Terrace is a 22-acre (9\u00a0ha) mixed-income, mixed-use neighborhood in Seattle, Washington, United States. It was originally completed in 1941 as the state's first public housing development and the first racially integrated public housing development in the United States. It occupies much of the area formerly known as Yesler Hill, Yesler's Hill, or Profanity Hill. The development is administered by the Seattle Housing Authority, who have been redeveloping the neighborhood into a mixed-income area with multi-story buildings and community amenities since 2013.",
+  "image": "Yesler_Terrace_Visit_w_CM_Mosqueda_(27547576298).jpg",
+  "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Yesler_Terrace_Visit_w_CM_Mosqueda_%2827547576298%29.jpg/330px-Yesler_Terrace_Visit_w_CM_Mosqueda_%2827547576298%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Yesler_Terrace_Visit_w_CM_Mosqueda_(27547576298).jpg",
+   "artist": "Seattle City Council from Seattle",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "mime": "image/jpeg",
+   "width": 6000,
+   "height": 4000,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Yesler_Terrace_Visit_w_CM_Mosqueda_%2827547576298%29.jpg/1280px-Yesler_Terrace_Visit_w_CM_Mosqueda_%2827547576298%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "yesler-terrace-seattle.jpg",
+  "photo_h": 800,
+  "photo_hold": true
  }
 }
