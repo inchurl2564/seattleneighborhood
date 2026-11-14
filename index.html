@@ -1156,6 +1156,65 @@ ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b041
   .intro-hero h1{font-size:30px}.intro-hero .intro{font-size:15px}
   ol.rank.cards{grid-template-columns:1fr;gap:18px}
 }
+/* ===== phones: one question at a time, compact cards, list before map ===== */
+.guide-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:18px}
+.guide-step{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.datasrc summary{cursor:pointer;color:var(--accent);font-weight:600}
+.datasrc p{margin:6px 0 0}
+#guideHistory{display:none}
+@media (max-width:700px){
+  body.guide-started .intro-hero{display:none}
+  .intro-hero .kick{display:none}
+  .assist{padding:16px}
+  .assist-head .sub{display:none}
+  .assist-head h2{font-size:19px}
+  #guideHistory{display:inline-block;font-size:12.5px}
+  .assist-log{max-height:none;overflow:visible}
+  .assist-log:not(.all) .msg{display:none}
+  .assist-log:not(.all) .msg.recent{display:block;background:none;padding:0;font-size:12.5px;color:var(--muted)}
+  .assist-log:not(.all) .msg.current{display:block;background:none;padding:4px 0 0;max-width:none;font:400 22px/1.3 var(--display);color:var(--ink)}
+  .guide-choices{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .guide-choices button{grid-column:1/-1;text-align:left;padding:13px 16px;font-size:15px}
+  .guide-choices button[aria-pressed]{grid-column:auto;text-align:center;padding:12px 8px;font-size:14px}
+  .guide-choices button.primary{text-align:center}
+  .guide-choices button.quiet{grid-column:auto;text-align:center;border:0;background:none;color:var(--muted);text-decoration:underline;padding:10px}
+  .guide-choices button.skip{grid-column:auto;text-align:center;border:0;background:none;color:var(--muted);text-decoration:underline;padding:10px}
+  .guide-choices button[aria-pressed="true"]{background:var(--surface-2);color:var(--accent);border:1.5px solid var(--accent);font-weight:600}
+  .guide-choices button[aria-pressed="true"]::before{content:"✓ "}
+  .assist-head h2{display:none}
+  .assist{gap:10px}
+  .assist-log:not(.all) .msg.current.done{font:15px/1.5 var(--body);color:var(--ink)}
+  .intro-hero h1{font-size:28px;margin-bottom:8px}.intro-hero .intro{font-size:14.5px}
+  /* filters: each topic in its own box */
+  #filterGroups{gap:12px!important}
+  .fgroup{border:1px solid var(--line);padding:12px 14px;border-top:1px solid var(--line)}
+  /* results: matches first, map after; lighter header */
+  #resultsPage .res-top .btn{padding:8px 10px;font-size:10.5px}
+  #resultsPage .results{order:2}
+  #agentResults{order:3}
+  #mapSlotResults{order:4}
+  #compare{order:1}
+  #resultsPage .sources{order:5}
+  .agentcard p{display:none}
+  .agentcard{padding:14px 16px}
+  .agentcard b{font-size:18px}
+  .pc-media{aspect-ratio:16/8}
+  .pc-body{padding:12px 14px 14px}
+  .pc-body .nm{font-size:22px}
+  .pc-price{margin:2px 0 10px}
+  .pc-facts{grid-template-columns:repeat(3,1fr);gap:6px;padding-top:10px}
+  .pc-facts span{flex-direction:column;justify-content:flex-start;gap:0;padding:0}
+  .pc-facts i{font-size:11px;letter-spacing:.04em}
+  .pc-facts b{font-size:15px}
+  .pcard .tags{margin:8px 0 0}
+  .pc-go{display:none}
+  /* neighborhood page: one row of small buttons */
+  .detailpage .res-top{flex-wrap:nowrap;align-items:center}
+  .detailpage .res-top .btn{padding:8px 10px;font-size:10.5px}
+  .detailpage .res-top .long, #detailCrumb{display:none}
+  .detailpage .tabs{position:sticky;top:0;z-index:5;background:var(--surface)}
+  .sitefoot{font-size:11.5px}
+}
 </style>
 
 
@@ -1193,6 +1252,7 @@ ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b041
       <span style="display:flex;gap:12px;flex-wrap:wrap;justify-content:end"><button class="back" id="guideRestart" type="button">Start over</button><button class="back" id="guideHide" type="button">Use sliders instead</button></span>
     </div>
     <div class="guide-progress" aria-hidden="true"><span id="guideBar"></span></div>
+    <div class="guide-meta"><span id="guideStep" class="guide-step"></span><button type="button" class="back" id="guideHistory" hidden aria-expanded="false"></button></div>
     <div class="assist-log" id="guideLog" aria-live="polite"></div>
     <div class="guide-choices" id="guideChoices"></div>
   </section>
@@ -1221,7 +1281,7 @@ ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b041
       <section class="page" data-page="filters" aria-label="Filters" hidden>
       <div>
         <h2>Filters</h2>
-        <div class="hint">Grouped by the priorities you set in step 1, most important first. Each slider hides neighborhoods that fall short; leave it at Any to skip. Distances are measured from the center of each neighborhood.</div>
+        <div class="hint">Optional. Each slider hides neighborhoods that fall short; leave it at <b>Any</b> to skip. Your top priorities are listed first.</div>
       </div>
       <div id="filterGroups" style="display:grid;gap:16px"></div>
       <div class="fgroup" style="display:grid;gap:8px">
@@ -1261,7 +1321,7 @@ ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b041
   <div class="mbar" id="mbar" hidden><span><b id="mbarCount" class="num"></b><span id="mbarTop"></span></span><a class="btn" href="#results">See results →</a></div>
   <div id="detailPage" class="respage detailpage" hidden>
     <div class="res-top">
-      <button class="btn ghost" id="toMatches" type="button">← Back to matches</button>
+      <button class="btn ghost" id="toMatches" type="button">← <span class="long">Back to </span>matches</button>
       <span class="sub" id="detailCrumb"></span>
       <a class="btn ghost" id="guideLink" href="neighborhoods/">Full guide to this neighborhood</a>
     </div>
@@ -1320,7 +1380,7 @@ ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b041
     <p><b>For research only.</b> This is not real estate, legal, financial or tax advice. Scores are estimates built from public data that may be incomplete or out of date. Verify school assignments with the school district, crime with local police, and listings and prices with a licensed real estate professional before making decisions.</p>
     <p><a href="neighborhoods/">Browse guides to all 155 neighborhoods</a> — home prices, schools, safety, transit and parks for each.</p>
     <p>Neighborhood rankings use schools, safety, prices, amenities and similar factors. They never use race, color, religion, national origin, sex, disability or familial status, in keeping with the federal Fair Housing Act.</p>
-    <p>Data: home values, listings and days on market from <a href="https://www.zillow.com/research/data/" target="_blank" rel="noopener">Zillow Research</a>; recorded sales from the King County Assessor; school test scores from the Washington Office of Superintendent of Public Instruction; school locations from NCES; crime from Seattle and Bellevue police open data and the FBI Crime Data Explorer; Census Bureau American Community Survey and TIGER boundaries; EPA National Walkability Index; King County Metro and Sound Transit schedules; King County, Seattle, Bellevue, Kirkland, Redmond and Issaquah GIS; and stores, gyms and restaurants © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors (ODbL). Map library: Leaflet.</p>
+    <details class="datasrc" id="dataSrc"><summary>Data sources</summary><p>Data: home values, listings and days on market from <a href="https://www.zillow.com/research/data/" target="_blank" rel="noopener">Zillow Research</a>; recorded sales from the King County Assessor; school test scores from the Washington Office of Superintendent of Public Instruction; school locations from NCES; crime from Seattle and Bellevue police open data and the FBI Crime Data Explorer; Census Bureau American Community Survey and TIGER boundaries; EPA National Walkability Index; King County Metro and Sound Transit schedules; King County, Seattle, Bellevue, Kirkland, Redmond and Issaquah GIS; and stores, gyms and restaurants © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors (ODbL). Map library: Leaflet.</p></details>
   </footer>
 </div>
 
@@ -2114,7 +2174,7 @@ function update(){
   document.getElementById('mbarCount').textContent = `${ranked.length} of ${FEATS.length} fit`;
   document.getElementById('mbarTop').textContent = top ? `Top: ${top.name}, ${top.city}` : 'Loosen a filter to see matches';
   { const gp = ALLP.find(x=>x.id===selected), gl = document.getElementById('guideLink');
-    if(gp && gl){ gl.href = 'neighborhoods/' + (gp.name + ' ' + gp.city).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '/'; gl.textContent = `Full guide to ${gp.name}`; } }
+    if(gp && gl){ gl.href = 'neighborhoods/' + (gp.name + ' ' + gp.city).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '/'; gl.innerHTML = `<span class="long">Full </span>guide<span class="long"> to ${gp.name}</span>`; } }
   { const i = ranked.findIndex(r=>r.p.id===selected), sp = ALLP.find(x=>x.id===selected);
     document.getElementById('detailCrumb').textContent = sp ? (i>=0 ? `Match #${i+1} of ${ranked.length}` : 'Outside your current filters') : ''; }
   document.getElementById('resSummary').textContent = `${ranked.length} of ${FEATS.length} neighborhoods fit your filters, ranked by your priorities.`;
@@ -2208,7 +2268,11 @@ function initGuide(){
     i = k; ch.textContent = '';
     bar.style.width = Math.round(Math.min(i, Q.length) / Q.length * 100) + '%';
     if(i >= Q.length) return finish();
-    const q = Q[i]; say('ai', q.say);
+    const vis = Q.map((_,k)=>k).filter(visible), pos = vis.indexOf(i);
+    document.getElementById('guideStep').textContent = pos >= 0 ? `Question ${pos+1} of ${vis.length}` : '';
+    const q = Q[i]; log.querySelectorAll('.msg.current,.msg.recent').forEach(m=>m.classList.remove('current','recent'));
+    const prevMsg = log.lastElementChild; if(prevMsg && prevMsg.classList.contains('ack')) prevMsg.classList.add('recent');
+    say('ai', q.say).classList.add('current'); syncHistory();
     if(q.multi === 'budget'){
       const RANGES = [['Under $750K',null,750000],['$750K – $1M',750000,1000000],['$1M – $1.5M',1000000,1500000],['$1.5M – $2M',1500000,2000000],['$2M – $3M',2000000,3000000],['$3M and up',3000000,null]];
       const pick = new Set(); const btns = [];
@@ -2242,7 +2306,8 @@ function initGuide(){
     const changed = change ? applyChanges(change) : [];
     if(change && change.pick){ startPick(); }
     history.push({i, snap, logLen: log.children.length - 2});
-    if(changed.length) say('ai', 'Got it. ' + document.getElementById('liveCount').textContent + '.' + (extra ? ' ' + extra : ''), changed.join(' · '));
+    document.body.classList.add('guide-started');
+    if(changed.length) say('ai ack', 'Got it. ' + document.getElementById('liveCount').textContent + '.' + (extra ? ' ' + extra : ''), changed.join(' · '));
     ask(next());
   }
   function back(){
@@ -2253,13 +2318,19 @@ function initGuide(){
   }
   function finish(){
     const top = lastRanked[0];
-    say('ai', top ? `All set! ${document.getElementById('liveCount').textContent}, and your top match so far is ${top.p.name} in ${top.p.city}. Next, review the priorities I set and adjust anything that doesn't look right. Then you'll check the filters and see your results.` :
+    document.getElementById('guideStep').textContent = 'All set';
+    log.querySelectorAll('.msg.current,.msg.recent').forEach(m=>m.classList.remove('current','recent'));
+    syncHistory();
+    say('ai current done', top ? `All set! ${document.getElementById('liveCount').textContent}, and your top match so far is ${top.p.name} in ${top.p.city}. Next, review the priorities I set and adjust anything that doesn't look right. Then you'll check the filters and see your results.` :
       "Hmm, nothing fits all of those answers yet. Let's review your priorities and filters to loosen something up.");
     btn('Review and fine-tune →', 'primary', () => { showSliders(true, true); });
     if(history.length) btn('← Back', 'quiet', back);
     btn('Skip to results', 'skip', () => { location.hash = 'results'; });
   }
-  function restart(){ log.textContent = ''; history = []; ask(0); }
+  function syncHistory(){ const n = log.querySelectorAll('.msg.user').length, hb = document.getElementById('guideHistory');
+    hb.hidden = !n; const open = log.classList.contains('all'); hb.setAttribute('aria-expanded', open); hb.textContent = open ? 'Hide your answers' : `Your answers (${n})`; }
+  document.getElementById('guideHistory').onclick = () => { log.classList.toggle('all'); syncHistory(); };
+  function restart(){ log.textContent = ''; log.classList.remove('all'); history = []; document.body.classList.remove('guide-started'); ask(0); }
   restartGuide = restart;
   document.getElementById('guideRestart').onclick = restart;
   const area = document.getElementById('sliderArea'), wrap = document.getElementById('guideWrap');
@@ -2362,6 +2433,7 @@ document.addEventListener('click', e=>{ const b = e.target.closest('[data-contac
   openContact(b.dataset.contact, b.dataset.contact==='nb' ? ALLP.find(x=>x.id===selected) : null); });
 
 initGuide(); renderAgentCards();
+if(matchMedia('(min-width: 701px)').matches) document.getElementById('dataSrc').open = true;
 function startOver(){
   const keep = state.saved;
   state = structuredClone(DEFAULT); state.saved = keep;
