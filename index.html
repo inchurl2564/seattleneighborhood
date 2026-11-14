@@ -1127,6 +1127,11 @@ ol.rank.cards li.empty{grid-column:1/-1}
 .pc-go{margin-top:auto;align-self:flex-start;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--gold);padding-bottom:2px}
 ol.rank.cards .heart{position:absolute;right:10px;top:10px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.94);color:#002349;font-size:18px;z-index:2;display:grid;place-items:center}
 ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b0412e}
+/* dark mode: cards a lighter navy than the page so they stand apart */
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--card:#1b2a3f;--card-line:#33475f;--card-tag:#26384f}}
+:root[data-theme="dark"]{--card:#1b2a3f;--card-line:#33475f;--card-tag:#26384f}
+.row.pcard,.row.pcard:hover,.row.pcard[aria-current="true"]{background:var(--card,var(--surface));border-color:var(--card-line,var(--line))}
+.pcard .tag{background:var(--card-tag,var(--surface-2))}
 .mm-land{fill:var(--map-bg)}.mm-other{fill:var(--city-fill);stroke:var(--city-line);stroke-width:.8}.mm-water{fill:var(--water)}
 .mm-road{fill:none;stroke:var(--road);stroke-width:1;opacity:.75}.mm-major{stroke-width:2}
 .mm-this{fill:var(--accent);fill-opacity:.85;stroke:var(--sel);stroke-width:2}
