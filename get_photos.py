@@ -37,8 +37,9 @@ if __name__ == '__main__':
         cr = (w or {}).get('credit') or {}
         if not w or w.get('error') or not cr.get('thumb_1200'): continue
         if not (cr.get('license') or '').lower().startswith(OK): continue
-        fname = slug(key) + '.jpg'; path = os.path.join(IMG, fname)
-        if not os.path.exists(path):
+        existing = [x for x in (slug(key) + '.jpg', slug(key) + '.png') if os.path.exists(os.path.join(IMG, x))]
+        fname = existing[0] if existing else None
+        if not fname:
             for attempt in range(4):
                 try:
                     with urllib.request.urlopen(urllib.request.Request(cr['thumb_1200'], headers=UA), timeout=60) as r:
@@ -48,9 +49,11 @@ if __name__ == '__main__':
                     time.sleep(min(30, int(e.headers.get('Retry-After') or 10)) if e.code == 429 else 3); data = None
                 except Exception:
                     time.sleep(3); data = None
-            if not data or data[:2] != b'\xff\xd8': continue
-            open(path, 'wb').write(data); time.sleep(0.5)
-        size = jpeg_size(open(path, 'rb').read())
+            if not data or not (data[:2] == b'\xff\xd8' or data[:8] == b'\x89PNG\r\n\x1a\n'): continue
+            fname = slug(key) + ('.jpg' if data[:2] == b'\xff\xd8' else '.png')
+            open(os.path.join(IMG, fname), 'wb').write(data); time.sleep(0.5)
+        raw = open(os.path.join(IMG, fname), 'rb').read()
+        size = jpeg_size(raw) if raw[:2] == b'\xff\xd8' else struct.unpack('>II', raw[16:24])
         w['photo_file'] = fname
         w['photo_h'] = round(1200 * size[1] / size[0]) if size else 800
         got += 1

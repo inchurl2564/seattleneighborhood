@@ -29,6 +29,22 @@ def fetch(url):
     return None
 
 
+MAPLIKE = re.compile(r'(^map[ _]of|locator|location|highlighted|\.svg|_map[ _.]|[ _]map\.|logo|seal|flag)', re.I)
+
+
+def file_from_url(u):
+    """Original Commons file name from an image address (full-size or thumbnail)."""
+    if not u: return None
+    name = urllib.parse.unquote(u.split('?')[0].rsplit('/', 1)[-1])
+    name = re.sub(r'^\d+px-', '', name)                       # thumbnail size prefix
+    if name.lower().endswith('.svg.png'): name = name[:-4]     # rendered SVG
+    return name
+
+
+def is_photo(name):
+    return bool(name) and name.lower().endswith(('.jpg', '.jpeg', '.png', '.webp')) and not MAPLIKE.search(name)
+
+
 def km(a, b):
     return 6371 * math.hypot(math.radians(a[1] - b[1]) * math.cos(math.radians(a[0])), math.radians(a[0] - b[0]))
 
@@ -54,8 +70,7 @@ def find(p):
         if not s or s.get('type') != 'standard' or not s.get('coordinates'): continue
         c = s['coordinates']; d = km(here, (c['lat'], c['lon']))
         if d > 3.0: continue
-        img = (s.get('originalimage') or {}).get('source')
-        fname = urllib.parse.unquote(img.rsplit('/', 1)[-1]) if img else None
+        fname = file_from_url((s.get('originalimage') or {}).get('source') or (s.get('thumbnail') or {}).get('source'))
         return {'title': s['title'], 'url': s['content_urls']['desktop']['page'], 'km_from_center': round(d, 2),
                 'extract': s.get('extract', '').strip(), 'image': fname, 'thumb': (s.get('thumbnail') or {}).get('source')}
     return None
@@ -81,13 +96,18 @@ if __name__ == '__main__':
     out = json.load(open(PARTIAL)) if os.path.exists(PARTIAL) else (json.load(open(OUT)) if os.path.exists(OUT) else {})
     for f in data['neighborhoods']['features']:
         p = f['properties']; key = f"{p['name']}|{p['city']}"
-        if key in out and 'error' not in (out[key] or {}): continue
+        prev = out.get(key)
+        if key in out and 'error' not in (prev or {}):
+            if not prev or prev.get('credit') or not prev.get('thumb'): continue
+            m = prev; m['image'] = file_from_url(prev['thumb'])      # recover a photo the old version missed
+        else:
+            m = None
         try:
-            m = find(p)
-            if m and m['image'] and m['image'].lower().endswith(('.jpg', '.jpeg', '.webp', '.tif', '.tiff')):
+            if m is None: m = find(p)
+            if m and is_photo(m.get('image')):
                 m['credit'] = image_credit(m['image'])
             elif m:
-                m['image'] = None   # maps, logos and diagrams (SVG/PNG/GIF) are not neighborhood photos
+                m['image'] = None   # locator maps, logos and diagrams are not neighborhood photos
             out[key] = m
         except Exception as e:
             out[key] = {'error': str(e)}
