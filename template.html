@@ -1070,7 +1070,7 @@ header.top{align-items:center;padding-bottom:14px;border-bottom:1px solid var(--
 .toplinks a[aria-current]{color:var(--gold)}
 .menubtn{display:none}
 .citybar .cb-p{margin-left:18px}.citybar a{color:inherit;text-decoration:none}
-@media (max-width:700px){.citybar .cb-l{display:none}.citybar .cb-p{margin:0}.citybar{font-size:11px!important;letter-spacing:.08em!important}}
+@media (max-width:700px){.citybar .cb-l{display:none}.citybar .cb-p{margin:0}.citybar{font-size:13px!important;letter-spacing:.06em!important}.citybar .cb-p{display:flex;justify-content:center;flex-wrap:wrap;gap:0 4px}.citybar .cb-p a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;white-space:nowrap}.citybar{padding-top:0!important;padding-bottom:0!important}}
 .toplinks{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
 .toplinks a,.linkbtn{font:500 12px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none;background:none;border:0;padding:4px 0;cursor:pointer}
 .toplinks a:hover,.linkbtn:hover{color:var(--gold)}
@@ -1233,6 +1233,15 @@ ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b041
   .detailpage .res-top .btn{padding:8px 10px;font-size:10.5px}
   .detailpage .res-top .long, #detailCrumb{display:none}
   .sitefoot{font-size:11.5px}
+}
+
+@media (max-width:700px){
+ .citybar,.phonebar{padding:0!important;letter-spacing:0!important;text-transform:none!important;font-size:14px!important;line-height:1.2!important}
+ .citybar .cb-l{display:none!important}
+ .citybar .cb-p,.phonebar .wrap{display:flex!important;justify-content:center!important;align-items:stretch;flex-wrap:nowrap!important;gap:0!important;margin:0!important;padding:0!important;font-size:0}
+ .citybar .cb-p a,.phonebar .wrap a{display:inline-flex!important;align-items:center;justify-content:center;flex:1 1 50%;min-height:46px;padding:0 6px!important;white-space:nowrap;font-size:14px;letter-spacing:0!important;color:#fff!important;opacity:1!important;text-decoration:none}
+ .citybar .cb-p a+a,.phonebar .wrap a+span+a{border-left:1px solid rgba(255,255,255,.25)}
+ .phonebar .wrap span{display:none}
 }
 </style>
 

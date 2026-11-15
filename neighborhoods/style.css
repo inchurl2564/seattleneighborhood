@@ -71,3 +71,11 @@ main>details.sec{border-top:1px solid var(--line)}main>details.sec>h2{display:no
 main>details.sec>summary::after{content:"+";font-size:26px;color:var(--gold)}main>details.sec[open]>summary::after{content:"–"}main>details.sec>summary::-webkit-details-marker{display:none}
 .leadform .consent input{width:22px;height:22px;flex:none}}
 @media (min-width:601px){main>details.sec>summary{display:none}}
+@media (max-width:700px){
+ .citybar,.phonebar{padding:0!important;letter-spacing:0!important;text-transform:none!important;font-size:14px!important;line-height:1.2!important}
+ .citybar .cb-l{display:none!important}
+ .citybar .cb-p,.phonebar .wrap{display:flex!important;justify-content:center!important;align-items:stretch;flex-wrap:nowrap!important;gap:0!important;margin:0!important;padding:0!important;font-size:0}
+ .citybar .cb-p a,.phonebar .wrap a{display:inline-flex!important;align-items:center;justify-content:center;flex:1 1 50%;min-height:46px;padding:0 6px!important;white-space:nowrap;font-size:14px;letter-spacing:0!important;color:#fff!important;opacity:1!important;text-decoration:none}
+ .citybar .cb-p a+a,.phonebar .wrap a+span+a{border-left:1px solid rgba(255,255,255,.25)}
+ .phonebar .wrap span{display:none}
+}
