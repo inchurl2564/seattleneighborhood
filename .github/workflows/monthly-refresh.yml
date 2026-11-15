@@ -1,10 +1,12 @@
 name: Monthly data refresh
 
-# Runs on the 1st of every month at 17:00 UTC (9 AM Pacific in winter, 10 AM in summer),
-# and any time from the Actions tab with "Run workflow".
+# Runs at 3 AM Pacific on the 1st of every month, and any time from the Actions tab with "Run workflow".
+# GitHub schedules use UTC, so it is scheduled at both 10:00 UTC (3 AM in summer) and 11:00 UTC (3 AM in winter);
+# the "Is it 3 AM in Seattle?" step skips whichever one is not, and a month is never refreshed twice.
 on:
   schedule:
-    - cron: '0 17 1 * *'
+    - cron: '0 10 1 * *'
+    - cron: '0 11 1 * *'
   workflow_dispatch:
 
 permissions:
@@ -21,29 +23,48 @@ jobs:
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+
+      - name: Is it 3 AM in Seattle?
+        id: gate
+        run: |
+          hour=$(TZ=America/Los_Angeles date +%-H)
+          month="$(TZ=America/Los_Angeles date +'%B %Y')"
+          if [ "${{ github.event_name }}" = "schedule" ] && { [ "$hour" -lt 3 ] || git log -1 --format=%s -- data.json | grep -q "Monthly data refresh: $month"; }; then
+            echo "Skipping: Pacific hour is $hour, or $month was already refreshed."; echo "go=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=yes" >> "$GITHUB_OUTPUT"
+          fi
 
       - uses: actions/setup-python@v5
+        if: steps.gate.outputs.go == 'yes'
         with:
           python-version: '3.12'
 
       - name: Install tools
+        if: steps.gate.outputs.go == 'yes'
         run: pip install pandas geopandas shapely pyproj pyogrio pillow
 
       - name: Download public data (about 400 MB)
+        if: steps.gate.outputs.go == 'yes'
         env:
           FBI_API_KEY: ${{ secrets.FBI_API_KEY }}
         run: bash fetch_data.sh
 
       - name: Build data, site and guides
+        if: steps.gate.outputs.go == 'yes'
         run: |
           python3 build.py
           python3 make_page.py
           python3 make_guides.py
 
       - name: Check the new data before publishing
+        if: steps.gate.outputs.go == 'yes'
         run: python3 check_data.py
 
       - name: Publish if anything changed
+        if: steps.gate.outputs.go == 'yes'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
