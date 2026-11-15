@@ -48,13 +48,28 @@ json.dump(out, open(RAW + 'fbi_city.json', 'w'), indent=1)
 Q = '[out:json][timeout:180];(nwr["shop"~"^(supermarket|grocery)$"](47.48,-122.45,47.79,-121.93);nwr["amenity"="restaurant"](47.48,-122.45,47.79,-121.93);nwr["amenity"="pharmacy"](47.48,-122.45,47.79,-121.93);nwr["healthcare"="pharmacy"](47.48,-122.45,47.79,-121.93);nwr["shop"~"^(mall|department_store)$"](47.48,-122.45,47.79,-121.93););out center tags;'
 B = '47.47,-122.46,47.80,-121.92'
 QF = f'[out:json][timeout:180];(nwr["leisure"="fitness_centre"]({B});nwr["sport"~"yoga|pilates"]({B});nwr["leisure"="spa"]({B});nwr["amenity"="spa"]({B});nwr["beauty"~"spa"]({B});nwr["shop"="massage"]({B}););out center tags;'
+CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'cache') + '/'
+MIRRORS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter', 'https://overpass.private.coffee/api/interpreter']
 for fname, q in [('osm_poi.json', Q), ('osm_fitness.json', QF), ('osm_parks_w.json', f'[out:json][timeout:240];way["leisure"~"^(park|nature_reserve)$"]({B});out geom;')]:
-    for attempt in range(5):
-        try:
-            req = urllib.request.Request('https://overpass.kumi.systems/api/interpreter', data=urllib.parse.urlencode({'data': q}).encode(), headers={'User-Agent': 'neighborhood-finder'})
-            open(RAW + fname, 'wb').write(urllib.request.urlopen(req, timeout=300).read()); break
-        except Exception as e:
-            print('overpass retry', e); time.sleep(20 * (attempt + 1))
+    data = None
+    for attempt in range(3):
+        for url in MIRRORS:
+            try:
+                req = urllib.request.Request(url, data=urllib.parse.urlencode({'data': q}).encode(), headers={'User-Agent': 'neighborhood-finder'})
+                body = urllib.request.urlopen(req, timeout=300).read()
+                if len(json.loads(body).get('elements', [])) > 50: data = body; break
+            except Exception as e:
+                print('overpass', url.split('/')[2], 'busy:', e)
+        if data: break
+        time.sleep(30 * (attempt + 1))
+    if data:
+        open(RAW + fname, 'wb').write(data)
+        os.makedirs(CACHE, exist_ok=True); open(CACHE + fname, 'wb').write(data)   # keep a copy in case the servers are busy next month
+    elif os.path.exists(CACHE + fname):
+        print(f'OpenStreetMap busy; using last saved copy of {fname}')
+        open(RAW + fname, 'wb').write(open(CACHE + fname, 'rb').read())
+    else:
+        raise SystemExit(f'OpenStreetMap download failed for {fname} and there is no saved copy')
 
 # King County Assessor sales: last 12 months, house/condo, warranty deed, no special reason, single-parcel deeds; locate by parcel
 z = zipfile.ZipFile(RAW + 'kc_sales.zip')
