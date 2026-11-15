@@ -1,0 +1,55 @@
+name: Monthly data refresh
+
+# Runs on the 1st of every month at 17:00 UTC (9 AM Pacific in winter, 10 AM in summer),
+# and any time from the Actions tab with "Run workflow".
+on:
+  schedule:
+    - cron: '0 17 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install tools
+        run: pip install pandas geopandas shapely pyproj pyogrio pillow
+
+      - name: Download public data (about 400 MB)
+        env:
+          FBI_API_KEY: ${{ secrets.FBI_API_KEY }}
+        run: bash fetch_data.sh
+
+      - name: Build data, site and guides
+        run: |
+          python3 build.py
+          python3 make_page.py
+          python3 make_guides.py
+
+      - name: Check the new data before publishing
+        run: python3 check_data.py
+
+      - name: Publish if anything changed
+        run: |
+          git config user.name "Monthly data refresh"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json index.html neighborhoods sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No changes this month."
+          else
+            git commit -m "Monthly data refresh: $(date +'%B %Y')"
+            git push
+          fi
