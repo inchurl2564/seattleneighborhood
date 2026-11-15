@@ -1242,14 +1242,11 @@ ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b041
 }
 
 @media (max-width:700px){
- .citybar{background:#001a38!important;border-bottom:1px solid rgba(255,255,255,.18)!important;margin-bottom:0}
- .citybar .cb-p a{font-family:Inter,"Public Sans",system-ui,sans-serif}
-*{box-sizing:border-box}body{margin:0!important}
- .citybar,.phonebar{padding:0!important;letter-spacing:0!important;text-transform:none!important;font-size:14px!important;line-height:1.2!important}
+ .citybar,.phonebar{background:#001a38!important;border-bottom:1px solid rgba(255,255,255,.18)!important;padding:0!important;margin-bottom:0;text-transform:none!important;line-height:1.2!important}
  .citybar .cb-l{display:none!important}
- .citybar .cb-p,.phonebar .wrap{display:flex!important;justify-content:center!important;align-items:stretch;flex-wrap:nowrap!important;gap:0!important;margin:0!important;padding:0!important;font-size:0}
- .citybar .cb-p a,.phonebar .wrap a{display:inline-flex!important;align-items:center;justify-content:center;flex:1 1 50%;min-height:46px;padding:0 6px!important;white-space:nowrap;font-size:14px;letter-spacing:0!important;color:#fff!important;opacity:1!important;text-decoration:none}
- .citybar .cb-p a+a,.phonebar .wrap a+span+a{border-left:1px solid rgba(255,255,255,.25)}
+ .citybar .cb-p,.phonebar .wrap{display:flex!important;justify-content:center!important;align-items:center;flex-wrap:nowrap!important;gap:0!important;margin:0!important;padding:0!important;font-size:0}
+ .citybar .cb-p a,.phonebar .wrap a{display:inline-flex!important;align-items:center;min-height:44px;padding:0 8px!important;white-space:nowrap;font:400 12.5px Inter,"Public Sans",system-ui,sans-serif!important;letter-spacing:.08em!important;color:#fff!important;opacity:.92!important;text-decoration:none;border:0!important}
+ .citybar .cb-p a+a::before,.phonebar .wrap a+span+a::before{content:"·";opacity:.5;margin:0 14px 0 0}
  .phonebar .wrap span{display:none}
 }
 </style>
