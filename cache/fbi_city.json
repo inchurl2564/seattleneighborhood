@@ -1,0 +1,73 @@
+{
+ "Seattle": {
+  "violent-crime": {
+   "rate_per_100k": 706.0,
+   "months": 12
+  },
+  "property-crime": {
+   "rate_per_100k": 4462.3,
+   "months": 12
+  }
+ },
+ "Bellevue": {
+  "violent-crime": {
+   "rate_per_100k": 114.8,
+   "months": 12
+  },
+  "property-crime": {
+   "rate_per_100k": 2189.7,
+   "months": 12
+  }
+ },
+ "Kirkland": {
+  "violent-crime": {
+   "rate_per_100k": 66.5,
+   "months": 12
+  },
+  "property-crime": {
+   "rate_per_100k": 1216.0,
+   "months": 12
+  }
+ },
+ "Redmond": {
+  "violent-crime": {
+   "rate_per_100k": 104.1,
+   "months": 12
+  },
+  "property-crime": {
+   "rate_per_100k": 1921.6,
+   "months": 12
+  }
+ },
+ "Issaquah": {
+  "violent-crime": {
+   "rate_per_100k": 50.6,
+   "months": 12
+  },
+  "property-crime": {
+   "rate_per_100k": 2151.4,
+   "months": 12
+  }
+ },
+ "Sammamish": {
+  "violent-crime": {
+   "rate_per_100k": 21.1,
+   "months": 12
+  },
+  "property-crime": {
+   "rate_per_100k": 356.3,
+   "months": 12
+  }
+ },
+ "Mercer Island": {
+  "violent-crime": {
+   "rate_per_100k": 67.5,
+   "months": 12
+  },
+  "property-crime": {
+   "rate_per_100k": 956.7,
+   "months": 12
+  }
+ },
+ "_year": 2025
+}

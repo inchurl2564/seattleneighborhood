@@ -37,12 +37,24 @@ def fbi_year(y):
     return out
 
 
+# The FBI rates change once a year, so a saved copy (cache/fbi_city.json) is used when the FBI service is busy
+# (shared servers such as GitHub's are often turned away without a personal key) or the newest year isn't complete.
+CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'cache') + '/'
+saved = json.load(open(CACHE + 'fbi_city.json')) if os.path.exists(CACHE + 'fbi_city.json') else None
+out = None
 for y in (_t.year - 1, _t.year - 2):
+    if saved and saved.get('_year', 0) >= y:
+        print(f'FBI: saved copy already has {saved["_year"]}'); out = saved; break
     try:
         out = fbi_year(y); out['_year'] = y; break
     except Exception as e:
-        print('FBI', y, 'not complete yet:', e)
+        print('FBI', y, 'not available:', e)
+if out is None and saved:
+    print(f'FBI service busy; using saved copy for {saved.get("_year")}'); out = saved
+if out is None:
+    raise SystemExit('FBI crime rates could not be downloaded and there is no saved copy')
 json.dump(out, open(RAW + 'fbi_city.json', 'w'), indent=1)
+os.makedirs(CACHE, exist_ok=True); json.dump(out, open(CACHE + 'fbi_city.json', 'w'), indent=1)
 
 # OpenStreetMap: groceries, restaurants, pharmacies, malls (Overpass API; retry if the server is busy)
 Q = '[out:json][timeout:180];(nwr["shop"~"^(supermarket|grocery)$"](47.48,-122.45,47.79,-121.93);nwr["amenity"="restaurant"](47.48,-122.45,47.79,-121.93);nwr["amenity"="pharmacy"](47.48,-122.45,47.79,-121.93);nwr["healthcare"="pharmacy"](47.48,-122.45,47.79,-121.93);nwr["shop"~"^(mall|department_store)$"](47.48,-122.45,47.79,-121.93););out center tags;'
