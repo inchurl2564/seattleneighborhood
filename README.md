@@ -25,12 +25,14 @@ average using the visitor's slider settings.
 
 | File | What it is |
 |---|---|
-| `index.html` | The finished site. GitHub Pages serves this. |
+| `index.html`, `home-value/` | Rachel's home page and home value consultation page, built by `make_home.py` from `site_home.html` and `site_value.html`. |
+| `match/` | Neighborhood Match, built by `make_page.py` from `template.html`. |
 | `template.html` | The page without data. Edit this for design or feature changes. |
 | `data.json` | The combined neighborhood data the page uses. |
 | `build.py` | Combines the downloaded public data into `data.json`. |
 | `fetch_data.sh`, `fetch_extra.py`, `arcfetch.py` | Download every public dataset into `raw/`. |
-| `make_page.py` | Puts `data.json` into `template.html` and writes `index.html`. |
+| `make_page.py` | Puts `data.json` into `template.html` and writes `match/index.html`. |
+| `make_home.py` | Writes the home page (with the six featured neighborhoods, the two highest-priced in Bellevue, Kirkland and Sammamish) and the home value page. |
 | `config.json` | Site address and agent details (name, brokerage, email, profile link, optional Formspree form ID) used by the lead forms. |
 | `make_guides.py` | Writes a guide page per neighborhood (`neighborhoods/<name>-<city>/`), the guide index and `sitemap.xml`. |
 | `fetch_wiki.py`, `get_photos.py` | Find each neighborhood's Wikipedia intro and lead photo (`wiki.json`), and download the photos into `img/`. |
@@ -49,6 +51,7 @@ python3 fetch_wiki.py     # optional: Wikipedia intros and photo credits (wiki.j
 python3 get_photos.py     # optional: downloads approved photos into img/
 python3 make_page.py      # writes index.html
 python3 make_guides.py    # writes the neighborhood guide pages and sitemap.xml
+python3 make_home.py      # writes the home page and home value page
 ```
 
 Move the date windows in the scripts forward when refreshing (crime from Nov 2025, FBI year 2025,

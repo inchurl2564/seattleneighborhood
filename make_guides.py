@@ -171,6 +171,9 @@ body{padding-top:0;overflow-x:clip}
 .citybar{margin:0 calc(50% - 50vw);background:#002349;color:#fff;text-align:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:9px 16px}
 header.site{padding:18px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
 header.site .brand{font:400 19px/1.2 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+header.site .brand .b1{display:block;letter-spacing:.24em}header.site .brand .b2{display:block;font:500 9.5px var(--body);letter-spacing:.2em;color:var(--muted);margin-top:6px}
+.ownbox{border:1px solid var(--line);border-left:3px solid var(--gold);background:var(--surface);padding:18px 20px;margin:18px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ownbox .ok{font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}.ownbox .oh{font:400 22px/1.3 var(--display);color:var(--accent);margin:4px 0}.ownbox .os{font-size:13.5px;color:var(--muted)}
 header.site nav{display:flex;gap:20px;flex-wrap:wrap}header.site nav a{font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
 header.site nav a:hover{color:var(--gold)}
 h1,h2{font-weight:400;letter-spacing:0;color:var(--accent)}h1{font-size:clamp(32px,5.4vw,48px);line-height:1.1}h2{font-size:26px;margin-top:36px}
@@ -270,7 +273,7 @@ def page(p):
     near = ''.join(f'<li><a href="../{q["slug"]}/">{esc(q["name"])}<small>{esc(q["city"])} · {money(q["price"])}</small></a></li>' for q in nearest_neighbors(p))
     crime_note = (f"This is {esc(p['city'])}'s citywide rate, because {esc(p['city'])} does not publish where incidents occur."
                   if p['crime_level'] == 'city' else 'Based on mapped police incidents in this neighborhood, scaled to the city\'s FBI-reported rate. Busy commercial areas can look high because visitors are not counted as residents.')
-    app = f'../../#nb-{p["id"]}'
+    app = f'../../match/#nb-{p["id"]}'
     ld = {"@context": "https://schema.org", "@type": "Place", "name": f"{p['name']}, {p['city']}, WA",
           "geo": {"@type": "GeoCoordinates", "latitude": p['center'][1], "longitude": p['center'][0]},
           "containedInPlace": {"@type": "City", "name": f"{p['city']}, Washington"}, "url": f"{BASE}neighborhoods/{p['slug']}/"}
@@ -283,15 +286,16 @@ def page(p):
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">{json.dumps(ld)}</script>
 </head><body>
-<div class="citybar">Seattle · Bellevue · Mercer Island · Kirkland · Redmond · Issaquah · Sammamish</div>
-<header class="site"><a class="brand" href="../../">Seattle Neighborhood Match</a><nav><a href="../">All neighborhoods</a><a href="../../">Find your match</a></nav></header>
+<div class="citybar">Neighborhood guides · from Rachel Yo</div>
+<header class="site"><a class="brand" href="../../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's International Realty</span></a><nav><a href="../../match/">Neighborhood Match</a><a href="../../home-value/">What's My Home Worth?</a><a href="../">All neighborhoods</a></nav></header>
 <main>
 <div class="eyebrow">{where}</div>
 <h1>Living in {nm}</h1>
 {hero(p)}
 {about(p)}
 <p class="lede">{nm} is a neighborhood in {where} with about {p['pop']:,} residents. The typical home value is about <b>{money(p['price'])}</b>{f" ({yoy:+.1f}% over the past year)" if yoy is not None else ''}, and {p['sold_12m']} homes sold in the last 12 months. It is {walk_lvl}, with {crime_lvl}.</p>
-<div class="cta"><a class="btn" href="{app}">See how {nm} fits your priorities</a><a class="btn ghost" href="../../">Find your best-matching neighborhoods</a></div>
+<div class="cta"><a class="btn" href="{app}">See how {nm} fits your priorities</a><a class="btn ghost" href="../../match/">Find your best-matching neighborhoods</a></div>
+<aside class="ownbox"><div><div class="ok">Own a home in {nm}?</div><div class="oh">Find out what it is worth.</div><div class="os">Schedule a free, in-person home value consultation with Rachel Yo.</div></div><a class="btn" href="../../home-value/">Schedule a consultation</a></aside>
 
 <div class="facts">
 <div class="fact"><b>{money(p['price'])}</b><span>Typical home value · {rank_txt('price', p, 'highest priced')}</span></div>
@@ -369,11 +373,11 @@ def index_page():
 <link rel="canonical" href="{BASE}neighborhoods/">
 <link rel="stylesheet" href="style.css">
 </head><body>
-<div class="citybar">Seattle · Bellevue · Mercer Island · Kirkland · Redmond · Issaquah · Sammamish</div>
-<header class="site"><a class="brand" href="../">Seattle Neighborhood Match</a><nav><a href="../">Find your match</a></nav></header>
+<div class="citybar">Neighborhood guides · from Rachel Yo</div>
+<header class="site"><a class="brand" href="../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's International Realty</span></a><nav><a href="../match/">Neighborhood Match</a><a href="../home-value/">What's My Home Worth?</a></nav></header>
 <main>
 <h1>Seattle-area neighborhood guides</h1>
-<p class="lede">Home prices, schools, safety, walkability, transit and parks for {N} neighborhoods, built from public data. Want them ranked for you? <a href="../">Answer a few questions</a>.</p>
+<p class="lede">Home prices, schools, safety, walkability, transit and parks for {N} neighborhoods, built from public data. Want them ranked for you? <a href="../match/">Answer a few questions</a>.</p>
 <div class="cities">{blocks}</div>
 </main>
 {FOOT.format(agent=agent_footer())}
@@ -387,7 +391,7 @@ for p in P:
     d = os.path.join(OUT, p['slug']); os.makedirs(d, exist_ok=True)
     open(os.path.join(d, 'index.html'), 'w').write(page(p))
 open(os.path.join(OUT, 'index.html'), 'w').write(index_page())
-urls = [BASE, BASE + 'neighborhoods/'] + [f"{BASE}neighborhoods/{p['slug']}/" for p in P]
+urls = [BASE, BASE + 'match/', BASE + 'home-value/', BASE + 'neighborhoods/'] + [f"{BASE}neighborhoods/{p['slug']}/" for p in P]
 open(os.path.join(HERE, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                                    + ''.join(f'  <url><loc>{u}</loc><lastmod>{DATA["generated"]}</lastmod></url>\n' for u in urls) + '</urlset>\n')
 print('wrote', N, 'guide pages, index and sitemap with', len(urls), 'URLs')

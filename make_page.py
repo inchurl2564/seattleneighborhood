@@ -1,4 +1,4 @@
-"""Build the finished site: puts data.json into template.html and writes index.html (a complete web page)."""
+"""Build Neighborhood Match: puts data.json into template.html and writes match/index.html (a complete web page)."""
 import os
 here = os.path.dirname(os.path.abspath(__file__))
 t = open(os.path.join(here, 'template.html')).read()
@@ -22,5 +22,6 @@ html = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="description" content="Find the right Seattle-area neighborhood: rank 155 neighborhoods in Seattle, Bellevue, Mercer Island, '
         'Kirkland, Redmond, Issaquah and Sammamish by schools, safety, prices, commute, parks and more, using public data.">\n'
         + head + '\n</head>\n<body>\n' + body + '\n</body>\n</html>\n')
-open(os.path.join(here, 'index.html'), 'w').write(html)
-print('wrote index.html', len(html) // 1024, 'KB')
+os.makedirs(os.path.join(here, 'match'), exist_ok=True)
+open(os.path.join(here, 'match', 'index.html'), 'w').write(html)
+print('wrote match/index.html', len(html) // 1024, 'KB')

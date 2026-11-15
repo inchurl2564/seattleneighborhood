@@ -1066,6 +1066,8 @@ h1,h2,h3{font-weight:400;letter-spacing:0}
 .citybar{margin:-20px calc(50% - 50vw) 0;background:#002349;color:#fff;text-align:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:9px 16px}
 header.top{align-items:center;padding-bottom:14px;border-bottom:1px solid var(--line)}
 .brand{font:400 21px/1.2 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);text-decoration:none}
+.brand .b1{display:block;letter-spacing:.24em}.brand .b2{display:block;font:500 9.5px var(--body);letter-spacing:.2em;color:var(--muted);margin-top:6px}
+.toplinks a[aria-current]{color:var(--gold)}
 .toplinks{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
 .toplinks a,.linkbtn{font:500 12px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none;background:none;border:0;padding:4px 0;cursor:pointer}
 .toplinks a:hover,.linkbtn:hover{color:var(--gold)}
@@ -1227,13 +1229,13 @@ ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b041
 </style>
 
 <div class="wrap">
-  <div class="citybar">Seattle · Bellevue · Mercer Island · Kirkland · Redmond · Issaquah · Sammamish</div>
+  <div class="citybar">Neighborhood Match · a free tool from Rachel Yo</div>
   <header class="top">
-    <a class="brand" href="#priorities">Seattle Neighborhood Match</a>
-    <nav class="toplinks" aria-label="Site"><a href="neighborhoods/">Neighborhoods</a><button type="button" class="linkbtn" data-contact="results" id="topContact" hidden>Contact</button><button class="btn ghost" id="startOver" type="button">Start over</button></nav>
+    <a class="brand" href="../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's International Realty</span></a>
+    <nav class="toplinks" aria-label="Site"><a href="./" aria-current="page">Neighborhood Match</a><a href="../home-value/">What's My Home Worth?</a><a href="../#about">About</a><button type="button" class="linkbtn" data-contact="results" id="topContact" hidden>Contact</button><button class="btn ghost" id="startOver" type="button">Start over</button></nav>
   </header>
   <div class="intro-hero" id="introHero">
-    <p class="kick">Find your place in Seattle and the Eastside</p>
+    <p class="kick">Neighborhood Match by Rachel Yo</p>
     <h1>The right neighborhood, chosen with care.</h1>
     <p class="intro">Every neighborhood has its own rhythm. Tell us what matters to the way you live, and we'll match you with the places across Seattle and the Eastside that suit you best.</p>
   </div>
@@ -1305,7 +1307,7 @@ ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b041
     </aside>
 
     <div class="main" id="mapSlotSetup">
-      <figure class="sethero" id="setHero"><img src="img/hero-seattle.jpg" alt="Seattle skyline with the Space Needle and Mount Rainier, seen from Queen Anne" width="1280" height="719"><figcaption>Photo: Daniel Schwen · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a> · via <a href="https://commons.wikimedia.org/wiki/File:Seattle_4.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>
+      <figure class="sethero" id="setHero"><img src="../img/hero-seattle.jpg" alt="Seattle skyline with the Space Needle and Mount Rainier, seen from Queen Anne" width="1280" height="719"><figcaption>Photo: Daniel Schwen · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a> · via <a href="https://commons.wikimedia.org/wiki/File:Seattle_4.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>
       <div class="mapcard" id="mapcard">
         <div id="map" role="region" aria-label="Map of neighborhoods colored by match score"></div>
         <div class="legend" aria-hidden="true">
@@ -1329,7 +1331,7 @@ ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b041
     <div class="res-top">
       <button class="btn ghost" id="toMatches" type="button">← <span class="long">Back to </span>matches</button>
       <span class="sub" id="detailCrumb"></span>
-      <a class="btn ghost" id="guideLink" href="neighborhoods/">Full guide to this neighborhood</a>
+      <a class="btn ghost" id="guideLink" href="../neighborhoods/">Full guide to this neighborhood</a>
     </div>
     <section class="detail dhead" id="detailHead"></section>
     <div id="mapSlotDetail"></div>
@@ -1385,7 +1387,7 @@ ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b041
   <footer class="sitefoot">
     <p class="agentfoot" id="agentFoot" hidden></p>
     <p><b>For research only.</b> This is not real estate, legal, financial or tax advice. Scores are estimates built from public data that may be incomplete or out of date. Verify school assignments with the school district, crime with local police, and listings and prices with a licensed real estate professional before making decisions.</p>
-    <p><a href="neighborhoods/">Browse guides to all 155 neighborhoods</a> — home prices, schools, safety, transit and parks for each.</p>
+    <p><a href="../neighborhoods/">Browse guides to all 155 neighborhoods</a> — home prices, schools, safety, transit and parks for each.</p>
     <p><b>Your privacy.</b> Your answers, matches and saved neighborhoods stay in your browser on this device. They are only shared if you choose to send them to the agent named above.</p>
     <p>Neighborhood rankings use schools, safety, prices, amenities and similar factors. They never use race, color, religion, national origin, sex, disability or familial status, in keeping with the federal Fair Housing Act.</p>
     <details class="datasrc" id="dataSrc"><summary>Data sources</summary><p>Data: home values, listings and days on market from <a href="https://www.zillow.com/research/data/" target="_blank" rel="noopener">Zillow Research</a>; recorded sales from the King County Assessor; school test scores from the Washington Office of Superintendent of Public Instruction; school locations from NCES; crime from Seattle and Bellevue police open data and the FBI Crime Data Explorer; Census Bureau American Community Survey and TIGER boundaries; EPA National Walkability Index; King County Metro and Sound Transit schedules; King County, Seattle, Bellevue, Kirkland, Redmond and Issaquah GIS; and stores, gyms and restaurants © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors (ODbL). Map library: Leaflet.</p></details>
@@ -1755,7 +1757,7 @@ function miniMap(p){
 }
 function cardMedia(p){
   const ph = PHOTOS[p.id];
-  return ph ? `<img src="img/card/${ph.file}" alt="" loading="lazy" width="600" height="${Math.round(ph.h/2)}"><span class="pc-credit">Photo: ${escH(ph.by)}, ${escH(ph.lic)}</span>` : miniMap(p);
+  return ph ? `<img src="../img/card/${ph.file}" alt="" loading="lazy" width="600" height="${Math.round(ph.h/2)}"><span class="pc-credit">Photo: ${escH(ph.by)}, ${escH(ph.lic)}</span>` : miniMap(p);
 }
 function cardHTML(p, s, i, extra){
   return `<li class="pc"><button class="row pcard ${eligible(p)?'':'outside'}" type="button" data-id="${p.id}" aria-current="${p.id===selected}">
@@ -2043,7 +2045,7 @@ function renderDetail(ranked){
   ];
   if(!tabs.some(x=>x[0]===detailTab)) detailTab = 'overview';
   const ph = PHOTOS[p.id];
-  document.getElementById('detailHead').innerHTML = (ph ? `<figure class="d-photo"><img src="img/${ph.file}" alt="${p.name}, ${p.city}" width="1200" height="${ph.h}"><figcaption>Photo: ${escH(ph.by)} · ${ph.lic_url?`<a href="${escH(ph.lic_url)}" target="_blank" rel="noopener">${escH(ph.lic)}</a>`:escH(ph.lic)} · via <a href="${escH(ph.page)}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>` : '') + `    <div class="d-head">
+  document.getElementById('detailHead').innerHTML = (ph ? `<figure class="d-photo"><img src="../img/${ph.file}" alt="${p.name}, ${p.city}" width="1200" height="${ph.h}"><figcaption>Photo: ${escH(ph.by)} · ${ph.lic_url?`<a href="${escH(ph.lic_url)}" target="_blank" rel="noopener">${escH(ph.lic)}</a>`:escH(ph.lic)} · via <a href="${escH(ph.page)}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>` : '') + `    <div class="d-head">
       <div><h2>${p.name}</h2><div class="sub">${p.district && p.district!==p.name ? p.district+', ' : ''}${p.city}${p.approx?' <span class="pill">approximate area</span>':''} · ${p.pop.toLocaleString()} residents</div>
       <div class="sub">${r>=0 ? `Ranked #${r+1} of ${ranked.length} for your priorities` : 'Outside your current filters'}</div></div>
       <div style="display:grid;justify-items:end;gap:4px"><div class="big num">${Math.round(s)}<small>match</small></div><button type="button" class="d-save" data-save-d="${p.id}" aria-pressed="${isSaved(p.id)}">${isSaved(p.id)?'♥ Saved':'♡ Save'}</button></div>
@@ -2193,7 +2195,7 @@ function update(){
   document.getElementById('mbarCount').textContent = `${ranked.length} of ${FEATS.length} fit`;
   document.getElementById('mbarTop').textContent = top ? `Top: ${top.name}, ${top.city}` : 'Loosen a filter to see matches';
   { const gp = ALLP.find(x=>x.id===selected), gl = document.getElementById('guideLink');
-    if(gp && gl){ gl.href = 'neighborhoods/' + (gp.name + ' ' + gp.city).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '/'; gl.innerHTML = `<span class="long">Full </span>guide<span class="long"> to ${gp.name}</span>`; } }
+    if(gp && gl){ gl.href = '../neighborhoods/' + (gp.name + ' ' + gp.city).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '/'; gl.innerHTML = `<span class="long">Full </span>guide<span class="long"> to ${gp.name}</span>`; } }
   { const i = ranked.findIndex(r=>r.p.id===selected), sp = ALLP.find(x=>x.id===selected);
     document.getElementById('detailCrumb').textContent = sp ? (i>=0 ? `Match #${i+1} of ${ranked.length}` : 'Outside your current filters') : ''; }
   document.getElementById('resSummary').textContent = `${ranked.length} of ${FEATS.length} neighborhoods fit your filters, ranked by your priorities.`;
@@ -2442,7 +2444,7 @@ document.getElementById('contactForm').addEventListener('submit', async e=>{
 function renderAgentCards(){
   if(!AGENT) return;
   const esc = s => String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  const tc = document.getElementById('topContact'); tc.hidden = false; tc.textContent = 'Contact ' + AGENT.first_name;
+  const tc = document.getElementById('topContact'); tc.hidden = false; tc.textContent = "Let's talk";
   const foot = document.getElementById('agentFoot');
   foot.hidden = false;
   foot.innerHTML = `Brought to you by <b>${esc(AGENT.name)}</b>, ${esc(AGENT.brokerage)}${AGENT.profile_url ? ` · <a href="${esc(AGENT.profile_url)}" target="_blank" rel="noopener">View my profile</a>` : ''} · <a href="mailto:${esc(AGENT.email)}">${esc(AGENT.email)}</a>`;
