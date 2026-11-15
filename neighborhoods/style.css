@@ -62,4 +62,12 @@ h1,h2{font-weight:400;letter-spacing:0;color:var(--accent)}h1{font-size:clamp(32
 ul.near a{font:400 18px/1.3 var(--display);color:var(--accent)}ul.near a small{font:13px var(--body);color:var(--muted)}
 .cities{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px 28px;columns:auto}.cities h2{font-size:24px;break-before:auto}
 .lede a,main p a{color:var(--accent)}
-@media (max-width:600px){.citybar{font-size:9px;letter-spacing:.12em;padding:7px 10px;line-height:1.6}header.site .brand{font-size:15px;letter-spacing:.1em}header.site nav a{font-size:11px}}
+.menubtn{display:none}.openform{display:none}
+@media (max-width:600px){.openform{display:inline-block;cursor:pointer;font-family:inherit}.agent .leadform,.agent>.note{display:none}.agent.formopen .leadform{display:grid}.agent.formopen>.note{display:block}.agent.formopen .openform{display:none}
+.citybar{font-size:9px;letter-spacing:.12em;padding:7px 10px;line-height:1.6}header.site{flex-wrap:nowrap;align-items:center}header.site .brand{font-size:15px;letter-spacing:.1em}
+.menubtn{display:block;flex:none;font:600 11px var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);background:none;border:1px solid var(--accent);padding:10px 12px;min-height:40px}
+header.site nav{display:none}header.site.open{flex-wrap:wrap}header.site.open nav{display:flex;flex-direction:column;gap:0;width:100%}header.site.open nav a{padding:14px 2px;border-top:1px solid var(--line);font-size:13px}
+main>details.sec{border-top:1px solid var(--line)}main>details.sec>h2{display:none}main>details.sec>summary{cursor:pointer;list-style:none;font:400 22px/1.3 var(--display);color:var(--accent);padding:16px 0;display:flex;justify-content:space-between;align-items:center}
+main>details.sec>summary::after{content:"+";font-size:26px;color:var(--gold)}main>details.sec[open]>summary::after{content:"–"}main>details.sec>summary::-webkit-details-marker{display:none}
+.leadform .consent input{width:22px;height:22px;flex:none}}
+@media (min-width:601px){main>details.sec>summary{display:none}}

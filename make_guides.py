@@ -185,7 +185,15 @@ h1,h2{font-weight:400;letter-spacing:0;color:var(--accent)}h1{font-size:clamp(32
 ul.near a{font:400 18px/1.3 var(--display);color:var(--accent)}ul.near a small{font:13px var(--body);color:var(--muted)}
 .cities{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px 28px;columns:auto}.cities h2{font-size:24px;break-before:auto}
 .lede a,main p a{color:var(--accent)}
-@media (max-width:600px){.citybar{font-size:9px;letter-spacing:.12em;padding:7px 10px;line-height:1.6}header.site .brand{font-size:15px;letter-spacing:.1em}header.site nav a{font-size:11px}}
+.menubtn{display:none}.openform{display:none}
+@media (max-width:600px){.openform{display:inline-block;cursor:pointer;font-family:inherit}.agent .leadform,.agent>.note{display:none}.agent.formopen .leadform{display:grid}.agent.formopen>.note{display:block}.agent.formopen .openform{display:none}
+.citybar{font-size:9px;letter-spacing:.12em;padding:7px 10px;line-height:1.6}header.site{flex-wrap:nowrap;align-items:center}header.site .brand{font-size:15px;letter-spacing:.1em}
+.menubtn{display:block;flex:none;font:600 11px var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);background:none;border:1px solid var(--accent);padding:10px 12px;min-height:40px}
+header.site nav{display:none}header.site.open{flex-wrap:wrap}header.site.open nav{display:flex;flex-direction:column;gap:0;width:100%}header.site.open nav a{padding:14px 2px;border-top:1px solid var(--line);font-size:13px}
+main>details.sec{border-top:1px solid var(--line)}main>details.sec>h2{display:none}main>details.sec>summary{cursor:pointer;list-style:none;font:400 22px/1.3 var(--display);color:var(--accent);padding:16px 0;display:flex;justify-content:space-between;align-items:center}
+main>details.sec>summary::after{content:"+";font-size:26px;color:var(--gold)}main>details.sec[open]>summary::after{content:"–"}main>details.sec>summary::-webkit-details-marker{display:none}
+.leadform .consent input{width:22px;height:22px;flex:none}}
+@media (min-width:601px){main>details.sec>summary{display:none}}
 """
 
 FOOT = """<footer class="site">
@@ -231,7 +239,9 @@ def agent_box(p):
         body = quote(f'Hi {first},\n\nI\'d like to learn more about {p["name"]} in {p["city"]}.\n\nName:\nPhone (optional):\nWhen I\'m hoping to buy:\n\n'
                      f'(Sent from the {p["name"]} guide on Seattle Neighborhood Match. I agree to be contacted about my home search.)')
         form = f'<div class="cta"><a class="btn" href="mailto:{esc(a["email"])}?subject={subject}&amp;body={body}">Ask {esc(first)} about {esc(p["name"])}</a></div>'
-    return f'<section class="agent" aria-label="Talk to a local agent">{intro}{form}{privacy}</section>'
+    opener = (f'<button class="btn openform" type="button" onclick="this.closest(\'.agent\').classList.add(\'formopen\')">Ask {esc(first)} about {esc(p["name"])}</button>'
+              if a.get('formspree_id') else '')
+    return f'<section class="agent" aria-label="Talk to a local agent">{intro}{opener}{form}{privacy}</section>'
 
 
 from photos import WIKI, wiki_for, broader_area, photo_for
@@ -287,7 +297,7 @@ def page(p):
 <script type="application/ld+json">{json.dumps(ld)}</script>
 </head><body>
 <div class="citybar">Neighborhood guides · from Rachel Yo</div>
-<header class="site"><a class="brand" href="../../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's International Realty</span></a><nav><a href="../../match/">Neighborhood Match</a><a href="../../home-value/">What's My Home Worth?</a><a href="../">All neighborhoods</a></nav></header>
+<header class="site"><a class="brand" href="../../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's International Realty</span></a><button class="menubtn" type="button" aria-expanded="false" onclick="var h=this.closest('header');var o=h.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'Close':'Menu'">Menu</button><nav><a href="../../match/">Neighborhood Match</a><a href="../../home-value/">What's My Home Worth?</a><a href="../">All neighborhoods</a></nav></header>
 <main>
 <div class="eyebrow">{where}</div>
 <h1>Living in {nm}</h1>
@@ -304,32 +314,32 @@ def page(p):
 <div class="fact"><b>{p['walk']:.1f}<small style="font-size:13px"> / 20</small></b><span>Walkability · {rank_txt('walk', p, 'most walkable')}</span></div>
 </div>
 
-<h2>Home prices and the market</h2>
+<details class="sec" open><summary>Home prices and the market</summary><h2>Home prices and the market</h2>
 <table>
 <tr><th>Typical home value</th><td>{money(p['price'])}{f" · {yoy:+.1f}% over 12 months" if yoy is not None else ''}</td></tr>
 <tr><th>Homes sold, last 12 months</th><td>{p['sold_12m']}{f" · median sale price {money(p['median_sale'])}" if p.get('median_sale') else ''}{f" · {p['sold_condo_12m']} were condos" if p.get('sold_condo_12m') else ''}</td></tr>
 <tr><th>Homes for sale (estimate)</th><td>{round(p['for_sale']) if p.get('for_sale') is not None else '—'}{f" · homes typically go under contract in {round(p['dom'])} days" if p.get('dom') else ''}</td></tr>
 <tr><th>Median household income</th><td>{money(p['income'])} · <span class="rank">{rank_txt('income', p, 'highest income')}</span></td></tr>
 </table>
-
-<h2>Schools</h2>
+</details>
+<details class="sec" open><summary>Schools</summary><h2>Schools</h2>
 <table>{sch_rows}
 <tr><th>Nearest college</th><td>{esc(p['college_name'])}, {p['college_mi']} mi</td></tr>
 </table>
 <p class="note">Share of students meeting the Washington state standard in English and math ({esc(M['ospi_year'])}). The nearest school is not always the assigned school; check with the school district.</p>
-
-<h2>Safety</h2>
+</details>
+<details class="sec" open><summary>Safety</summary><h2>Safety</h2>
 <p>About <b>{round(p['crime_index'])} crimes per 1,000 residents</b> a year (violent crimes counted three times), {crime_lvl}: <span class="rank">{rank_txt('crime_index', p, 'lowest crime', False)}</span>. {crime_note}</p>
-
-<h2>Getting around</h2>
+</details>
+<details class="sec" open><summary>Getting around</summary><h2>Getting around</h2>
 <table>
 <tr><th>Walkability</th><td>{p['walk']:.1f} of 20 ({walk_lvl}) · <span class="rank">{rank_txt('walk', p, 'most walkable')}</span></td></tr>
 <tr><th>Light rail or train</th><td>{esc(p['rail_name'])}, {p['rail_mi']} mi · <span class="rank">{rank_txt('rail_mi', p, 'closest to rail', False)}</span></td></tr>
 <tr><th>Nearest bus stop</th><td>{esc(p['bus_name'])}, {p['bus_mi']:.2f} mi</td></tr>
 <tr><th>How residents commute</th><td>{round(p.get('pct_transit_commute') or 0)}% take transit · {round(p.get('pct_wfh') or 0)}% work from home</td></tr>
 </table>
-
-<h2>Everyday amenities</h2>
+</details>
+<details class="sec" open><summary>Everyday amenities</summary><h2>Everyday amenities</h2>
 <table>
 <tr><th>Grocery store</th><td>{esc(p['grocery_name'])}, {p['grocery_mi']} mi · {p['grocery_1mi']} within a mile</td></tr>
 <tr><th>Pharmacy</th><td>{esc(p['pharm_name'])}, {p['pharm_mi']} mi</td></tr>
@@ -338,8 +348,8 @@ def page(p):
 <tr><th>Hospital</th><td>{esc(p['hosp_name'])}, {p['hosp_mi']} mi · {p['clinics_2mi']} clinics within 2 miles</td></tr>
 <tr><th>Library</th><td>{esc(p['lib_name'])}, {p['lib_mi']} mi</td></tr>
 </table>
-
-<h2>Parks and recreation</h2>
+</details>
+<details class="sec" open><summary>Parks and recreation</summary><h2>Parks and recreation</h2>
 <table>
 <tr><th>Nearest park</th><td>{esc(p['park_name'])}, {p['park_mi']} mi · {round(p['park_acres_1mi']):,} acres of parks within a mile</td></tr>
 <tr><th>Large green space</th><td>{esc(p['green_name'])}, {p['green_mi']} mi</td></tr>
@@ -347,6 +357,8 @@ def page(p):
 <tr><th>Gyms, spas and studios</th><td>{p['fit_1mi']} within a mile</td></tr>
 <tr><th>Golf</th><td>{esc(p['golf_name'])}, {p['golf_mi']} mi</td></tr>
 </table>
+</details>
+<script>if(matchMedia("(max-width:600px)").matches)document.querySelectorAll("details.sec").forEach(function(d){{d.open=false}})</script>
 
 {agent_box(p)}
 
@@ -374,7 +386,7 @@ def index_page():
 <link rel="stylesheet" href="style.css">
 </head><body>
 <div class="citybar">Neighborhood guides · from Rachel Yo</div>
-<header class="site"><a class="brand" href="../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's International Realty</span></a><nav><a href="../match/">Neighborhood Match</a><a href="../home-value/">What's My Home Worth?</a></nav></header>
+<header class="site"><a class="brand" href="../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's International Realty</span></a><button class="menubtn" type="button" aria-expanded="false" onclick="var h=this.closest('header');var o=h.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'Close':'Menu'">Menu</button><nav><a href="../match/">Neighborhood Match</a><a href="../home-value/">What's My Home Worth?</a></nav></header>
 <main>
 <h1>Seattle-area neighborhood guides</h1>
 <p class="lede">Home prices, schools, safety, walkability, transit and parks for {N} neighborhoods, built from public data. Want them ranked for you? <a href="../match/">Answer a few questions</a>.</p>

@@ -8,7 +8,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Place", "name": "Mann, Seattle, WA", "geo": {"@type": "GeoCoordinates", "latitude": 47.61373, "longitude": -122.29943}, "containedInPlace": {"@type": "City", "name": "Seattle, Washington"}, "url": "https://inchurl2564.github.io/seattleneighborhood/neighborhoods/mann-seattle/"}</script>
 </head><body>
 <div class="citybar">Neighborhood guides · from Rachel Yo</div>
-<header class="site"><a class="brand" href="../../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's International Realty</span></a><nav><a href="../../match/">Neighborhood Match</a><a href="../../home-value/">What's My Home Worth?</a><a href="../">All neighborhoods</a></nav></header>
+<header class="site"><a class="brand" href="../../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's International Realty</span></a><button class="menubtn" type="button" aria-expanded="false" onclick="var h=this.closest('header');var o=h.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'Close':'Menu'">Menu</button><nav><a href="../../match/">Neighborhood Match</a><a href="../../home-value/">What's My Home Worth?</a><a href="../">All neighborhoods</a></nav></header>
 <main>
 <div class="eyebrow">Central Area, Seattle</div>
 <h1>Living in Mann</h1>
@@ -25,32 +25,32 @@
 <div class="fact"><b>15.6<small style="font-size:13px"> / 20</small></b><span>Walkability · 62nd most walkable of 155</span></div>
 </div>
 
-<h2>Home prices and the market</h2>
+<details class="sec" open><summary>Home prices and the market</summary><h2>Home prices and the market</h2>
 <table>
 <tr><th>Typical home value</th><td>$978K · -2.2% over 12 months</td></tr>
 <tr><th>Homes sold, last 12 months</th><td>81 · median sale price $860K · 25 were condos</td></tr>
 <tr><th>Homes for sale (estimate)</th><td>31 · homes typically go under contract in 23 days</td></tr>
 <tr><th>Median household income</th><td>$164K · <span class="rank">61st highest income of 155</span></td></tr>
 </table>
-
-<h2>Schools</h2>
+</details>
+<details class="sec" open><summary>Schools</summary><h2>Schools</h2>
 <table><tr><th>Elementary</th><td>Madrona K-5 School, 0.4 mi · 36% meet standard<br><span class='rank'>Area average 45% · 136th best elementary schools of 155</span></td></tr><tr><th>Middle school</th><td>Edmonds S. Meany Middle School, 0.7 mi · 41% meet standard<br><span class='rank'>Area average 44% · 137th best middle schools of 155</span></td></tr><tr><th>High school</th><td>Garfield High School, 0.5 mi · 59% meet standard<br><span class='rank'>Area average 57% · 121st best high schools of 155</span></td></tr>
 <tr><th>Nearest college</th><td>Seattle University, 0.8 mi</td></tr>
 </table>
 <p class="note">Share of students meeting the Washington state standard in English and math (2024-25). The nearest school is not always the assigned school; check with the school district.</p>
-
-<h2>Safety</h2>
+</details>
+<details class="sec" open><summary>Safety</summary><h2>Safety</h2>
 <p>About <b>51 crimes per 1,000 residents</b> a year (violent crimes counted three times), higher crime than most neighborhoods in the area: <span class="rank">109th lowest crime of 155</span>. Based on mapped police incidents in this neighborhood, scaled to the city's FBI-reported rate. Busy commercial areas can look high because visitors are not counted as residents.</p>
-
-<h2>Getting around</h2>
+</details>
+<details class="sec" open><summary>Getting around</summary><h2>Getting around</h2>
 <table>
 <tr><th>Walkability</th><td>15.6 of 20 (somewhat walkable) · <span class="rank">62nd most walkable of 155</span></td></tr>
 <tr><th>Light rail or train</th><td>Broadway &amp; Marion, 1.0 mi · <span class="rank">50th closest to rail of 155</span></td></tr>
 <tr><th>Nearest bus stop</th><td>E Union St &amp; 26th Ave, 0.05 mi</td></tr>
 <tr><th>How residents commute</th><td>12% take transit · 32% work from home</td></tr>
 </table>
-
-<h2>Everyday amenities</h2>
+</details>
+<details class="sec" open><summary>Everyday amenities</summary><h2>Everyday amenities</h2>
 <table>
 <tr><th>Grocery store</th><td>PCC Community Market, 0.2 mi · 9 within a mile</td></tr>
 <tr><th>Pharmacy</th><td>Genoa Healthcare, 0.6 mi</td></tr>
@@ -59,8 +59,8 @@
 <tr><th>Hospital</th><td>Swedish Hospital - Cherry Hill Campus, 0.6 mi · 32 clinics within 2 miles</td></tr>
 <tr><th>Library</th><td>Madrona-Sally Goldmark Library, 0.4 mi</td></tr>
 </table>
-
-<h2>Parks and recreation</h2>
+</details>
+<details class="sec" open><summary>Parks and recreation</summary><h2>Parks and recreation</h2>
 <table>
 <tr><th>Nearest park</th><td>Plum Tree Park, 0.3 mi · 146 acres of parks within a mile</td></tr>
 <tr><th>Large green space</th><td>Madrona Park - Seattle, 0.7 mi</td></tr>
@@ -68,8 +68,10 @@
 <tr><th>Gyms, spas and studios</th><td>27 within a mile</td></tr>
 <tr><th>Golf</th><td>Broadmoor Golf Club, 2.0 mi</td></tr>
 </table>
+</details>
+<script>if(matchMedia("(max-width:600px)").matches)document.querySelectorAll("details.sec").forEach(function(d){d.open=false})</script>
 
-<section class="agent" aria-label="Talk to a local agent"><h2 style="margin-top:0">Thinking about Mann?</h2><p>Rachel Yo, Realogics Sotheby&#x27;s International Realty, can walk you through homes for sale, recent sales and what to know before you buy here.</p><form action="https://formspree.io/f/meagelnr" method="POST" class="leadform" onsubmit="if(this.sms_consent.checked&&this.phone.value.replace(/\D/g,'').length<10){alert('Please add a mobile number to get texts, or uncheck the texting box.');return false}"><input type="hidden" name="_subject" value="Question about Mann, Seattle"><input type="hidden" name="neighborhood" value="Mann, Seattle"><label>Your name<input name="name" required autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><label>Mobile phone (optional)<input name="phone" type="tel" autocomplete="tel"></label><label>Message<textarea name="message" rows="3">Hi Rachel, I'd like to learn more about Mann.</textarea></label><label class="consent"><input type="checkbox" name="consent" value="yes" required> I agree to be contacted by Rachel Yo of Realogics Sotheby&#x27;s International Realty about my home search.</label><label class="consent"><input type="checkbox" name="sms_consent" value="yes"> <span><b>Optional: OK to text me.</b> I agree to receive text messages from Rachel Yo of Realogics Sotheby&#x27;s International Realty about my home search at the mobile number above. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Agreeing is not required to get help with your search.</span></label><input type="hidden" name="sms_terms" value="I agree to receive text messages from Rachel Yo of Realogics Sotheby&#x27;s International Realty about my home search at the mobile number above. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Agreeing is not required to get help with your search."><button class="btn" type="submit">Ask Rachel about Mann</button></form><p class="note">Your details go only to Rachel Yo at Realogics Sotheby&#x27;s International Realty to answer your request. They are not sold or shared, and your mobile number and texting permission are never shared with anyone for marketing.</p></section>
+<section class="agent" aria-label="Talk to a local agent"><h2 style="margin-top:0">Thinking about Mann?</h2><p>Rachel Yo, Realogics Sotheby&#x27;s International Realty, can walk you through homes for sale, recent sales and what to know before you buy here.</p><button class="btn openform" type="button" onclick="this.closest('.agent').classList.add('formopen')">Ask Rachel about Mann</button><form action="https://formspree.io/f/meagelnr" method="POST" class="leadform" onsubmit="if(this.sms_consent.checked&&this.phone.value.replace(/\D/g,'').length<10){alert('Please add a mobile number to get texts, or uncheck the texting box.');return false}"><input type="hidden" name="_subject" value="Question about Mann, Seattle"><input type="hidden" name="neighborhood" value="Mann, Seattle"><label>Your name<input name="name" required autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><label>Mobile phone (optional)<input name="phone" type="tel" autocomplete="tel"></label><label>Message<textarea name="message" rows="3">Hi Rachel, I'd like to learn more about Mann.</textarea></label><label class="consent"><input type="checkbox" name="consent" value="yes" required> I agree to be contacted by Rachel Yo of Realogics Sotheby&#x27;s International Realty about my home search.</label><label class="consent"><input type="checkbox" name="sms_consent" value="yes"> <span><b>Optional: OK to text me.</b> I agree to receive text messages from Rachel Yo of Realogics Sotheby&#x27;s International Realty about my home search at the mobile number above. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Agreeing is not required to get help with your search.</span></label><input type="hidden" name="sms_terms" value="I agree to receive text messages from Rachel Yo of Realogics Sotheby&#x27;s International Realty about my home search at the mobile number above. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Agreeing is not required to get help with your search."><button class="btn" type="submit">Ask Rachel about Mann</button></form><p class="note">Your details go only to Rachel Yo at Realogics Sotheby&#x27;s International Realty to answer your request. They are not sold or shared, and your mobile number and texting permission are never shared with anyone for marketing.</p></section>
 
 <h2>Nearby neighborhoods</h2>
 <ul class="near"><li><a href="../madrona-seattle/">Madrona<small>Seattle · $1.12M</small></a></li><li><a href="../minor-seattle/">Minor<small>Seattle · $785K</small></a></li><li><a href="../harrison-denny-blaine-seattle/">Harrison/Denny-Blaine<small>Seattle · $1.42M</small></a></li><li><a href="../stevens-seattle/">Stevens<small>Seattle · $1.14M</small></a></li><li><a href="../leschi-seattle/">Leschi<small>Seattle · $905K</small></a></li><li><a href="../broadway-seattle/">Broadway<small>Seattle · $658K</small></a></li></ul>

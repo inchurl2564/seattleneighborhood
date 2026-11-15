@@ -125,7 +125,52 @@ footer a{color:inherit;border-bottom:1px solid rgba(233,207,143,.4)}
 .tile{color:#fff}
 .leadform .times label{display:flex;flex-direction:row;align-items:center;gap:8px;font-weight:400;font-size:14px}.leadform .times input{width:auto;padding:0}
 .contact h2{font-size:38px}
-@media(max-width:760px){.contact .wrap{grid-template-columns:1fr;gap:28px}.row2{grid-template-columns:1fr}.card{padding:22px}}
+.menubtn,.readmore,.quick,.swipehint{display:none}
+@media(max-width:760px){
+ /* menu */
+ .top .wrap{flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
+ .menubtn{display:block;font:600 11px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:inherit;background:transparent;border:1px solid currentColor;padding:11px 14px;min-height:44px;cursor:pointer}
+ nav a.cta{display:none}
+ .top.open nav{display:flex;flex-direction:column;align-items:stretch;gap:0;width:100%;margin-top:12px;background:#002349;padding:6px 0}
+ .top.open nav a,.top.open nav a.cta{display:block;padding:14px 18px;border:0;font-size:13px;color:#fff}
+ .top.open{background:#002349}
+ /* hero: shorter */
+ .hero2 .wrap{padding-top:96px;padding-bottom:28px;gap:22px}
+ .hero2 h1{font-size:31px}.hero2 .lead{font-size:15px;margin-bottom:18px}
+ .who{display:none}
+ .hero2 .actions .btn{padding:13px 16px}
+ .nmside{padding:20px}.nmside h2{font-size:26px}.nmside p{font-size:14px;margin-bottom:12px}.nmside img{display:none}.nmside small{display:none}
+ .hero2 .credit{font-size:9px}
+ /* sections: less padding */
+ .nbhd,.about,.services,.hv,.contact{padding:44px 0!important}
+ .head{margin-bottom:18px}.head h2,.about h2,.hv h2,.contact h2{font-size:27px!important}
+ /* neighborhoods and services: swipe sideways instead of scrolling down */
+ .nbhd .grid,.services .grid{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -18px;padding:0 18px 6px;-webkit-overflow-scrolling:touch}
+ .nbhd .grid>*,.services .grid>*{scroll-snap-align:start}
+ .tile{aspect-ratio:4/3}.tile h3{font-size:22px}
+ .services .card{padding:20px}.services h3{font-size:21px}.services p{font-size:14.5px}
+ .swipehint{display:block;font-size:12px;color:var(--muted);margin-top:8px}
+ /* about: photo beside the heading, second paragraph behind Read more */
+ .about .wrap{grid-template-columns:1fr!important;gap:18px!important}
+ .photo-real{max-width:150px!important}.photo-real::after{display:none}
+ .about .more{display:none}.about.expanded .more{display:block}
+ .readmore{display:inline-block;background:none;border:0;color:#e9cf8f;font:600 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:10px 0;margin:0 0 14px;cursor:pointer}
+ .stats{display:grid!important;grid-template-columns:repeat(3,1fr);gap:10px!important;margin:6px 0 20px!important}.stats b{font-size:22px!important}.stats span{font-size:9.5px!important;letter-spacing:.08em!important}
+ /* home value: drop the side card */
+ .hvcard{display:none}.hv .wrap{gap:0!important}
+ /* contact: one-tap buttons first, form on request */
+ .contact .wrap{grid-template-columns:1fr;gap:18px}
+ .contact .direct{display:none}
+ .quick{display:grid;grid-template-columns:1fr 1fr;gap:10px}.quick .btn{text-align:center;padding:14px 8px;min-height:48px;cursor:pointer;font-family:var(--sans)}
+ .contact form.leadform{display:none}.contact.formopen form.leadform{display:grid}.contact.formopen .quick{display:none}
+ .row2{grid-template-columns:1fr}.card{padding:20px}
+ /* bigger tap targets */
+ .leadform .cons input{width:24px;height:24px}
+ .services .card a,.head a{display:inline-block;padding:10px 0}
+ footer a{display:inline-block;padding:6px 0}
+ footer .wrap{gap:22px}
+}
+
 </style>'''
 
 
