@@ -194,6 +194,8 @@ main>details.sec{border-top:1px solid var(--line)}main>details.sec>h2{display:no
 main>details.sec>summary::after{content:"+";font-size:26px;color:var(--gold)}main>details.sec[open]>summary::after{content:"–"}main>details.sec>summary::-webkit-details-marker{display:none}
 .leadform .consent input{width:22px;height:22px;flex:none}}
 @media (min-width:601px){main>details.sec>summary{display:none}}
+@media (max-width:700px){header.site .brand .l2{display:block}header.site .brand{margin-right:20px;min-width:0}.menubtn{flex:none;margin-left:auto}}
+
 @media (max-width:700px){
  .citybar,.phonebar{background:#001a38!important;border-bottom:1px solid rgba(255,255,255,.18)!important;padding:0!important;margin-bottom:0;text-transform:none!important;line-height:1.2!important}
  .citybar .cb-l{display:none!important}
@@ -305,7 +307,7 @@ def page(p):
 <script type="application/ld+json">{json.dumps(ld)}</script>
 </head><body>
 <div class="citybar"><span class="cb-l">Neighborhood guides · from Rachel Yo</span><span class="cb-p"><a href="tel:+15127971935">Mobile 512.797.1935</a> · <a href="tel:+14256585300">Office 425.658.5300</a></span></div><script>(function(){{function fit(){{document.querySelectorAll(".citybar .cb-p,.phonebar .wrap").forEach(function(el){{var as=el.querySelectorAll("a[href^='tel:']");as.forEach(function(a){{a.style.removeProperty("font-size")}});if(innerWidth>700)return;var s=parseFloat(getComputedStyle(as[0]).fontSize)||12.5;while(el.scrollWidth>el.clientWidth+1&&s>8){{s-=.25;as.forEach(function(a){{a.style.setProperty("font-size",s+"px","important")}})}}}})}}fit();addEventListener("resize",fit);addEventListener("load",fit);if(document.fonts)document.fonts.ready.then(fit)}})()</script>
-<header class="site"><a class="brand" href="../../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's International Realty</span></a><button class="menubtn" type="button" aria-expanded="false" onclick="var h=this.closest('header');var o=h.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'Close':'Menu'">Menu</button><nav><a href="../../match/">Neighborhood Match</a><a href="../../home-value/">What's My Home Worth?</a><a href="../">All neighborhoods</a></nav></header>
+<header class="site"><a class="brand" href="../../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's <span class="l2">International Realty</span></span></a><button class="menubtn" type="button" aria-expanded="false" onclick="var h=this.closest('header');var o=h.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'Close':'Menu'">Menu</button><nav><a href="../../match/">Neighborhood Match</a><a href="../../home-value/">What's My Home Worth?</a><a href="../">All neighborhoods</a></nav></header>
 <main>
 <div class="eyebrow">{where}</div>
 <h1>Living in {nm}</h1>
@@ -394,7 +396,7 @@ def index_page():
 <link rel="stylesheet" href="style.css">
 </head><body>
 <div class="citybar"><span class="cb-l">Neighborhood guides · from Rachel Yo</span><span class="cb-p"><a href="tel:+15127971935">Mobile 512.797.1935</a> · <a href="tel:+14256585300">Office 425.658.5300</a></span></div><script>(function(){{function fit(){{document.querySelectorAll(".citybar .cb-p,.phonebar .wrap").forEach(function(el){{var as=el.querySelectorAll("a[href^='tel:']");as.forEach(function(a){{a.style.removeProperty("font-size")}});if(innerWidth>700)return;var s=parseFloat(getComputedStyle(as[0]).fontSize)||12.5;while(el.scrollWidth>el.clientWidth+1&&s>8){{s-=.25;as.forEach(function(a){{a.style.setProperty("font-size",s+"px","important")}})}}}})}}fit();addEventListener("resize",fit);addEventListener("load",fit);if(document.fonts)document.fonts.ready.then(fit)}})()</script>
-<header class="site"><a class="brand" href="../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's International Realty</span></a><button class="menubtn" type="button" aria-expanded="false" onclick="var h=this.closest('header');var o=h.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'Close':'Menu'">Menu</button><nav><a href="../match/">Neighborhood Match</a><a href="../home-value/">What's My Home Worth?</a></nav></header>
+<header class="site"><a class="brand" href="../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's <span class="l2">International Realty</span></span></a><button class="menubtn" type="button" aria-expanded="false" onclick="var h=this.closest('header');var o=h.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'Close':'Menu'">Menu</button><nav><a href="../match/">Neighborhood Match</a><a href="../home-value/">What's My Home Worth?</a></nav></header>
 <main>
 <h1>Seattle-area neighborhood guides</h1>
 <p class="lede">Home prices, schools, safety, walkability, transit and parks for {N} neighborhoods, built from public data. Want them ranked for you? <a href="../match/">Answer a few questions</a>.</p>

@@ -130,7 +130,7 @@ footer a{color:inherit;border-bottom:1px solid rgba(233,207,143,.4)}
 @media(max-width:760px){.phonebar{font-size:12.5px;background:#001a38}.phonebar .wrap{justify-content:center;padding-top:9px!important;padding-bottom:9px!important}.phonebar a{padding:4px 2px}}
 .leadform .times label{display:flex;flex-direction:row;align-items:center;gap:8px;font-weight:400;font-size:14px}.leadform .times input{width:auto;padding:0}
 .contact h2{font-size:38px}
-.menubtn,.readmore,.quick,.swipehint{display:none}
+.menubtn,.readmore,.quick,.swipehint,.guides-below{display:none}
 @media(max-width:760px){
  /* menu */
  .top .wrap{flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
@@ -162,6 +162,8 @@ footer a{color:inherit;border-bottom:1px solid rgba(233,207,143,.4)}
  .tile.maptile h3{color:var(--navy);font-size:21px}.tile.maptile small{color:var(--muted);opacity:1;margin-top:4px;line-height:1.5}
  .services .card{padding:20px}.services h3{font-size:21px}.services p{font-size:14.5px}
  .swipehint{display:block;font-size:12px;color:var(--muted);margin-top:8px}
+ .nbhd .head>a{display:none!important}
+ .guides-below{display:inline-block;margin-top:18px;padding:10px 0;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--gold)}
  /* about: photo beside the heading, second paragraph behind Read more */
  .about .wrap{grid-template-columns:1fr!important;gap:18px!important}
  .photo-real{max-width:150px!important}.photo-real::after{display:none}
@@ -192,6 +194,9 @@ footer a{color:inherit;border-bottom:1px solid rgba(233,207,143,.4)}
  .citybar .cb-p a+a::before,.phonebar .wrap a+span+a::before{content:"·";opacity:.5;margin:0 12px 0 0}
  .phonebar .wrap span{display:none}
 }
+
+.brand .l2{display:inline!important;margin:0!important}
+@media (max-width:700px){.brand .l2{display:block!important;margin-top:3px!important}.brand{margin-right:20px;min-width:0}.menubtn{flex:none;margin-left:auto}}
 </style>'''
 
 

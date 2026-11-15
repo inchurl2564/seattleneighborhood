@@ -71,6 +71,8 @@ main>details.sec{border-top:1px solid var(--line)}main>details.sec>h2{display:no
 main>details.sec>summary::after{content:"+";font-size:26px;color:var(--gold)}main>details.sec[open]>summary::after{content:"–"}main>details.sec>summary::-webkit-details-marker{display:none}
 .leadform .consent input{width:22px;height:22px;flex:none}}
 @media (min-width:601px){main>details.sec>summary{display:none}}
+@media (max-width:700px){header.site .brand .l2{display:block}header.site .brand{margin-right:20px;min-width:0}.menubtn{flex:none;margin-left:auto}}
+
 @media (max-width:700px){
  .citybar,.phonebar{background:#001a38!important;border-bottom:1px solid rgba(255,255,255,.18)!important;padding:0!important;margin-bottom:0;text-transform:none!important;line-height:1.2!important}
  .citybar .cb-l{display:none!important}
