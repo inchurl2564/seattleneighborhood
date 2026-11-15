@@ -185,7 +185,7 @@ h1,h2{font-weight:400;letter-spacing:0;color:var(--accent)}h1{font-size:clamp(32
 ul.near a{font:400 18px/1.3 var(--display);color:var(--accent)}ul.near a small{font:13px var(--body);color:var(--muted)}
 .cities{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px 28px;columns:auto}.cities h2{font-size:24px;break-before:auto}
 .lede a,main p a{color:var(--accent)}
-.menubtn{display:none}.openform{display:none}
+.menubtn{display:none}.citybar .cb-p{margin-left:18px}.citybar a{color:inherit;text-decoration:none}.openform{display:none}
 @media (max-width:600px){.openform{display:inline-block;cursor:pointer;font-family:inherit}.agent .leadform,.agent>.note{display:none}.agent.formopen .leadform{display:grid}.agent.formopen>.note{display:block}.agent.formopen .openform{display:none}
 .citybar{font-size:9px;letter-spacing:.12em;padding:7px 10px;line-height:1.6}header.site{flex-wrap:nowrap;align-items:center}header.site .brand{font-size:15px;letter-spacing:.1em}
 .menubtn{display:block;flex:none;font:600 11px var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);background:none;border:1px solid var(--accent);padding:10px 12px;min-height:40px}
@@ -296,7 +296,7 @@ def page(p):
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">{json.dumps(ld)}</script>
 </head><body>
-<div class="citybar">Neighborhood guides · from Rachel Yo</div>
+<div class="citybar"><span class="cb-l">Neighborhood guides · from Rachel Yo</span><span class="cb-p"><a href="tel:+15127971935">Mobile 512.797.1935</a> · <a href="tel:+14256585300">Office 425.658.5300</a></span></div>
 <header class="site"><a class="brand" href="../../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's International Realty</span></a><button class="menubtn" type="button" aria-expanded="false" onclick="var h=this.closest('header');var o=h.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'Close':'Menu'">Menu</button><nav><a href="../../match/">Neighborhood Match</a><a href="../../home-value/">What's My Home Worth?</a><a href="../">All neighborhoods</a></nav></header>
 <main>
 <div class="eyebrow">{where}</div>
@@ -385,7 +385,7 @@ def index_page():
 <link rel="canonical" href="{BASE}neighborhoods/">
 <link rel="stylesheet" href="style.css">
 </head><body>
-<div class="citybar">Neighborhood guides · from Rachel Yo</div>
+<div class="citybar"><span class="cb-l">Neighborhood guides · from Rachel Yo</span><span class="cb-p"><a href="tel:+15127971935">Mobile 512.797.1935</a> · <a href="tel:+14256585300">Office 425.658.5300</a></span></div>
 <header class="site"><a class="brand" href="../"><span class="b1">Rachel Yo</span><span class="b2">Realogics Sotheby's International Realty</span></a><button class="menubtn" type="button" aria-expanded="false" onclick="var h=this.closest('header');var o=h.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'Close':'Menu'">Menu</button><nav><a href="../match/">Neighborhood Match</a><a href="../home-value/">What's My Home Worth?</a></nav></header>
 <main>
 <h1>Seattle-area neighborhood guides</h1>

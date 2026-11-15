@@ -123,6 +123,11 @@ form.leadform{display:grid;gap:14px}.row2{display:grid;grid-template-columns:1fr
 .fdone{font-size:16px;line-height:1.6}.fdone b{display:block;font:400 26px var(--serif);color:var(--navy);margin-bottom:6px}
 footer a{color:inherit;border-bottom:1px solid rgba(233,207,143,.4)}
 .tile{color:#fff}
+.phonebar{border-bottom:1px solid rgba(255,255,255,.18);font-size:12px;letter-spacing:.08em}
+.phonebar .wrap{display:flex!important;justify-content:flex-end;gap:10px;padding-top:7px!important;padding-bottom:7px!important}
+.phonebar a{color:inherit;opacity:.92}.phonebar a:hover{color:#e9cf8f}.phonebar span{opacity:.5}
+.hero2 .wrap{padding-top:180px}
+@media(max-width:760px){.phonebar{font-size:12.5px;background:#001a38}.phonebar .wrap{justify-content:center;padding-top:9px!important;padding-bottom:9px!important}.phonebar a{padding:4px 2px}}
 .leadform .times label{display:flex;flex-direction:row;align-items:center;gap:8px;font-weight:400;font-size:14px}.leadform .times input{width:auto;padding:0}
 .contact h2{font-size:38px}
 .menubtn,.readmore,.quick,.swipehint{display:none}
