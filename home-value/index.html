@@ -177,7 +177,11 @@ footer a{color:inherit;border-bottom:1px solid rgba(233,207,143,.4)}
  /* neighborhoods and services: swipe sideways instead of scrolling down */
  .nbhd .grid,.services .grid{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -18px;padding:0 18px 6px;-webkit-overflow-scrolling:touch}
  .nbhd .grid>*,.services .grid>*{scroll-snap-align:start}
- .tile{aspect-ratio:4/3}.tile h3{font-size:22px}
+ .tile.maptile{aspect-ratio:auto;display:flex;flex-direction:column;padding:0;background:#fff;border:1px solid var(--line);color:var(--ink)}
+ .tile.maptile::before{display:none}
+ .tile.maptile .tmap{position:relative;inset:auto;display:block;aspect-ratio:16/10;overflow:hidden;border-bottom:3px solid var(--gold)}
+ .tile.maptile>div{padding:12px 14px 14px}
+ .tile.maptile h3{color:var(--navy);font-size:21px}.tile.maptile small{color:var(--muted);opacity:1;margin-top:4px;line-height:1.5}
  .services .card{padding:20px}.services h3{font-size:21px}.services p{font-size:14.5px}
  .swipehint{display:block;font-size:12px;color:var(--muted);margin-top:8px}
  /* about: photo beside the heading, second paragraph behind Read more */
