@@ -129,13 +129,16 @@ footer a{color:inherit;border-bottom:1px solid rgba(233,207,143,.4)}
 @media(max-width:760px){
  /* menu */
  .top .wrap{flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
+ .top{position:relative!important;background:#002349}
+ .top .wrap{flex-wrap:nowrap}.top.open .wrap{flex-wrap:wrap}
+ .brand{min-width:0}
  .menubtn{display:block;font:600 11px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:inherit;background:transparent;border:1px solid currentColor;padding:11px 14px;min-height:44px;cursor:pointer}
  nav a.cta{display:none}
  .top.open nav{display:flex;flex-direction:column;align-items:stretch;gap:0;width:100%;margin-top:12px;background:#002349;padding:6px 0}
  .top.open nav a,.top.open nav a.cta{display:block;padding:14px 18px;border:0;font-size:13px;color:#fff}
  .top.open{background:#002349}
  /* hero: shorter */
- .hero2 .wrap{padding-top:96px;padding-bottom:28px;gap:22px}
+ .hero2 .wrap{padding-top:30px;padding-bottom:28px;gap:22px}.hero2{min-height:0}
  .hero2 h1{font-size:31px}.hero2 .lead{font-size:15px;margin-bottom:18px}
  .who{display:none}
  .hero2 .actions .btn{padding:13px 16px}
