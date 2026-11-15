@@ -2,6 +2,9 @@
 # Downloads every public dataset the build uses into ./raw  (run from this folder).
 # Needs: curl, python3 with pandas/geopandas. Some sources are large (Assessor sales ~150 MB, Zillow ~120 MB, ZCTA ~65 MB).
 set -e
+# Rolling 12-month crime window: from the 1st of this month last year (GNU date or BSD date)
+CRIME_FROM=$(date -d "$(date +%Y-%m-01) -1 year" +%Y-%m-%d 2>/dev/null || date -v-1y +%Y-%m-01)
+export CRIME_FROM
 mkdir -p raw && cd raw
 B=https://www2.census.gov/geo/tiger
 curl -sSLo tracts.zip $B/GENZ2023/shp/cb_2023_53_tract_500k.zip
@@ -26,7 +29,7 @@ curl -sSLo schools.zip https://nces.ed.gov/programs/edge/data/EDGE_GEOCODE_PUBLI
 O="https://data.wa.gov/resource/qh4i-zmju.csv"   # OSPI Report Card Assessment 2024-25
 curl -sSLo ospi.csv "$O?\$select=districtcode,districtname,schoolcode,schoolname,gradelevel,testsubject,count_of_students_tested,count_consistent_grade_level&\$where=county='King'%20AND%20organizationlevel='School'%20AND%20studentgroup='All%20Students'%20AND%20gradelevel='All%20Grades'&\$limit=50000"
 curl -sSLo ospi_grades.csv "$O?\$select=districtcode,districtname,schoolcode,schoolname,gradelevel,testsubject,count_of_students_tested,count_consistent_grade_level&\$where=county='King'%20AND%20organizationlevel='School'%20AND%20studentgroup='All%20Students'%20AND%20gradelevel%20in('3','4','5','6','7','8','10','11','03','04','05','06','07','08')&\$limit=100000"
-curl -sSLo sea_crime.csv "https://data.seattle.gov/resource/tazs-3rd5.csv?\$select=offense_date,nibrs_crime_against_category,offense_category,offense_sub_category,latitude,longitude&\$where=offense_date>='2025-11-01T00:00:00'&\$limit=500000"
+curl -sSLo sea_crime.csv "https://data.seattle.gov/resource/tazs-3rd5.csv?\$select=offense_date,nibrs_crime_against_category,offense_category,offense_sub_category,latitude,longitude&\$where=offense_date>='${CRIME_FROM}T00:00:00'&\$limit=500000"
 curl -sSLo nhoods.geojson "https://services.arcgis.com/ZOyb2t4B0UYuYNYH/arcgis/rest/services/nma_nhoods_sub/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson"
 KC=https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services
 POI="$KC/COMMON_INTEREST_POINT_731/FeatureServer/0/query?outFields=NAME,ADDRESS,CODE&outSR=4326&f=geojson&where="
@@ -34,4 +37,5 @@ curl -sSLo clinics.geojson "${POI}CODE+IN+(330,340)"; curl -sSLo poi_nh.geojson 
 curl -sSLo golf_kc.geojson "${POI}CODE%3D300"; curl -sSLo colleges.geojson "${POI}CODE%3D663"; curl -sSLo shopping.geojson "${POI}CODE%3D690"; curl -sSLo libraries.geojson "${POI}CODE%3D390"
 curl -sSLo hosp.geojson "$KC/HOSPITALS_POINT_99/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson"
 curl -sSLo kc_sales.zip "https://aqua.kingcounty.gov/extranet/assessor/Real%20Property%20Sales.zip"
+echo "$CRIME_FROM" > crime_from
 cd .. && python3 fetch_extra.py   # ArcGIS layers, FBI rates, OSM, sales geocoding

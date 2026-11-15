@@ -151,6 +151,8 @@ print('ZHVI month', latest)
 
 # ---------------- Crime ----------------
 fbi = json.load(open(RAW + 'fbi_city.json'))
+FBI_YEAR = fbi.pop('_year', 2025)
+CRIME_FROM = datetime.date.fromisoformat(open(RAW + 'crime_from').read().strip()) if os.path.exists(RAW + 'crime_from') else datetime.date(2025, 11, 1)
 # EPA block-group jobs for daytime population
 walk_full = json.load(open(RAW + 'walk.json'))
 # (TotEmp not fetched in walk.json; fall back to residents only)
@@ -203,7 +205,7 @@ def gtfs_departures(zpath):
     # choose a Wednesday inside the feed
     cal = rd('calendar.txt') if 'calendar.txt' in names else None
     cd = rd('calendar_dates.txt') if 'calendar_dates.txt' in names else None
-    today = datetime.date(2026, 11, 18)
+    today = datetime.date.today()
     if cal is not None and len(cal):
         start = max(pd.to_datetime(cal.start_date).min().date(), today - datetime.timedelta(days=60))
         d = start + datetime.timedelta(days=(2 - start.weekday()) % 7)
@@ -584,8 +586,8 @@ out = {
                 'roads': [{'name': n if isinstance(n, str) else '', 'kind': 'primary' if m == 'S1100' else 'secondary', 'geometry': rndl(g)} for n, m, g in zip(rd.FULLNAME, rd.MTFCC, rd.geometry) if g.geom_type in ('LineString', 'MultiLineString')]},
     'hospitals': [{'name': r.NAME, 'lonlat': [round(p.x, 5), round(p.y, 5)]} for r, p in zip(hosp.itertuples(), hosp.to_crs(4326).geometry)],
     'city_crime': city_crime,
-    'meta': {'acs_year': f'{int(ACS_YEAR)-4}-{ACS_YEAR}', 'zhvi_month': latest[:7], 'crime_window': 'Nov 2025 - Nov 2026 (Seattle, Bellevue points); calendar 2025 (FBI city rates)',
-             'ospi_year': '2024-25', 'market_month': MKT_MONTH[:7], 'sales_window': SALES_WINDOW, 'osm_date': 'Nov 2026'},
+    'meta': {'acs_year': f'{int(ACS_YEAR)-4}-{ACS_YEAR}', 'zhvi_month': latest[:7], 'crime_window': f'{CRIME_FROM:%b %Y} – {datetime.date.today():%b %Y} (Seattle, Bellevue points); calendar {FBI_YEAR} (FBI city rates)', 'fbi_year': FBI_YEAR, 'crime_range': f'{CRIME_FROM:%b %Y} – {datetime.date.today():%b %Y}',
+             'ospi_year': '2024-25', 'market_month': MKT_MONTH[:7], 'sales_window': SALES_WINDOW, 'osm_date': f'{datetime.date.today():%b %Y}'},
 }
 import os; os.makedirs(os.path.dirname(OUT), exist_ok=True)
 json.dump(out, open(OUT, 'w'), separators=(',', ':'))

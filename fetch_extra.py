@@ -1,29 +1,47 @@
 """Second half of the downloads: paged ArcGIS layers, FBI crime rates, OpenStreetMap amenities, and locating recorded sales."""
-import json, os, sys, time, urllib.request, urllib.parse, zipfile
+import datetime, json, os, sys, time, urllib.request, urllib.parse, zipfile
 import pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import arcfetch
 RAW = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'raw') + '/'
 L = arcfetch.fetch
+_t = datetime.date.today()
+CRIME_FROM = os.environ.get('CRIME_FROM') or _t.replace(year=_t.year - 1, day=1).isoformat()
 L('https://services1.arcgis.com/EYzEZbDhXZjURPbP/arcgis/rest/services/Neighborhood_Areas/FeatureServer/3', out=RAW + 'bel_nh.geojson')
 L('https://maps.redmond.gov/server/rest/services/Web/RedmondDataForArcGISOnline/MapServer/11', out=RAW + 'red_nh.geojson')
 L('https://apps.issaquahwa.gov/server/rest/services/SingleLayers/Neighborhoods/FeatureServer/1', out=RAW + 'iss_nh.geojson')
 L('https://services3.arcgis.com/q5Jezm9AgzqyE7Q6/arcgis/rest/services/Kirkland_Capacity_Summarized_by_Neighborhood/FeatureServer/0', out=RAW + 'kir_nh.geojson')
-L('https://services1.arcgis.com/EYzEZbDhXZjURPbP/arcgis/rest/services/Offenses/FeatureServer/1', "REPORT_DATE >= DATE '2025-11-01'", out=RAW + 'bel_crime.geojson')
+L('https://services1.arcgis.com/EYzEZbDhXZjURPbP/arcgis/rest/services/Offenses/FeatureServer/1', f"REPORT_DATE >= DATE '{CRIME_FROM}'", out=RAW + 'bel_crime.geojson')
 L('https://geodata.epa.gov/arcgis/rest/services/OA/WalkabilityIndex/MapServer/0', "STATEFP='53' AND COUNTYFP='033'", fields='GEOID20,GEOID10,NatWalkInd,TotPop', out=RAW + 'walk.json', geom=False)
 L('https://geodata.epa.gov/arcgis/rest/services/OA/WalkabilityIndex/MapServer/0', "STATEFP='53' AND COUNTYFP='033'", fields='GEOID10,NatWalkInd,TotPop,Ac_Land', out=RAW + 'walk_geo.geojson')
 L('https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARK_AREA_228/FeatureServer/0', out=RAW + 'kc_parks.geojson')
 L('https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/Trails_in_King_County/FeatureServer/29', out=RAW + 'kc_trails.geojson')
 
-# FBI Crime Data Explorer: 2025 violent and property crime rates per city (DEMO_KEY is rate-limited; use your own api.data.gov key if you have one)
+# FBI Crime Data Explorer: latest full calendar year of violent and property crime rates per city
+# (the FBI publishes a year's data the following fall, so try last year first and fall back a year).
+# DEMO_KEY is rate-limited; set FBI_API_KEY to your own free api.data.gov key if you have one.
 oris = {'Seattle': 'WASPD0000', 'Bellevue': 'WA0170200', 'Kirkland': 'WA0170800', 'Redmond': 'WA0171200', 'Issaquah': 'WA0170600', 'Sammamish': 'WA0175000', 'Mercer Island': 'WA0170900'}
-key = os.environ.get('FBI_API_KEY', 'DEMO_KEY'); out = {}
-for city, ori in oris.items():
-    out[city] = {}
-    for off in ['violent-crime', 'property-crime']:
-        d = json.load(urllib.request.urlopen(f"https://api.usa.gov/crime/fbi/cde/summarized/agency/{ori}/{off}?from=01-2025&to=12-2025&API_KEY={key}", timeout=60))
-        r = [v for k, v in d['offenses']['rates'].items() if k.endswith('Offenses') and not k.startswith(('Washington', 'United'))]
-        out[city][off] = {'rate_per_100k': round(sum(r[0].values()), 1), 'months': len(r[0])}
+key = os.environ.get('FBI_API_KEY') or 'DEMO_KEY'
+
+
+def fbi_year(y):
+    out = {}
+    for city, ori in oris.items():
+        out[city] = {}
+        for off in ['violent-crime', 'property-crime']:
+            d = json.load(urllib.request.urlopen(f"https://api.usa.gov/crime/fbi/cde/summarized/agency/{ori}/{off}?from=01-{y}&to=12-{y}&API_KEY={key}", timeout=60))
+            r = [v for k, v in d['offenses']['rates'].items() if k.endswith('Offenses') and not k.startswith(('Washington', 'United'))]
+            if not r or len(r[0]) < 12: raise ValueError(f'{city} {y}: incomplete year')
+            out[city][off] = {'rate_per_100k': round(sum(r[0].values()), 1), 'months': len(r[0])}
+            time.sleep(1)
+    return out
+
+
+for y in (_t.year - 1, _t.year - 2):
+    try:
+        out = fbi_year(y); out['_year'] = y; break
+    except Exception as e:
+        print('FBI', y, 'not complete yet:', e)
 json.dump(out, open(RAW + 'fbi_city.json', 'w'), indent=1)
 
 # OpenStreetMap: groceries, restaurants, pharmacies, malls (Overpass API; retry if the server is busy)
