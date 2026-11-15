@@ -244,7 +244,7 @@ def about(p):
     if not w or not w.get('extract'): return ''
     area = broader_area(p, w)
     lead = f'<strong>{esc(p["name"])} is part of the larger {esc(area)} area.</strong> ' if area else ''
-    return (f'<p>{lead}{esc(w["extract"])} <span class="note">(From <a href="{esc(w["url"])}">Wikipedia</a>, '
+    return (f'<p class="lede">{lead}{esc(w["extract"])} <span class="note">(From <a href="{esc(w["url"])}">Wikipedia</a>, '
             f'<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</span></p>')
 
 
