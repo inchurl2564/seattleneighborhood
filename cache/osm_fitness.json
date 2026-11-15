@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.11 87bfad18",
   "osm3s": {
-    "timestamp_osm_base": "2026-06-01T08:52:28Z",
+    "timestamp_osm_base": "2026-11-15T21:19:21Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -73,24 +73,6 @@
     "phone": "+1-425-200-4173",
     "sport": "pilates",
     "website": "https://www.clubpilates.com/location/redmond"
-  }
-},
-{
-  "type": "node",
-  "id": 1081984002,
-  "lat": 47.6614669,
-  "lon": -122.3178014,
-  "tags": {
-    "addr:city": "Seattle",
-    "addr:country": "US",
-    "addr:housenumber": "4501",
-    "addr:postcode": "98105",
-    "addr:state": "WA",
-    "addr:street": "Roosevelt Way Northeast",
-    "check_date": "2026-02-06",
-    "leisure": "fitness_centre",
-    "name": "Industrious",
-    "website": "https://udistrict.workhardlivefit.com/"
   }
 },
 {
@@ -274,8 +256,7 @@
     "addr:housenumber": "17214",
     "addr:state": "WA",
     "addr:street": "Redmond Way",
-    "brand": "Massage Envy",
-    "brand:wikidata": "Q22922899",
+    "brand:wikidata": "Q10327170",
     "check_date": "2025-03-11",
     "name": "Massage Envy",
     "shop": "massage"
@@ -384,11 +365,12 @@
 {
   "type": "node",
   "id": 1766985953,
-  "lat": 47.6130990,
-  "lon": -122.3051216,
+  "lat": 47.6130830,
+  "lon": -122.3051344,
   "tags": {
     "addr:housenumber": "2022",
     "addr:street": "East Union Street",
+    "check_date": "2026-07-15",
     "leisure": "fitness_centre",
     "name": "Mind & Body Pilates",
     "sport": "pilates",
@@ -449,13 +431,11 @@
     "amenity": "doctors",
     "beauty": "medical_spa",
     "check_date": "2025-03-29",
-    "description": "Refine MD, led by Dr. McIntosh, offers a range of cosmetic and aesthetic services including liposuction, breast augmentation, facial fillers, and laser treatments. The clinic provides surgical and non-surgical procedures to address various aesthetic needs",
-    "description:en": "Refine MD, led by Dr. McIntosh, offers a range of cosmetic and aesthetic services including liposuction, breast augmentation, facial fillers, and laser treatments. The clinic provides surgical and non-surgical procedures to address various aesthetic needs",
     "email": "info@refinemdnw.com",
     "healthcare": "doctor",
     "healthcare:speciality": "plastic_surgery",
     "name": "Refine, MD Northwest",
-    "opening_hours": "Mo-Fr 9:00-17:00",
+    "opening_hours": "Mo-Fr 09:00-17:00",
     "operator": "Bryan C. McIntosh, M.D.",
     "phone": "+1-425-739-0808",
     "website": "https://refinemdnw.com"
@@ -541,7 +521,9 @@
     "addr:street": "Broadway East",
     "check_date": "2025-04-05",
     "name": "Dreamscape Massage",
-    "shop": "massage"
+    "opening_hours": "Mo-Su 08:30-22:30",
+    "shop": "massage",
+    "website": "https://www.dreamscapemassage.com/"
   }
 },
 {
@@ -699,10 +681,11 @@
     "addr:housenumber": "1400",
     "addr:postcode": "98107",
     "addr:street": "Northwest 49th Street",
-    "check_date": "2025-01-12",
+    "check_date": "2026-10-02",
+    "check_date:opening_hours": "2026-10-02",
     "leisure": "fitness_centre",
     "name": "Corsair Athletics",
-    "opening_hours": "Mo-Fr 11:00-19:00; Sa 09:30-11:00; Su off",
+    "opening_hours": "Mo-Fr 00:00-19:00; Sa 09:30-24:00; Su off",
     "phone": "+1-206-785-2864",
     "source": "King County GIS",
     "website": "https://traincorsair.com"
@@ -735,8 +718,8 @@
     "addr:housenumber": "1718",
     "addr:postcode": "98107",
     "addr:street": "Northwest Market Street",
-    "check_date": "2026-03-06",
-    "check_date:opening_hours": "2022-11-17",
+    "check_date": "2026-08-05",
+    "check_date:opening_hours": "2026-08-05",
     "contact:facebook": "https://www.facebook.com/inspireseattle",
     "contact:instagram": "https://www.instagram.com/inspirefitnessseattle/",
     "email": "info@inspireseattle.com",
@@ -759,8 +742,10 @@
     "addr:housenumber": "1713",
     "addr:postcode": "98107",
     "addr:street": "Northwest Market Street",
-    "check_date": "2024-12-01",
+    "check_date": "2026-08-05",
+    "check_date:opening_hours": "2026-08-05",
     "name": "Dream SPA",
+    "opening_hours": "Mo-Su 08:00-12:00",
     "shop": "massage",
     "source": "King County GIS"
   }
@@ -780,6 +765,7 @@
     "email": "striveanduplift@gmail.com",
     "leisure": "fitness_centre",
     "name": "Strive & Uplift",
+    "opening_hours": "Mo-Su 00:00+",
     "phone": "+1-206-919-9079",
     "source": "King County GIS",
     "website": "https://www.striveanduplift.com/"
@@ -798,7 +784,7 @@
     "addr:street": "Northwest Market Street",
     "brand": "Orangetheory Fitness",
     "brand:wikidata": "Q25005163",
-    "check_date:opening_hours": "2022-11-17",
+    "check_date:opening_hours": "2026-08-05",
     "checked_exists:date": "2016-08-27",
     "leisure": "fitness_centre",
     "name": "Orangetheory Fitness",
@@ -820,8 +806,10 @@
     "addr:housenumber": "2034",
     "addr:postcode": "98107",
     "addr:street": "Northwest Market Street",
-    "check_date": "2024-06-24",
+    "check_date": "2026-10-09",
+    "check_date:opening_hours": "2026-10-09",
     "name": "GW Relax Station",
+    "opening_hours": "Mo-Su 10:00-22:00",
     "shop": "massage",
     "source": "King County GIS"
   }
@@ -856,24 +844,6 @@
     "leisure": "fitness_centre",
     "name": "Tumbles",
     "source": "King County GIS"
-  }
-},
-{
-  "type": "node",
-  "id": 2140460435,
-  "lat": 47.6749129,
-  "lon": -122.3878421,
-  "tags": {
-    "addr:city": "Seattle",
-    "addr:housenumber": "6311",
-    "addr:postcode": "98107",
-    "addr:street": "24th Avenue Northwest",
-    "check_date": "2024-05-10",
-    "leisure": "fitness_centre",
-    "name": "Pilates Studio",
-    "source": "King County GIS",
-    "sport": "pilates",
-    "website": "http://pilatesstudioinballard.com"
   }
 },
 {
@@ -1164,6 +1134,7 @@
     "addr:street": "Broadway East",
     "check_date": "2026-05-02",
     "name": "The Massage Sanctuary",
+    "opening_hours": "Sa-Su 08:00-20:00; Mo 09:00-20:00; Tu-We 09:00-20:30; Th-Fr 08:00-20:30",
     "phone": "+1-206-322-5549",
     "shop": "massage",
     "source": "King County GIS",
@@ -1177,13 +1148,17 @@
   "lon": -122.3235750,
   "tags": {
     "addr:city": "Seattle",
-    "addr:housenumber": "1617 Lower",
+    "addr:housenumber": "1617",
     "addr:postcode": "98122",
+    "addr:state": "WA",
     "addr:street": "Boylston Avenue",
     "addr:unit": "Lower",
-    "leisure": "fitness_centre",
-    "name": "Urban Fit",
-    "source": "King County GIS"
+    "name": "Element MedSpa",
+    "opening_hours": "Tu-Sa 10:30-17:00",
+    "phone": "+1-206-257-1768",
+    "shop": "massage",
+    "source": "King County GIS",
+    "website": "https://elementmedicalspa.com/"
   }
 },
 {
@@ -1261,8 +1236,11 @@
     "addr:housenumber": "2351",
     "addr:postcode": "98102",
     "addr:street": "10th Avenue East",
+    "check_date": "2026-06-26",
+    "email": "info@pilateson10th.com",
     "leisure": "fitness_centre",
     "name": "Pilates on 10th",
+    "phone": "20677094030",
     "source": "King County GIS;data.seattle.gov",
     "sport": "pilates",
     "website": "https://www.pilateson10th.com"
@@ -1368,21 +1346,23 @@
 {
   "type": "node",
   "id": 2315238714,
-  "lat": 47.6802400,
-  "lon": -122.3239340,
+  "lat": 47.6801981,
+  "lon": -122.3239145,
   "tags": {
     "addr:city": "Seattle",
     "addr:housenumber": "7110",
     "addr:postcode": "98115",
     "addr:street": "Woodlawn Avenue Northeast",
     "check_date:opening_hours": "2025-05-05",
+    "contact:facebook": "https://www.facebook.com/haleayoga",
+    "contact:instagram": "https://www.instagram.com/haleayoga",
     "leisure": "fitness_centre",
-    "name": "Pranify Yoga",
+    "name": "Halea Yoga",
     "opening_hours": "Mo-Fr 05:30-21:00; Sa 08:00-13:00; Su 08:00-20:30",
     "opening_hours:signed": "no",
     "phone": "+1-206-402-6772",
     "sport": "yoga",
-    "website": "https://pranifyyoga.com/seattle"
+    "website": "https://haleayoga.com"
   }
 },
 {
@@ -1394,13 +1374,16 @@
     "addr:city": "Seattle",
     "addr:housenumber": "4502",
     "addr:postcode": "98105",
+    "addr:state": "WA",
     "addr:street": "University Way Northeast",
     "check_date": "2025-11-21",
     "check_date:opening_hours": "2025-08-05",
     "leisure": "fitness_centre",
     "name": "Seattle Bouldering Project",
     "opening_hours": "Mo-Fr 06:00-22:00; Sa,Su 07:00-22:00",
+    "phone": "+1-206-485-7475",
     "sport": "climbing",
+    "website": "https://boulderingproject.com/location/university-district/",
     "wheelchair": "limited"
   }
 },
@@ -1416,11 +1399,30 @@
     "addr:postcode": "98105",
     "addr:state": "WA",
     "addr:street": "Northeast 45th Street",
-    "check_date": "2024-03-26",
+    "check_date": "2026-11-12",
     "contact:phone": "+1-206-632-1648",
     "contact:yelp": "https://www.yelp.com/biz/my-foot-massage-seattle",
     "name": "My Foot Massage",
     "shop": "massage"
+  }
+},
+{
+  "type": "node",
+  "id": 2323846828,
+  "lat": 47.6670528,
+  "lon": -122.3128327,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "5218",
+    "addr:postcode": "98105",
+    "addr:state": "WA",
+    "addr:street": "University Way Northeast",
+    "name": "Jasmine Spa",
+    "opening_hours": "Mo-Su 09:00-23:00",
+    "phone": "+1-206-636-6318",
+    "shop": "massage",
+    "source": "King County GIS;data.seattle.gov",
+    "website": "https://jasminespawa.com"
   }
 },
 {
@@ -1433,7 +1435,9 @@
     "addr:housenumber": "5518",
     "addr:postcode": "98105",
     "addr:street": "Roosevelt Way Northeast",
+    "check_date:opening_hours": "2026-09-18",
     "name": "Emerald City Massage",
+    "opening_hours:signed": "no",
     "shop": "massage",
     "source": "King County GIS;data.seattle.gov"
   }
@@ -1470,9 +1474,28 @@
     "brand": "CrossFit",
     "brand:wikidata": "Q2072840",
     "leisure": "fitness_centre",
-    "name": "CrossFit",
+    "name": "Persistence Athletics",
     "source": "King County GIS;data.seattle.gov",
-    "website": "https://crossfitbelltown.com/"
+    "website": "https://persistenceathletics.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 2327596762,
+  "lat": 47.6161303,
+  "lon": -122.3488316,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "2602",
+    "addr:postcode": "98121",
+    "addr:state": "WA",
+    "addr:street": "2nd Avenue",
+    "check_date": "2026-10-19",
+    "check_date:opening_hours": "2026-10-19",
+    "leisure": "fitness_centre",
+    "name": "Axtion Club",
+    "opening_hours:signed": "no",
+    "source": "King County GIS;data.seattle.gov"
   }
 },
 {
@@ -1491,7 +1514,8 @@
     "opening_hours": "\"By Appointment\"",
     "phone": "+1-206-849-2103",
     "shop": "massage",
-    "source": "King County GIS;data.seattle.gov"
+    "source": "King County GIS;data.seattle.gov",
+    "website": "https://jerrilayman.com/"
   }
 },
 {
@@ -1550,6 +1574,27 @@
 },
 {
   "type": "node",
+  "id": 2327723341,
+  "lat": 47.6130531,
+  "lon": -122.3435798,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "2120",
+    "addr:postcode": "98121",
+    "addr:state": "WA",
+    "addr:street": "2nd Avenue",
+    "beauty": "spa",
+    "check_date": "2024-05-08",
+    "name": "Spa Noir",
+    "opening_hours": "Mo,We 12:00-19:00; Tu,Th-Su 11:00-19:00",
+    "phone": "+1-206-448-7600",
+    "shop": "beauty",
+    "source": "King County GIS;data.seattle.gov",
+    "website": "https://spanoir.net/"
+  }
+},
+{
+  "type": "node",
   "id": 2327741486,
   "lat": 47.6125881,
   "lon": -122.3388386,
@@ -1562,6 +1607,7 @@
     "check_date": "2023-09-23",
     "leisure": "fitness_centre",
     "name": "Urban Yoga Spa",
+    "phone": "+1-206-420-0222",
     "source": "King County GIS;data.seattle.gov",
     "sport": "yoga",
     "website": "https://www.urbanyogaspa.com/"
@@ -1580,8 +1626,10 @@
     "branch": "North Seattle",
     "brand": "Elements Massage",
     "brand:wikidata": "Q113642393",
-    "check_date": "2024-07-02",
+    "check_date": "2026-07-21",
+    "check_date:opening_hours": "2026-07-21",
     "name": "Elements Massage",
+    "opening_hours:signed": "no",
     "phone": "+1-206-632-8300",
     "shop": "massage",
     "source": "King County GIS;data.seattle.gov",
@@ -1635,12 +1683,13 @@
     "addr:housenumber": "7903",
     "addr:postcode": "98103",
     "addr:street": "Aurora Avenue North",
-    "check_date": "2023-11-19",
+    "check_date": "2026-09-11",
     "name": "The One Massage",
     "opening_hours": "09:00-21:00",
     "phone": "+1-206-484-9215",
     "shop": "massage",
-    "source": "King County GIS;data.seattle.gov"
+    "source": "King County GIS;data.seattle.gov",
+    "website": "https://www.theonemassagewa.com/"
   }
 },
 {
@@ -1779,6 +1828,7 @@
     "amenity": "spa",
     "check_date": "2024-04-18",
     "name": "Iðunn",
+    "opening_hours": "Mo-Sa 10:00-19:00; Su 10:00-18:00",
     "shop": "beauty",
     "source": "King County GIS;data.seattle.gov",
     "website": "https://www.idunnsalonandspa.com"
@@ -1854,12 +1904,17 @@
     "addr:postcode": "98104",
     "addr:state": "WA",
     "addr:street": "1st Avenue South",
+    "check_date": "2026-07-11",
+    "contact:email": "hello@kinesiapilates.com",
+    "contact:facebook": "https://www.facebook.com/kinesiastudio",
+    "contact:instagram": "https://www.instagram.com/kinesia_pilates/",
+    "contact:youtube": "https://www.youtube.com/channel/UC4XpJ3TEVGbOEphwHNunQdA",
     "leisure": "fitness_centre",
     "name": "Kinesia Pilates",
-    "phone": "+1-206-937-6070",
+    "phone": "+1-206-567-1538",
     "source": "Pioneer Square Association;King County GIS;data.seattle.gov",
     "sport": "pilates",
-    "website": "https://backalleybikerepair.com/"
+    "website": "https://www.kinesiapilates.com/"
   }
 },
 {
@@ -2203,21 +2258,18 @@
 },
 {
   "type": "node",
-  "id": 2397401989,
-  "lat": 47.5597188,
-  "lon": -122.3870674,
+  "id": 2396741258,
+  "lat": 47.5458869,
+  "lon": -122.3869758,
   "tags": {
     "addr:city": "Seattle",
-    "addr:housenumber": "4747",
-    "addr:postcode": "98116",
+    "addr:housenumber": "6400",
+    "addr:postcode": "98136",
     "addr:street": "California Avenue Southwest",
-    "check_date": "2023-05-13",
     "leisure": "fitness_centre",
-    "name": "Junction Hot Yoga",
-    "phone": "+1-425-481-4810",
+    "name": "NW Fitness Project",
     "source": "King County GIS;data.seattle.gov",
-    "sport": "yoga",
-    "website": "https://www.junctionhotyoga.com"
+    "website": "https://www.nwfitnessproject.com"
   }
 },
 {
@@ -2373,6 +2425,8 @@
   "tags": {
     "amenity": "spa",
     "name": "Blue Haven Spa",
+    "opening_hours": "Mo-Fr 09:00-19:00; Sa 09:00-17:00",
+    "shop": "beauty",
     "website": "http://www.bluehavenspa.com"
   }
 },
@@ -2382,6 +2436,11 @@
   "lat": 47.6372115,
   "lon": -122.3398506,
   "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "2040",
+    "addr:postcode": "98109",
+    "addr:street": "Westlake Avenue North",
+    "addr:unit": "301A",
     "name": "Sunny Massage",
     "shop": "massage",
     "website": "https://asiansunnymassage.com/"
@@ -2418,7 +2477,6 @@
     "amenity": "spa",
     "name": "Studio Karri L.",
     "phone": "+1-206-390-4818",
-    "website": "http://www.studiokarril.com/",
     "wifi": "no"
   }
 },
@@ -2437,7 +2495,8 @@
     "name": "Relaxing Station",
     "opening_hours": "Mo-Su 10:00-22:00",
     "phone": "+1-425-655-5555",
-    "shop": "massage"
+    "shop": "massage",
+    "website": "https://yiznet123.wixsite.com/98107"
   }
 },
 {
@@ -2451,11 +2510,31 @@
     "addr:postcode": "98118",
     "addr:state": "WA",
     "addr:street": "Rainier Avenue South",
+    "branch": "RE",
+    "brand": "CrossFit",
+    "brand:wikidata": "Q2072840",
     "leisure": "fitness_centre",
-    "name": "Crossfit RE",
+    "name": "CrossFit RE",
     "source": "King County GIS;data.seattle.gov",
     "sport": "fitness",
     "website": "http://crossfitre.com"
+  }
+},
+{
+  "type": "node",
+  "id": 2429568770,
+  "lat": 47.5636782,
+  "lon": -122.2882888,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "4421",
+    "addr:postcode": "98118",
+    "addr:state": "WA",
+    "addr:street": "Rainier Avenue South",
+    "check_date": "2026-09-18",
+    "leisure": "fitness_centre",
+    "source": "King County GIS;data.seattle.gov",
+    "sport": "yoga"
   }
 },
 {
@@ -2561,8 +2640,8 @@
 {
   "type": "node",
   "id": 2434504519,
-  "lat": 47.6759692,
-  "lon": -122.3177730,
+  "lat": 47.6760764,
+  "lon": -122.3177757,
   "tags": {
     "addr:city": "Seattle",
     "addr:housenumber": "916",
@@ -2570,6 +2649,7 @@
     "addr:street": "Northeast 65th Street",
     "check_date": "2025-11-22",
     "checked_exists:date": "2016-10-18",
+    "level": "1",
     "name": "Dreamclinic",
     "opening_hours": "Mo-Sa 09:00-21:00; Su 10:00-18:00",
     "payment:cash": "yes",
@@ -2644,12 +2724,14 @@
     "addr:postcode": "98104",
     "addr:state": "WA",
     "addr:street": "Maynard Alley South",
+    "addr:unit": "101",
     "amenity": "place_of_worship",
     "denomination": "experimential",
     "leisure": "fitness_centre",
     "name": "Mother Yoga Seattle",
+    "opening_hours": "Mo 17:30-19:00; Tu 17:30-18:30; We 12:00-13:00; Th 19:00-20:30; Sa,Su 10:00-11:30",
+    "opening_hours:url": "https://www.motheryogaseattle.com/book-online",
     "religion": "spiritualist",
-    "service_times": "06:30",
     "source": "King County GIS;data.seattle.gov",
     "sport": "yoga",
     "website": "https://www.motheryogaseattle.com"
@@ -2666,9 +2748,11 @@
     "addr:postcode": "98104",
     "addr:state": "WA",
     "addr:street": "South Weller Street",
+    "check_date": "2026-07-11",
     "name": "Amasia Acupuncture Massage Herbs Center",
     "shop": "massage",
-    "source": "King County GIS;data.seattle.gov"
+    "source": "King County GIS;data.seattle.gov",
+    "website": "https://www.amasiaacupuncture.com/"
   }
 },
 {
@@ -2685,23 +2769,6 @@
     "name": "Quynh Huong",
     "shop": "massage",
     "source": "King County GIS;data.seattle.gov"
-  }
-},
-{
-  "type": "node",
-  "id": 2445204037,
-  "lat": 47.5817863,
-  "lon": -122.3862137,
-  "tags": {
-    "addr:city": "Seattle",
-    "addr:housenumber": "2332",
-    "addr:postcode": "98116",
-    "addr:state": "WA",
-    "addr:street": "California Avenue Southwest",
-    "leisure": "fitness_centre",
-    "name": "Spira Power Yoga",
-    "source": "King County GIS;data.seattle.gov",
-    "sport": "yoga"
   }
 },
 {
@@ -2784,6 +2851,7 @@
     "addr:housenumber": "2201",
     "addr:postcode": "98115",
     "addr:street": "Northeast 65th Street",
+    "check_date": "2026-10-13",
     "check_date:opening_hours": "2024-07-15",
     "contact:mobile": "+12063388652",
     "contact:phone": "+1-206-297-6263",
@@ -2968,7 +3036,7 @@
     "addr:housenumber": "7216",
     "addr:postcode": "98103",
     "addr:street": "Greenwood Avenue North",
-    "check_date": "2023-08-14",
+    "check_date": "2026-08-08",
     "leisure": "fitness_centre",
     "name": "Vitality Pilates",
     "source": "King County GIS;data.seattle.gov",
@@ -2985,7 +3053,7 @@
     "addr:housenumber": "7408",
     "addr:postcode": "98103",
     "addr:street": "Greenwood Avenue North",
-    "check_date": "2023-06-26",
+    "check_date": "2026-08-08",
     "leisure": "fitness_centre",
     "name": "Seattle Strength & Performance",
     "opening_hours": "Mo,We 06:00-13:00,17:00-19:00; Tu 06:00-14:00,16:30-20:15; Th 06:00-13:00,16:00-18:00; Fr 06:00-13:00; Sa 09:00-11:00",
@@ -3013,20 +3081,6 @@
 },
 {
   "type": "node",
-  "id": 2463138707,
-  "lat": 47.6757918,
-  "lon": -122.3250389,
-  "tags": {
-    "addr:city": "Seattle",
-    "addr:housenumber": "305",
-    "addr:postcode": "98115",
-    "addr:street": "Northeast 65th Street",
-    "shop": "massage",
-    "source": "King County GIS;data.seattle.gov"
-  }
-},
-{
-  "type": "node",
   "id": 2463138851,
   "lat": 47.6792726,
   "lon": -122.3241583,
@@ -3036,10 +3090,13 @@
     "addr:postcode": "98115",
     "addr:state": "WA",
     "addr:street": "Northeast 70th Street",
-    "check_date": "2026-04-13",
+    "check_date": "2026-10-05",
+    "check_date:opening_hours": "2026-10-05",
     "leisure": "fitness_centre",
     "name": "Flight Room",
-    "sport": "gymnastics"
+    "opening_hours": "\"see website for class schedule and booking\"",
+    "sport": "aerial_yoga;aerial_fitness",
+    "website": "https://www.flightroomseattle.com"
   }
 },
 {
@@ -3051,6 +3108,7 @@
     "addr:city": "Seattle",
     "addr:housenumber": "466",
     "addr:postcode": "98115",
+    "addr:state": "WA",
     "addr:street": "Northeast 70th Street",
     "check_date": "2026-03-20",
     "leisure": "fitness_centre",
@@ -3059,6 +3117,25 @@
     "phone": "+1-206-526-5425",
     "source": "King County GIS;data.seattle.gov",
     "website": "https://greenlakestrength.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 2463139096,
+  "lat": 47.6759907,
+  "lon": -122.3228042,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "506",
+    "addr:postcode": "98115",
+    "addr:street": "Northeast 65th Street",
+    "contact:instagram": "https://www.instagram.com/rsheadspa/",
+    "name": "RS Head Spa",
+    "opening_hours": "Mo-Su 09:00-22:00",
+    "phone": "+1-425-248-8530",
+    "shop": "massage",
+    "source": "King County GIS;data.seattle.gov",
+    "website": "https://rsheadspaseattle.com"
   }
 },
 {
@@ -3253,12 +3330,13 @@
     "addr:state": "WA",
     "addr:street": "West Crockett Street",
     "brand": "Massage Envy",
-    "brand:wikidata": "Q22922899",
+    "brand:wikidata": "Q10327170",
     "check_date": "2024-05-08",
     "name": "Massage Envy",
+    "opening_hours": "Mo-Fr 08:00-20:00; Sa-Su 09:00-18:00",
     "shop": "massage",
     "source": "King County GIS",
-    "website": "https://www.massageenvy.com"
+    "website": "https://locations.massageenvy.com/washington/seattle/4-west-crockett-street.html"
   }
 },
 {
@@ -3288,14 +3366,20 @@
     "addr:city": "Seattle",
     "addr:housenumber": "1815",
     "addr:postcode": "98103",
+    "addr:state": "WA",
     "addr:street": "North 45th Street",
-    "addr:unit": "203",
+    "addr:unit": "205",
     "check_date": "2024-11-26",
+    "contact:facebook": "aditiyoga",
+    "email": "info@aditistudio.com",
     "leisure": "fitness_centre",
     "level": "1",
     "name": "Aditi",
+    "opening_hours": "Mo 08:00-19:30; Tu 09:00-19:30; We,Th 08:15-19:30; Fr 08:00-17:00; Sa 08:15-17:00; Su 08:00-19:00",
+    "phone": "+1-206-428-6004",
     "source": "King County GIS",
     "sport": "yoga",
+    "website": "https://aditistudio.com/",
     "wheelchair": "yes"
   }
 },
@@ -3436,8 +3520,8 @@
 {
   "type": "node",
   "id": 2995132086,
-  "lat": 47.6799493,
-  "lon": -122.3242900,
+  "lat": 47.6799732,
+  "lon": -122.3242396,
   "tags": {
     "addr:city": "Seattle",
     "addr:housenumber": "406",
@@ -3448,8 +3532,11 @@
     "check_date:opening_hours": "2025-05-05",
     "leisure": "fitness_centre",
     "name": "Pure Barre",
+    "opening_hours": "Mo 06:45-08:00,09:00-13:15,15:45-20:00; Tu 05:45-08:00,09:00-13:15,15:45-21:00; We 05:45-08:00,09:00-13:15,15:45-20:15; Th 05:45-08:00,09:00-13:30,15:45-20:15; Fr 06:45-13:15,15:00-19:00; Sa-Su 08:00-13:15",
     "opening_hours:signed": "no",
-    "sport": "barre"
+    "phone": "+1-206-420-1667",
+    "sport": "barre",
+    "website": "https://www.purebarre.com/location/seattle-green-lake-wa"
   }
 },
 {
@@ -3505,9 +3592,11 @@
   "lat": 47.6774875,
   "lon": -122.2039155,
   "tags": {
-    "check_date": "2024-06-15",
+    "check_date": "2026-09-14",
+    "check_date:opening_hours": "2026-09-14",
     "leisure": "fitness_centre",
     "name": "Solar You Yoga",
+    "opening_hours": "\"open during class hours only (class hours on website)\"",
     "sport": "yoga",
     "website": "https://solaryouyoga.com"
   }
@@ -3596,8 +3685,7 @@
   "tags": {
     "addr:housenumber": "14213",
     "addr:street": "Northeast Woodinville Duvall Road",
-    "brand": "Massage Envy",
-    "brand:wikidata": "Q22922899",
+    "brand:wikidata": "Q10327170",
     "name": "Massage Envy",
     "shop": "massage"
   }
@@ -3689,6 +3777,29 @@
     "brand:wikidata": "Q6457180",
     "leisure": "fitness_centre",
     "name": "LA Fitness"
+  }
+},
+{
+  "type": "node",
+  "id": 3311160762,
+  "lat": 47.6782449,
+  "lon": -122.3263260,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "6900",
+    "addr:postcode": "98115",
+    "addr:state": "WA",
+    "addr:street": "East Green Lake Way North",
+    "addr:unit": "L",
+    "contact:facebook": "https://www.facebook.com/liveloveflow",
+    "contact:instagram": "https://www.instagram.com/liveloveflowstudios",
+    "leisure": "fitness_centre",
+    "name": "Live Love Flow",
+    "opening_hours": "\"see website for class schedule\"",
+    "phone": "+1-206-322-3569",
+    "source": "King County GIS;data.seattle.gov",
+    "sport": "yoga",
+    "website": "https://www.liveloveflowstudios.com"
   }
 },
 {
@@ -3806,7 +3917,7 @@
   "type": "node",
   "id": 3325968711,
   "lat": 47.7054673,
-  "lon": -122.1768407,
+  "lon": -122.1768463,
   "tags": {
     "addr:city": "Kirkland",
     "addr:housenumber": "11725",
@@ -3814,6 +3925,38 @@
     "addr:street": "124th Avenue Northeast",
     "name": "Oasis Massage",
     "shop": "massage"
+  }
+},
+{
+  "type": "node",
+  "id": 3325968721,
+  "lat": 47.7064220,
+  "lon": -122.1790682,
+  "tags": {
+    "addr:city": "Kirkland",
+    "addr:housenumber": "11831",
+    "addr:postcode": "98034",
+    "addr:state": "WA",
+    "addr:street": "124th Avenue Northeast",
+    "leisure": "fitness_centre",
+    "name": "DOP Strength Gym"
+  }
+},
+{
+  "type": "node",
+  "id": 3325968728,
+  "lat": 47.7060789,
+  "lon": -122.1787595,
+  "tags": {
+    "addr:city": "Kirkland",
+    "addr:housenumber": "11853",
+    "addr:postcode": "98034",
+    "addr:state": "WA",
+    "addr:street": "124th Avenue Northeast",
+    "internet_access": "wlan",
+    "leisure": "fitness_centre",
+    "name": "Lake Washington Cross Fit",
+    "website": "https://lakewashingtoncrossfit.com"
   }
 },
 {
@@ -3827,6 +3970,7 @@
     "addr:postcode": "98034",
     "addr:street": "124th Avenue Northeast",
     "name": "Greenbow Massage",
+    "opening_hours": "Mo-Su 10:00-22:00",
     "shop": "massage"
   }
 },
@@ -4180,7 +4324,8 @@
     "addr:state": "WA",
     "addr:street": "16th Avenue Southwest",
     "check_date": "2026-04-19",
-    "leisure": "fitness_centre"
+    "leisure": "fitness_centre",
+    "name": "in ur lane Fitness"
   }
 },
 {
@@ -4203,28 +4348,6 @@
 },
 {
   "type": "node",
-  "id": 3665233026,
-  "lat": 47.6001652,
-  "lon": -122.3336215,
-  "tags": {
-    "addr:housenumber": "214",
-    "addr:state": "WA",
-    "addr:street": "1st Avenue South",
-    "addr:unit": "G7",
-    "contact:email": "hello@kinesiapilates.com",
-    "contact:facebook": "https://www.facebook.com/kinesiastudio",
-    "contact:instagram": "https://www.instagram.com/kinesia_pilates/",
-    "contact:phone": "+1-206-567-1538",
-    "contact:youtube": "https://www.youtube.com/channel/UC4XpJ3TEVGbOEphwHNunQdA",
-    "fixme": "Has this buisness moved to 314 1st ave S?",
-    "leisure": "fitness_centre",
-    "name": "Kinesia Pilates",
-    "sport": "pilates",
-    "website": "https://www.kinesiapilates.com/"
-  }
-},
-{
-  "type": "node",
   "id": 3688613827,
   "lat": 47.6237128,
   "lon": -122.3128330,
@@ -4233,8 +4356,10 @@
     "addr:street": "15th Avenue East",
     "check_date": "2026-04-02",
     "checked_exists:date": "2021-11-22",
-    "name": "ONE Bodywork",
-    "shop": "massage"
+    "name": "ONE Bodyworx",
+    "opening_hours": "Mo-Fr 15:00-20:30; Sa 09:00-15:00",
+    "shop": "massage",
+    "website": "https://www.onebodyworx.com/"
   }
 },
 {
@@ -4314,7 +4439,7 @@
     "addr:postcode": "98072",
     "addr:state": "WA",
     "addr:street": "Garden Way Northeast",
-    "check_date": "2024-07-07",
+    "check_date": "2026-10-10",
     "name": "InSpa",
     "shop": "massage"
   }
@@ -4423,8 +4548,7 @@
   "lat": 47.6272240,
   "lon": -122.1489607,
   "tags": {
-    "brand": "Massage Envy",
-    "brand:wikidata": "Q22922899",
+    "brand:wikidata": "Q10327170",
     "name": "Massage Envy",
     "shop": "massage"
   }
@@ -4486,6 +4610,16 @@
 },
 {
   "type": "node",
+  "id": 3950968433,
+  "lat": 47.6300090,
+  "lon": -122.1559714,
+  "tags": {
+    "leisure": "fitness_centre",
+    "sport": "fitness"
+  }
+},
+{
+  "type": "node",
   "id": 3953174328,
   "lat": 47.7259758,
   "lon": -122.3467169,
@@ -4506,7 +4640,7 @@
     "leisure": "fitness_centre",
     "level": "0",
     "name": "Krav Maga",
-    "sport": "Krav Maga"
+    "sport": "krav_maga"
   }
 },
 {
@@ -4637,14 +4771,17 @@
     "addr:city": "Seattle",
     "addr:country": "US",
     "addr:housenumber": "1618",
+    "addr:postcode": "98122",
     "addr:state": "WA",
     "addr:street": "Bellevue Avenue",
     "addr:unit": "2",
-    "check_date": "2024-08-07",
+    "check_date": "2026-10-17",
     "leisure": "fitness_centre",
     "name": "Cap Hill Fitness",
     "opening_hours": "Mo-Su 05:00-23:00",
-    "sport": "fitness"
+    "phone": "+1-206-819-9933",
+    "sport": "fitness",
+    "website": "http://www.caphillfitness.com/"
   }
 },
 {
@@ -4944,24 +5081,6 @@
 },
 {
   "type": "node",
-  "id": 4401326060,
-  "lat": 47.6183250,
-  "lon": -122.3532494,
-  "tags": {
-    "addr:city": "Seattle",
-    "addr:housenumber": "159",
-    "addr:postcode": "98109",
-    "addr:state": "WA",
-    "addr:street": "Denny Way",
-    "addr:unit": "1",
-    "name": "MassageWorks",
-    "opening_hours": "\"on appointment\"",
-    "operator": "Rob Grant, LMT, BCTMB",
-    "shop": "massage"
-  }
-},
-{
-  "type": "node",
   "id": 4428266390,
   "lat": 47.7035485,
   "lon": -122.2097870,
@@ -5012,6 +5131,20 @@
 },
 {
   "type": "node",
+  "id": 4514613590,
+  "lat": 47.6696060,
+  "lon": -122.3733456,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "5600",
+    "addr:postcode": "98107",
+    "addr:state": "WA",
+    "addr:street": "14th Avenue Northwest",
+    "shop": "massage"
+  }
+},
+{
+  "type": "node",
   "id": 4520151851,
   "lat": 47.6706553,
   "lon": -122.3878340,
@@ -5027,7 +5160,7 @@
     "email": "ballard@barre3.com",
     "leisure": "fitness_centre",
     "name": "Barre3",
-    "opening_hours": "Mo-FR 05:45-19:00, Sa 07:00-12:00, Su 07:00-18:00 || \"by appointment\"",
+    "opening_hours": "Mo-Fr 05:45-19:00, Sa 07:00-12:00, Su 07:00-18:00 || \"by appointment\"",
     "phone": "+1-206-420-2288",
     "sport": "barre",
     "website": "https://barre3.com/studio-locations/ballard"
@@ -5076,12 +5209,20 @@
 {
   "type": "node",
   "id": 4639109919,
-  "lat": 47.6108904,
-  "lon": -122.3440564,
+  "lat": 47.6108595,
+  "lon": -122.3439871,
   "tags": {
-    "check_date": "2024-02-24",
+    "addr:city": "Seattle",
+    "addr:housenumber": "2020",
+    "addr:postcode": "98121",
+    "addr:state": "WA",
+    "addr:street": "Western Avenue",
+    "check_date": "2026-06-03",
     "leisure": "fitness_centre",
-    "name": "Seattle Athletic Club"
+    "name": "Seattle Athletic Club",
+    "opening_hours": "Mo-Fr 05:00-22:00; Sa,Su 07:00-20:00",
+    "phone": "+1-206-443-1111",
+    "website": "http://www.sacdt.com/"
   }
 },
 {
@@ -5279,9 +5420,11 @@
     "addr:housenumber": "112",
     "addr:postcode": "98103",
     "addr:street": "North 85th Street",
-    "check_date": "2024-10-26",
+    "brand": "TITLE Boxing Club",
+    "brand:wikidata": "Q126391325",
+    "check_date": "2026-09-16",
     "leisure": "fitness_centre",
-    "name": "Title Boxing Club",
+    "name": "TITLE Boxing Club",
     "source": "King County GIS;data.seattle.gov",
     "sport": "boxing"
   }
@@ -5317,7 +5460,7 @@
     "addr:housenumber": "8554 1/2",
     "addr:postcode": "98103",
     "addr:street": "Greenwood Avenue North",
-    "check_date": "2024-12-05",
+    "check_date": "2026-10-11",
     "leisure": "fitness_centre",
     "name": "The Grinning Yogi",
     "source": "King County GIS;data.seattle.gov",
@@ -5379,6 +5522,25 @@
 },
 {
   "type": "node",
+  "id": 4907720157,
+  "lat": 47.4878701,
+  "lon": -122.1660067,
+  "tags": {
+    "addr:city": "Renton",
+    "addr:housenumber": "3901",
+    "addr:postcode": "98056",
+    "addr:state": "WA",
+    "addr:street": "Northeast 4th Street",
+    "alt_name": "Liberty Tax Service",
+    "brand": "Liberty Tax",
+    "brand:wikidata": "Q6541978",
+    "check_date": "2026-08-18",
+    "name": "Oasis Foot Massage",
+    "shop": "massage"
+  }
+},
+{
+  "type": "node",
   "id": 4908200177,
   "lat": 47.5644762,
   "lon": -122.3870398,
@@ -5400,9 +5562,12 @@
   "lat": 47.5443242,
   "lon": -122.0148870,
   "tags": {
+    "brand": "Barre3",
+    "brand:wikidata": "Q120601241",
     "check_date": "2025-05-18",
     "leisure": "fitness_centre",
-    "name": "Barre3"
+    "name": "Barre3",
+    "sport": "barre"
   }
 },
 {
@@ -5417,17 +5582,6 @@
     "leisure": "fitness_centre",
     "name": "City Cycle",
     "website": "https://citycycleseattle.com"
-  }
-},
-{
-  "type": "node",
-  "id": 5067774828,
-  "lat": 47.6191017,
-  "lon": -122.3584891,
-  "tags": {
-    "leisure": "fitness_centre",
-    "name": "Soul Fitness Club",
-    "name:en": "Soul Fitness Club"
   }
 },
 {
@@ -5475,19 +5629,11 @@
     "addr:housenumber": "300",
     "addr:state": "WA",
     "addr:street": "Fairview Avenue North",
-    "check_date": "2023-06-08",
+    "check_date": "2026-09-30",
+    "check_date:opening_hours": "2026-09-30",
     "leisure": "fitness_centre",
-    "name": "Transform 180"
-  }
-},
-{
-  "type": "node",
-  "id": 5092313466,
-  "lat": 47.5849263,
-  "lon": -122.2348086,
-  "tags": {
-    "leisure": "fitness_centre",
-    "name": "MI Crossfit"
+    "name": "Transform 180",
+    "opening_hours": "24/7"
   }
 },
 {
@@ -5523,10 +5669,10 @@
 {
   "type": "node",
   "id": 5162371579,
-  "lat": 47.7374691,
-  "lon": -122.1528955,
+  "lat": 47.7369240,
+  "lon": -122.1535924,
   "tags": {
-    "addr:unit": "B200",
+    "addr:unit": "B500",
     "email": "info@alphagymnasticswa.com",
     "leisure": "fitness_centre",
     "name": "Alpha Gymnastics",
@@ -5632,7 +5778,12 @@
   "lat": 47.5052735,
   "lon": -122.1591201,
   "tags": {
+    "addr:city": "Renton",
     "addr:door": "A",
+    "addr:housenumber": "4500",
+    "addr:postcode": "98059",
+    "addr:state": "WA",
+    "addr:street": "Northeast Sunset Boulevard",
     "check_date": "2025-11-19",
     "name": "Umami Spa",
     "payment:cash": "yes",
@@ -5699,8 +5850,7 @@
     "addr:state": "WA",
     "addr:street": "Ballinger Way Northeast",
     "addr:unit": "A-02",
-    "brand": "Massage Envy",
-    "brand:wikidata": "Q22922899",
+    "brand:wikidata": "Q10327170",
     "check_date": "2024-04-28",
     "name": "Massage Envy",
     "opening_hours": "Mo-Fr 08:00-22:00; Sa 08:00-18:00; Su 10:00-18:00",
@@ -5754,6 +5904,10 @@
   "lat": 47.5435383,
   "lon": -122.0157812,
   "tags": {
+    "addr:city": "Issaquah",
+    "addr:housenumber": "1012",
+    "addr:postcode": "98029",
+    "addr:street": "Northeast Park Drive",
     "check_date": "2025-05-18",
     "leisure": "fitness_centre",
     "name": "Pilates Studio 11"
@@ -5775,6 +5929,7 @@
     "email": "info@ballardhealthclub.com",
     "leisure": "fitness_centre",
     "name": "Ballard Health Club",
+    "opening_hours": "Mo-Fr 05:30-22:00; Sa,Su 07:00-20:00",
     "phone": "+1-206-706-4882",
     "sport": "fitness",
     "website": "https://www.ballardhealthclub.com/"
@@ -5810,6 +5965,11 @@
   "lat": 47.5050986,
   "lon": -122.1595030,
   "tags": {
+    "addr:city": "Renton",
+    "addr:housenumber": "4444",
+    "addr:postcode": "98059",
+    "addr:state": "WA",
+    "addr:street": "Northeast Sunset Boulevard",
     "check_date": "2025-11-19",
     "name": "Balance Acupuncture",
     "shop": "massage"
@@ -5891,24 +6051,6 @@
     "check_date": "2024-07-16",
     "leisure": "fitness_centre",
     "name": "Infrared Yoga"
-  }
-},
-{
-  "type": "node",
-  "id": 5625223041,
-  "lat": 47.6157236,
-  "lon": -122.3362957,
-  "tags": {
-    "addr:city": "Seattle",
-    "addr:housenumber": "1918",
-    "addr:postcode": "98101",
-    "addr:state": "WA",
-    "addr:street": "8th Avenue",
-    "addr:unit": "150",
-    "leisure": "fitness_centre",
-    "name": "Pandora Fitness",
-    "phone": "+1-206-726-3672",
-    "website": "https://www.pandorafitness.com/"
   }
 },
 {
@@ -6080,7 +6222,8 @@
     "check_date": "2024-09-04",
     "name": "Gilsha Spa",
     "phone": "+1-206-492-3688",
-    "shop": "massage"
+    "shop": "massage",
+    "website": "https://www.gilshaspa.com/"
   }
 },
 {
@@ -6135,6 +6278,38 @@
     "check_date": "2023-02-17",
     "leisure": "fitness_centre",
     "name": "Fortified Fitness"
+  }
+},
+{
+  "type": "node",
+  "id": 5859916575,
+  "lat": 47.6685132,
+  "lon": -122.3780478,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "1545",
+    "addr:postcode": "98107",
+    "addr:street": "Northwest Market Street",
+    "addr:unit": "D",
+    "branch": "Ballard",
+    "leisure": "fitness_centre",
+    "name": "Club Pilates",
+    "sport": "pilates"
+  }
+},
+{
+  "type": "node",
+  "id": 5859941709,
+  "lat": 47.6685148,
+  "lon": -122.3796942,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "1717",
+    "addr:postcode": "98107",
+    "addr:street": "Northwest Market Street",
+    "name": "Two Smiling Feet",
+    "shop": "massage",
+    "source": "King County GIS"
   }
 },
 {
@@ -6335,6 +6510,22 @@
 },
 {
   "type": "node",
+  "id": 6120367206,
+  "lat": 47.5170736,
+  "lon": -122.3549329,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "9606",
+    "addr:postcode": "98106",
+    "addr:state": "WA",
+    "addr:street": "16th Avenue Southwest",
+    "check_date": "2026-07-18",
+    "name": "Beijing Massage & Spa",
+    "shop": "massage"
+  }
+},
+{
+  "type": "node",
   "id": 6268295685,
   "lat": 47.7926141,
   "lon": -122.2134610,
@@ -6380,12 +6571,14 @@
 },
 {
   "type": "node",
-  "id": 6301574886,
-  "lat": 47.5408158,
-  "lon": -122.0401623,
+  "id": 6301574885,
+  "lat": 47.5407954,
+  "lon": -122.0401206,
   "tags": {
-    "leisure": "fitness_centre",
-    "name": "Daniel Defense"
+    "check_date": "2026-07-01",
+    "healthcare": "dentist",
+    "name": "Long Massage",
+    "shop": "massage"
   }
 },
 {
@@ -6396,6 +6589,7 @@
   "tags": {
     "addr:housenumber": "10626",
     "addr:street": "Main Street",
+    "check_date": "2026-06-13",
     "name": "Noble Massage",
     "shop": "massage"
   }
@@ -6541,6 +6735,7 @@
     "addr:street": "Rainier Avenue South",
     "addr:unit": "C",
     "name": "Sound Foot Massage",
+    "opening_hours": "Mo-Su 10:00-22:00",
     "shop": "massage"
   }
 },
@@ -6656,10 +6851,17 @@
   "lat": 47.5981374,
   "lon": -122.3260732,
   "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "601",
+    "addr:postcode": "98104",
+    "addr:street": "South King Street",
+    "addr:unit": "101B",
     "check_date": "2025-08-02",
     "level": "0",
     "name": "Magical Massage",
-    "shop": "massage"
+    "opening_hours": "Mo,We-Th 12:30-21:30; Fr 12:30-22:30; Sa 12:00-22:30; Su 12:00-21:30",
+    "shop": "massage",
+    "website": "https://www.magicalmassageseattle.com/"
   }
 },
 {
@@ -6668,8 +6870,17 @@
   "lat": 47.5972677,
   "lon": -122.3246731,
   "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "701",
+    "addr:postcode": "98104",
+    "addr:state": "WA",
+    "addr:street": "S King Street",
+    "addr:unit": "1/2",
     "leisure": "fitness_centre",
-    "name": "Northwest Kung Fu Fitness Studios"
+    "name": "Northwest Kung Fu Fitness Studios",
+    "opening_hours": "Tu,Th 17:30-20:00; Sa 11:30-13:30",
+    "phone": "+1-206-954-0965",
+    "website": "https://nwkungfuandfitness.com/"
   }
 },
 {
@@ -6678,11 +6889,14 @@
   "lat": 47.6625325,
   "lon": -122.3692250,
   "tags": {
+    "addr:country": "US",
     "addr:housenumber": "907",
+    "addr:state": "WA",
     "addr:street": "Northwest Ballard Way",
     "addr:unit": "115",
     "brand": "F45 Training",
     "brand:wikidata": "Q64390973",
+    "check_date": "2026-11-02",
     "contact:facebook": "https://www.facebook.com/F45Ballard/",
     "contact:instagram": "https://www.instagram.com/f45_Ballard/",
     "email": "ballard@f45training.com",
@@ -6737,7 +6951,7 @@
     "addr:street": "Northwest 85th Street",
     "addr:unit": "A",
     "alt_name": "Tattoo Microblading",
-    "check_date": "2023-09-29",
+    "check_date": "2026-10-21",
     "name": "Mi U Spa",
     "shop": "massage",
     "source": "King County GIS;data.seattle.gov"
@@ -6749,8 +6963,13 @@
   "lat": 47.6623170,
   "lon": -122.3476067,
   "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "4601",
+    "addr:postcode": "98103",
+    "addr:street": "Aurora Avenue North",
     "name": "Orchid Spa",
-    "shop": "massage"
+    "shop": "massage",
+    "website": "http://orchidspa888.com/"
   }
 },
 {
@@ -6764,11 +6983,13 @@
     "addr:postcode": "98116",
     "addr:state": "WA",
     "addr:street": "California Avenue Southwest",
+    "brand": "Barre3",
+    "brand:wikidata": "Q120601241",
     "email": "westseattle@barre3.com",
     "leisure": "fitness_centre",
     "name": "Barre3",
     "phone": "+1-206-717-2116",
-    "sport": "workout;yoga",
+    "sport": "barre",
     "website": "https://barre3.com/"
   }
 },
@@ -6848,23 +7069,6 @@
     "name": "Miya's Massage",
     "shop": "massage",
     "website": "https://miyasmassage.com/"
-  }
-},
-{
-  "type": "node",
-  "id": 7134240342,
-  "lat": 47.7787605,
-  "lon": -122.3615957,
-  "tags": {
-    "addr:city": "Edmonds",
-    "addr:housenumber": "9649",
-    "addr:postcode": "98020",
-    "addr:street": "Firdale Avenue",
-    "healthcare": "counselling",
-    "leisure": "fitness_centre",
-    "name": "Aftermath Agency",
-    "sport": "yoga",
-    "website": "https://www.theaftermathagency.com/"
   }
 },
 {
@@ -7033,9 +7237,11 @@
     "addr:housenumber": "2420",
     "addr:postcode": "98107",
     "addr:street": "Northwest Market Street",
-    "check_date": "2024-11-03",
+    "check_date": "2026-10-21",
+    "check_date:opening_hours": "2026-10-21",
     "leisure": "fitness_centre",
     "name": "The Cycle Sanctuary",
+    "opening_hours": "Mo 17:00-20:00; Tu,We 06:00-20:00; Th 06:00-19:30; Fr 06:00-13:30; Sa,Su 08:30-12:30",
     "phone": "+1-206-550-7932",
     "sport": "cycling",
     "website": "https://www.thecyclesanctuary.com"
@@ -7043,17 +7249,20 @@
 },
 {
   "type": "node",
-  "id": 7658547383,
-  "lat": 47.6618619,
-  "lon": -122.3408719,
+  "id": 7658547382,
+  "lat": 47.6618025,
+  "lon": -122.3408624,
   "tags": {
     "addr:city": "Seattle",
     "addr:housenumber": "4501",
     "addr:postcode": "98103",
+    "addr:state": "WA",
     "addr:street": "Interlake Avenue North",
-    "addr:unit": "6",
+    "addr:unit": "5",
+    "check_date": "2026-08-15",
     "leisure": "fitness_centre",
-    "name": "Compfit Dance & Fitness Studio",
+    "name": "Compfit",
+    "personal_trainer": "yes",
     "website": "https://www.compfit.com"
   }
 },
@@ -7457,9 +7666,11 @@
     "addr:postcode": "98107",
     "addr:state": "WA",
     "addr:street": "17th Avenue Northwest",
-    "check_date": "2026-01-03",
+    "check_date": "2026-10-02",
+    "check_date:opening_hours": "2026-10-02",
     "leisure": "fitness_centre",
     "name": "Praxis Yoga & Café",
+    "opening_hours": "Mo,Tu 07:00-19:30; We,Th 07:00-20:30; Fr 07:00-18:30; Sa 08:00-15:00; Su 08:00-16:00",
     "sport": "yoga"
   }
 },
@@ -7473,6 +7684,7 @@
     "addr:street": "East Madison Street",
     "check_date": "2023-05-29",
     "name": "Seattle Massage Pro",
+    "opening_hours": "Mo,We-Th 12:00-20:30; Tu,Fr 10:00-20:30; Sa-Su 10:00-18:00",
     "phone": "+1-206-397-3590",
     "shop": "massage",
     "website": "https://seattlemassagepro.com/"
@@ -7523,8 +7735,10 @@
   "lat": 47.6444479,
   "lon": -122.3451012,
   "tags": {
+    "check_date:opening_hours": "2026-07-08",
     "leisure": "fitness_centre",
-    "name": "Studio Jack's Pilates"
+    "name": "Studio Jack's Pilates",
+    "opening_hours:signed": "no"
   }
 },
 {
@@ -7586,6 +7800,7 @@
     "addr:postcode": "98125",
     "addr:street": "Lake City Way Northeast",
     "addr:unit": "A",
+    "check_date": "2025-11-23",
     "check_date:opening_hours": "2024-10-08",
     "name": "Laurel Spa",
     "opening_hours": "Mo-Su 10:00-22:00",
@@ -7637,14 +7852,15 @@
     "addr:housenumber": "4550",
     "addr:state": "WA",
     "addr:street": "9th Avenue Northwest",
-    "contact:facebook": "https://www.facebook.com/TwentyPoundHammer/",
-    "contact:instagram": "https://www.instagram.com/twentypoundhammer/",
-    "email": "info@twentypoundhammer.com",
+    "check_date": "2026-07-21",
+    "contact:facebook": "https://www.facebook.com/PolarisStrength/",
+    "email": "info@polarisstrength.com",
     "leisure": "fitness_centre",
-    "name": "CrossFit Twenty Pound Hammer",
+    "name": "Polaris Strength & Conditioning",
+    "opening_hours": "Mo-Th 06:00-13:00, Mo-Th 15:30-19:30, Fr 06:00-13:00, Fr 15:30-18:30, Sa 08:00-11:00, Su 09:00-11:00",
     "phone": "+1-206-693-2570",
-    "sport": "crossfit",
-    "website": "https://www.twentypoundhammer.com/"
+    "short_name": "Polaris",
+    "website": "https://polarisstrength.com"
   }
 },
 {
@@ -7813,6 +8029,7 @@
     "addr:unit": "Suite B",
     "leisure": "fitness_centre",
     "name": "Sasquatch Strength",
+    "opening_hours": "\"by appointment\"",
     "phone": "+1-425-300-1499",
     "sport": "fitness",
     "website": "https://www.sasquatchstrength.com/redmond"
@@ -7884,7 +8101,7 @@
     "addr:housenumber": "12025",
     "addr:postcode": "98125",
     "addr:street": "Lake City Way Northeast",
-    "check_date": "2024-04-16",
+    "check_date": "2025-11-06",
     "leisure": "fitness_centre",
     "name": "Tier 1 Body",
     "opening_hours": "Mo-Fr 06:00-19:00; Sa,Su 06:00-13:00",
@@ -8180,6 +8397,20 @@
 },
 {
   "type": "node",
+  "id": 10983357081,
+  "lat": 47.7012074,
+  "lon": -122.3551427,
+  "tags": {
+    "leisure": "fitness_centre",
+    "level": "0",
+    "name": "Find Your Center",
+    "opening_hours": "Mo,Fr-Su 12:00-17:30 \"Crystal Shop\"",
+    "service_times": "Mo,We 18:00 \"Yoga\"; Su 11:00 \"Yoga\"",
+    "sport": "yoga"
+  }
+},
+{
+  "type": "node",
   "id": 11040165861,
   "lat": 47.6764849,
   "lon": -122.1247046,
@@ -8285,7 +8516,10 @@
   "lat": 47.6778569,
   "lon": -122.3265772,
   "tags": {
+    "addr:city": "Seattle",
     "addr:housenumber": "6869",
+    "addr:postcode": "98115",
+    "addr:state": "WA",
     "addr:street": "Woodlawn Avenue Northeast",
     "addr:unit": "100",
     "check_date": "2026-03-25",
@@ -8293,20 +8527,6 @@
     "name": "Yoga by Fran Gallo",
     "sport": "yoga",
     "website": "https://frangallo.com"
-  }
-},
-{
-  "type": "node",
-  "id": 11160050276,
-  "lat": 47.6779117,
-  "lon": -122.3266518,
-  "tags": {
-    "addr:housenumber": "6869",
-    "addr:street": "Woodlawn Avenue Northeast",
-    "addr:unit": "120",
-    "check_date": "2023-08-31",
-    "name": "Four Winds Massage",
-    "shop": "massage"
   }
 },
 {
@@ -8325,15 +8545,39 @@
 },
 {
   "type": "node",
+  "id": 11214277891,
+  "lat": 47.5758600,
+  "lon": -122.3209127,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "3200",
+    "addr:postcode": "98134",
+    "addr:street": "Airport Way South",
+    "check_date": "2023-09-23",
+    "name": "Little Red Day Spa",
+    "opening_hours": "Mo 15:00+; Tu-Su 10:00+",
+    "shop": "massage",
+    "website": "https://www.littlereddayspa.com/"
+  }
+},
+{
+  "type": "node",
   "id": 11214850366,
   "lat": 47.6127427,
   "lon": -122.3391547,
   "tags": {
+    "addr:city": "Seattle",
     "addr:housenumber": "1918",
+    "addr:postcode": "98101",
+    "addr:state": "WA",
     "addr:street": "4th Avenue",
     "check_date": "2025-06-24",
     "leisure": "fitness_centre",
-    "name": "Rowdy Box"
+    "name": "Rowdy Box",
+    "opening_hours": "Mo,We 06:15-19:15; Tu 05:00-19:00; Th 05:00-19:15; Fr 06:15-18:15; Sa 07:15-12:30; Su 08:15-12:30",
+    "phone": "+1-206-659-0597",
+    "sport": "boxing",
+    "website": "http://rowdybox.com/"
   }
 },
 {
@@ -8405,7 +8649,9 @@
     "check_date": "2026-02-10",
     "leisure": "fitness_centre",
     "name": "The Bar Method",
-    "sport": "barre"
+    "phone": "+1-206-784-5100",
+    "sport": "barre",
+    "website": "https://barmethod.com/locations/seattle-phinney-ridge/"
   }
 },
 {
@@ -8417,7 +8663,7 @@
     "addr:housenumber": "6801",
     "addr:street": "Greenwood Avenue North",
     "addr:unit": "113",
-    "check_date": "2023-12-02",
+    "check_date": "2026-08-08",
     "leisure": "fitness_centre",
     "name": "8 Limbs Yoga",
     "sport": "yoga",
@@ -8579,7 +8825,7 @@
     "addr:housenumber": "1122",
     "addr:street": "23rd Avenue",
     "addr:unit": "D",
-    "check_date": "2024-05-27",
+    "check_date": "2026-07-03",
     "leisure": "fitness_centre",
     "name": "HIIT Lab",
     "website": "https://hiitlab.com/"
@@ -8591,9 +8837,16 @@
   "lat": 47.6195535,
   "lon": -122.3022453,
   "tags": {
-    "check_date": "2024-05-31",
+    "check_date": "2026-11-14",
+    "description": "Drop in crossfit gym with classes.",
     "leisure": "fitness_centre",
-    "name": "Emerald City CrossFit"
+    "name": "Emerald City CrossFit",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "phone": "+1 206-590-5158",
+    "website": "https://emeraldcitycrossfit.com",
+    "wheelchair": "limited"
   }
 },
 {
@@ -8630,6 +8883,11 @@
   "lat": 47.6177391,
   "lon": -122.3206039,
   "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "1812",
+    "addr:postcode": "98122",
+    "addr:state": "WA",
+    "addr:street": "Broadway",
     "brand": "[solidcore]",
     "brand:wikidata": "Q124429271",
     "check_date": "2026-01-08",
@@ -8682,10 +8940,11 @@
     "addr:housenumber": "900",
     "addr:street": "North 34th Street",
     "addr:unit": "B",
-    "check_date": "2024-06-27",
+    "check_date": "2026-10-02",
     "name": "The Now",
+    "opening_hours": "Mo-Sa 09:00-21:00; Su 09:00-20:00",
     "shop": "massage",
-    "website": "https://thenowmassage.com/seattle-fremont"
+    "website": "https://www.thenowmassage.com/boutique/seattle-fremont"
   }
 },
 {
@@ -8776,7 +9035,7 @@
     "check_date": "2024-07-13",
     "contact:instagram": "https://www.instagram.com/cypress.bodywork",
     "lgbtq": "welcome",
-    "lgbtq:trans": "welcome",
+    "lgbtq:transgender": "welcome",
     "name": "Cypress Bodywork",
     "shop": "massage"
   }
@@ -9041,9 +9300,13 @@
     "addr:housenumber": "1823",
     "addr:street": "Minor Avenue",
     "addr:unit": "101",
-    "check_date": "2025-02-28",
+    "check_date": "2026-10-13",
     "leisure": "fitness_centre",
-    "name": "SHRED415"
+    "name": "SHRED415",
+    "opening_hours": "Sa-Su 08:30-12:30; Mo 06:00-19:30; Tu,Th 05:30-19:30; We 06:00-19:30; Fr 06:00-18:30",
+    "phone": "+1-206-402-5242",
+    "sport": "hiit",
+    "website": "https://shred415.com/locations/seattle/"
   }
 },
 {
@@ -9076,7 +9339,7 @@
     "healthcare": "doctor",
     "healthcare:speciality": "plastic_surgery",
     "name": "Refine, MD Northwest",
-    "opening_hours": "Mo-Th 9:00-17:00; Fr 9:00-14:00",
+    "opening_hours": "Mo-Th 09:00-17:00; Fr 09:00-14:00",
     "operator": "Bryan C. McIntosh, M.D.",
     "phone": "+1-425-420-2663",
     "website": "https://refinemdnw.com"
@@ -9141,20 +9404,25 @@
     "addr:housenumber": "1415",
     "addr:postcode": "98122",
     "addr:street": "12th Avenue",
+    "check_date": "2026-06-15",
+    "internet_access": "no",
     "leisure": "fitness_centre",
     "name": "Foundation CrossFit",
     "opening_hours": "Su 10:00-12:00; Mo-Th 06:00-20:30; Fr 06:00-19:30; Sa 09:00-13:00",
     "phone": "+1-206-414-9348",
-    "website": "https://foundationcrossfit.com/"
+    "website": "https://foundationcrossfit.com/",
+    "wheelchair": "limited"
   }
 },
 {
   "type": "node",
   "id": 12790968610,
-  "lat": 47.5477017,
-  "lon": -122.3171813,
+  "lat": 47.5477304,
+  "lon": -122.3171038,
   "tags": {
-    "check_date": "2025-04-26",
+    "addr:housenumber": "1211",
+    "addr:street": "South Bailey Street",
+    "check_date": "2026-09-13",
     "name": "JM Massage Spa",
     "shop": "massage"
   }
@@ -9269,7 +9537,7 @@
     "level": "3",
     "name": "Fremont Health Club",
     "opening_hours": "24/7",
-    "opening_hours:reception": "Mo-Fr 10:30; Sa-Su 09:00-13:00",
+    "opening_hours:reception": "Mo-Fr 10:30-19:30; Sa-Su 09:00-13:00",
     "opening_hours:self_service": "24/7",
     "operator": "Fremont Health Club",
     "phone": "+1-206-632-2200",
@@ -9440,12 +9708,21 @@
   "lat": 47.6628892,
   "lon": -122.3128617,
   "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "4556",
+    "addr:postcode": "98105",
+    "addr:state": "WA",
+    "addr:street": "University Way Northeast",
     "addr:unit": "221",
     "branch": "Seattle",
-    "check_date": "2025-11-21",
+    "check_date": "2026-09-09",
+    "check_date:opening_hours": "2026-09-09",
     "leisure": "fitness_centre",
     "name": "The Yoga Shala",
-    "sport": "yoga"
+    "opening_hours": "Mo,We 05:30-09:30,17:00-19:00; Tu,Th 05:30-09:30,18:00-19:30; Fr 05:30-13:30,17:30-19:00; Sa 07:15-12:00; Su 08:30-14:00,18:30-20:00",
+    "phone": "+1-207-604-2298",
+    "sport": "yoga",
+    "website": "https://www.theyogashalaseattle.com/"
   }
 },
 {
@@ -9477,7 +9754,8 @@
     "addr:street": "West Government Way",
     "name": "Massage Reimagined",
     "phone": "+1 206-801-9251",
-    "shop": "massage"
+    "shop": "massage",
+    "website": "https://massagereimagined.com/magnolia/"
   }
 },
 {
@@ -9603,7 +9881,7 @@
     "addr:street": "44th Avenue Southwest",
     "leisure": "fitness_centre",
     "name": "Row West",
-    "sport": "rowing"
+    "sport": "indoor_rowing"
   }
 },
 {
@@ -9662,8 +9940,8 @@
     "addr:state": "WA",
     "addr:street": "15th Avenue East",
     "addr:unit": "Suite 308",
+    "contact:facebook": "ttreemassage",
     "email": "massage@talkingtreemassage.com",
-    "facebook": "https://www.facebook.com/ttreemassage/",
     "name": "Talking Tree Massage & Bodywork",
     "opening_hours": "Mo-Fr 12:00-18:00, Sa 12:00-16:00, Su 10:00-16:00",
     "payment:american_express": "yes",
@@ -9719,6 +9997,7 @@
     "internet_access": "wlan",
     "leisure": "fitness_centre",
     "name": "Strong Life Training",
+    "opening_hours": "Mo-Th 10:00-19:00; Fr,Sa 10:00-13:00",
     "phone": "+1-206-420-2825",
     "website": "https://joinstronglife.com/"
   }
@@ -9732,9 +10011,11 @@
     "addr:housenumber": "5420",
     "addr:street": "Barnes Avenue Northwest",
     "addr:unit": "B",
-    "check_date": "2026-02-28",
+    "check_date": "2026-08-08",
+    "check_date:opening_hours": "2026-08-08",
     "level": "-1",
     "name": "Compass Spa",
+    "opening_hours": "Mo-Su 09:30-22:00",
     "shop": "massage"
   }
 },
@@ -9761,11 +10042,18 @@
   "lat": 47.6190856,
   "lon": -122.3206557,
   "tags": {
-    "check_date": "2026-04-15",
+    "addr:city": "Seattle",
+    "addr:housenumber": "118",
+    "addr:postcode": "98102",
+    "addr:state": "WA",
+    "addr:street": "Broadway East",
+    "check_date": "2026-09-23",
     "contact:instagram": "upliftfitnesswa",
     "leisure": "fitness_centre",
     "name": "Uplift Fitness",
-    "opening_hours": "\"Appointment Only\"",
+    "opening_hours": "Mo-Tu 06:00-19:00; We-Fr 06:00-20:00; Su 08:00-12:00",
+    "phone": "+18056603922",
+    "sport": "fitness",
     "website": "https://upliftfitnesswa.com/"
   }
 },
@@ -9814,6 +10102,326 @@
   }
 },
 {
+  "type": "node",
+  "id": 13954733663,
+  "lat": 47.6915389,
+  "lon": -122.3560991,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "8604",
+    "addr:postcode": "98103",
+    "addr:state": "WA",
+    "addr:street": "Palatine Avenue North",
+    "leisure": "fitness_centre",
+    "name": "FLX",
+    "website": "https://www.flxlagree.com"
+  }
+},
+{
+  "type": "node",
+  "id": 13954910201,
+  "lat": 47.5139972,
+  "lon": -122.3530942,
+  "tags": {
+    "addr:housenumber": "9988",
+    "addr:street": "15th Avenue Southwest",
+    "check_date": "2026-06-20",
+    "check_date:opening_hours": "2026-06-20",
+    "name": "Cozy Spa",
+    "opening_hours": "Mo-Su 10:00-23:00",
+    "phone": "+12063072126",
+    "shop": "massage"
+  }
+},
+{
+  "type": "node",
+  "id": 13958260501,
+  "lat": 47.6164836,
+  "lon": -122.1279495,
+  "tags": {
+    "addr:housenumber": "15921",
+    "addr:postcode": "98008",
+    "addr:street": "Northeast 8th Street",
+    "check_date": "2026-06-22",
+    "check_date:opening_hours": "2026-06-22",
+    "level": "0",
+    "name": "Relaxing Station",
+    "opening_hours": "Mo-Su 10:00-22:00",
+    "phone": "+1-425-616-6666",
+    "shop": "massage"
+  }
+},
+{
+  "type": "node",
+  "id": 13970808527,
+  "lat": 47.6172787,
+  "lon": -122.3528281,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "2908",
+    "addr:postcode": "98121",
+    "addr:state": "WA",
+    "addr:street": "1st Avenue",
+    "name": "Mulan Spa",
+    "opening_hours": "Mo-Su 10:00-22:00",
+    "phone": "+1-206-708-6696",
+    "shop": "massage",
+    "website": "https://www.mulanspaseattle.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 14063336550,
+  "lat": 47.7561746,
+  "lon": -122.1532693,
+  "tags": {
+    "addr:city": "Woodinville",
+    "addr:housenumber": "17705",
+    "addr:postcode": "98072",
+    "addr:state": "WA",
+    "addr:street": "140th Avenue Northeast",
+    "addr:unit": "A10",
+    "beauty": "spa;skin_care",
+    "name": "Pure MedSpa",
+    "opening_hours": "Tu-Sa 10:00-19:00",
+    "phone": "+1-425-655-7677",
+    "shop": "beauty",
+    "website": "https://puremedspa.us/"
+  }
+},
+{
+  "type": "node",
+  "id": 14111644859,
+  "lat": 47.4877909,
+  "lon": -122.1560804,
+  "tags": {
+    "name": "Organic Spa",
+    "shop": "massage"
+  }
+},
+{
+  "type": "node",
+  "id": 14129970681,
+  "lat": 47.6256414,
+  "lon": -122.3529822,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "174",
+    "addr:postcode": "98109",
+    "addr:state": "WA",
+    "addr:street": "Roy Street",
+    "addr:unit": "B",
+    "email": "relax@jaspermassage.com",
+    "level": "1",
+    "name": "Jasper Massage",
+    "opening_hours": "Tu 11:00-20:00; Su 11:00-20:00",
+    "phone": "+1-206-572-9746",
+    "shop": "massage",
+    "source": "local knowledge",
+    "website": "https://www.jaspermassage.com"
+  }
+},
+{
+  "type": "node",
+  "id": 14159940792,
+  "lat": 47.5988907,
+  "lon": -122.1835833,
+  "tags": {
+    "addr:city": "Bellevue",
+    "addr:housenumber": "1331",
+    "addr:postcode": "98005",
+    "addr:state": "WA",
+    "addr:street": "118th Avenue Southeast",
+    "addr:unit": "200",
+    "leisure": "fitness_centre",
+    "name": "Hot Yoga Inc.",
+    "opening_hours": "Mo-Su 06:00-18:00",
+    "phone": "+1 425 633 2488",
+    "sport": "yoga",
+    "website": "https://hotyogainc.com"
+  }
+},
+{
+  "type": "node",
+  "id": 14181850721,
+  "lat": 47.6774269,
+  "lon": -122.2040854,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "McCracken's Pain Cave",
+    "opening_hours": "Mo,Fr 06:00-17:00; Tu 06:00-18:00; We,Th 06:00-13:00"
+  }
+},
+{
+  "type": "node",
+  "id": 14193472001,
+  "lat": 47.5636721,
+  "lon": -122.3136860,
+  "tags": {
+    "addr:housenumber": "4351",
+    "addr:postcode": "98108",
+    "addr:street": "15th Avenue South",
+    "check_date": "2026-09-18",
+    "leisure": "fitness_centre",
+    "name": "Urban Playground - Beacon Hill"
+  }
+},
+{
+  "type": "node",
+  "id": 14195983970,
+  "lat": 47.5661627,
+  "lon": -122.2889736,
+  "tags": {
+    "check_date": "2026-09-18",
+    "shop": "massage"
+  }
+},
+{
+  "type": "node",
+  "id": 14195983975,
+  "lat": 47.5699795,
+  "lon": -122.2904211,
+  "tags": {
+    "addr:housenumber": "3756",
+    "addr:street": "Rainier Avenue South",
+    "addr:unit": "D",
+    "check_date": "2026-09-18",
+    "name": "Sky Massage",
+    "shop": "massage"
+  }
+},
+{
+  "type": "node",
+  "id": 14202510355,
+  "lat": 47.6612491,
+  "lon": -122.3323870,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "2205",
+    "addr:postcode": "98103",
+    "addr:state": "WA",
+    "addr:street": "North 45th Street",
+    "brand": "Jazzercise",
+    "brand:wikidata": "Q6168434",
+    "leisure": "fitness_centre",
+    "name": "Jazzercise",
+    "website": "https://www.jazzercise.com/studio/wa/seattle-wallingford"
+  }
+},
+{
+  "type": "node",
+  "id": 14212086942,
+  "lat": 47.7989542,
+  "lon": -122.3199619,
+  "tags": {
+    "check_date": "2026-09-22",
+    "leisure": "fitness_centre",
+    "name": "Bindi Community Yoga",
+    "sport": "yoga"
+  }
+},
+{
+  "type": "node",
+  "id": 14212086943,
+  "lat": 47.7992000,
+  "lon": -122.3211297,
+  "tags": {
+    "check_date": "2026-09-22",
+    "name": "Theory Wellness and Bodyworks",
+    "shop": "massage"
+  }
+},
+{
+  "type": "node",
+  "id": 14265507924,
+  "lat": 47.5009418,
+  "lon": -122.1800715,
+  "tags": {
+    "check_date": "2026-10-08",
+    "leisure": "fitness_centre",
+    "name": "Tumbles"
+  }
+},
+{
+  "type": "node",
+  "id": 14265507925,
+  "lat": 47.5016344,
+  "lon": -122.1792912,
+  "tags": {
+    "check_date": "2026-10-08",
+    "leisure": "fitness_centre",
+    "name": "Be Yoga",
+    "sport": "yoga"
+  }
+},
+{
+  "type": "node",
+  "id": 14265507935,
+  "lat": 47.5048587,
+  "lon": -122.1769837,
+  "tags": {
+    "check_date": "2026-10-08",
+    "leisure": "fitness_centre",
+    "name": "Fitness Elite 19"
+  }
+},
+{
+  "type": "node",
+  "id": 14285566502,
+  "lat": 47.6756812,
+  "lon": -122.3042297,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "2201",
+    "addr:postcode": "98115",
+    "addr:state": "WA",
+    "addr:street": "Northeast 65th Street",
+    "name": "Sound Bodywork/Jennifer Gustafson LMT",
+    "opening_hours": "Tu,Sa 10:00-17:00; We,Th 14:00-20:00; Fr 12:00-17:00; Su 12:00-20:00; Mo off",
+    "shop": "massage",
+    "website": "http://sound-bodywork.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 14285572201,
+  "lat": 47.6756692,
+  "lon": -122.3040498,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "2207",
+    "addr:postcode": "98115",
+    "addr:state": "WA",
+    "addr:street": "Northeast 65th Street",
+    "addr:unit": "202",
+    "name": "River and Fern Massage Therapy Studio",
+    "opening_hours": "Mo 10:00-16:00; Fr 10:00-18:30; Sa 09:00-15:30; Su 15:00-20:00; Tu-Th off",
+    "shop": "massage",
+    "website": "http://riverandfernmassage.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 14322399648,
+  "lat": 47.6811905,
+  "lon": -122.3246274,
+  "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "407",
+    "addr:postcode": "98115",
+    "addr:state": "WA",
+    "addr:street": "Northeast 73rd Street",
+    "addr:unit": "A",
+    "contact:facebook": "https://www.facebook.com/pilateshubseattle",
+    "contact:instagram": "https://www.instagram.com/pilateshubseattle/",
+    "leisure": "fitness_centre",
+    "name": "The Pilates Hub",
+    "phone": "+1-206-944-3096",
+    "sport": "pilates",
+    "website": "https://www.pilateshubseattle.com"
+  }
+},
+{
   "type": "way",
   "id": 29252508,
   "center": {
@@ -9846,7 +10454,7 @@
     "addr:street": "Bellevue Way Northeast",
     "brand": "Orangetheory Fitness",
     "brand:wikidata": "Q25005163",
-    "building": "yes",
+    "building": "retail",
     "check_date": "2026-04-26",
     "leisure": "fitness_centre",
     "name": "Orangetheory Fitness",
@@ -10030,6 +10638,7 @@
     "contact:instagram": "https://www.instagram.com/olympicathleticclub/",
     "leisure": "fitness_centre",
     "name": "Olympic Athletic Club",
+    "opening_hours": "Mo-Fr 09:00-19:00, Sa,Su 09:00-21:00, Su,Mo 05:00-19:00",
     "phone": "+1-206-789-5010",
     "source": "King County GIS",
     "website": "https://www.olympicathleticclub.com/"
@@ -10128,6 +10737,7 @@
     "contact:instagram": "https://www.instagram.com/olympicathleticclub/",
     "leisure": "fitness_centre",
     "name": "Olympic Athletic Club",
+    "opening_hours": "Mo-Su 09:00-19:00, Sa,Su 09:00-21:00, Su,Mo 05:00+",
     "phone": "+1-206-789-5010",
     "source": "King County GIS",
     "website": "https://www.olympicathleticclub.com/"
@@ -10251,6 +10861,7 @@
     "addr:street": "Northwest Market Street",
     "building": "yes",
     "name": "Ballard Wellness Center",
+    "opening_hours": "Mo-Su 09:00-20:00",
     "shop": "massage",
     "source": "King County GIS;data.seattle.gov;https://blue.kingcounty.com/Assessor/eRealProperty/Dashboard.aspx?ParcelNbr=2768100595",
     "start_date": "1979",
@@ -10292,7 +10903,7 @@
     "addr:postcode": "98103",
     "addr:street": "North 85th Street",
     "building": "yes",
-    "check_date": "2024-04-26",
+    "check_date": "2026-07-28",
     "name": "Apple Massage",
     "shop": "massage",
     "source": "King County GIS;data.seattle.gov"
@@ -10411,7 +11022,7 @@
     "addr:street": "Roosevelt Way Northeast",
     "alt_name": "Healing Touch Massage",
     "building": "retail",
-    "check_date": "2025-04-22",
+    "check_date": "2026-09-28",
     "contact:phone": "+1-206-588-2435",
     "contact:twitter": "https://twitter.com/asianspaseattle/",
     "contact:youtube": "https://www.youtube.com/channel/UCehwS1vKPvJPFMEaNyQ1BVg",
@@ -10527,26 +11138,6 @@
 },
 {
   "type": "way",
-  "id": 224037755,
-  "center": {
-    "lat": 47.6615955,
-    "lon": -122.3349679
-  },
-  "tags": {
-    "addr:city": "Seattle",
-    "addr:housenumber": "1900",
-    "addr:postcode": "98103",
-    "addr:street": "North 45th Street",
-    "building": "yes",
-    "check_date": "2023-06-10",
-    "leisure": "fitness_centre",
-    "name": "Jae Hun Kim Taekwon-do Institute",
-    "source": "King County GIS;data.seattle.gov",
-    "sport": "taekwondo"
-  }
-},
-{
-  "type": "way",
   "id": 226145848,
   "center": {
     "lat": 47.6332621,
@@ -10634,6 +11225,7 @@
     "building": "yes",
     "leisure": "fitness_centre",
     "name": "Anytime Fitness",
+    "opening_hours": "24/7",
     "phone": "+1-206-306-6676",
     "ref": "1993",
     "source": "King County GIS;data.seattle.gov",
@@ -10661,28 +11253,6 @@
     "leisure": "fitness_centre",
     "name": "Cascade Elite Gymnastics",
     "sport": "gymnastics"
-  }
-},
-{
-  "type": "way",
-  "id": 258364692,
-  "center": {
-    "lat": 47.5858090,
-    "lon": -122.1437785
-  },
-  "tags": {
-    "addr:city": "Bellevue",
-    "addr:housenumber": "2649",
-    "addr:postcode": "98007",
-    "addr:state": "WA",
-    "addr:street": "148th Avenue Southeast",
-    "amenity": "cafe",
-    "building": "yes",
-    "cuisine": "coffee_shop",
-    "leisure": "fitness_centre",
-    "name": "Champions center",
-    "name:en": "Champions Center",
-    "website": "https://5stonescoffeeco.com/"
   }
 },
 {
@@ -10716,6 +11286,9 @@
     "addr:postcode": "98103",
     "addr:street": "North Pacific Street",
     "building": "yes",
+    "building:colour": "tan",
+    "building:material": "plaster",
+    "check_date": "2026-08-02",
     "leisure": "fitness_centre",
     "name": "OmCulture",
     "source": "King County GIS;data.seattle.gov",
@@ -10871,7 +11444,7 @@
     "brand": "Planet Fitness",
     "brand:wikidata": "Q7201095",
     "building": "yes",
-    "check_date": "2024-10-14",
+    "check_date": "2026-10-18",
     "indoor": "room",
     "leisure": "fitness_centre",
     "level": "0",
@@ -11007,6 +11580,7 @@
     "brand": "Orangetheory Fitness",
     "brand:wikidata": "Q25005163",
     "building": "yes",
+    "check_date": "2026-08-18",
     "leisure": "fitness_centre",
     "name": "Orangetheory Fitness",
     "phone": "+1-425-892-8405",
@@ -11203,7 +11777,8 @@
     "building": "yes",
     "check_date": "2026-02-28",
     "description": "Private apartment building fitness center",
-    "leisure": "fitness_centre"
+    "leisure": "fitness_centre",
+    "noname": "yes"
   }
 },
 {
@@ -11280,7 +11855,7 @@
     "leisure": "fitness_centre",
     "level": "1",
     "name": "TruFusion",
-    "opening_hours": "Mo-Th 6:00-21:00; Fr 6:00-20:00; Sa 8:30-14:30; Su 8:30-14:30",
+    "opening_hours": "Mo-Th 06:00-21:00; Fr 06:00-20:00; Sa 08:30-14:30; Su 08:30-14:30",
     "phone": "+1-425-362-6956",
     "room": "fitness_centre",
     "sport": "yoga;pilates;barre;bootcamp;trx;total_resistance_exercises;boxing;hiit;high-intensity_interval_training",
@@ -11332,7 +11907,7 @@
     "leisure": "fitness_centre",
     "level": "0",
     "name": "Solidcore",
-    "opening_hours": "5:30-19:00",
+    "opening_hours": "05:30-19:00",
     "phone": "+1-206-590-6562",
     "website": "https://solidcore.co/wa/seattle/totem-lake"
   }
@@ -11356,7 +11931,7 @@
     "email": "Totemlakeinfo@yuanspa.com",
     "level": "0",
     "name": "Yuan Spa",
-    "opening_hours": "9:30-22:00",
+    "opening_hours": "09:30-22:00",
     "phone": "+1-425-896-8026",
     "shop": "massage",
     "website": "https://yuanspa.com"

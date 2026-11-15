@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.11 87bfad18",
   "osm3s": {
-    "timestamp_osm_base": "2026-07-24T11:04:51Z",
+    "timestamp_osm_base": "2026-11-15T21:19:21Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -306,13 +306,19 @@
   ],
   "tags": {
     "access": "no",
+    "addr:city": "Seattle",
+    "addr:housenumber": "401",
+    "addr:postcode": "98101",
+    "addr:state": "WA",
+    "addr:street": "Pine Street",
     "area": "yes",
     "highway": "pedestrian",
     "leisure": "park",
     "lit": "yes",
     "name": "Westlake Park",
     "name:ko": "웨스트레이크 공원",
-    "opening_hours": "06:00-22:00",
+    "opening_hours": "Mo-Su 06:00-22:00",
+    "phone": "+1-206-684-4075",
     "postal_code": "98101",
     "source": "King County GIS;data.seattle.gov",
     "surface": "paving_stones",
@@ -1078,14 +1084,16 @@
   ],
   "tags": {
     "addr:city": "Seattle",
-    "addr:housenumber": "2001",
+    "addr:housenumber": "1999",
     "addr:postcode": "98121",
     "addr:state": "WA",
     "addr:street": "Western Avenue",
     "leisure": "park",
     "name": "Victor Steinbrueck Park",
     "name:ko": "빅터 슈타인브룩 공원",
-    "website": "https://www.seattle.gov/parks/allparks/victor-steinbrueck-park",
+    "opening_hours": "Mo-Su 06:00-22:00",
+    "phone": "+1-206-684-4075",
+    "website": "https://www.seattle.gov/parks/parks/victor-steinbrueck-park",
     "wikidata": "Q7926370"
   }
 },
@@ -1400,16 +1408,26 @@
   ],
   "tags": {
     "access": "yes",
+    "addr:city": "Bellevue",
+    "addr:housenumber": "10201",
+    "addr:postcode": "98004",
+    "addr:state": "WA",
+    "addr:street": "Northeast 4th Street",
     "dog": "leashed",
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Bellevue_Downtown_Park_aerial%2C_April_2023.png",
     "leisure": "park",
     "name": "Bellevue Downtown Park",
     "name:en": "Bellevue Downtown Park",
     "name:ru": "парк Даунтаун",
+    "note": "The Park includes an 'Inspiration Playground' and a Water Spray playground.",
+    "opening_hours": "Mo-Su (sunrise-00:30)-23:00",
     "operator": "City of Bellevue",
     "operator:type": "government",
     "operator:wikidata": "Q214164",
     "operator:wikipedia": "en:Bellevue, Washington",
+    "phone": "+1-425-452-6885",
+    "reg_name": "\"Downtown Park\"",
+    "website": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/bellevue-downtown-park",
     "wikidata": "Q4883926",
     "wikimedia_commons": "Category:Bellevue_Downtown_Park",
     "wikipedia": "en:Bellevue Downtown Park"
@@ -2276,9 +2294,16 @@
     { "lat": 47.5970200, "lon": -122.3236486 }
   ],
   "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "700",
+    "addr:postcode": "98104",
+    "addr:state": "WA",
+    "addr:street": "South Lane Street",
     "leisure": "park",
     "name": "Donnie Chin International Children’s Park",
-    "website": "https://www.seattle.gov/parks/allparks/donnie-chin-international-childrens-park",
+    "opening_hours": "Mo-Su 06:00-22:00",
+    "phone": "+1-206-684-4075",
+    "website": "https://www.seattle.gov/parks/parks/donnie-chin-international-childrens-park",
     "wikidata": "Q63476316",
     "wikipedia": "en:Donnie Chin International Children's Park"
   }
@@ -2447,6 +2472,7 @@
     "name": "Dr. Jose Rizal Park",
     "name:etymology:wikidata": "Q1500",
     "opening_hours": "Mo-Su 04:00-23:30",
+    "phone": "+1-206-684-4075",
     "website": "https://www.seattle.gov/parks/allparks/jose-rizal-park",
     "wikidata": "Q7339078",
     "wikipedia": "en:Dr. Jose Rizal Park"
@@ -2496,10 +2522,16 @@
     11218018614,
     11218018613,
     11218022652,
+    14218122735,
+    14218122736,
+    14218122737,
+    14218122739,
+    14218122740,
+    14218122738,
     11218018566
   ],
   "geometry": [
-    { "lat": 47.7696055, "lon": -122.1583794 },
+    { "lat": 47.7696059, "lon": -122.1583925 },
     { "lat": 47.7701385, "lon": -122.1583845 },
     { "lat": 47.7704639, "lon": -122.1583984 },
     { "lat": 47.7707993, "lon": -122.1584096 },
@@ -2527,13 +2559,19 @@
     { "lat": 47.7689731, "lon": -122.1576408 },
     { "lat": 47.7689736, "lon": -122.1581306 },
     { "lat": 47.7689760, "lon": -122.1581687 },
-    { "lat": 47.7689838, "lon": -122.1582088 },
-    { "lat": 47.7690012, "lon": -122.1582030 },
-    { "lat": 47.7690209, "lon": -122.1582104 },
-    { "lat": 47.7690343, "lon": -122.1582245 },
-    { "lat": 47.7690642, "lon": -122.1582817 },
-    { "lat": 47.7691005, "lon": -122.1583375 },
-    { "lat": 47.7696055, "lon": -122.1583794 }
+    { "lat": 47.7689863, "lon": -122.1582250 },
+    { "lat": 47.7690033, "lon": -122.1582235 },
+    { "lat": 47.7690171, "lon": -122.1582266 },
+    { "lat": 47.7690352, "lon": -122.1582410 },
+    { "lat": 47.7690828, "lon": -122.1583366 },
+    { "lat": 47.7690989, "lon": -122.1583553 },
+    { "lat": 47.7691144, "lon": -122.1583524 },
+    { "lat": 47.7691710, "lon": -122.1583307 },
+    { "lat": 47.7692389, "lon": -122.1583133 },
+    { "lat": 47.7693008, "lon": -122.1583107 },
+    { "lat": 47.7693522, "lon": -122.1583558 },
+    { "lat": 47.7694093, "lon": -122.1583875 },
+    { "lat": 47.7696059, "lon": -122.1583925 }
   ],
   "tags": {
     "leisure": "park",
@@ -2767,12 +2805,12 @@
     "contact:email": "guestservices@redmond.gov",
     "contact:phone": "+1-425-556-2300",
     "fee": "no",
-    "leisure": "park",
+    "leisure": "nature_reserve",
     "name": "Viewpoint Open Space",
     "natural": "wood",
     "opening_hours": "dawn-dusk",
     "operator": "City of Redmond",
-    "operator:type": "public",
+    "operator:type": "government",
     "operator:wikidata": "Q223718",
     "operator:wikipedia": "en:Redmond, Washington",
     "source": "http://www.redmond.gov",
@@ -4654,7 +4692,7 @@
     "historic": "heritage",
     "leisure": "park",
     "name": "Albert Anderson Memorial Park",
-    "nrhp:criteria": "(A),(C)",
+    "nrhp:criteria": "A;C",
     "nrhp:inscription_date": "2009-01-06",
     "old_name:1928-1946": "Redmond City Park",
     "opening_hours": "dawn-dusk",
@@ -4879,7 +4917,7 @@
     2141004133,
     2141004130,
     2141007107,
-    3952260893,
+    358636389,
     2309089135,
     2309089136,
     12324934613,
@@ -5901,54 +5939,54 @@
   "type": "way",
   "id": 32919331,
   "bounds": {
-    "minlat": 47.7247682,
-    "minlon": -122.0335054,
-    "maxlat": 47.7287089,
-    "maxlon": -122.0286654
+    "minlat": 47.7248115,
+    "minlon": -122.0335097,
+    "maxlat": 47.7286539,
+    "maxlon": -122.0287738
   },
   "nodes": [
-    370712683,
-    12829367812,
-    53192128,
-    370712684,
-    1636843093,
-    53087539,
-    1636843076,
-    356965511,
-    370712686,
-    7018198398,
+    2654794935,
+    14174542354,
+    14174542353,
+    14174542356,
+    14174542375,
+    14174542327,
+    14174542322,
+    14174542370,
+    14174542328,
+    14174542323,
+    14174542324,
+    14174542325,
+    14174542326,
     7018198397,
     7018198396,
-    7018198400,
-    7018198401,
-    7018198402,
     370712749,
+    14174542355,
     370712758,
     7018198403,
-    2654794935,
-    370712683
+    2654794935
   ],
   "geometry": [
-    { "lat": 47.7247682, "lon": -122.0288934 },
-    { "lat": 47.7254422, "lon": -122.0288467 },
-    { "lat": 47.7270797, "lon": -122.0287332 },
-    { "lat": 47.7285128, "lon": -122.0286654 },
-    { "lat": 47.7285083, "lon": -122.0295023 },
-    { "lat": 47.7284925, "lon": -122.0324194 },
-    { "lat": 47.7286017, "lon": -122.0327585 },
-    { "lat": 47.7286811, "lon": -122.0331126 },
-    { "lat": 47.7287089, "lon": -122.0335041 },
-    { "lat": 47.7265604, "lon": -122.0335054 },
-    { "lat": 47.7264457, "lon": -122.0331974 },
-    { "lat": 47.7259840, "lon": -122.0320136 },
-    { "lat": 47.7256871, "lon": -122.0311850 },
-    { "lat": 47.7253835, "lon": -122.0303262 },
-    { "lat": 47.7252043, "lon": -122.0298831 },
+    { "lat": 47.7248115, "lon": -122.0289778 },
+    { "lat": 47.7254890, "lon": -122.0289392 },
+    { "lat": 47.7264861, "lon": -122.0288825 },
+    { "lat": 47.7270546, "lon": -122.0288501 },
+    { "lat": 47.7271868, "lon": -122.0288426 },
+    { "lat": 47.7283955, "lon": -122.0287738 },
+    { "lat": 47.7284608, "lon": -122.0288594 },
+    { "lat": 47.7284632, "lon": -122.0293233 },
+    { "lat": 47.7284645, "lon": -122.0295841 },
+    { "lat": 47.7284794, "lon": -122.0324227 },
+    { "lat": 47.7285601, "lon": -122.0327975 },
+    { "lat": 47.7286264, "lon": -122.0331256 },
+    { "lat": 47.7286539, "lon": -122.0334910 },
+    { "lat": 47.7265829, "lon": -122.0335097 },
+    { "lat": 47.7251844, "lon": -122.0298831 },
     { "lat": 47.7255306, "lon": -122.0296385 },
+    { "lat": 47.7254707, "lon": -122.0294604 },
     { "lat": 47.7254036, "lon": -122.0292608 },
     { "lat": 47.7250390, "lon": -122.0295441 },
-    { "lat": 47.7248159, "lon": -122.0290168 },
-    { "lat": 47.7247682, "lon": -122.0288934 }
+    { "lat": 47.7248115, "lon": -122.0289778 }
   ],
   "tags": {
     "addr:state": "WA",
@@ -6296,6 +6334,7 @@
     390062482,
     390062140,
     390062483,
+    14108992835,
     13409555173,
     13409555172,
     13409555171,
@@ -6360,6 +6399,7 @@
     { "lat": 47.7919606, "lon": -122.0879431 },
     { "lat": 47.7918275, "lon": -122.0875620 },
     { "lat": 47.7907428, "lon": -122.0847631 },
+    { "lat": 47.7904965, "lon": -122.0841028 },
     { "lat": 47.7903439, "lon": -122.0836936 },
     { "lat": 47.7898408, "lon": -122.0824053 },
     { "lat": 47.7898132, "lon": -122.0823451 },
@@ -6606,6 +6646,8 @@
   "nodes": [
     411668016,
     9813756369,
+    2303068621,
+    2303068615,
     411668019,
     411668020,
     411668022,
@@ -6618,6 +6660,8 @@
   "geometry": [
     { "lat": 47.7064071, "lon": -122.3230869 },
     { "lat": 47.7063754, "lon": -122.3230636 },
+    { "lat": 47.7059692, "lon": -122.3230508 },
+    { "lat": 47.7058448, "lon": -122.3230460 },
     { "lat": 47.7050443, "lon": -122.3230217 },
     { "lat": 47.7050155, "lon": -122.3227932 },
     { "lat": 47.7049996, "lon": -122.3224248 },
@@ -6897,6 +6941,7 @@
     415831839,
     415831840,
     415831841,
+    14292145926,
     415831842,
     415831843,
     415831844,
@@ -6913,6 +6958,7 @@
     410792420,
     410792421,
     410792423,
+    14292145927,
     410792231,
     410792232,
     410792233,
@@ -6995,6 +7041,7 @@
     { "lat": 47.7886197, "lon": -122.3330553 },
     { "lat": 47.7883494, "lon": -122.3331206 },
     { "lat": 47.7881106, "lon": -122.3331439 },
+    { "lat": 47.7880678, "lon": -122.3331445 },
     { "lat": 47.7877587, "lon": -122.3331485 },
     { "lat": 47.7869354, "lon": -122.3332278 },
     { "lat": 47.7865425, "lon": -122.3332418 },
@@ -7011,6 +7058,7 @@
     { "lat": 47.7865088, "lon": -122.3309123 },
     { "lat": 47.7865325, "lon": -122.3307573 },
     { "lat": 47.7865253, "lon": -122.3302039 },
+    { "lat": 47.7865008, "lon": -122.3299971 },
     { "lat": 47.7864951, "lon": -122.3299493 },
     { "lat": 47.7864945, "lon": -122.3295730 },
     { "lat": 47.7865182, "lon": -122.3290760 },
@@ -9173,50 +9221,6 @@
 },
 {
   "type": "way",
-  "id": 44115568,
-  "bounds": {
-    "minlat": 47.6360402,
-    "minlon": -122.1162933,
-    "maxlat": 47.6367554,
-    "maxlon": -122.1141871
-  },
-  "nodes": [
-    321379613,
-    879231496,
-    9673526919,
-    879231458,
-    321379626,
-    321379624,
-    321379622,
-    321379617,
-    560593609,
-    321379615,
-    321379613
-  ],
-  "geometry": [
-    { "lat": 47.6360567, "lon": -122.1162910 },
-    { "lat": 47.6367511, "lon": -122.1162933 },
-    { "lat": 47.6367554, "lon": -122.1161428 },
-    { "lat": 47.6367418, "lon": -122.1142063 },
-    { "lat": 47.6364375, "lon": -122.1141871 },
-    { "lat": 47.6365198, "lon": -122.1152150 },
-    { "lat": 47.6364544, "lon": -122.1153839 },
-    { "lat": 47.6363894, "lon": -122.1154644 },
-    { "lat": 47.6362689, "lon": -122.1155149 },
-    { "lat": 47.6360402, "lon": -122.1156188 },
-    { "lat": 47.6360567, "lon": -122.1162910 }
-  ],
-  "tags": {
-    "addr:housenumber": "16833",
-    "addr:state": "WA",
-    "addr:street": "NE 30th Street",
-    "leisure": "park",
-    "name": "Ardmore Park",
-    "website": "http://www.ci.bellevue.wa.us/ardmore.htm"
-  }
-},
-{
-  "type": "way",
   "id": 47397585,
   "bounds": {
     "minlat": 47.5975582,
@@ -10649,33 +10653,79 @@
   "type": "way",
   "id": 50321786,
   "bounds": {
-    "minlat": 47.6739014,
-    "minlon": -122.3792148,
-    "maxlat": 47.6744950,
-    "maxlon": -122.3790025
+    "minlat": 47.6739009,
+    "minlon": -122.3792147,
+    "maxlat": 47.6744681,
+    "maxlon": -122.3790037
   },
   "nodes": [
-    639297638,
-    639297635,
-    639297634,
     639297637,
-    639297638
+    14266176176,
+    14266176177,
+    14266176175,
+    639297638,
+    14266176174,
+    14266176150,
+    14266176173,
+    14266176153,
+    14266176152,
+    14266176151,
+    14266176154,
+    14266176156,
+    14266176155,
+    14266176172,
+    14266176149,
+    14266176148,
+    14266176145,
+    14266176144,
+    14266176143,
+    14266176147,
+    14266176146,
+    639297635,
+    14266176171,
+    639297634,
+    639297637
   ],
   "geometry": [
-    { "lat": 47.6744950, "lon": -122.3790025 },
-    { "lat": 47.6739014, "lon": -122.3790025 },
-    { "lat": 47.6739014, "lon": -122.3792148 },
-    { "lat": 47.6744950, "lon": -122.3792148 },
-    { "lat": 47.6744950, "lon": -122.3790025 }
+    { "lat": 47.6744681, "lon": -122.3792144 },
+    { "lat": 47.6744681, "lon": -122.3791635 },
+    { "lat": 47.6744681, "lon": -122.3791146 },
+    { "lat": 47.6744681, "lon": -122.3790576 },
+    { "lat": 47.6744681, "lon": -122.3790037 },
+    { "lat": 47.6744317, "lon": -122.3790037 },
+    { "lat": 47.6744003, "lon": -122.3790060 },
+    { "lat": 47.6743681, "lon": -122.3790165 },
+    { "lat": 47.6743258, "lon": -122.3790251 },
+    { "lat": 47.6742855, "lon": -122.3790251 },
+    { "lat": 47.6742457, "lon": -122.3790177 },
+    { "lat": 47.6742159, "lon": -122.3790070 },
+    { "lat": 47.6741972, "lon": -122.3790038 },
+    { "lat": 47.6741286, "lon": -122.3790039 },
+    { "lat": 47.6741035, "lon": -122.3790081 },
+    { "lat": 47.6740732, "lon": -122.3790219 },
+    { "lat": 47.6740500, "lon": -122.3790256 },
+    { "lat": 47.6740129, "lon": -122.3790249 },
+    { "lat": 47.6739828, "lon": -122.3790195 },
+    { "lat": 47.6739564, "lon": -122.3790078 },
+    { "lat": 47.6739349, "lon": -122.3790040 },
+    { "lat": 47.6739179, "lon": -122.3790040 },
+    { "lat": 47.6739009, "lon": -122.3790040 },
+    { "lat": 47.6739009, "lon": -122.3790391 },
+    { "lat": 47.6739010, "lon": -122.3792147 },
+    { "lat": 47.6744681, "lon": -122.3792144 }
   ],
   "tags": {
     "addr:city": "Seattle",
+    "addr:country": "US",
     "addr:housenumber": "1702",
     "addr:postcode": "98107",
     "addr:state": "WA",
     "addr:street": "Northwest 62nd Street",
     "leisure": "park",
-    "name": "Ballard Corners Park"
+    "name": "Ballard Corners Park",
+    "opening_hours": "Su-Sa 04:00-23:30",
+    "start_date": "2006",
+    "website": "https://www.seattle.gov/parks/parks/ballard-corners-park"
   }
 },
 {
@@ -11006,24 +11056,34 @@
   "type": "way",
   "id": 50419096,
   "bounds": {
-    "minlat": 47.6681469,
-    "minlon": -122.3845963,
-    "maxlat": 47.6685558,
-    "maxlon": -122.3842736
+    "minlat": 47.6681386,
+    "minlon": -122.3846095,
+    "maxlat": 47.6685405,
+    "maxlon": -122.3842666
   },
   "nodes": [
     640696786,
     640696793,
     640696791,
+    14260689610,
+    14260689659,
+    14260689676,
+    14260689668,
     640696789,
+    14257051057,
     640696786
   ],
   "geometry": [
-    { "lat": 47.6681469, "lon": -122.3845963 },
-    { "lat": 47.6685556, "lon": -122.3845903 },
-    { "lat": 47.6685558, "lon": -122.3845513 },
-    { "lat": 47.6683150, "lon": -122.3842736 },
-    { "lat": 47.6681469, "lon": -122.3845963 }
+    { "lat": 47.6681926, "lon": -122.3846095 },
+    { "lat": 47.6685405, "lon": -122.3846082 },
+    { "lat": 47.6685404, "lon": -122.3845642 },
+    { "lat": 47.6685202, "lon": -122.3845404 },
+    { "lat": 47.6685098, "lon": -122.3845281 },
+    { "lat": 47.6683571, "lon": -122.3843482 },
+    { "lat": 47.6683406, "lon": -122.3843288 },
+    { "lat": 47.6682878, "lon": -122.3842666 },
+    { "lat": 47.6681386, "lon": -122.3845459 },
+    { "lat": 47.6681926, "lon": -122.3846095 }
   ],
   "tags": {
     "foot": "yes",
@@ -11395,11 +11455,13 @@
   "tags": {
     "addr:city": "Seattle",
     "addr:housenumber": "321",
-    "addr:postcode": "98122",
+    "addr:postcode": "98104",
     "addr:state": "WA",
     "addr:street": "Broadway",
     "leisure": "park",
     "name": "Boren Place",
+    "opening_hours": "Mo-Su 04:00-23:30",
+    "phone": "+1-206-684-4075",
     "source": "King County GIS;data.seattle.gov",
     "website": "https://seattle.gov/parks/park_detail.asp?id=348"
   }
@@ -11414,8 +11476,6 @@
     "maxlon": -122.3104620
   },
   "nodes": [
-    2383826096,
-    11804022677,
     642963874,
     642963867,
     11804022676,
@@ -11436,11 +11496,9 @@
     642963890,
     5391149333,
     10935410392,
-    2383826096
+    642963874
   ],
   "geometry": [
-    { "lat": 47.6344710, "lon": -122.3120760 },
-    { "lat": 47.6343436, "lon": -122.3120781 },
     { "lat": 47.6341972, "lon": -122.3120750 },
     { "lat": 47.6341970, "lon": -122.3124470 },
     { "lat": 47.6345683, "lon": -122.3128646 },
@@ -11461,7 +11519,7 @@
     { "lat": 47.6346422, "lon": -122.3104832 },
     { "lat": 47.6346350, "lon": -122.3120842 },
     { "lat": 47.6345685, "lon": -122.3120829 },
-    { "lat": 47.6344710, "lon": -122.3120760 }
+    { "lat": 47.6341972, "lon": -122.3120750 }
   ],
   "tags": {
     "addr:city": "Seattle",
@@ -11695,8 +11753,7 @@
     "addr:state": "WA",
     "addr:street": "South Cloverdale Street",
     "leisure": "park",
-    "old_name": "Cesar Chavez Park",
-    "old_name:es": "Parque de Cesar Chavez",
+    "name": "Parque Libertad",
     "operator": "Seattle Parks and Recreation",
     "operator:type": "government",
     "operator:wikidata": "Q7442147"
@@ -11707,29 +11764,33 @@
   "id": 50622242,
   "bounds": {
     "minlat": 47.5273733,
-    "minlon": -122.3254299,
-    "maxlat": 47.5285965,
-    "maxlon": -122.3229333
+    "minlon": -122.3257070,
+    "maxlat": 47.5285879,
+    "maxlon": -122.3229629
   },
   "nodes": [
     644528316,
+    14161543481,
     644528269,
     644528245,
     13793555823,
     644528247,
     644528257,
+    14161543486,
     12839287964,
     644528316
   ],
   "geometry": [
-    { "lat": 47.5285684, "lon": -122.3229333 },
+    { "lat": 47.5285811, "lon": -122.3229890 },
+    { "lat": 47.5281866, "lon": -122.3229804 },
     { "lat": 47.5273733, "lon": -122.3229629 },
-    { "lat": 47.5273918, "lon": -122.3246009 },
-    { "lat": 47.5274153, "lon": -122.3246299 },
-    { "lat": 47.5280640, "lon": -122.3254299 },
-    { "lat": 47.5285965, "lon": -122.3254167 },
-    { "lat": 47.5285718, "lon": -122.3230432 },
-    { "lat": 47.5285684, "lon": -122.3229333 }
+    { "lat": 47.5273769, "lon": -122.3248148 },
+    { "lat": 47.5274044, "lon": -122.3248472 },
+    { "lat": 47.5281899, "lon": -122.3256941 },
+    { "lat": 47.5285879, "lon": -122.3257070 },
+    { "lat": 47.5285844, "lon": -122.3243838 },
+    { "lat": 47.5285809, "lon": -122.3230445 },
+    { "lat": 47.5285811, "lon": -122.3229890 }
   ],
   "tags": {
     "construction": "yes",
@@ -12188,8 +12249,8 @@
   "id": 51475862,
   "bounds": {
     "minlat": 47.6644824,
-    "minlon": -122.4019815,
-    "maxlat": 47.6661921,
+    "minlon": -122.4019816,
+    "maxlat": 47.6661889,
     "maxlon": -122.3981664
   },
   "nodes": [
@@ -12268,27 +12329,27 @@
     { "lat": 47.6651592, "lon": -122.3991585 },
     { "lat": 47.6651740, "lon": -122.3992039 },
     { "lat": 47.6653324, "lon": -122.3996910 },
-    { "lat": 47.6654990, "lon": -122.4002031 },
-    { "lat": 47.6655186, "lon": -122.4002542 },
-    { "lat": 47.6655440, "lon": -122.4002989 },
-    { "lat": 47.6655815, "lon": -122.4003445 },
-    { "lat": 47.6656110, "lon": -122.4003704 },
-    { "lat": 47.6656449, "lon": -122.4004065 },
-    { "lat": 47.6656486, "lon": -122.4004201 },
-    { "lat": 47.6656479, "lon": -122.4004336 },
-    { "lat": 47.6657354, "lon": -122.4005490 },
-    { "lat": 47.6658085, "lon": -122.4006867 },
-    { "lat": 47.6658196, "lon": -122.4006925 },
-    { "lat": 47.6658289, "lon": -122.4007037 },
-    { "lat": 47.6658966, "lon": -122.4009003 },
-    { "lat": 47.6659145, "lon": -122.4009500 },
-    { "lat": 47.6659303, "lon": -122.4010039 },
-    { "lat": 47.6659264, "lon": -122.4010255 },
-    { "lat": 47.6659655, "lon": -122.4011898 },
-    { "lat": 47.6659971, "lon": -122.4014970 },
-    { "lat": 47.6661142, "lon": -122.4019309 },
+    { "lat": 47.6654958, "lon": -122.4002032 },
+    { "lat": 47.6655154, "lon": -122.4002543 },
+    { "lat": 47.6655408, "lon": -122.4002990 },
+    { "lat": 47.6655783, "lon": -122.4003446 },
+    { "lat": 47.6656078, "lon": -122.4003705 },
+    { "lat": 47.6656417, "lon": -122.4004066 },
+    { "lat": 47.6656454, "lon": -122.4004202 },
+    { "lat": 47.6656447, "lon": -122.4004337 },
+    { "lat": 47.6657322, "lon": -122.4005491 },
+    { "lat": 47.6658053, "lon": -122.4006868 },
+    { "lat": 47.6658164, "lon": -122.4006926 },
+    { "lat": 47.6658257, "lon": -122.4007038 },
+    { "lat": 47.6658934, "lon": -122.4009004 },
+    { "lat": 47.6659113, "lon": -122.4009501 },
+    { "lat": 47.6659271, "lon": -122.4010040 },
+    { "lat": 47.6659232, "lon": -122.4010256 },
+    { "lat": 47.6659623, "lon": -122.4011899 },
+    { "lat": 47.6659939, "lon": -122.4014971 },
+    { "lat": 47.6661110, "lon": -122.4019310 },
     { "lat": 47.6661882, "lon": -122.4019657 },
-    { "lat": 47.6661921, "lon": -122.4019815 },
+    { "lat": 47.6661889, "lon": -122.4019816 },
     { "lat": 47.6661402, "lon": -122.4019726 },
     { "lat": 47.6661092, "lon": -122.4019673 },
     { "lat": 47.6660311, "lon": -122.4019540 },
@@ -12357,6 +12418,8 @@
     657612096,
     3649766990,
     3905766749,
+    14184059080,
+    14184059085,
     763350825,
     3413241653,
     657612061,
@@ -12435,10 +12498,12 @@
     { "lat": 47.6674039, "lon": -122.3962207 },
     { "lat": 47.6674163, "lon": -122.3962854 },
     { "lat": 47.6673206, "lon": -122.3971381 },
-    { "lat": 47.6672046, "lon": -122.3981733 },
-    { "lat": 47.6671912, "lon": -122.3983123 },
-    { "lat": 47.6671873, "lon": -122.3984124 },
-    { "lat": 47.6672709, "lon": -122.3984639 },
+    { "lat": 47.6671998, "lon": -122.3982006 },
+    { "lat": 47.6671792, "lon": -122.3981986 },
+    { "lat": 47.6671789, "lon": -122.3982237 },
+    { "lat": 47.6671785, "lon": -122.3982902 },
+    { "lat": 47.6671784, "lon": -122.3983927 },
+    { "lat": 47.6672734, "lon": -122.3984076 },
     { "lat": 47.6672288, "lon": -122.3988039 },
     { "lat": 47.6672135, "lon": -122.3991203 },
     { "lat": 47.6672109, "lon": -122.3994503 },
@@ -12499,7 +12564,7 @@
     "historic": "maritime",
     "leisure": "park",
     "name": "Carl S. English Jr. Botanical Gardens",
-    "nrhp:criteria": "(A),(C)",
+    "nrhp:criteria": "A;C",
     "nrhp:inscription_date": "1978-12-14",
     "operator": "United States Army Corps of Engineers",
     "operator:short": "USACE",
@@ -12584,7 +12649,7 @@
     "heritage:website": "https://www.nps.gov/subjects/nationalregister/index.htm",
     "historic": "maritime",
     "leisure": "park",
-    "nrhp:criteria": "(A),(C)",
+    "nrhp:criteria": "A;C",
     "nrhp:inscription_date": "1978-12-14",
     "operator": "United States Army Corps of Engineers",
     "operator:short": "USACE",
@@ -12666,8 +12731,12 @@
   },
   "nodes": [
     660936422,
+    14332607598,
+    14332607599,
+    14332607600,
     880895153,
     883660533,
+    14332669501,
     4131106949,
     660936438,
     660936455,
@@ -12676,12 +12745,19 @@
     660936462,
     660936471,
     660936477,
+    14332607595,
+    14332607596,
+    14332607597,
     660936422
   ],
   "geometry": [
     { "lat": 47.6648997, "lon": -122.3335528 },
+    { "lat": 47.6648587, "lon": -122.3335537 },
+    { "lat": 47.6640447, "lon": -122.3335718 },
+    { "lat": 47.6639712, "lon": -122.3335735 },
     { "lat": 47.6632236, "lon": -122.3335901 },
     { "lat": 47.6632153, "lon": -122.3324137 },
+    { "lat": 47.6632152, "lon": -122.3323690 },
     { "lat": 47.6632145, "lon": -122.3317378 },
     { "lat": 47.6635659, "lon": -122.3317365 },
     { "lat": 47.6635645, "lon": -122.3313571 },
@@ -12690,6 +12766,9 @@
     { "lat": 47.6647206, "lon": -122.3318460 },
     { "lat": 47.6647122, "lon": -122.3305553 },
     { "lat": 47.6648808, "lon": -122.3306562 },
+    { "lat": 47.6648814, "lon": -122.3307512 },
+    { "lat": 47.6648834, "lon": -122.3310507 },
+    { "lat": 47.6648991, "lon": -122.3334638 },
     { "lat": 47.6648997, "lon": -122.3335528 }
   ],
   "tags": {
@@ -13468,8 +13547,11 @@
     "addr:street": "University Street",
     "leisure": "park",
     "name": "First Hill Park",
-    "opening_hours": "04:00-23:30",
+    "opening_hours": "Mo-Su 04:00-23:30",
     "operator": "Seattle Parks and Recreation",
+    "operator:type": "government",
+    "operator:wikidata": "Q7442147",
+    "phone": "+1-206-684-4075",
     "start_date": "1978",
     "website": "https://www.seattle.gov/parks/allparks/first-hill-park",
     "wikidata": "Q111146019"
@@ -14191,6 +14273,8 @@
     { "lat": 47.6024844, "lon": -122.3340640 }
   ],
   "tags": {
+    "addr:city": "Seattle",
+    "addr:state": "WA",
     "alt_name:zh": "開拓者廣場",
     "alt_name:zh-Hans": "开拓者广场",
     "alt_name:zh-Hant": "開拓者廣場",
@@ -14829,7 +14913,7 @@
     "minlat": 47.7161675,
     "minlon": -122.3152513,
     "maxlat": 47.7166948,
-    "maxlon": -122.3139966
+    "maxlon": -122.3140388
   },
   "nodes": [
     677006357,
@@ -14839,11 +14923,11 @@
     677006357
   ],
   "geometry": [
-    { "lat": 47.7166923, "lon": -122.3140192 },
+    { "lat": 47.7166923, "lon": -122.3140543 },
     { "lat": 47.7166948, "lon": -122.3152513 },
     { "lat": 47.7161776, "lon": -122.3152250 },
-    { "lat": 47.7161675, "lon": -122.3139966 },
-    { "lat": 47.7166923, "lon": -122.3140192 }
+    { "lat": 47.7161675, "lon": -122.3140388 },
+    { "lat": 47.7166923, "lon": -122.3140543 }
   ],
   "tags": {
     "leisure": "park",
@@ -15649,13 +15733,19 @@
   "id": 55565096,
   "bounds": {
     "minlat": 47.7577002,
-    "minlon": -122.2092254,
+    "minlon": -122.2092312,
     "maxlat": 47.7585338,
     "maxlon": -122.2061822
   },
   "nodes": [
     698418505,
+    14297790031,
+    14297790030,
+    14297790032,
     356548328,
+    14297790027,
+    14297790028,
+    14297790029,
     698418282,
     698418715,
     698418484,
@@ -15672,9 +15762,15 @@
     698418505
   ],
   "geometry": [
-    { "lat": 47.7584313, "lon": -122.2091821 },
-    { "lat": 47.7584313, "lon": -122.2073722 },
-    { "lat": 47.7584313, "lon": -122.2066952 },
+    { "lat": 47.7583698, "lon": -122.2092305 },
+    { "lat": 47.7584261, "lon": -122.2092312 },
+    { "lat": 47.7584117, "lon": -122.2091507 },
+    { "lat": 47.7584054, "lon": -122.2090528 },
+    { "lat": 47.7584000, "lon": -122.2079241 },
+    { "lat": 47.7583950, "lon": -122.2071210 },
+    { "lat": 47.7583932, "lon": -122.2068380 },
+    { "lat": 47.7583991, "lon": -122.2067676 },
+    { "lat": 47.7584167, "lon": -122.2066824 },
     { "lat": 47.7584862, "lon": -122.2064689 },
     { "lat": 47.7585338, "lon": -122.2063422 },
     { "lat": 47.7585112, "lon": -122.2061822 },
@@ -15687,7 +15783,7 @@
     { "lat": 47.7577393, "lon": -122.2090911 },
     { "lat": 47.7577282, "lon": -122.2091293 },
     { "lat": 47.7577002, "lon": -122.2092254 },
-    { "lat": 47.7584313, "lon": -122.2091821 }
+    { "lat": 47.7583698, "lon": -122.2092305 }
   ],
   "tags": {
     "ele": "14",
@@ -17842,8 +17938,8 @@
   "bounds": {
     "minlat": 47.5731564,
     "minlon": -122.2825803,
-    "maxlat": 47.5734653,
-    "maxlon": -122.2811781
+    "maxlat": 47.5734671,
+    "maxlon": -122.2811859
   },
   "nodes": [
     3014802302,
@@ -17875,7 +17971,7 @@
     3014802302
   ],
   "geometry": [
-    { "lat": 47.5734653, "lon": -122.2811781 },
+    { "lat": 47.5734671, "lon": -122.2811887 },
     { "lat": 47.5733943, "lon": -122.2814269 },
     { "lat": 47.5733762, "lon": -122.2817448 },
     { "lat": 47.5733482, "lon": -122.2821793 },
@@ -17899,9 +17995,9 @@
     { "lat": 47.5733437, "lon": -122.2814108 },
     { "lat": 47.5733202, "lon": -122.2812276 },
     { "lat": 47.5733148, "lon": -122.2811859 },
-    { "lat": 47.5733323, "lon": -122.2811975 },
-    { "lat": 47.5733829, "lon": -122.2812310 },
-    { "lat": 47.5734653, "lon": -122.2811781 }
+    { "lat": 47.5733299, "lon": -122.2812240 },
+    { "lat": 47.5733763, "lon": -122.2813496 },
+    { "lat": 47.5734671, "lon": -122.2811887 }
   ],
   "tags": {
     "leisure": "park",
@@ -18248,9 +18344,16 @@
     { "lat": 47.5914473, "lon": -122.3128498 }
   ],
   "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "1120",
+    "addr:postcode": "98144",
+    "addr:state": "WA",
+    "addr:street": "15th Avenue South",
     "leisure": "park",
     "name": "Lewis Park",
     "natural": "wood",
+    "opening_hours": "Mo-Su 04:00-23:30",
+    "phone": "+1-206-684-4075",
     "website": "https://www.seattle.gov/parks/allparks/lewis-park"
   }
 },
@@ -18342,10 +18445,11 @@
     "leisure": "park",
     "man_made": "pier",
     "name": "Pier 62",
-    "opening_hours": "07:00-22:00",
+    "opening_hours": "Mo-Su 06:00-22:00",
     "operator": "Seattle Parks and Recreation",
     "operator:type": "government",
     "operator:wikidata": "Q7442147",
+    "phone": "+1-206-684-4075",
     "start_date": "2020-09-20",
     "surface": "concrete",
     "website": "https://www.seattle.gov/parks/allparks/pier-62"
@@ -18731,19 +18835,23 @@
   ],
   "tags": {
     "addr:city": "Bellevue",
-    "addr:housenumber": "419",
+    "addr:housenumber": "9899",
+    "addr:postcode": "98004",
     "addr:state": "WA",
-    "addr:street": "98th Avenue Northeast",
+    "addr:street": "Lake Washington Boulevard Northeast",
     "ele": "15",
     "gnis:feature_id": "1514290",
     "leisure": "park",
     "name": "Meydenbauer Bay Park",
     "name:en": "Meydenbauer Bay Park",
     "name:ru": "парк Мейденбауэр Бич",
+    "opening_hours": "06:00-23:00",
     "operator": "City of Bellevue",
     "operator:type": "government",
     "operator:wikidata": "Q214164",
     "operator:wikipedia": "en:Bellevue, Washington",
+    "phone": "+1 425-452-6885",
+    "reg_name": "\"Meydenbauer Park\"",
     "website": "https://parks.bellevuewa.gov/parks-and-trails/parks/meydenbauer-beach-park/",
     "wikidata": "Q49525744"
   }
@@ -18786,42 +18894,50 @@
   "type": "way",
   "id": 57883622,
   "bounds": {
-    "minlat": 47.6677974,
-    "minlon": -122.3851265,
-    "maxlat": 47.6680997,
-    "maxlon": -122.3848441
+    "minlat": 47.6678088,
+    "minlon": -122.3851276,
+    "maxlat": 47.6681185,
+    "maxlon": -122.3848788
   },
   "nodes": [
     718325470,
-    718325486,
-    718325437,
-    718325493,
+    14123174236,
+    14123174256,
+    14123174250,
+    14123174230,
     6292664305,
-    6292664304,
-    718325445,
     6292664303,
-    718325427,
+    14123174259,
+    14123174232,
+    14123174252,
     718325459,
+    14123174221,
+    14123174248,
     718325470
   ],
   "geometry": [
-    { "lat": 47.6680997, "lon": -122.3848898 },
-    { "lat": 47.6679196, "lon": -122.3848868 },
-    { "lat": 47.6678809, "lon": -122.3848588 },
-    { "lat": 47.6678574, "lon": -122.3848460 },
-    { "lat": 47.6678336, "lon": -122.3848441 },
-    { "lat": 47.6678137, "lon": -122.3848589 },
-    { "lat": 47.6677990, "lon": -122.3848884 },
-    { "lat": 47.6677974, "lon": -122.3849206 },
-    { "lat": 47.6678211, "lon": -122.3849723 },
-    { "lat": 47.6679354, "lon": -122.3851265 },
-    { "lat": 47.6680997, "lon": -122.3848898 }
+    { "lat": 47.6681185, "lon": -122.3848806 },
+    { "lat": 47.6679856, "lon": -122.3848798 },
+    { "lat": 47.6679544, "lon": -122.3848796 },
+    { "lat": 47.6679145, "lon": -122.3848794 },
+    { "lat": 47.6678760, "lon": -122.3848791 },
+    { "lat": 47.6678309, "lon": -122.3848788 },
+    { "lat": 47.6678088, "lon": -122.3849125 },
+    { "lat": 47.6678507, "lon": -122.3849734 },
+    { "lat": 47.6679113, "lon": -122.3850611 },
+    { "lat": 47.6679289, "lon": -122.3850866 },
+    { "lat": 47.6679572, "lon": -122.3851276 },
+    { "lat": 47.6680419, "lon": -122.3849978 },
+    { "lat": 47.6681069, "lon": -122.3848985 },
+    { "lat": 47.6681185, "lon": -122.3848806 }
   ],
   "tags": {
+    "check_date:opening_hours": "2026-08-04",
     "foot": "yes",
     "leisure": "park",
     "name": "Marvin's Garden",
     "opening_hours": "Su-Sa 04:00-23:30",
+    "smoking": "no",
     "website": "https://www.seattle.gov/parks/allparks/marvins-garden"
   }
 },
@@ -18968,17 +19084,20 @@
   "tags": {
     "addr:city": "Seattle",
     "addr:country": "US",
-    "addr:housenumber": "1801",
-    "addr:postcode": "98121",
+    "addr:housenumber": "531",
+    "addr:postcode": "98101",
     "addr:state": "WA",
-    "addr:street": "Westlake Avenue",
+    "addr:street": "Stewart Street",
     "area": "yes",
     "highway": "pedestrian",
     "leisure": "park",
     "lit": "yes",
     "name": "McGraw Square",
+    "opening_hours": "24/7",
+    "phone": "+1-206-684-4075",
     "smoothness": "excellent",
     "surface": "concrete",
+    "website": "http://www.seattle.gov/parks/find/parks/mcgraw-square",
     "wikidata": "Q21016048"
   }
 },
@@ -20102,9 +20221,12 @@
     428979557,
     428979559,
     783641774,
+    14158762859,
+    14158762836,
     783642001,
     783642002,
     783642006,
+    14158762835,
     783642008,
     783642011,
     783642013,
@@ -20150,9 +20272,12 @@
     { "lat": 47.6664325, "lon": -121.9239694 },
     { "lat": 47.6657620, "lon": -121.9245960 },
     { "lat": 47.6659663, "lon": -121.9254190 },
+    { "lat": 47.6659727, "lon": -121.9254422 },
+    { "lat": 47.6661048, "lon": -121.9259197 },
     { "lat": 47.6661595, "lon": -121.9261176 },
     { "lat": 47.6663401, "lon": -121.9264394 },
     { "lat": 47.6668026, "lon": -121.9268471 },
+    { "lat": 47.6669590, "lon": -121.9269217 },
     { "lat": 47.6674095, "lon": -121.9271368 },
     { "lat": 47.6685366, "lon": -121.9274372 },
     { "lat": 47.6692374, "lon": -121.9277269 },
@@ -20676,8 +20801,15 @@
     { "lat": 47.5940336, "lon": -122.3136886 }
   ],
   "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "904",
+    "addr:postcode": "98144",
+    "addr:state": "WA",
+    "addr:street": "Sturgus Avenue South",
     "leisure": "park",
     "name": "Sturgus Park",
+    "opening_hours": "Mo-Su 04:00-23:30",
+    "phone": "+1-206-684-4075",
     "website": "https://www.seattle.gov/parks/allparks/sturgus-park"
   }
 },
@@ -20703,8 +20835,16 @@
     { "lat": 47.5773917, "lon": -122.3106228 }
   ],
   "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "2919",
+    "addr:postcode": "98144",
+    "addr:state": "WA",
+    "addr:street": "Beacon Avenue South",
     "leisure": "park",
-    "name": "Stevens Place",
+    "name": "Stevens Place Park",
+    "opening_hours": "Mo-Su 04:00-23:30",
+    "operator": "City of Seattle",
+    "operator:type": "government",
     "website": "https://www.seattle.gov/parks/allparks/stevens-place"
   }
 },
@@ -21687,11 +21827,14 @@
     "addr:street": "Southeast 4th Street",
     "leisure": "park",
     "name": "Surrey Downs Park",
+    "note": "The Park has a 'great lawn' surrounded by a footpath perimeter. It includes a basketball court, picnic tables and restrooms. Views of Bellevue Downtown and Mount Rainier.",
+    "opening_hours": "Mo-Fr 06:00-21:00",
     "operator": "City of Bellevue",
     "operator:type": "government",
     "operator:wikidata": "Q214164",
     "operator:wikipedia": "en:Bellevue, Washington",
     "phone": "+1-425-452-6885",
+    "reg_name": "\"Surrey Downs,\" \"Great Lawn\"",
     "website": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/surrey-downs-park"
   }
 },
@@ -21951,7 +22094,7 @@
   "bounds": {
     "minlat": 47.6313171,
     "minlon": -122.1163127,
-    "maxlat": 47.6367418,
+    "maxlat": 47.6367447,
     "maxlon": -122.1108855
   },
   "nodes": [
@@ -21963,11 +22106,6 @@
     879231345,
     321379613,
     321379615,
-    560593609,
-    321379617,
-    321379622,
-    321379624,
-    321379626,
     879231458,
     809266918,
     7399958587,
@@ -21980,6 +22118,8 @@
     4086038079,
     321379639,
     321379641,
+    14271968071,
+    14271968079,
     9742266656,
     9742266657
   ],
@@ -21991,12 +22131,7 @@
     { "lat": 47.6350089, "lon": -122.1149860 },
     { "lat": 47.6350343, "lon": -122.1163127 },
     { "lat": 47.6360567, "lon": -122.1162910 },
-    { "lat": 47.6360402, "lon": -122.1156188 },
-    { "lat": 47.6362689, "lon": -122.1155149 },
-    { "lat": 47.6363894, "lon": -122.1154644 },
-    { "lat": 47.6364544, "lon": -122.1153839 },
-    { "lat": 47.6365198, "lon": -122.1152150 },
-    { "lat": 47.6364375, "lon": -122.1141871 },
+    { "lat": 47.6367447, "lon": -122.1162569 },
     { "lat": 47.6367418, "lon": -122.1142063 },
     { "lat": 47.6367083, "lon": -122.1136440 },
     { "lat": 47.6362997, "lon": -122.1136316 },
@@ -22008,7 +22143,9 @@
     { "lat": 47.6351432, "lon": -122.1112847 },
     { "lat": 47.6352235, "lon": -122.1110955 },
     { "lat": 47.6352088, "lon": -122.1109263 },
-    { "lat": 47.6336409, "lon": -122.1108855 },
+    { "lat": 47.6336351, "lon": -122.1108855 },
+    { "lat": 47.6320392, "lon": -122.1109169 },
+    { "lat": 47.6314474, "lon": -122.1109286 },
     { "lat": 47.6313307, "lon": -122.1109309 },
     { "lat": 47.6313171, "lon": -122.1121975 }
   ],
@@ -22017,9 +22154,8 @@
     "gnis:feature_id": "1513503",
     "leisure": "park",
     "name": "Ardmore Park",
-    "natural": "wood",
     "operator": "City of Bellevue",
-    "operator:type": "public",
+    "operator:type": "government",
     "operator:wikidata": "Q214164",
     "operator:wikipedia": "en:Bellevue, Washington"
   }
@@ -22462,10 +22598,17 @@
     { "lat": 47.6136139, "lon": -122.3371863 }
   ],
   "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "1900",
+    "addr:postcode": "98109",
+    "addr:state": "WA",
+    "addr:street": "Westlake Avenue",
     "area": "yes",
     "highway": "pedestrian",
     "leisure": "park",
     "name": "Westlake Square",
+    "opening_hours": "Mo-Su 06:00-22:00",
+    "phone": "+1-206-684-4075",
     "postal_code": "98101",
     "surface": "concrete",
     "website": "https://www.seattle.gov/parks/allparks/westlake-square",
@@ -22476,9 +22619,9 @@
   "type": "way",
   "id": 76743718,
   "bounds": {
-    "minlat": 47.7393217,
-    "minlon": -122.3209298,
-    "maxlat": 47.7412209,
+    "minlat": 47.7392891,
+    "minlon": -122.3209012,
+    "maxlat": 47.7412152,
     "maxlon": -122.3184085
   },
   "nodes": [
@@ -22487,21 +22630,41 @@
     904185320,
     904185322,
     904185317,
+    14114154474,
+    14114154475,
     2513499089,
+    9941279516,
+    14114154469,
+    14114154471,
+    5431223013,
+    9941344920,
+    14114154426,
     2513499088,
     904185319,
+    14114154425,
+    14114154424,
     904185326
   ],
   "geometry": [
-    { "lat": 47.7393378, "lon": -122.3189771 },
-    { "lat": 47.7402685, "lon": -122.3189557 },
-    { "lat": 47.7402974, "lon": -122.3184192 },
+    { "lat": 47.7392891, "lon": -122.3189095 },
+    { "lat": 47.7402785, "lon": -122.3189377 },
+    { "lat": 47.7402759, "lon": -122.3184145 },
     { "lat": 47.7411921, "lon": -122.3184085 },
-    { "lat": 47.7412209, "lon": -122.3209298 },
-    { "lat": 47.7406224, "lon": -122.3209036 },
-    { "lat": 47.7400362, "lon": -122.3208063 },
-    { "lat": 47.7393217, "lon": -122.3207951 },
-    { "lat": 47.7393378, "lon": -122.3189771 }
+    { "lat": 47.7412152, "lon": -122.3208156 },
+    { "lat": 47.7411775, "lon": -122.3209008 },
+    { "lat": 47.7410995, "lon": -122.3209012 },
+    { "lat": 47.7405084, "lon": -122.3208847 },
+    { "lat": 47.7404909, "lon": -122.3208763 },
+    { "lat": 47.7403201, "lon": -122.3208739 },
+    { "lat": 47.7402596, "lon": -122.3208721 },
+    { "lat": 47.7401718, "lon": -122.3208694 },
+    { "lat": 47.7400877, "lon": -122.3208669 },
+    { "lat": 47.7400479, "lon": -122.3208657 },
+    { "lat": 47.7400467, "lon": -122.3207310 },
+    { "lat": 47.7393211, "lon": -122.3207124 },
+    { "lat": 47.7393039, "lon": -122.3201215 },
+    { "lat": 47.7393005, "lon": -122.3191417 },
+    { "lat": 47.7392891, "lon": -122.3189095 }
   ],
   "tags": {
     "leisure": "park",
@@ -23415,7 +23578,9 @@
     1166064603,
     1166064583,
     1166043530,
+    14359895932,
     1166043528,
+    14359895935,
     1445942535,
     1445942516,
     356541869,
@@ -23428,7 +23593,9 @@
     { "lat": 47.6238712, "lon": -122.1937033 },
     { "lat": 47.6246359, "lon": -122.1936934 },
     { "lat": 47.6246529, "lon": -122.1936932 },
-    { "lat": 47.6246521, "lon": -122.1952661 },
+    { "lat": 47.6246513, "lon": -122.1948318 },
+    { "lat": 47.6246522, "lon": -122.1952663 },
+    { "lat": 47.6243277, "lon": -122.1952679 },
     { "lat": 47.6243045, "lon": -122.1952682 },
     { "lat": 47.6242051, "lon": -122.1952689 },
     { "lat": 47.6241342, "lon": -122.1952693 },
@@ -24063,10 +24230,18 @@
   ],
   "tags": {
     "access": "yes",
+    "addr:city": "Seattle",
+    "addr:housenumber": "1111",
+    "addr:postcode": "98122",
+    "addr:state": "WA",
+    "addr:street": "East Cherry Street",
     "leisure": "park",
     "name": "Seattle University Park",
+    "opening_hours": "Mo-Fr 06:00-23:00; Sa,Su 09:00-21:00",
     "operator": "Seattle University",
-    "ref": "SUPK"
+    "phone": "+1-206-296-6000",
+    "ref": "SUPK",
+    "website": "https://www.seattleu.edu/life-at-seattle-u/university-recreation/recreation-facilities/"
   }
 },
 {
@@ -25555,24 +25730,50 @@
   "id": 158306440,
   "bounds": {
     "minlat": 47.7553536,
-    "minlon": -122.2118775,
-    "maxlat": 47.7584313,
-    "maxlon": -122.2091821
+    "minlon": -122.2116998,
+    "maxlat": 47.7586515,
+    "maxlon": -122.2092254
   },
   "nodes": [
     1705329209,
     1705329215,
-    1705329222,
-    2821996221,
-    3289365319,
-    3289365318,
-    3289365317,
-    1705329216,
+    14297790060,
+    14297790026,
+    14297790025,
+    14297790024,
+    14297790061,
     1705329210,
+    14297790059,
     1705329219,
     1705329211,
     1705329218,
+    14297790058,
     1705329212,
+    14297790057,
+    14297790056,
+    14297790055,
+    14297790079,
+    14297790054,
+    14297790052,
+    14297790051,
+    14297790050,
+    14297790049,
+    14297790048,
+    14297790047,
+    14297790046,
+    14297790045,
+    14297790033,
+    14297790034,
+    14297790035,
+    14297790036,
+    14297790037,
+    14297790038,
+    14297790039,
+    14297790040,
+    14297790041,
+    14297790042,
+    14297790043,
+    14297790044,
     698418505,
     295088155,
     295087884,
@@ -25593,18 +25794,44 @@
   "geometry": [
     { "lat": 47.7562618, "lon": -122.2112595 },
     { "lat": 47.7567949, "lon": -122.2112595 },
-    { "lat": 47.7568119, "lon": -122.2118775 },
-    { "lat": 47.7568581, "lon": -122.2118601 },
-    { "lat": 47.7570340, "lon": -122.2117962 },
-    { "lat": 47.7572531, "lon": -122.2116544 },
-    { "lat": 47.7574053, "lon": -122.2115598 },
-    { "lat": 47.7574955, "lon": -122.2115063 },
-    { "lat": 47.7574945, "lon": -122.2108164 },
-    { "lat": 47.7577476, "lon": -122.2108196 },
-    { "lat": 47.7577476, "lon": -122.2102080 },
-    { "lat": 47.7583239, "lon": -122.2102080 },
-    { "lat": 47.7584155, "lon": -122.2101979 },
-    { "lat": 47.7584313, "lon": -122.2091821 },
+    { "lat": 47.7568069, "lon": -122.2116998 },
+    { "lat": 47.7571297, "lon": -122.2115728 },
+    { "lat": 47.7572694, "lon": -122.2115171 },
+    { "lat": 47.7574376, "lon": -122.2114259 },
+    { "lat": 47.7575317, "lon": -122.2113641 },
+    { "lat": 47.7575331, "lon": -122.2108854 },
+    { "lat": 47.7576796, "lon": -122.2107252 },
+    { "lat": 47.7576535, "lon": -122.2106756 },
+    { "lat": 47.7579882, "lon": -122.2103015 },
+    { "lat": 47.7582467, "lon": -122.2103383 },
+    { "lat": 47.7582463, "lon": -122.2103041 },
+    { "lat": 47.7583022, "lon": -122.2103034 },
+    { "lat": 47.7583369, "lon": -122.2103579 },
+    { "lat": 47.7583509, "lon": -122.2104006 },
+    { "lat": 47.7583924, "lon": -122.2103205 },
+    { "lat": 47.7584023, "lon": -122.2103010 },
+    { "lat": 47.7584121, "lon": -122.2102816 },
+    { "lat": 47.7584676, "lon": -122.2101706 },
+    { "lat": 47.7585005, "lon": -122.2100975 },
+    { "lat": 47.7585357, "lon": -122.2100117 },
+    { "lat": 47.7585713, "lon": -122.2099198 },
+    { "lat": 47.7585992, "lon": -122.2098407 },
+    { "lat": 47.7586305, "lon": -122.2097505 },
+    { "lat": 47.7586481, "lon": -122.2096865 },
+    { "lat": 47.7586513, "lon": -122.2096680 },
+    { "lat": 47.7586515, "lon": -122.2096453 },
+    { "lat": 47.7586461, "lon": -122.2096244 },
+    { "lat": 47.7586404, "lon": -122.2096111 },
+    { "lat": 47.7586311, "lon": -122.2095950 },
+    { "lat": 47.7586174, "lon": -122.2095827 },
+    { "lat": 47.7585782, "lon": -122.2095594 },
+    { "lat": 47.7585442, "lon": -122.2095376 },
+    { "lat": 47.7585127, "lon": -122.2095095 },
+    { "lat": 47.7584802, "lon": -122.2094746 },
+    { "lat": 47.7584496, "lon": -122.2094290 },
+    { "lat": 47.7584212, "lon": -122.2093774 },
+    { "lat": 47.7583955, "lon": -122.2093143 },
+    { "lat": 47.7583698, "lon": -122.2092305 },
     { "lat": 47.7577002, "lon": -122.2092254 },
     { "lat": 47.7575855, "lon": -122.2095064 },
     { "lat": 47.7574757, "lon": -122.2097490 },
@@ -25864,6 +26091,8 @@
     "leisure": "park",
     "name": "Cal Anderson Park",
     "name:etymology:wikidata": "Q5018119",
+    "opening_hours": "Mo-Su 04:00-23:30",
+    "phone": "+1-206-684-4075",
     "wheelchair": "yes",
     "wikidata": "Q12054012",
     "wikipedia": "en:Cal Anderson Park"
@@ -26359,6 +26588,8 @@
     2318808420,
     2318808418,
     1721058483,
+    14190543992,
+    14190543991,
     6136490311
   ],
   "geometry": [
@@ -26389,6 +26620,8 @@
     { "lat": 47.4827003, "lon": -122.2043271 },
     { "lat": 47.4826557, "lon": -122.2043379 },
     { "lat": 47.4825340, "lon": -122.2043506 },
+    { "lat": 47.4825389, "lon": -122.2050171 },
+    { "lat": 47.4825407, "lon": -122.2052676 },
     { "lat": 47.4825411, "lon": -122.2053186 }
   ],
   "tags": {
@@ -27046,6 +27279,12 @@
     4145085957,
     4145085956,
     1733627706,
+    1722159897,
+    1722159893,
+    1722159861,
+    14134101391,
+    14134101389,
+    14134101390,
     1733627699,
     4145085960,
     4145085961,
@@ -27081,7 +27320,13 @@
     { "lat": 47.7507014, "lon": -122.1649896 },
     { "lat": 47.7505344, "lon": -122.1647457 },
     { "lat": 47.7511468, "lon": -122.1638600 },
-    { "lat": 47.7507326, "lon": -122.1629924 },
+    { "lat": 47.7511059, "lon": -122.1638708 },
+    { "lat": 47.7508877, "lon": -122.1641337 },
+    { "lat": 47.7508105, "lon": -122.1639896 },
+    { "lat": 47.7509091, "lon": -122.1638055 },
+    { "lat": 47.7509616, "lon": -122.1636072 },
+    { "lat": 47.7508301, "lon": -122.1633225 },
+    { "lat": 47.7507186, "lon": -122.1629672 },
     { "lat": 47.7491197, "lon": -122.1630323 },
     { "lat": 47.7487107, "lon": -122.1626192 },
     { "lat": 47.7484769, "lon": -122.1622066 },
@@ -29464,6 +29709,7 @@
   "tags": {
     "addr:city": "Seattle",
     "addr:housenumber": "117",
+    "addr:postcode": "98104",
     "addr:state": "WA",
     "addr:street": "South Washington Street",
     "leisure": "park",
@@ -29704,7 +29950,7 @@
     11616866129,
     1863760936,
     1863760935,
-    417236559,
+    14246926151,
     1863760940,
     417236558,
     1863760942,
@@ -29779,8 +30025,8 @@
     { "lat": 47.5859796, "lon": -122.0025524 },
     { "lat": 47.5859688, "lon": -122.0024159 },
     { "lat": 47.5859709, "lon": -122.0022712 },
-    { "lat": 47.5859658, "lon": -122.0020380 },
-    { "lat": 47.5859784, "lon": -122.0019794 },
+    { "lat": 47.5859600, "lon": -122.0020358 },
+    { "lat": 47.5859616, "lon": -122.0019795 },
     { "lat": 47.5860063, "lon": -122.0019451 },
     { "lat": 47.5862007, "lon": -122.0019198 },
     { "lat": 47.5863138, "lon": -122.0019025 },
@@ -31777,7 +32023,7 @@
   ],
   "tags": {
     "leisure": "park",
-    "name": "Klahanie Park"
+    "name": "Lakeside Park"
   }
 },
 {
@@ -31861,7 +32107,9 @@
   ],
   "tags": {
     "leisure": "park",
-    "name": "Klahanie Park"
+    "name": "Lakeside Park Courts",
+    "operator": "Klahanie HOA",
+    "operator:type": "local_authority"
   }
 },
 {
@@ -35223,7 +35471,7 @@
   "id": 259778966,
   "bounds": {
     "minlat": 47.6896510,
-    "minlon": -122.0354859,
+    "minlon": -122.0354451,
     "maxlat": 47.6926534,
     "maxlon": -122.0321536
   },
@@ -35253,7 +35501,7 @@
     { "lat": 47.6922883, "lon": -122.0347671 },
     { "lat": 47.6922104, "lon": -122.0349605 },
     { "lat": 47.6921364, "lon": -122.0352204 },
-    { "lat": 47.6920726, "lon": -122.0354859 },
+    { "lat": 47.6920129, "lon": -122.0354451 },
     { "lat": 47.6917355, "lon": -122.0354176 },
     { "lat": 47.6915555, "lon": -122.0353399 },
     { "lat": 47.6914023, "lon": -122.0352602 },
@@ -35507,10 +35755,10 @@
   "type": "way",
   "id": 259990323,
   "bounds": {
-    "minlat": 47.6920136,
+    "minlat": 47.6920935,
     "minlon": -122.0365409,
-    "maxlat": 47.6925825,
-    "maxlon": -122.0356782
+    "maxlat": 47.6925492,
+    "maxlon": -122.0359614
   },
   "nodes": [
     2653414199,
@@ -35520,10 +35768,10 @@
     2653421596,
     2655272071,
     2682773254,
-    318768080,
-    2682773256,
-    2653006242,
-    2653403303,
+    14111643571,
+    14111643572,
+    14111643573,
+    14111643574,
     2653414199
   ],
   "geometry": [
@@ -35531,13 +35779,13 @@
     { "lat": 47.6924682, "lon": -122.0364232 },
     { "lat": 47.6924746, "lon": -122.0362556 },
     { "lat": 47.6925277, "lon": -122.0362580 },
-    { "lat": 47.6925825, "lon": -122.0358578 },
-    { "lat": 47.6925169, "lon": -122.0358354 },
-    { "lat": 47.6922175, "lon": -122.0357198 },
-    { "lat": 47.6921086, "lon": -122.0356782 },
-    { "lat": 47.6920844, "lon": -122.0358725 },
-    { "lat": 47.6920555, "lon": -122.0360941 },
-    { "lat": 47.6920136, "lon": -122.0363391 },
+    { "lat": 47.6925492, "lon": -122.0360505 },
+    { "lat": 47.6924542, "lon": -122.0360203 },
+    { "lat": 47.6923341, "lon": -122.0359756 },
+    { "lat": 47.6922514, "lon": -122.0359614 },
+    { "lat": 47.6921847, "lon": -122.0360339 },
+    { "lat": 47.6921462, "lon": -122.0361488 },
+    { "lat": 47.6920935, "lon": -122.0363841 },
     { "lat": 47.6923716, "lon": -122.0365409 }
   ],
   "tags": {
@@ -36914,8 +37162,9 @@
     { "lat": 47.5498542, "lon": -122.1570433 }
   ],
   "tags": {
-    "leisure": "park",
-    "name": "Bellevue Open Space"
+    "leisure": "nature_reserve",
+    "name": "Bellevue Open Space",
+    "natural": "wood"
   }
 },
 {
@@ -37258,8 +37507,9 @@
     { "lat": 47.5490686, "lon": -122.1421193 }
   ],
   "tags": {
-    "leisure": "park",
-    "name": "Meadows Open Space"
+    "leisure": "nature_reserve",
+    "name": "Meadows Open Space",
+    "natural": "wood"
   }
 },
 {
@@ -37296,8 +37546,9 @@
     { "lat": 47.5561611, "lon": -122.1491578 }
   ],
   "tags": {
-    "leisure": "park",
+    "leisure": "nature_reserve",
     "name": "Somerset East Open Space",
+    "natural": "wood",
     "operator": "Bellevue Parks & Community Services"
   }
 },
@@ -37548,7 +37799,7 @@
     { "lat": 47.5466116, "lon": -122.1295137 }
   ],
   "tags": {
-    "leisure": "park",
+    "leisure": "nature_reserve",
     "name": "Lakemont Highlands Park",
     "natural": "wood"
   }
@@ -37681,7 +37932,7 @@
     { "lat": 47.5465612, "lon": -122.1361598 }
   ],
   "tags": {
-    "leisure": "park",
+    "leisure": "nature_reserve",
     "name": "West Summit Open Space",
     "natural": "wood"
   }
@@ -37792,7 +38043,7 @@
     { "lat": 47.5541473, "lon": -122.1377084 }
   ],
   "tags": {
-    "leisure": "park",
+    "leisure": "nature_reserve",
     "name": "Saddleback Open Space",
     "natural": "wood"
   }
@@ -38538,49 +38789,9 @@
     { "lat": 47.5598372, "lon": -122.1362466 }
   ],
   "tags": {
-    "leisure": "park",
-    "name": "Whispering Heights Open Space"
-  }
-},
-{
-  "type": "way",
-  "id": 267172919,
-  "bounds": {
-    "minlat": 47.5567009,
-    "minlon": -122.1375405,
-    "maxlat": 47.5575179,
-    "maxlon": -122.1360013
-  },
-  "nodes": [
-    2726486354,
-    2726486350,
-    2726486352,
-    2726486347,
-    2726486355,
-    2726486356,
-    2726486357,
-    2726486360,
-    2726486362,
-    2726486361,
-    2726486359,
-    2726486354
-  ],
-  "geometry": [
-    { "lat": 47.5569136, "lon": -122.1360343 },
-    { "lat": 47.5567774, "lon": -122.1360013 },
-    { "lat": 47.5568641, "lon": -122.1366349 },
-    { "lat": 47.5567009, "lon": -122.1373327 },
-    { "lat": 47.5569423, "lon": -122.1374542 },
-    { "lat": 47.5571134, "lon": -122.1375405 },
-    { "lat": 47.5572772, "lon": -122.1367435 },
-    { "lat": 47.5574347, "lon": -122.1367485 },
-    { "lat": 47.5575179, "lon": -122.1367511 },
-    { "lat": 47.5574667, "lon": -122.1362001 },
-    { "lat": 47.5573909, "lon": -122.1361498 },
-    { "lat": 47.5569136, "lon": -122.1360343 }
-  ],
-  "tags": {
-    "leisure": "park"
+    "leisure": "nature_reserve",
+    "name": "Whispering Heights Open Space",
+    "natural": "wood"
   }
 },
 {
@@ -38667,8 +38878,9 @@
     { "lat": 47.5579766, "lon": -122.1372290 }
   ],
   "tags": {
-    "leisure": "park",
-    "name": "Easglesmere Open Space"
+    "leisure": "nature_reserve",
+    "name": "Easglesmere Open Space",
+    "natural": "wood"
   }
 },
 {
@@ -38793,7 +39005,7 @@
     { "lat": 47.5608486, "lon": -122.1306889 }
   ],
   "tags": {
-    "leisure": "park",
+    "leisure": "nature_reserve",
     "name": "The Heights Open Space",
     "natural": "wood"
   }
@@ -40729,6 +40941,7 @@
     "name": "Fritz Hedges Waterway Park",
     "name:etymology": "Frederick \"Fritz\" Hedges",
     "start_date": "2020",
+    "website": "https://www.seattle.gov/parks/parks/fritz-hedges-waterway-park",
     "wikidata": "Q105343857",
     "wikimedia_commons": "Category:Fritz Hedges Waterway Park",
     "wikipedia": "en:Fritz Hedges Waterway Park"
@@ -42318,7 +42531,6 @@
     { "lat": 47.7836411, "lon": -122.3738450 }
   ],
   "tags": {
-    "fixme": "Add missing paths",
     "leisure": "park",
     "name": "Hickman Park"
   }
@@ -42793,8 +43005,16 @@
     { "lat": 47.5959512, "lon": -122.3188144 }
   ],
   "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "1110",
+    "addr:postcode": "98104",
+    "addr:state": "WA",
+    "addr:street": "South Dearborn Street",
     "leisure": "park",
-    "name": "Beacon Place"
+    "name": "Beacon Place",
+    "opening_hours": "Mo-Su 04:00-23:30",
+    "phone": "+1-206-684-4075",
+    "website": "http://www.seattle.gov/parks/find/parks/beacon-place"
   }
 },
 {
@@ -44263,11 +44483,11 @@
   "tags": {
     "ele": "46",
     "gnis:feature_id": "1514570",
-    "leisure": "park",
+    "leisure": "nature_reserve",
     "name": "Woodridge Open Space",
     "natural": "wood",
     "operator": "City of Bellevue",
-    "operator:type": "public",
+    "operator:type": "government",
     "operator:wikidata": "Q214164",
     "operator:wikipedia": "en:Bellevue, Washington",
     "website": "http://parkstrails.myparksandrecreation.com/Details.aspx?pid=478"
@@ -45535,7 +45755,7 @@
     { "lat": 47.5591065, "lon": -122.1254545 }
   ],
   "tags": {
-    "leisure": "park",
+    "leisure": "nature_reserve",
     "name": "Silverleaf Open Space",
     "natural": "wood"
   }
@@ -46598,6 +46818,7 @@
   "nodes": [
     3843978111,
     3843978112,
+    14174127677,
     3843978113,
     3843978114,
     3843978115,
@@ -46606,6 +46827,7 @@
   "geometry": [
     { "lat": 47.5478464, "lon": -122.0049205 },
     { "lat": 47.5478247, "lon": -122.0047998 },
+    { "lat": 47.5478153, "lon": -122.0047658 },
     { "lat": 47.5477975, "lon": -122.0047019 },
     { "lat": 47.5476816, "lon": -122.0046925 },
     { "lat": 47.5476762, "lon": -122.0049311 },
@@ -46922,7 +47144,7 @@
     { "lat": 47.5420920, "lon": -122.0102920 },
     { "lat": 47.5422459, "lon": -122.0101914 },
     { "lat": 47.5423718, "lon": -122.0101538 },
-    { "lat": 47.5424136, "lon": -122.0101798 },
+    { "lat": 47.5424151, "lon": -122.0101559 },
     { "lat": 47.5425169, "lon": -122.0101695 },
     { "lat": 47.5431289, "lon": -122.0102239 },
     { "lat": 47.5431134, "lon": -122.0103283 }
@@ -48747,7 +48969,7 @@
     "minlat": 47.5643071,
     "minlon": -122.0975450,
     "maxlat": 47.5707580,
-    "maxlon": -122.0940366
+    "maxlon": -122.0940688
   },
   "nodes": [
     2706634992,
@@ -48781,9 +49003,6 @@
     2706635005,
     2706635006,
     2706635013,
-    2706635008,
-    2706635024,
-    2706635010,
     2706635016,
     2706635027,
     2706635037,
@@ -48799,7 +49018,7 @@
   "geometry": [
     { "lat": 47.5702764, "lon": -122.0941000 },
     { "lat": 47.5699681, "lon": -122.0941117 },
-    { "lat": 47.5696206, "lon": -122.0940366 },
+    { "lat": 47.5696305, "lon": -122.0941281 },
     { "lat": 47.5693383, "lon": -122.0942190 },
     { "lat": 47.5686217, "lon": -122.0941225 },
     { "lat": 47.5672825, "lon": -122.0940688 },
@@ -48814,9 +49033,9 @@
     { "lat": 47.5656319, "lon": -122.0975450 },
     { "lat": 47.5658057, "lon": -122.0971711 },
     { "lat": 47.5662400, "lon": -122.0971174 },
-    { "lat": 47.5667974, "lon": -122.0971174 },
-    { "lat": 47.5664500, "lon": -122.0965257 },
-    { "lat": 47.5664210, "lon": -122.0960107 },
+    { "lat": 47.5664963, "lon": -122.0970891 },
+    { "lat": 47.5663719, "lon": -122.0965493 },
+    { "lat": 47.5663143, "lon": -122.0959729 },
     { "lat": 47.5665513, "lon": -122.0954759 },
     { "lat": 47.5668192, "lon": -122.0954008 },
     { "lat": 47.5673548, "lon": -122.0953348 },
@@ -48824,13 +49043,10 @@
     { "lat": 47.5681077, "lon": -122.0957210 },
     { "lat": 47.5683249, "lon": -122.0962789 },
     { "lat": 47.5687013, "lon": -122.0964308 },
-    { "lat": 47.5687809, "lon": -122.0966437 },
-    { "lat": 47.5691790, "lon": -122.0966115 },
-    { "lat": 47.5688823, "lon": -122.0958069 },
+    { "lat": 47.5686735, "lon": -122.0961787 },
+    { "lat": 47.5686328, "lon": -122.0957850 },
+    { "lat": 47.5688521, "lon": -122.0956215 },
     { "lat": 47.5690487, "lon": -122.0955279 },
-    { "lat": 47.5693528, "lon": -122.0966115 },
-    { "lat": 47.5694471, "lon": -122.0965705 },
-    { "lat": 47.5693178, "lon": -122.0959506 },
     { "lat": 47.5694107, "lon": -122.0956154 },
     { "lat": 47.5697075, "lon": -122.0955188 },
     { "lat": 47.5700549, "lon": -122.0956583 },
@@ -48847,8 +49063,7 @@
     "ele": "28",
     "gnis:feature_id": "1514066",
     "leisure": "park",
-    "name": "Timberlake Park",
-    "natural": "wood"
+    "name": "Timberlake Park"
   }
 },
 {
@@ -50222,11 +50437,11 @@
     { "lat": 47.5794579, "lon": -122.1620529 }
   ],
   "tags": {
-    "leisure": "park",
+    "leisure": "nature_reserve",
     "name": "Sunset Ravine Neighborhood Park",
     "natural": "wood",
     "operator": "City of Bellevue",
-    "operator:type": "public",
+    "operator:type": "government",
     "operator:wikidata": "Q214164",
     "operator:wikipedia": "en:Bellevue, Washington"
   }
@@ -50339,6 +50554,40 @@
     "old_name": "Terminal 105 Park",
     "operator": "Port of Seattle",
     "website": "https://www.portseattle.org/places/terminal-105-park"
+  }
+},
+{
+  "type": "way",
+  "id": 396477971,
+  "bounds": {
+    "minlat": 47.4797919,
+    "minlon": -122.2102587,
+    "maxlat": 47.4802017,
+    "maxlon": -122.2096755
+  },
+  "nodes": [
+    2380770226,
+    883792996,
+    883793005,
+    4679453505,
+    3992917611,
+    3992917612,
+    2380770231,
+    2380770226
+  ],
+  "geometry": [
+    { "lat": 47.4798009, "lon": -122.2102587 },
+    { "lat": 47.4797919, "lon": -122.2096778 },
+    { "lat": 47.4800478, "lon": -122.2096755 },
+    { "lat": 47.4800760, "lon": -122.2096888 },
+    { "lat": 47.4801174, "lon": -122.2099077 },
+    { "lat": 47.4802017, "lon": -122.2102527 },
+    { "lat": 47.4801691, "lon": -122.2102532 },
+    { "lat": 47.4798009, "lon": -122.2102587 }
+  ],
+  "tags": {
+    "leisure": "park",
+    "name": "Legacy Square"
   }
 },
 {
@@ -50733,18 +50982,24 @@
     4112030593,
     4112024970,
     4112024969,
+    14136022577,
+    14136022581,
     4112024985,
     4112024986,
     4112030592,
+    14136022550,
     4112030593
   ],
   "geometry": [
     { "lat": 47.4957444, "lon": -122.3166664 },
     { "lat": 47.4943462, "lon": -122.3166755 },
     { "lat": 47.4943382, "lon": -122.3154448 },
+    { "lat": 47.4944467, "lon": -122.3154441 },
+    { "lat": 47.4951023, "lon": -122.3154398 },
     { "lat": 47.4955547, "lon": -122.3154369 },
     { "lat": 47.4955580, "lon": -122.3159530 },
     { "lat": 47.4957398, "lon": -122.3159518 },
+    { "lat": 47.4957438, "lon": -122.3165679 },
     { "lat": 47.4957444, "lon": -122.3166664 }
   ],
   "tags": {
@@ -51186,10 +51441,9 @@
   "tags": {
     "leisure": "park",
     "name": "Bridal Trails Corner Park",
+    "not:operator:wikidata": "Q214164",
     "operator": "City of Bellevue",
-    "operator:type": "public",
-    "operator:wikidata": "Q214164",
-    "operator:wikipedia": "en:Bellevue, Washington"
+    "operator:type": "government"
   }
 },
 {
@@ -55258,6 +55512,7 @@
     4677854370,
     4677854368,
     13067811860,
+    14065061635,
     4677854369,
     4677854367,
     4677854366,
@@ -55270,6 +55525,7 @@
     4677857402,
     4677857396,
     4677854387,
+    14065061667,
     4677857411,
     4677857409
   ],
@@ -55279,6 +55535,7 @@
     { "lat": 47.4920144, "lon": -122.1228032 },
     { "lat": 47.4916588, "lon": -122.1228162 },
     { "lat": 47.4916853, "lon": -122.1241101 },
+    { "lat": 47.4917292, "lon": -122.1262517 },
     { "lat": 47.4917506, "lon": -122.1272966 },
     { "lat": 47.4915159, "lon": -122.1272950 },
     { "lat": 47.4914309, "lon": -122.1275858 },
@@ -55291,6 +55548,7 @@
     { "lat": 47.4927540, "lon": -122.1273033 },
     { "lat": 47.4926413, "lon": -122.1273025 },
     { "lat": 47.4925756, "lon": -122.1240171 },
+    { "lat": 47.4932937, "lon": -122.1240125 },
     { "lat": 47.4933852, "lon": -122.1240119 },
     { "lat": 47.4933502, "lon": -122.1222324 }
   ],
@@ -55440,7 +55698,7 @@
     "minlat": 47.4826617,
     "minlon": -122.2090648,
     "maxlat": 47.4852276,
-    "maxlon": -122.2083555
+    "maxlon": -122.2083527
   },
   "nodes": [
     4679453525,
@@ -55492,7 +55750,7 @@
     { "lat": 47.4847933, "lon": -122.2087464 },
     { "lat": 47.4849975, "lon": -122.2087274 },
     { "lat": 47.4852276, "lon": -122.2087007 },
-    { "lat": 47.4850322, "lon": -122.2083555 },
+    { "lat": 47.4850333, "lon": -122.2083527 },
     { "lat": 47.4841610, "lon": -122.2083655 },
     { "lat": 47.4841546, "lon": -122.2083713 }
   ],
@@ -55696,7 +55954,7 @@
   "type": "way",
   "id": 479215139,
   "bounds": {
-    "minlat": 47.6944920,
+    "minlat": 47.6945078,
     "minlon": -122.0574260,
     "maxlat": 47.7177148,
     "maxlon": -122.0346170
@@ -55756,7 +56014,7 @@
     { "lat": 47.6947430, "lon": -122.0573940 },
     { "lat": 47.6945603, "lon": -122.0494109 },
     { "lat": 47.6945569, "lon": -122.0492654 },
-    { "lat": 47.6944920, "lon": -122.0464280 },
+    { "lat": 47.6945078, "lon": -122.0464250 },
     { "lat": 47.6999670, "lon": -122.0466350 },
     { "lat": 47.7018990, "lon": -122.0467130 },
     { "lat": 47.7016660, "lon": -122.0359990 },
@@ -56846,8 +57104,8 @@
   "id": 490140126,
   "bounds": {
     "minlat": 47.6740606,
-    "minlon": -122.1232798,
-    "maxlat": 47.6742352,
+    "minlon": -122.1232407,
+    "maxlat": 47.6742236,
     "maxlon": -122.1228938
   },
   "nodes": [
@@ -56857,22 +57115,18 @@
     7251950326,
     7251950327,
     4823213318,
-    6112174569,
-    6112174568,
     6112174567,
     4823213315
   ],
   "geometry": [
-    { "lat": 47.6742352, "lon": -122.1232285 },
-    { "lat": 47.6741425, "lon": -122.1232798 },
+    { "lat": 47.6742236, "lon": -122.1231894 },
+    { "lat": 47.6741309, "lon": -122.1232407 },
     { "lat": 47.6740606, "lon": -122.1229521 },
     { "lat": 47.6740865, "lon": -122.1229117 },
     { "lat": 47.6741186, "lon": -122.1228938 },
     { "lat": 47.6741513, "lon": -122.1229079 },
     { "lat": 47.6741741, "lon": -122.1229712 },
-    { "lat": 47.6741488, "lon": -122.1230479 },
-    { "lat": 47.6741991, "lon": -122.1230847 },
-    { "lat": 47.6742352, "lon": -122.1232285 }
+    { "lat": 47.6742236, "lon": -122.1231894 }
   ],
   "tags": {
     "addr:city": "Redmond",
@@ -56889,7 +57143,7 @@
     "name": "O'Leary Park",
     "opening_hours": "dawn-dusk",
     "operator": "City of Redmond",
-    "operator:type": "public",
+    "operator:type": "government",
     "operator:wikidata": "Q223718",
     "operator:wikipedia": "en:Redmond, Washington",
     "website": "https://www.redmond.gov/Facilities/Facility/Details/OLeary-Park-90",
@@ -58093,10 +58347,10 @@
   "type": "way",
   "id": 501085037,
   "bounds": {
-    "minlat": 47.5867619,
+    "minlat": 47.5867669,
     "minlon": -122.2349168,
     "maxlat": 47.5882991,
-    "maxlon": -122.2318182
+    "maxlon": -122.2318277
   },
   "nodes": [
     4919858658,
@@ -58163,14 +58417,14 @@
     { "lat": 47.5868981, "lon": -122.2323017 },
     { "lat": 47.5868375, "lon": -122.2322455 },
     { "lat": 47.5867911, "lon": -122.2321273 },
-    { "lat": 47.5867891, "lon": -122.2320512 },
-    { "lat": 47.5867619, "lon": -122.2319331 },
-    { "lat": 47.5867717, "lon": -122.2318935 },
-    { "lat": 47.5867853, "lon": -122.2318668 },
-    { "lat": 47.5868098, "lon": -122.2318394 },
-    { "lat": 47.5868348, "lon": -122.2318227 },
-    { "lat": 47.5868637, "lon": -122.2318206 },
-    { "lat": 47.5869528, "lon": -122.2318182 },
+    { "lat": 47.5867701, "lon": -122.2320586 },
+    { "lat": 47.5867669, "lon": -122.2319566 },
+    { "lat": 47.5867767, "lon": -122.2319170 },
+    { "lat": 47.5867903, "lon": -122.2318903 },
+    { "lat": 47.5868148, "lon": -122.2318629 },
+    { "lat": 47.5868398, "lon": -122.2318462 },
+    { "lat": 47.5868574, "lon": -122.2318400 },
+    { "lat": 47.5869189, "lon": -122.2318417 },
     { "lat": 47.5870246, "lon": -122.2318277 },
     { "lat": 47.5870219, "lon": -122.2318367 },
     { "lat": 47.5870233, "lon": -122.2318508 },
@@ -58834,9 +59088,17 @@
     { "lat": 47.6015713, "lon": -122.3224217 }
   ],
   "tags": {
+    "addr:city": "Seattle",
+    "addr:housenumber": "903",
+    "addr:postcode": "98122",
+    "addr:state": "WA",
+    "addr:street": "Yesler Way",
     "leisure": "park",
     "name": "Yesler Terrace Park",
-    "source": "http://www.seattle.gov/parks/about-us/current-projects/yesler-terrace-park"
+    "opening_hours": "Mo-Su 04:00-23:30",
+    "phone": "+1-206-684-4075",
+    "source": "http://www.seattle.gov/parks/about-us/current-projects/yesler-terrace-park",
+    "website": "http://www.seattle.gov/parks/find/parks/yesler-terrace-park"
   }
 },
 {
@@ -58864,13 +59126,20 @@
   ],
   "tags": {
     "access": "yes",
+    "addr:city": "Seattle",
+    "addr:housenumber": "903",
+    "addr:postcode": "98122",
+    "addr:state": "WA",
+    "addr:street": "Yesler Way",
     "construction": "park",
     "dog": "yes",
     "leisure": "park",
     "motor_vehicle": "no",
     "name": "Yesler Terrace Pocket Park",
-    "opening_hours": "04:00-23:30",
-    "operator": "Yesler Terrace Owners Association"
+    "opening_hours": "Mo-Su 04:00-23:30",
+    "operator": "Yesler Terrace Owners Association",
+    "phone": "+1-206-684-4075",
+    "website": "http://www.seattle.gov/parks/find/parks/yesler-terrace-park"
   }
 },
 {
@@ -61069,7 +61338,7 @@
   },
   "nodes": [
     5476075830,
-    5476075831,
+    4679453527,
     5476075845,
     5476075846,
     5476075847,
@@ -61092,7 +61361,7 @@
     5476075830
   ],
   "geometry": [
-    { "lat": 47.4848495, "lon": -122.2083372 },
+    { "lat": 47.4848382, "lon": -122.2083550 },
     { "lat": 47.4850333, "lon": -122.2083527 },
     { "lat": 47.4852276, "lon": -122.2087007 },
     { "lat": 47.4852856, "lon": -122.2089002 },
@@ -61112,8 +61381,8 @@
     { "lat": 47.4847471, "lon": -122.2079179 },
     { "lat": 47.4847455, "lon": -122.2080271 },
     { "lat": 47.4847777, "lon": -122.2080248 },
-    { "lat": 47.4848471, "lon": -122.2081195 },
-    { "lat": 47.4848495, "lon": -122.2083372 }
+    { "lat": 47.4848373, "lon": -122.2081169 },
+    { "lat": 47.4848382, "lon": -122.2083550 }
   ],
   "tags": {
     "landuse": "grass",
@@ -63098,6 +63367,7 @@
   "nodes": [
     6025423415,
     6025423416,
+    14100141161,
     6025423417,
     6025423418,
     6025423419,
@@ -63106,6 +63376,7 @@
   "geometry": [
     { "lat": 47.6420941, "lon": -121.9874416 },
     { "lat": 47.6420398, "lon": -121.9867496 },
+    { "lat": 47.6411208, "lon": -121.9866872 },
     { "lat": 47.6407820, "lon": -121.9865994 },
     { "lat": 47.6406953, "lon": -121.9876776 },
     { "lat": 47.6415411, "lon": -121.9876401 },
@@ -63202,6 +63473,9 @@
   "nodes": [
     9158663386,
     9158663385,
+    14360894184,
+    14360894188,
+    14360894192,
     9158663384,
     9158663383,
     9158663436,
@@ -63222,6 +63496,9 @@
   "geometry": [
     { "lat": 47.7694233, "lon": -122.2331754 },
     { "lat": 47.7694655, "lon": -122.2328081 },
+    { "lat": 47.7693238, "lon": -122.2327528 },
+    { "lat": 47.7691923, "lon": -122.2327016 },
+    { "lat": 47.7691504, "lon": -122.2326852 },
     { "lat": 47.7689842, "lon": -122.2326204 },
     { "lat": 47.7690362, "lon": -122.2322588 },
     { "lat": 47.7693982, "lon": -122.2323212 },
@@ -64577,8 +64854,14 @@
     { "lat": 47.6353171, "lon": -122.1362472 }
   ],
   "tags": {
+    "access": "yes",
+    "alcohol": "no",
+    "camping": "no",
+    "dog": "leashed",
     "leisure": "park",
     "name": "Esterra Park",
+    "opening_hours": "dawn-dusk",
+    "smoking": "no",
     "wikidata": "Q55075269"
   }
 },
@@ -64589,7 +64872,7 @@
     "minlat": 47.7337655,
     "minlon": -121.9694026,
     "maxlat": 47.7342680,
-    "maxlon": -121.9687267
+    "maxlon": -121.9687194
   },
   "nodes": [
     6399986472,
@@ -64604,10 +64887,10 @@
   ],
   "geometry": [
     { "lat": 47.7342680, "lon": -121.9687999 },
-    { "lat": 47.7340424, "lon": -121.9687658 },
-    { "lat": 47.7340423, "lon": -121.9687267 },
-    { "lat": 47.7338742, "lon": -121.9687274 },
-    { "lat": 47.7338752, "lon": -121.9691744 },
+    { "lat": 47.7340476, "lon": -121.9687585 },
+    { "lat": 47.7340475, "lon": -121.9687194 },
+    { "lat": 47.7338795, "lon": -121.9687201 },
+    { "lat": 47.7338804, "lon": -121.9691671 },
     { "lat": 47.7337698, "lon": -121.9691727 },
     { "lat": 47.7337655, "lon": -121.9693881 },
     { "lat": 47.7342601, "lon": -121.9694026 },
@@ -64635,6 +64918,7 @@
     1034548570,
     1034549003,
     1034548962,
+    14079090655,
     4379619834,
     4379619827
   ],
@@ -64645,6 +64929,7 @@
     { "lat": 47.5345481, "lon": -122.3204337 },
     { "lat": 47.5345661, "lon": -122.3203421 },
     { "lat": 47.5353241, "lon": -122.3193316 },
+    { "lat": 47.5352842, "lon": -122.3192510 },
     { "lat": 47.5352235, "lon": -122.3191282 },
     { "lat": 47.5343905, "lon": -122.3202144 }
   ],
@@ -65176,6 +65461,7 @@
     6608910515,
     7274596939,
     13067811809,
+    14065049983,
     6608910514,
     6608910513,
     6608910512,
@@ -65183,6 +65469,7 @@
     6608910510,
     6608910509,
     6608910508,
+    14065049982,
     6608910507,
     6608910506,
     6608910505,
@@ -65196,6 +65483,7 @@
     6608910497,
     6608910496,
     6608910495,
+    14065061325,
     6608910494,
     6608910493,
     6608910492,
@@ -65213,6 +65501,7 @@
     { "lat": 47.5026477, "lon": -122.1326851 },
     { "lat": 47.5026523, "lon": -122.1331545 },
     { "lat": 47.5026894, "lon": -122.1353029 },
+    { "lat": 47.5027818, "lon": -122.1406562 },
     { "lat": 47.5027851, "lon": -122.1408478 },
     { "lat": 47.5028652, "lon": -122.1408443 },
     { "lat": 47.5028627, "lon": -122.1407164 },
@@ -65220,6 +65509,7 @@
     { "lat": 47.5038771, "lon": -122.1431761 },
     { "lat": 47.5047750, "lon": -122.1431649 },
     { "lat": 47.5047458, "lon": -122.1410527 },
+    { "lat": 47.5052137, "lon": -122.1410484 },
     { "lat": 47.5061224, "lon": -122.1410400 },
     { "lat": 47.5061167, "lon": -122.1408583 },
     { "lat": 47.5060914, "lon": -122.1405103 },
@@ -65233,6 +65523,7 @@
     { "lat": 47.5053992, "lon": -122.1355855 },
     { "lat": 47.5053661, "lon": -122.1353758 },
     { "lat": 47.5053480, "lon": -122.1351621 },
+    { "lat": 47.5053455, "lon": -122.1350494 },
     { "lat": 47.5053444, "lon": -122.1349987 },
     { "lat": 47.5053472, "lon": -122.1340997 },
     { "lat": 47.5053420, "lon": -122.1339064 },
@@ -65788,34 +66079,54 @@
   "type": "way",
   "id": 726576967,
   "bounds": {
-    "minlat": 47.6658529,
-    "minlon": -122.4026482,
-    "maxlat": 47.6661700,
-    "maxlon": -122.4022202
+    "minlat": 47.6658377,
+    "minlon": -122.4027708,
+    "maxlat": 47.6662871,
+    "maxlon": -122.4021865
   },
   "nodes": [
-    4931258732,
-    6810307452,
-    6810307465,
-    7556673271,
-    6113976399,
+    6810307459,
+    6810307458,
+    1719994096,
+    6113976400,
+    1719994095,
+    14179707820,
+    14179707823,
+    14179707826,
     7556673273,
     6113976404,
+    14179707819,
+    14179707828,
     657612018,
     6810307447,
-    4931258732
+    14179702865,
+    14179702868,
+    14179702867,
+    14179702864,
+    4931258733,
+    6810307459
   ],
   "geometry": [
-    { "lat": 47.6661380, "lon": -122.4026482 },
-    { "lat": 47.6661700, "lon": -122.4025977 },
-    { "lat": 47.6661681, "lon": -122.4025005 },
-    { "lat": 47.6661132, "lon": -122.4024836 },
-    { "lat": 47.6659731, "lon": -122.4024406 },
-    { "lat": 47.6658645, "lon": -122.4022415 },
-    { "lat": 47.6658529, "lon": -122.4022202 },
-    { "lat": 47.6658918, "lon": -122.4026167 },
-    { "lat": 47.6660067, "lon": -122.4026211 },
-    { "lat": 47.6661380, "lon": -122.4026482 }
+    { "lat": 47.6662419, "lon": -122.4027641 },
+    { "lat": 47.6662871, "lon": -122.4027708 },
+    { "lat": 47.6662743, "lon": -122.4027255 },
+    { "lat": 47.6662572, "lon": -122.4025298 },
+    { "lat": 47.6662275, "lon": -122.4024771 },
+    { "lat": 47.6662066, "lon": -122.4024027 },
+    { "lat": 47.6659317, "lon": -122.4023647 },
+    { "lat": 47.6658651, "lon": -122.4021865 },
+    { "lat": 47.6658499, "lon": -122.4022016 },
+    { "lat": 47.6658377, "lon": -122.4022033 },
+    { "lat": 47.6658436, "lon": -122.4022852 },
+    { "lat": 47.6658669, "lon": -122.4026049 },
+    { "lat": 47.6658744, "lon": -122.4027072 },
+    { "lat": 47.6659304, "lon": -122.4026718 },
+    { "lat": 47.6659574, "lon": -122.4026665 },
+    { "lat": 47.6659837, "lon": -122.4026736 },
+    { "lat": 47.6660008, "lon": -122.4026957 },
+    { "lat": 47.6660026, "lon": -122.4027299 },
+    { "lat": 47.6660561, "lon": -122.4027375 },
+    { "lat": 47.6662419, "lon": -122.4027641 }
   ],
   "tags": {
     "leisure": "park",
@@ -67253,7 +67564,9 @@
   "nodes": [
     4354551712,
     4354551709,
+    14114166987,
     7876435227,
+    14114166985,
     4366664879,
     4366664883,
     4366664882,
@@ -67270,9 +67583,11 @@
   ],
   "geometry": [
     { "lat": 47.7388719, "lon": -122.3182685 },
-    { "lat": 47.7388442, "lon": -122.3169486 },
-    { "lat": 47.7382802, "lon": -122.3169413 },
-    { "lat": 47.7381963, "lon": -122.3169404 },
+    { "lat": 47.7388365, "lon": -122.3169816 },
+    { "lat": 47.7383124, "lon": -122.3169488 },
+    { "lat": 47.7382790, "lon": -122.3169468 },
+    { "lat": 47.7382285, "lon": -122.3169456 },
+    { "lat": 47.7381085, "lon": -122.3169428 },
     { "lat": 47.7371492, "lon": -122.3169282 },
     { "lat": 47.7371441, "lon": -122.3162399 },
     { "lat": 47.7364944, "lon": -122.3162140 },
@@ -72472,6 +72787,8 @@
     "name": "12th Ave Square Park",
     "opening_hours": "Mo-Su 04:00-23:30",
     "operator": "Seattle Parks and Recreation",
+    "operator:type": "government",
+    "operator:wikidata": "Q7442147",
     "surface": "concrete",
     "website": "https://www.seattle.gov/parks/find/parks/12th-ave-square-park"
   }
@@ -72839,6 +73156,8 @@
     9633042811,
     9633042812,
     9633042813,
+    14174191360,
+    14174191366,
     9633042814,
     9633042811
   ],
@@ -72846,6 +73165,8 @@
     { "lat": 47.5408027, "lon": -122.0235435 },
     { "lat": 47.5413484, "lon": -122.0235448 },
     { "lat": 47.5413510, "lon": -122.0238871 },
+    { "lat": 47.5409520, "lon": -122.0238883 },
+    { "lat": 47.5408849, "lon": -122.0238885 },
     { "lat": 47.5407188, "lon": -122.0238890 },
     { "lat": 47.5408027, "lon": -122.0235435 }
   ],
@@ -72950,12 +73271,12 @@
   ],
   "geometry": [
     { "lat": 47.5407851, "lon": -122.0252340 },
-    { "lat": 47.5415573, "lon": -122.0251868 },
-    { "lat": 47.5424268, "lon": -122.0240654 },
-    { "lat": 47.5424996, "lon": -122.0239399 },
-    { "lat": 47.5429386, "lon": -122.0228689 },
-    { "lat": 47.5430362, "lon": -122.0227044 },
-    { "lat": 47.5441660, "lon": -122.0220646 },
+    { "lat": 47.5416188, "lon": -122.0252107 },
+    { "lat": 47.5424839, "lon": -122.0241109 },
+    { "lat": 47.5425582, "lon": -122.0239377 },
+    { "lat": 47.5429898, "lon": -122.0229036 },
+    { "lat": 47.5431416, "lon": -122.0227131 },
+    { "lat": 47.5442216, "lon": -122.0221297 },
     { "lat": 47.5441586, "lon": -122.0218191 },
     { "lat": 47.5444608, "lon": -122.0218302 },
     { "lat": 47.5444883, "lon": -122.0218911 },
@@ -72983,33 +73304,6 @@
   "tags": {
     "leisure": "park",
     "name": "High Street Linear Park"
-  }
-},
-{
-  "type": "way",
-  "id": 1047700547,
-  "bounds": {
-    "minlat": 47.5416006,
-    "minlon": -122.0239422,
-    "maxlat": 47.5419379,
-    "maxlon": -122.0234940
-  },
-  "nodes": [
-    9634129923,
-    9634129924,
-    9634129925,
-    9634129923
-  ],
-  "geometry": [
-    { "lat": 47.5419379, "lon": -122.0234955 },
-    { "lat": 47.5416086, "lon": -122.0234940 },
-    { "lat": 47.5416006, "lon": -122.0239422 },
-    { "lat": 47.5419379, "lon": -122.0234955 }
-  ],
-  "tags": {
-    "garden:type": "community",
-    "leisure": "park",
-    "name": "Westridge Community Garden"
   }
 },
 {
@@ -73483,7 +73777,11 @@
   ],
   "tags": {
     "leisure": "park",
-    "name": "Main Street Park"
+    "name": "Isan Park",
+    "operator": "City of Bellevue",
+    "operator:type": "government",
+    "operator:wikidata": "Q214164",
+    "website": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/isan-park"
   }
 },
 {
@@ -73861,8 +74159,12 @@
   "nodes": [
     660936462,
     660936471,
+    14332607594,
+    14332669503,
     9935905718,
     9935905719,
+    14332669504,
+    14332669505,
     9935905720,
     4131106949,
     660936438,
@@ -73874,8 +74176,12 @@
   "geometry": [
     { "lat": 47.6647206, "lon": -122.3318460 },
     { "lat": 47.6647122, "lon": -122.3305553 },
+    { "lat": 47.6644209, "lon": -122.3303639 },
+    { "lat": 47.6643510, "lon": -122.3303180 },
     { "lat": 47.6643305, "lon": -122.3303045 },
     { "lat": 47.6642378, "lon": -122.3302948 },
+    { "lat": 47.6638371, "lon": -122.3302952 },
+    { "lat": 47.6637847, "lon": -122.3302952 },
     { "lat": 47.6632138, "lon": -122.3302958 },
     { "lat": 47.6632145, "lon": -122.3317378 },
     { "lat": 47.6635659, "lon": -122.3317365 },
@@ -74114,6 +74420,7 @@
     10138316406,
     10138316407,
     10138316408,
+    14355172894,
     10138316409,
     10138316404
   ],
@@ -74123,6 +74430,7 @@
     { "lat": 47.7577622, "lon": -122.1083276 },
     { "lat": 47.7577567, "lon": -122.1070294 },
     { "lat": 47.7566989, "lon": -122.1070335 },
+    { "lat": 47.7567082, "lon": -122.1094916 },
     { "lat": 47.7567100, "lon": -122.1099790 },
     { "lat": 47.7567793, "lon": -122.1100347 }
   ],
@@ -78162,7 +78470,8 @@
     "name:etymology": "Mai Flower",
     "name:etymology:wikidata": "Q385214",
     "name:etymology:wikipedia": "en:Ochna integerrima",
-    "opening_hours": "04:00-23:30",
+    "opening_hours": "Mo-Su 07:00-19:30",
+    "phone": "+1-206-684-4075",
     "website": "https://www.seattle.gov/parks/allparks/hoa-mai-park"
   }
 },
@@ -81516,10 +81825,10 @@
   "type": "way",
   "id": 1368163196,
   "bounds": {
-    "minlat": 47.7631434,
-    "minlon": -122.1484340,
-    "maxlat": 47.7635704,
-    "maxlon": -122.1478334
+    "minlat": 47.7631493,
+    "minlon": -122.1484482,
+    "maxlat": 47.7635760,
+    "maxlon": -122.1478501
   },
   "nodes": [
     12670715478,
@@ -81553,35 +81862,35 @@
     12670715478
   ],
   "geometry": [
-    { "lat": 47.7635650, "lon": -122.1483205 },
-    { "lat": 47.7635506, "lon": -122.1483019 },
-    { "lat": 47.7635522, "lon": -122.1480814 },
-    { "lat": 47.7635682, "lon": -122.1480570 },
-    { "lat": 47.7635704, "lon": -122.1479994 },
-    { "lat": 47.7635600, "lon": -122.1479540 },
-    { "lat": 47.7635474, "lon": -122.1479252 },
-    { "lat": 47.7635212, "lon": -122.1479154 },
-    { "lat": 47.7634761, "lon": -122.1479221 },
-    { "lat": 47.7632539, "lon": -122.1478666 },
-    { "lat": 47.7632234, "lon": -122.1478401 },
-    { "lat": 47.7631924, "lon": -122.1478334 },
-    { "lat": 47.7631605, "lon": -122.1478618 },
-    { "lat": 47.7631459, "lon": -122.1479120 },
-    { "lat": 47.7631473, "lon": -122.1479669 },
-    { "lat": 47.7631619, "lon": -122.1479912 },
-    { "lat": 47.7631601, "lon": -122.1483009 },
-    { "lat": 47.7631434, "lon": -122.1483260 },
-    { "lat": 47.7631441, "lon": -122.1483741 },
-    { "lat": 47.7631660, "lon": -122.1484127 },
-    { "lat": 47.7631969, "lon": -122.1484256 },
-    { "lat": 47.7632348, "lon": -122.1484249 },
-    { "lat": 47.7632507, "lon": -122.1484019 },
-    { "lat": 47.7634588, "lon": -122.1484059 },
-    { "lat": 47.7634768, "lon": -122.1484340 },
-    { "lat": 47.7635235, "lon": -122.1484330 },
-    { "lat": 47.7635508, "lon": -122.1484080 },
-    { "lat": 47.7635650, "lon": -122.1483720 },
-    { "lat": 47.7635650, "lon": -122.1483205 }
+    { "lat": 47.7635735, "lon": -122.1483372 },
+    { "lat": 47.7635552, "lon": -122.1483190 },
+    { "lat": 47.7635598, "lon": -122.1480974 },
+    { "lat": 47.7635760, "lon": -122.1480766 },
+    { "lat": 47.7635755, "lon": -122.1480121 },
+    { "lat": 47.7635659, "lon": -122.1479609 },
+    { "lat": 47.7635432, "lon": -122.1479383 },
+    { "lat": 47.7635212, "lon": -122.1479285 },
+    { "lat": 47.7634849, "lon": -122.1479330 },
+    { "lat": 47.7632513, "lon": -122.1478739 },
+    { "lat": 47.7632159, "lon": -122.1478501 },
+    { "lat": 47.7631954, "lon": -122.1478502 },
+    { "lat": 47.7631687, "lon": -122.1478762 },
+    { "lat": 47.7631533, "lon": -122.1479137 },
+    { "lat": 47.7631551, "lon": -122.1479774 },
+    { "lat": 47.7631675, "lon": -122.1480035 },
+    { "lat": 47.7631660, "lon": -122.1483125 },
+    { "lat": 47.7631493, "lon": -122.1483420 },
+    { "lat": 47.7631524, "lon": -122.1483883 },
+    { "lat": 47.7631721, "lon": -122.1484214 },
+    { "lat": 47.7631979, "lon": -122.1484394 },
+    { "lat": 47.7632370, "lon": -122.1484445 },
+    { "lat": 47.7632595, "lon": -122.1484211 },
+    { "lat": 47.7634654, "lon": -122.1484248 },
+    { "lat": 47.7634797, "lon": -122.1484482 },
+    { "lat": 47.7635233, "lon": -122.1484472 },
+    { "lat": 47.7635540, "lon": -122.1484302 },
+    { "lat": 47.7635716, "lon": -122.1483811 },
+    { "lat": 47.7635735, "lon": -122.1483372 }
   ],
   "tags": {
     "leisure": "park",
@@ -82465,7 +82774,6 @@
     13288355597,
     13288355598,
     13288355599,
-    13288355600,
     13860635157,
     13288376601,
     13288376602,
@@ -82493,9 +82801,8 @@
     { "lat": 47.7585895, "lon": -122.2079049 },
     { "lat": 47.7585866, "lon": -122.2077993 },
     { "lat": 47.7585595, "lon": -122.2077713 },
-    { "lat": 47.7585640, "lon": -122.2076715 },
-    { "lat": 47.7585640, "lon": -122.2075595 },
-    { "lat": 47.7585639, "lon": -122.2075565 },
+    { "lat": 47.7585616, "lon": -122.2076699 },
+    { "lat": 47.7585620, "lon": -122.2075582 },
     { "lat": 47.7585602, "lon": -122.2074799 },
     { "lat": 47.7588774, "lon": -122.2074709 },
     { "lat": 47.7588488, "lon": -122.2079461 },
@@ -82546,7 +82853,8 @@
     { "lat": 47.5345807, "lon": -122.3256948 }
   ],
   "tags": {
-    "leisure": "park"
+    "leisure": "park",
+    "name": "South Park Pump Station Park"
   }
 },
 {
@@ -82993,6 +83301,512 @@
   "tags": {
     "landuse": "recreation_ground",
     "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1547501417,
+  "bounds": {
+    "minlat": 47.4858314,
+    "minlon": -122.2393149,
+    "maxlat": 47.4861255,
+    "maxlon": -122.2384485
+  },
+  "nodes": [
+    14075097272,
+    14075097273,
+    14075097274,
+    14075097275,
+    14075097276,
+    14075097277,
+    14075097278,
+    14075097279,
+    14075097280,
+    14075097281,
+    14075097272
+  ],
+  "geometry": [
+    { "lat": 47.4861255, "lon": -122.2393149 },
+    { "lat": 47.4858314, "lon": -122.2392937 },
+    { "lat": 47.4858761, "lon": -122.2385781 },
+    { "lat": 47.4858994, "lon": -122.2385054 },
+    { "lat": 47.4859771, "lon": -122.2385067 },
+    { "lat": 47.4859959, "lon": -122.2384776 },
+    { "lat": 47.4860066, "lon": -122.2384538 },
+    { "lat": 47.4861076, "lon": -122.2384485 },
+    { "lat": 47.4861067, "lon": -122.2388228 },
+    { "lat": 47.4861103, "lon": -122.2391680 },
+    { "lat": 47.4861255, "lon": -122.2393149 }
+  ],
+  "tags": {
+    "access": "private",
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1547501463,
+  "bounds": {
+    "minlat": 47.4867033,
+    "minlon": -122.2397941,
+    "maxlat": 47.4868720,
+    "maxlon": -122.2394378
+  },
+  "nodes": [
+    14075102336,
+    14075102337,
+    14075102338,
+    14075102339,
+    14075102340,
+    14075102341,
+    14075102336
+  ],
+  "geometry": [
+    { "lat": 47.4867096, "lon": -122.2397941 },
+    { "lat": 47.4867033, "lon": -122.2394420 },
+    { "lat": 47.4868720, "lon": -122.2394378 },
+    { "lat": 47.4868502, "lon": -122.2395569 },
+    { "lat": 47.4868021, "lon": -122.2396708 },
+    { "lat": 47.4867654, "lon": -122.2397293 },
+    { "lat": 47.4867096, "lon": -122.2397941 }
+  ],
+  "tags": {
+    "access": "private",
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1548055195,
+  "bounds": {
+    "minlat": 47.5268210,
+    "minlon": -122.1590667,
+    "maxlat": 47.5272802,
+    "maxlon": -122.1586883
+  },
+  "nodes": [
+    14079850411,
+    14079850410,
+    14079850409,
+    14079850408,
+    14079850407,
+    14079850406,
+    14079850405,
+    14079850404,
+    14079850411
+  ],
+  "geometry": [
+    { "lat": 47.5268210, "lon": -122.1590533 },
+    { "lat": 47.5268615, "lon": -122.1590528 },
+    { "lat": 47.5268616, "lon": -122.1590667 },
+    { "lat": 47.5272802, "lon": -122.1590617 },
+    { "lat": 47.5272792, "lon": -122.1588769 },
+    { "lat": 47.5269741, "lon": -122.1588806 },
+    { "lat": 47.5268917, "lon": -122.1586883 },
+    { "lat": 47.5268210, "lon": -122.1587265 },
+    { "lat": 47.5268210, "lon": -122.1590533 }
+  ],
+  "tags": {
+    "access": "private",
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1548055217,
+  "bounds": {
+    "minlat": 47.5255283,
+    "minlon": -122.1584982,
+    "maxlat": 47.5258199,
+    "maxlon": -122.1583041
+  },
+  "nodes": [
+    14079850637,
+    14079850634,
+    14079850635,
+    14079850636,
+    14079850637
+  ],
+  "geometry": [
+    { "lat": 47.5255283, "lon": -122.1583054 },
+    { "lat": 47.5255287, "lon": -122.1584982 },
+    { "lat": 47.5258199, "lon": -122.1584969 },
+    { "lat": 47.5258195, "lon": -122.1583041 },
+    { "lat": 47.5255283, "lon": -122.1583054 }
+  ],
+  "tags": {
+    "access": "private",
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1548055254,
+  "bounds": {
+    "minlat": 47.5274708,
+    "minlon": -122.1900326,
+    "maxlat": 47.5284416,
+    "maxlon": -122.1879217
+  },
+  "nodes": [
+    14079851232,
+    14079851229,
+    14079851231,
+    14079851228,
+    14079851227,
+    14079851230,
+    14079851224,
+    14079851223,
+    14079851222,
+    14079851226,
+    14079851221,
+    14079851220,
+    14079851219,
+    14079851225,
+    14079851218,
+    14079851217,
+    14079851232
+  ],
+  "geometry": [
+    { "lat": 47.5274817, "lon": -122.1882543 },
+    { "lat": 47.5276069, "lon": -122.1882877 },
+    { "lat": 47.5277334, "lon": -122.1883079 },
+    { "lat": 47.5278288, "lon": -122.1883145 },
+    { "lat": 47.5279242, "lon": -122.1883136 },
+    { "lat": 47.5280196, "lon": -122.1883053 },
+    { "lat": 47.5280777, "lon": -122.1882882 },
+    { "lat": 47.5281346, "lon": -122.1882631 },
+    { "lat": 47.5281896, "lon": -122.1882302 },
+    { "lat": 47.5282423, "lon": -122.1881899 },
+    { "lat": 47.5282992, "lon": -122.1881351 },
+    { "lat": 47.5283517, "lon": -122.1880717 },
+    { "lat": 47.5283994, "lon": -122.1880003 },
+    { "lat": 47.5284416, "lon": -122.1879217 },
+    { "lat": 47.5284271, "lon": -122.1900219 },
+    { "lat": 47.5274708, "lon": -122.1900326 },
+    { "lat": 47.5274817, "lon": -122.1882543 }
+  ],
+  "tags": {
+    "access": "private",
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1548055302,
+  "bounds": {
+    "minlat": 47.5289364,
+    "minlon": -122.1921381,
+    "maxlat": 47.5293308,
+    "maxlon": -122.1917193
+  },
+  "nodes": [
+    14079851758,
+    14079851757,
+    14079851754,
+    14079851756,
+    14079851753,
+    14079851755,
+    14079851750,
+    14079851752,
+    14079851749,
+    14079851751,
+    14079851748,
+    14079851747,
+    14079851746,
+    14079851744,
+    14079851745,
+    14079851758
+  ],
+  "geometry": [
+    { "lat": 47.5293235, "lon": -122.1921381 },
+    { "lat": 47.5293308, "lon": -122.1918055 },
+    { "lat": 47.5292554, "lon": -122.1917945 },
+    { "lat": 47.5291805, "lon": -122.1917774 },
+    { "lat": 47.5291048, "lon": -122.1917537 },
+    { "lat": 47.5290301, "lon": -122.1917237 },
+    { "lat": 47.5290060, "lon": -122.1917193 },
+    { "lat": 47.5289817, "lon": -122.1917224 },
+    { "lat": 47.5289640, "lon": -122.1917297 },
+    { "lat": 47.5289473, "lon": -122.1917412 },
+    { "lat": 47.5289364, "lon": -122.1917613 },
+    { "lat": 47.5289400, "lon": -122.1918055 },
+    { "lat": 47.5292167, "lon": -122.1920778 },
+    { "lat": 47.5292518, "lon": -122.1921055 },
+    { "lat": 47.5292891, "lon": -122.1921261 },
+    { "lat": 47.5293235, "lon": -122.1921381 }
+  ],
+  "tags": {
+    "access": "private",
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1548055303,
+  "bounds": {
+    "minlat": 47.5287061,
+    "minlon": -122.1921516,
+    "maxlat": 47.5290347,
+    "maxlon": -122.1918069
+  },
+  "nodes": [
+    14079851773,
+    14079851772,
+    14079851771,
+    14079851768,
+    14079851770,
+    14079851769,
+    14079851767,
+    14079851766,
+    14079851765,
+    14079851764,
+    14079851763,
+    14079851760,
+    14079851762,
+    14079851759,
+    14079851761,
+    14079851773
+  ],
+  "geometry": [
+    { "lat": 47.5287061, "lon": -122.1921516 },
+    { "lat": 47.5287220, "lon": -122.1918632 },
+    { "lat": 47.5287251, "lon": -122.1918069 },
+    { "lat": 47.5287601, "lon": -122.1918117 },
+    { "lat": 47.5287947, "lon": -122.1918216 },
+    { "lat": 47.5288472, "lon": -122.1918471 },
+    { "lat": 47.5288671, "lon": -122.1918592 },
+    { "lat": 47.5288952, "lon": -122.1918605 },
+    { "lat": 47.5289133, "lon": -122.1918739 },
+    { "lat": 47.5290347, "lon": -122.1919973 },
+    { "lat": 47.5290310, "lon": -122.1920604 },
+    { "lat": 47.5290219, "lon": -122.1920862 },
+    { "lat": 47.5290093, "lon": -122.1921086 },
+    { "lat": 47.5289892, "lon": -122.1921310 },
+    { "lat": 47.5289659, "lon": -122.1921448 },
+    { "lat": 47.5287061, "lon": -122.1921516 }
+  ],
+  "tags": {
+    "access": "private",
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1548055342,
+  "bounds": {
+    "minlat": 47.5256587,
+    "minlon": -122.1785719,
+    "maxlat": 47.5259282,
+    "maxlon": -122.1781565
+  },
+  "nodes": [
+    14079852432,
+    14079852431,
+    14079852430,
+    14079852427,
+    14079852429,
+    14079852426,
+    14079852428,
+    14079852423,
+    14079852425,
+    14079852424,
+    14079852420,
+    14079852422,
+    14079852419,
+    14079852418,
+    14079852421,
+    14079852432
+  ],
+  "geometry": [
+    { "lat": 47.5258670, "lon": -122.1781565 },
+    { "lat": 47.5256587, "lon": -122.1783751 },
+    { "lat": 47.5257257, "lon": -122.1785206 },
+    { "lat": 47.5257463, "lon": -122.1785484 },
+    { "lat": 47.5257715, "lon": -122.1785662 },
+    { "lat": 47.5257921, "lon": -122.1785719 },
+    { "lat": 47.5258131, "lon": -122.1785709 },
+    { "lat": 47.5258355, "lon": -122.1785669 },
+    { "lat": 47.5258575, "lon": -122.1785595 },
+    { "lat": 47.5258915, "lon": -122.1785400 },
+    { "lat": 47.5259095, "lon": -122.1785211 },
+    { "lat": 47.5259223, "lon": -122.1784944 },
+    { "lat": 47.5259276, "lon": -122.1784695 },
+    { "lat": 47.5259282, "lon": -122.1784434 },
+    { "lat": 47.5259241, "lon": -122.1784180 },
+    { "lat": 47.5258670, "lon": -122.1781565 }
+  ],
+  "tags": {
+    "access": "private",
+    "leisure": "park"
+  }
+},
+{
+  "type": "way",
+  "id": 1550645716,
+  "bounds": {
+    "minlat": 47.7255460,
+    "minlon": -122.1322577,
+    "maxlat": 47.7262581,
+    "maxlon": -122.1298644
+  },
+  "nodes": [
+    14103748385,
+    13918120026,
+    14103748386,
+    14103748387,
+    14103748388,
+    1224479254,
+    1764757041,
+    14103748389,
+    14103748390,
+    14103748391,
+    14103748392,
+    14103748393,
+    14108596453,
+    14103748394,
+    14103748395,
+    14103748396,
+    14103748397,
+    14103748398,
+    14103748385
+  ],
+  "geometry": [
+    { "lat": 47.7255533, "lon": -122.1320545 },
+    { "lat": 47.7259099, "lon": -122.1322577 },
+    { "lat": 47.7258978, "lon": -122.1317865 },
+    { "lat": 47.7260896, "lon": -122.1315180 },
+    { "lat": 47.7262581, "lon": -122.1309125 },
+    { "lat": 47.7262531, "lon": -122.1298644 },
+    { "lat": 47.7261140, "lon": -122.1298653 },
+    { "lat": 47.7260574, "lon": -122.1299408 },
+    { "lat": 47.7260489, "lon": -122.1301895 },
+    { "lat": 47.7259868, "lon": -122.1301886 },
+    { "lat": 47.7257591, "lon": -122.1307831 },
+    { "lat": 47.7257320, "lon": -122.1309736 },
+    { "lat": 47.7257192, "lon": -122.1310109 },
+    { "lat": 47.7256795, "lon": -122.1311270 },
+    { "lat": 47.7256479, "lon": -122.1311866 },
+    { "lat": 47.7256053, "lon": -122.1311174 },
+    { "lat": 47.7255586, "lon": -122.1309362 },
+    { "lat": 47.7255460, "lon": -122.1306429 },
+    { "lat": 47.7255533, "lon": -122.1320545 }
+  ],
+  "tags": {
+    "leisure": "park",
+    "natural": "wood"
+  }
+},
+{
+  "type": "way",
+  "id": 1550713517,
+  "bounds": {
+    "minlat": 47.7311631,
+    "minlon": -122.1354102,
+    "maxlat": 47.7316317,
+    "maxlon": -122.1346433
+  },
+  "nodes": [
+    14104425650,
+    14104425653,
+    14104425654,
+    1215146607,
+    14104425635,
+    14104425634,
+    14104425652,
+    14104425650
+  ],
+  "geometry": [
+    { "lat": 47.7311631, "lon": -122.1351354 },
+    { "lat": 47.7312813, "lon": -122.1354102 },
+    { "lat": 47.7314765, "lon": -122.1348981 },
+    { "lat": 47.7316317, "lon": -122.1346770 },
+    { "lat": 47.7315751, "lon": -122.1346433 },
+    { "lat": 47.7315200, "lon": -122.1347091 },
+    { "lat": 47.7312378, "lon": -122.1351465 },
+    { "lat": 47.7311631, "lon": -122.1351354 }
+  ],
+  "tags": {
+    "leisure": "park",
+    "natural": "scrub"
+  }
+},
+{
+  "type": "way",
+  "id": 1550713518,
+  "bounds": {
+    "minlat": 47.7284553,
+    "minlon": -122.1368937,
+    "maxlat": 47.7312813,
+    "maxlon": -122.1304360
+  },
+  "nodes": [
+    14104425650,
+    14104425653,
+    14104425729,
+    14104425730,
+    14104425655,
+    14104425629,
+    14104425727,
+    14104425724,
+    14104425656,
+    14104425721,
+    14104425657,
+    14104425658,
+    14104425659,
+    14104425739,
+    14104425660,
+    14104425661,
+    14104425662,
+    14104425663,
+    14104425664,
+    14104425665,
+    14104425666,
+    14104425667,
+    1215146604,
+    14104425668,
+    14104425669,
+    14104425670,
+    14104425630,
+    1215146606,
+    14104425651,
+    14104425650
+  ],
+  "geometry": [
+    { "lat": 47.7311631, "lon": -122.1351354 },
+    { "lat": 47.7312813, "lon": -122.1354102 },
+    { "lat": 47.7312163, "lon": -122.1355802 },
+    { "lat": 47.7310671, "lon": -122.1359699 },
+    { "lat": 47.7307220, "lon": -122.1368717 },
+    { "lat": 47.7304898, "lon": -122.1368778 },
+    { "lat": 47.7296694, "lon": -122.1368877 },
+    { "lat": 47.7293770, "lon": -122.1368913 },
+    { "lat": 47.7291801, "lon": -122.1368937 },
+    { "lat": 47.7291787, "lon": -122.1362069 },
+    { "lat": 47.7291755, "lon": -122.1345488 },
+    { "lat": 47.7291762, "lon": -122.1341532 },
+    { "lat": 47.7284586, "lon": -122.1337302 },
+    { "lat": 47.7284556, "lon": -122.1307407 },
+    { "lat": 47.7284553, "lon": -122.1304360 },
+    { "lat": 47.7289120, "lon": -122.1307335 },
+    { "lat": 47.7292581, "lon": -122.1309620 },
+    { "lat": 47.7294676, "lon": -122.1315813 },
+    { "lat": 47.7294862, "lon": -122.1316398 },
+    { "lat": 47.7297035, "lon": -122.1322843 },
+    { "lat": 47.7297322, "lon": -122.1326647 },
+    { "lat": 47.7297829, "lon": -122.1334076 },
+    { "lat": 47.7301700, "lon": -122.1342177 },
+    { "lat": 47.7300267, "lon": -122.1350392 },
+    { "lat": 47.7300377, "lon": -122.1359871 },
+    { "lat": 47.7305616, "lon": -122.1362560 },
+    { "lat": 47.7305815, "lon": -122.1349319 },
+    { "lat": 47.7308562, "lon": -122.1349054 },
+    { "lat": 47.7308510, "lon": -122.1350992 },
+    { "lat": 47.7311631, "lon": -122.1351354 }
+  ],
+  "tags": {
+    "leisure": "park",
+    "natural": "wood"
   }
 }
 
