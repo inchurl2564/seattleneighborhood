@@ -133,6 +133,7 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .agentcard p{margin:2px 0 0;color:var(--muted);font-size:13px;max-width:70ch}
 .agentcard b{font-family:var(--display);font-size:16px}
 .agentcard .btn{cursor:pointer;font:inherit;font-weight:600}
+.agentcard .privnote{flex-basis:100%;font-size:12px;color:var(--muted);margin-top:-4px}
 .agentfoot{color:var(--ink)!important}
 dialog.contact{overflow-y:auto;overscroll-behavior:contain;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);padding:0;width:min(560px,calc(100vw - 24px));max-height:calc(100vh - 24px)}
 dialog.contact::backdrop{background:rgb(0 0 0 / .45)}
@@ -1385,6 +1386,7 @@ ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b041
     <p class="agentfoot" id="agentFoot" hidden></p>
     <p><b>For research only.</b> This is not real estate, legal, financial or tax advice. Scores are estimates built from public data that may be incomplete or out of date. Verify school assignments with the school district, crime with local police, and listings and prices with a licensed real estate professional before making decisions.</p>
     <p><a href="neighborhoods/">Browse guides to all 155 neighborhoods</a> — home prices, schools, safety, transit and parks for each.</p>
+    <p><b>Your privacy.</b> Your answers, matches and saved neighborhoods stay in your browser on this device. They are only shared if you choose to send them to the agent named above.</p>
     <p>Neighborhood rankings use schools, safety, prices, amenities and similar factors. They never use race, color, religion, national origin, sex, disability or familial status, in keeping with the federal Fair Housing Act.</p>
     <details class="datasrc" id="dataSrc"><summary>Data sources</summary><p>Data: home values, listings and days on market from <a href="https://www.zillow.com/research/data/" target="_blank" rel="noopener">Zillow Research</a>; recorded sales from the King County Assessor; school test scores from the Washington Office of Superintendent of Public Instruction; school locations from NCES; crime from Seattle and Bellevue police open data and the FBI Crime Data Explorer; Census Bureau American Community Survey and TIGER boundaries; EPA National Walkability Index; King County Metro and Sound Transit schedules; King County, Seattle, Bellevue, Kirkland, Redmond and Issaquah GIS; and stores, gyms and restaurants © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors (ODbL). Map library: Leaflet.</p></details>
   </footer>
@@ -2396,7 +2398,7 @@ function openContact(kind, p){
   document.getElementById('ctConsentText').textContent = `I agree to be contacted by ${AGENT.name} of ${AGENT.brokerage} by email or phone about my home search.`;
   document.getElementById('ctSms').checked = false;
   document.getElementById('ctSmsText').innerHTML = `<b>Optional: OK to text me.</b> ${escH(smsTerms())}`;
-  document.getElementById('ctPrivacy').textContent = `Your details go only to ${AGENT.name} at ${AGENT.brokerage} to answer your request. They are not sold or shared, and your mobile number and texting permission are never shared with anyone for marketing.` +
+  document.getElementById('ctPrivacy').textContent = `Your details go only to ${AGENT.name} at ${AGENT.brokerage} to answer your request. They are not sold or shared, and your mobile number and texting permission are never shared with anyone for marketing. Only your message and what's listed under "What's included" are sent, and only when you tap Send.` +
     (AGENT.formspree_id ? '' : ' Tapping Send opens your email app with the message ready to send.');
   document.getElementById('ctSend').textContent = AGENT.formspree_id ? 'Send' : 'Open email to send';
   document.getElementById('ctErr').hidden = true; document.getElementById('ctDone').hidden = true;
@@ -2446,7 +2448,7 @@ function renderAgentCards(){
   foot.innerHTML = `Brought to you by <b>${esc(AGENT.name)}</b>, ${esc(AGENT.brokerage)}${AGENT.profile_url ? ` · <a href="${esc(AGENT.profile_url)}" target="_blank" rel="noopener">View my profile</a>` : ''} · <a href="mailto:${esc(AGENT.email)}">${esc(AGENT.email)}</a>`;
   const res = document.getElementById('agentResults');
   res.hidden = false;
-  res.innerHTML = `<div><b>Want a local expert's take on these matches?</b><p>${esc(AGENT.name)}, ${esc(AGENT.brokerage)}, can share homes for sale, recent sales and insider knowledge for your top neighborhoods.</p></div><button type="button" class="btn" data-contact="results">Send my matches to ${esc(AGENT.first_name)}</button>`;
+  res.innerHTML = `<div><b>Want a local expert's take on these matches?</b><p>${esc(AGENT.name)}, ${esc(AGENT.brokerage)}, can share homes for sale, recent sales and insider knowledge for your top neighborhoods.</p></div><button type="button" class="btn" data-contact="results">Send my matches to ${esc(AGENT.first_name)}</button><small class="privnote">Your answers and matches stay on this device. Nothing is shared unless you choose to send it.</small>`;
   const p = ALLP.find(x=>x.id===selected), det = document.getElementById('agentDetail');
   if(p){ det.hidden = false;
     det.innerHTML = `<div><b>Thinking about ${esc(p.name)}?</b><p>${esc(AGENT.name)}, ${esc(AGENT.brokerage)}, can walk you through homes for sale, recent sales and what to know before you buy here.</p></div><button type="button" class="btn" data-contact="nb">Ask ${esc(AGENT.first_name)} about ${esc(p.name)}</button>`; }
