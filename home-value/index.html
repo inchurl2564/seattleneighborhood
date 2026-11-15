@@ -217,9 +217,9 @@ footer a{color:inherit;border-bottom:1px solid rgba(233,207,143,.4)}
 @media (max-width:700px){
  .citybar,.phonebar{background:#001a38!important;border-bottom:1px solid rgba(255,255,255,.18)!important;padding:0!important;margin-bottom:0;text-transform:none!important;line-height:1.2!important}
  .citybar .cb-l{display:none!important}
- .citybar .cb-p,.phonebar .wrap{display:flex!important;justify-content:center!important;align-items:center;flex-wrap:nowrap!important;gap:0!important;margin:0!important;padding:0!important;font-size:0}
- .citybar .cb-p a,.phonebar .wrap a{display:inline-flex!important;align-items:center;min-height:44px;padding:0 8px!important;white-space:nowrap;font:400 12.5px Inter,"Public Sans",system-ui,sans-serif!important;letter-spacing:.08em!important;color:#fff!important;opacity:.92!important;text-decoration:none;border:0!important}
- .citybar .cb-p a+a::before,.phonebar .wrap a+span+a::before{content:"·";opacity:.5;margin:0 14px 0 0}
+ .citybar .cb-p,.phonebar .wrap{display:flex!important;justify-content:center!important;align-items:center;flex-wrap:wrap!important;gap:0!important;margin:0!important;padding:0 4px!important;font-size:0;overflow:hidden}
+ .citybar .cb-p a,.phonebar .wrap a{display:inline-flex!important;align-items:center;min-height:44px;padding:0 6px!important;white-space:nowrap;font:400 clamp(11px,3.4vw,12.5px) -apple-system,BlinkMacSystemFont,system-ui,"Segoe UI",Roboto,sans-serif!important;letter-spacing:.06em!important;color:#fff!important;opacity:.92!important;text-decoration:none;border:0!important}
+ .citybar .cb-p a+a::before,.phonebar .wrap a+span+a::before{content:"·";opacity:.5;margin:0 12px 0 0}
  .phonebar .wrap span{display:none}
 }
 </style></head><body>
