@@ -207,16 +207,21 @@ def agent_box(p):
     first = a.get('first_name') or a['name'].split()[0]
     intro = (f'<h2 style="margin-top:0">Thinking about {esc(p["name"])}?</h2>'
              f'<p>{esc(a["name"])}, {esc(a["brokerage"])}, can walk you through homes for sale, recent sales and what to know before you buy here.</p>')
-    privacy = (f'<p class="note">Your details go only to {esc(a["name"])} at {esc(a["brokerage"])} to answer your request. They are not sold or shared.</p>')
+    privacy = (f'<p class="note">Your details go only to {esc(a["name"])} at {esc(a["brokerage"])} to answer your request. They are not sold or shared, and your mobile number and texting permission are never shared with anyone for marketing.</p>')
     if a.get('formspree_id'):
-        form = (f'<form action="https://formspree.io/f/{esc(a["formspree_id"])}" method="POST" class="leadform">'
+        sms = (f'I agree to receive text messages from {a["name"]} of {a["brokerage"]} about my home search at the mobile number above. '
+               'Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Agreeing is not required to get help with your search.')
+        form = (f'<form action="https://formspree.io/f/{esc(a["formspree_id"])}" method="POST" class="leadform" '
+                'onsubmit="if(this.sms_consent.checked&&this.phone.value.replace(/\\D/g,\'\').length<10){alert(\'Please add a mobile number to get texts, or uncheck the texting box.\');return false}">'
                 f'<input type="hidden" name="_subject" value="Question about {esc(p["name"])}, {esc(p["city"])}">'
                 f'<input type="hidden" name="neighborhood" value="{esc(p["name"])}, {esc(p["city"])}">'
                 '<label>Your name<input name="name" required autocomplete="name"></label>'
                 '<label>Email<input name="email" type="email" required autocomplete="email"></label>'
-                '<label>Phone (optional)<input name="phone" type="tel" autocomplete="tel"></label>'
+                '<label>Mobile phone (optional)<input name="phone" type="tel" autocomplete="tel"></label>'
                 f'<label>Message<textarea name="message" rows="3">Hi {esc(first)}, I\'d like to learn more about {esc(p["name"])}.</textarea></label>'
                 f'<label class="consent"><input type="checkbox" name="consent" value="yes" required> I agree to be contacted by {esc(a["name"])} of {esc(a["brokerage"])} about my home search.</label>'
+                f'<label class="consent"><input type="checkbox" name="sms_consent" value="yes"> <span><b>Optional: OK to text me.</b> {esc(sms)}</span></label>'
+                f'<input type="hidden" name="sms_terms" value="{esc(sms)}">'
                 f'<button class="btn" type="submit">Ask {esc(first)} about {esc(p["name"])}</button></form>')
     else:
         subject = quote(f'Question about {p["name"]}, {p["city"]}')

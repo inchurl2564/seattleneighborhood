@@ -1377,12 +1377,13 @@ ol.rank.cards .heart[aria-pressed="true"],ol.rank.cards .heart:hover{color:#b041
       <div class="ct-grid">
         <label for="ctName">Your name<input id="ctName" name="name" autocomplete="name" required></label>
         <label for="ctEmail">Email<input id="ctEmail" name="email" type="email" autocomplete="email" required></label>
-        <label for="ctPhone"><span>Phone <span class="opt">(optional)</span></span><input id="ctPhone" name="phone" type="tel" autocomplete="tel"></label>
+        <label for="ctPhone"><span>Mobile phone <span class="opt">(optional)</span></span><input id="ctPhone" name="phone" type="tel" autocomplete="tel"></label>
         <label for="ctWhen">When are you hoping to buy?<select id="ctWhen" name="timeline"><option>Just exploring</option><option>Within 3 months</option><option>3 to 6 months</option><option>6 to 12 months</option><option>More than a year</option></select></label>
       </div>
       <label for="ctMsg">Message<textarea id="ctMsg" name="message" rows="4"></textarea></label>
       <details class="ct-summary"><summary>What's included</summary><pre id="ctSummary"></pre></details>
       <label class="ct-consent" for="ctConsent"><input type="checkbox" id="ctConsent" name="consent" required> <span id="ctConsentText"></span></label>
+      <label class="ct-consent ct-sms" for="ctSms"><input type="checkbox" id="ctSms" name="sms_consent"> <span id="ctSmsText"></span></label>
       <p class="sub" id="ctPrivacy"></p>
       <p class="ct-err" id="ctErr" role="alert" hidden></p>
       <div class="ct-actions"><button type="submit" class="btn" id="ctSend">Send</button><button type="button" class="btn ghost" id="ctCancel">Cancel</button></div>
@@ -2390,6 +2391,7 @@ function matchSummary(p){
   return L.join('\n');
 }
 let contactCtx = null;
+function smsTerms(){ return `I agree to receive text messages from ${AGENT.name} of ${AGENT.brokerage} about my home search at the mobile number above. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Agreeing is not required to get help with your search.`; }
 function openContact(kind, p){
   if(!AGENT) return;
   const dlg = document.getElementById('contactDlg');
@@ -2401,7 +2403,9 @@ function openContact(kind, p){
   document.getElementById('ctMsg').value = kind==='nb' ? `Hi ${AGENT.first_name}, I'd like to learn more about ${p.name} in ${p.city}.` : `Hi ${AGENT.first_name}, here are my neighborhood matches. I'd love your advice.`;
   document.getElementById('ctSummary').textContent = matchSummary(kind==='nb' ? p : null);
   document.getElementById('ctConsentText').textContent = `I agree to be contacted by ${AGENT.name} of ${AGENT.brokerage} by email or phone about my home search.`;
-  document.getElementById('ctPrivacy').textContent = `Your details go only to ${AGENT.name} at ${AGENT.brokerage} to answer your request. They are not sold or shared.` +
+  document.getElementById('ctSms').checked = false;
+  document.getElementById('ctSmsText').innerHTML = `<b>Optional: OK to text me.</b> ${escH(smsTerms())}`;
+  document.getElementById('ctPrivacy').textContent = `Your details go only to ${AGENT.name} at ${AGENT.brokerage} to answer your request. They are not sold or shared, and your mobile number and texting permission are never shared with anyone for marketing.` +
     (AGENT.formspree_id ? '' : ' Tapping Send opens your email app with the message ready to send.');
   document.getElementById('ctSend').textContent = AGENT.formspree_id ? 'Send' : 'Open email to send';
   document.getElementById('ctErr').hidden = true; document.getElementById('ctDone').hidden = true;
@@ -2419,18 +2423,20 @@ document.getElementById('contactForm').addEventListener('submit', async e=>{
   if(!v('ctName')) return show('Please add your name.');
   if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('ctEmail'))) return show('Please add a valid email address so ' + AGENT.first_name + ' can reply.');
   if(!document.getElementById('ctConsent').checked) return show('Please check the box to agree to be contacted.');
+  const sms = document.getElementById('ctSms').checked;
+  if(sms && v('ctPhone').replace(/\D/g,'').length < 10) return show(`Please add a mobile number so ${AGENT.first_name} can text you, or uncheck the texting box.`);
   err.hidden = true;
   const p = contactCtx?.p, subject = contactCtx?.kind==='nb' ? `Question about ${p.name}, ${p.city}` : 'My neighborhood matches';
-  const body = `${v('ctMsg')}\n\nName: ${v('ctName')}\nEmail: ${v('ctEmail')}${v('ctPhone') ? '\nPhone: ' + v('ctPhone') : ''}\nTimeline: ${v('ctWhen')}\n\n${document.getElementById('ctSummary').textContent}\n\nSent from Seattle Neighborhood Match. The sender agreed to be contacted.`;
+  const body = `${v('ctMsg')}\n\nName: ${v('ctName')}\nEmail: ${v('ctEmail')}${v('ctPhone') ? '\nPhone: ' + v('ctPhone') : ''}\nTexting: ${sms ? 'OK to text (agreed to: ' + smsTerms() + ')' : 'Not permitted. Do not text.'}\nTimeline: ${v('ctWhen')}\n\n${document.getElementById('ctSummary').textContent}\n\nSent from Seattle Neighborhood Match. The sender agreed to be contacted.`;
   const done = msg => { const d = document.getElementById('ctDone'); d.textContent = msg; d.hidden = false;
     document.getElementById('contactForm').querySelectorAll('.ct-grid, label[for=ctMsg], .ct-summary, .ct-consent, #ctPrivacy, .ct-actions').forEach(el=>el.hidden = true); };
   if(AGENT.formspree_id){
     const send = document.getElementById('ctSend'); send.disabled = true; send.textContent = 'Sending…';
     try{
       const r = await fetch('https://formspree.io/f/' + encodeURIComponent(AGENT.formspree_id), {method:'POST', headers:{'Accept':'application/json','Content-Type':'application/json'},
-        body: JSON.stringify({name:v('ctName'), email:v('ctEmail'), phone:v('ctPhone'), timeline:v('ctWhen'), _subject:subject, message:body})});
+        body: JSON.stringify({name:v('ctName'), email:v('ctEmail'), phone:v('ctPhone'), sms_consent: sms ? 'yes' : 'no', sms_terms: sms ? smsTerms() : '', consent_time: new Date().toISOString(), timeline:v('ctWhen'), _subject:subject, message:body})});
       if(!r.ok) throw new Error('status ' + r.status);
-      done(`Thanks, ${v('ctName').split(' ')[0]}! Your message is on its way to ${AGENT.name}, who will reply by email${v('ctPhone') ? ' or phone' : ''}.`);
+      done(`Thanks, ${v('ctName').split(' ')[0]}! Your message is on its way to ${AGENT.name}, who will reply by email${v('ctPhone') ? (sms ? ', phone or text' : ' or phone') : ''}.`);
     } catch(ex){ show(`Your message didn't send. Please try again, or email ${AGENT.email} directly.`); }
     finally { send.disabled = false; send.textContent = 'Send'; }
   } else {
