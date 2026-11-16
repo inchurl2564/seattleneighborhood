@@ -1934,7 +1934,7 @@ function renderList(ranked){
   const em = document.getElementById('emailMatches'); if(em) em.hidden = !AGENT || !ranked.length;
 }
 /* ----- unlock: the top matches are open; the full list unlocks with an email ----- */
-const GATE_OPEN = 3;
+const GATE_OPEN = 4;
 function isLocked(ranked){ return !!AGENT && !state.unlocked && !listMode && !savedOnly && ranked.length > GATE_OPEN; }
 function gateCard(n){
   const others = n - GATE_OPEN, e = escH;
