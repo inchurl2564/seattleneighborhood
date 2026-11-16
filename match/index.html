@@ -1329,20 +1329,21 @@ header.shd{margin-top:-20px}
 ol.rank.cards > li.lockwrap{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr);position:relative;min-width:0;isolation:isolate}
 .lockwrap > *{grid-area:1/1;min-width:0}
 .lockblur{position:relative;z-index:0}
-.lockblur{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:24px;filter:blur(6px) saturate(.6);opacity:.55;pointer-events:none;user-select:none;min-height:520px;align-content:start}
+.lockblur{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:24px;filter:blur(6px) saturate(.6);opacity:.55;pointer-events:none;user-select:none;min-height:680px;align-content:start}
 .lockblur > li{position:relative}
 .gate{position:relative;z-index:10;white-space:normal;align-self:start;justify-self:center;width:min(640px,100%);margin-top:32px;background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gold);box-shadow:0 30px 70px rgba(0,35,73,.22);padding:28px 30px;box-sizing:border-box}
 .gate *{box-sizing:border-box}
 .gate .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
 .gate h3{font:400 28px/1.2 var(--display);color:var(--accent);margin:6px 0 8px}
 .gate p{font-size:15px;color:var(--muted);margin:0 0 16px;line-height:1.5}
-.gate .row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.gate .row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}.gate input[name=phone]{font:inherit;font-weight:400;font-size:15px;padding:11px 12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);width:100%;min-width:0;border-radius:0}
 .gate label{display:grid;gap:5px;font-size:13px;font-weight:600;margin-bottom:12px;min-width:0;color:var(--ink)}
 .gate input[name=name],.gate input[name=email]{font:inherit;font-weight:400;font-size:15px;padding:11px 12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);width:100%;min-width:0;border-radius:0}
 .gate .cb{display:flex;gap:10px;font-weight:400;font-size:13.5px;line-height:1.45;align-items:flex-start}
 .gate .cb input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--accent)}
 .gate button{width:100%;background:#002349;color:#fff;border:0;padding:15px;font:600 12.5px var(--body);letter-spacing:.14em;text-transform:uppercase;margin-top:6px;cursor:pointer}
 .gate button:disabled{opacity:.6}
+.gate .opt{font-weight:400;color:var(--muted)}
 .gate .gerr{color:var(--bad);font-size:14px;margin:4px 0 0}
 .gate .fine{font-size:12px;margin:12px 0 0;text-align:center}.gate .fine a{color:var(--accent)}
 .emailme{background:#002349;color:#fff;border:0;padding:9px 14px;font:600 11px var(--body);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
@@ -1944,8 +1945,10 @@ function gateCard(n){
     <p>Your top ${GATE_OPEN} are shown above. Enter your email to unlock the rest, and ${e(AGENT.first_name)} will email you a copy of your matches with prices, schools and commute details for each.</p>
     <form novalidate>
       <div class="row2"><label>Your name<input name="name" autocomplete="name" required></label><label>Email<input name="email" type="email" autocomplete="email" required></label></div>
+      <div class="row2"><label><span>Mobile phone <span class="opt">(optional)</span></span><input name="phone" type="tel" autocomplete="tel"></label><span></span></div>
       <label class="cb"><input type="checkbox" name="keep_posted" value="yes"> Keep me posted on homes in my top neighborhoods (optional)</label>
-      <label class="cb"><input type="checkbox" name="consent" value="yes" required> I agree to be contacted by ${e(AGENT.name)} of ${e(AGENT.brokerage)} by email about my home search.</label>
+      <label class="cb"><input type="checkbox" name="consent" value="yes" required> I agree to be contacted by ${e(AGENT.name)} of ${e(AGENT.brokerage)} by email or phone about my home search.</label>
+      <label class="cb"><input type="checkbox" name="sms_consent" value="yes"> <span><b>Optional: OK to text me.</b> ${e(smsTerms())}</span></label>
       <p class="gerr" role="alert" hidden></p>
       <button type="submit">Show all my matches</button>
       <p class="fine">Your details and matches go only to ${e(AGENT.first_name)}. They are never sold or shared. <a href="../privacy/" target="_blank">Privacy policy</a></p>
@@ -1960,17 +1963,19 @@ async function submitGate(ev){
   if(!v('name')) return show('Please add your name.');
   if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email'))) return show('Please add a valid email address so ' + AGENT.first_name + ' can send your matches.');
   if(!f.elements.consent.checked) return show('Please check the box to agree to be contacted.');
+  const sms = f.elements.sms_consent.checked;
+  if(sms && v('phone').replace(/\D/g,'').length < 10) return show(`Please add a mobile number so ${AGENT.first_name} can text you, or uncheck the texting box.`);
   err.hidden = true;
   const keep = f.elements.keep_posted.checked;
   const subject = `Neighborhood Match: full list requested by ${v('name')}`;
-  const body = `${v('name')} unlocked their full Neighborhood Match list and would like a copy emailed to them.\n\nName: ${v('name')}\nEmail: ${v('email')}\nKeep posted on homes in top neighborhoods: ${keep ? 'Yes' : 'No'}\nTexting: Not permitted. Do not text.\n\n${matchSummary(null)}\n\nSent from Seattle Neighborhood Match. The sender agreed to be contacted by email.`;
+  const body = `${v('name')} unlocked their full Neighborhood Match list and would like a copy emailed to them.\n\nName: ${v('name')}\nEmail: ${v('email')}${v('phone') ? '\nPhone: ' + v('phone') : ''}\nKeep posted on homes in top neighborhoods: ${keep ? 'Yes' : 'No'}\nTexting: ${sms ? 'OK to text (agreed to: ' + smsTerms() + ')' : 'Not permitted. Do not text.'}\n\n${matchSummary(null)}\n\nSent from Seattle Neighborhood Match. The sender agreed to be contacted by email or phone.`;
   const unlock = () => { state.unlocked = true; save(); showN = Math.max(showN, 12); update();
     const lc = document.getElementById('listCount'); if(lc) lc.textContent = `Thanks, ${v('name').split(' ')[0]}! All ${lastRanked.length} matches are unlocked, and ${AGENT.first_name} will email you a copy.`; };
   if(AGENT.formspree_id){
     const b = f.querySelector('button'); b.disabled = true; b.textContent = 'Unlocking…';
     try{
       const r = await fetch('https://formspree.io/f/' + encodeURIComponent(AGENT.formspree_id), {method:'POST', headers:{'Accept':'application/json','Content-Type':'application/json'},
-        body: JSON.stringify({name:v('name'), email:v('email'), keep_posted: keep ? 'yes' : 'no', consent:'yes', sms_consent:'no', consent_time:new Date().toISOString(), _subject:subject, message:body})});
+        body: JSON.stringify({name:v('name'), email:v('email'), phone:v('phone'), keep_posted: keep ? 'yes' : 'no', consent:'yes', sms_consent: sms ? 'yes' : 'no', sms_terms: sms ? smsTerms() : '', consent_time:new Date().toISOString(), _subject:subject, message:body})});
       if(!r.ok) throw new Error('status ' + r.status);
       unlock();
     } catch(ex){ b.disabled = false; b.textContent = 'Show all my matches'; show(`That didn't go through. Please try again, or email ${AGENT.email} directly.`); }

@@ -20,7 +20,7 @@ BODY = """
 <li>your name, email address and, if you provide them, your mobile phone number and home address</li>
 <li>details you give about your home or search, such as home type, timeline, best times for a visit and your message</li>
 <li>if you send your Neighborhood Match results, the budget, priorities, matches and saved neighborhoods listed under "What's included"</li>
-<li>if you unlock your full Neighborhood Match list, your name, email, whether you'd like to be kept posted, and your budget, priorities and top matches, so I can email you a copy</li>
+<li>if you unlock your full Neighborhood Match list, your name, email, mobile number if you provide it, whether you'd like to be kept posted, and your budget, priorities and top matches, so I can email you a copy</li>
 <li>whether you agreed to be contacted and to receive text messages, the wording you agreed to, and the time you sent the form</li>
 </ul>
 
