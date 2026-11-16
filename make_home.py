@@ -197,6 +197,9 @@ footer a{color:inherit;border-bottom:1px solid rgba(233,207,143,.4)}
 
 .brand .l2{display:inline!important;margin:0!important}
 @media (max-width:700px){.brand .l2{display:block!important;margin-top:3px!important}.brand{margin-right:20px;min-width:0}.menubtn{flex:none;margin-left:auto}}
+
+.brand .y2{display:inline!important;font:inherit!important;letter-spacing:inherit!important;text-transform:inherit!important;opacity:1!important;margin:0!important;color:inherit!important}
+@media (max-width:700px){header.open .brand .y2{display:block!important;margin-top:2px!important}}
 </style>'''
 
 
