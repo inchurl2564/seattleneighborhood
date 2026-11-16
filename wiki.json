@@ -121,7 +121,21 @@
   "photo_h": 900
  },
  "Northeast Bellevue|Bellevue": null,
- "Northwest Bellevue|Bellevue": null,
+ "Northwest Bellevue|Bellevue": {
+  "title": "Northwest Bellevue",
+  "url": "",
+  "extract": "",
+  "image": null,
+  "credit": {
+   "artist": "Zac Gudakov",
+   "license": "Unsplash License",
+   "license_url": "https://unsplash.com/license",
+   "file_page": "https://unsplash.com/"
+  },
+  "photo_file": "northwest-bellevue-bellevue.jpg",
+  "photo_h": 799,
+  "photo_added_by": "request"
+ },
  "Somerset|Bellevue": {
   "title": "Somerset, Washington",
   "url": "https://en.wikipedia.org/wiki/Somerset%2C_Washington",
@@ -281,8 +295,8 @@
   "image": null,
   "thumb": null
  },
- "Lake Sammamish Shore (West)|Sammamish": {
-  "title": "Lake Sammamish Shore (West)",
+ "Pine Lake / Town Center|Sammamish": {
+  "title": "Pine Lake / Town Center",
   "url": "",
   "extract": "",
   "image": null,
@@ -292,11 +306,10 @@
    "license_url": "https://unsplash.com/license",
    "file_page": "https://unsplash.com/"
   },
-  "photo_file": "lake-sammamish-shore-west-sammamish.jpg",
+  "photo_file": "pine-lake-town-center-sammamish.jpg",
   "photo_h": 799,
   "photo_added_by": "request"
  },
- "Pine Lake / Town Center|Sammamish": null,
  "Sahalee / Northeast|Sammamish": null,
  "Alki|Seattle": {
   "title": "Alki Point, Seattle",
