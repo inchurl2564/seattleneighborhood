@@ -39,6 +39,12 @@ def tiles():
             svg = re.sub(r'<figcaption.*?</figcaption>', '', svg, flags=re.S)
             svg = re.sub(r'<g class="m-pin">.*?</g>', '', svg)
             name = DISPLAY_NAMES.get(p['name'], p['name'])
+            from photos import photo_for, make_card_copy
+            ph = photo_for(p)
+            if ph:   # a neighborhood photo replaces the map on its tile
+                make_card_copy(ph['file'])
+                svg = (f'<img src="img/card/{esc(ph["file"])}" alt="{esc(p["name"])}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">'
+                       f'<span class="tcredit">Photo: {esc(ph["by"])}, {esc(ph["lic"])}</span>')
             out.append(f'    <a class="tile maptile" href="neighborhoods/{p["slug"]}/"><span class="tmap">{svg}</span>'
                        f'<div><h3>{esc(name)}</h3><small>{esc(city)} · Typical home {money(p["price"])}</small></div></a>')
     return '\n'.join(out)
@@ -123,6 +129,7 @@ form.leadform{display:grid;gap:14px}.row2{display:grid;grid-template-columns:1fr
 .fdone{font-size:16px;line-height:1.6}.fdone b{display:block;font:400 26px var(--serif);color:var(--navy);margin-bottom:6px}
 footer a{color:inherit;border-bottom:1px solid rgba(233,207,143,.4)}
 .tile{color:#fff}
+.tcredit{position:absolute;right:0;top:0;font-size:9.5px;line-height:1.4;color:#fff;background:rgba(0,0,0,.45);padding:1px 6px;z-index:2;letter-spacing:0;text-transform:none}
 .phonebar{border-bottom:1px solid rgba(255,255,255,.18);font-size:12px;letter-spacing:.08em}
 .phonebar .wrap{display:flex!important;justify-content:flex-end;gap:10px;padding-top:7px!important;padding-bottom:7px!important}
 .phonebar a{color:inherit;opacity:.92}.phonebar a:hover{color:#e9cf8f}.phonebar span{opacity:.5}

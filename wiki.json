@@ -253,7 +253,25 @@
  "SE Redmond|Redmond": null,
  "Sammamish Valley|Redmond": null,
  "Willows / Rose Hill|Redmond": null,
- "Beaver Lake / East|Sammamish": null,
+ "Beaver Lake / East|Sammamish": {
+  "title": "Beaver Lake / East",
+  "url": "",
+  "extract": "",
+  "image": "2022-06-13, Beaver Lake Park, Sammamish, Washington, 010.jpg",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:2022-06-13,_Beaver_Lake_Park,_Sammamish,_Washington,_010.jpg",
+   "artist": "Steven Pavlov",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "mime": "image/jpeg",
+   "width": 4032,
+   "height": 3024,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/2022-06-13%2C_Beaver_Lake_Park%2C_Sammamish%2C_Washington%2C_010.jpg/1280px-2022-06-13%2C_Beaver_Lake_Park%2C_Sammamish%2C_Washington%2C_010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "beaver-lake-east-sammamish.jpg",
+  "photo_h": 900,
+  "photo_added_by": "request"
+ },
  "Inglewood / North Sammamish|Sammamish": null,
  "Klahanie / Southeast|Sammamish": {
   "title": "Klahanie, Washington",
