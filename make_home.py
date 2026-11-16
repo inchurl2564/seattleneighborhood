@@ -2,7 +2,7 @@
 
 Fills site_home.html and site_value.html with:
 - the six featured neighborhood tiles: the two highest-priced neighborhoods (typical home value) in Bellevue,
-  Kirkland and Sammamish, recalculated from data.json on every build, so they follow the monthly data refresh
+  Kirkland and Sammamish, except where SWAPS names Rachel's own pick, recalculated from data.json on every build, so they follow the monthly data refresh
 - the contact forms (sent to the agent through Formspree, or the visitor's email app if no form ID is set)
 - the shared footer
 """
@@ -16,6 +16,8 @@ esc = lambda s: html.escape(str(s), quote=True)
 
 FEATURED_CITIES = ['Bellevue', 'Kirkland', 'Sammamish']
 PER_CITY = 2
+# Rachel's picks: swap a top-priced neighborhood for another in the same city (kept in that tile's spot)
+SWAPS = {('Kirkland', 'Market'): 'Moss Bay'}
 DISPLAY_NAMES = {'Lake Sammamish Shore (West)': 'West Lake Sammamish'}   # shorter labels that fit on a tile
 
 
@@ -34,6 +36,8 @@ def tiles():
     out = []
     for city in FEATURED_CITIES:
         ps = sorted((p for p in g.P if p['city'] == city and p.get('price')), key=lambda p: -p['price'])[:PER_CITY]
+        by_name = {p['name']: p for p in g.P if p['city'] == city}
+        ps = [by_name.get(SWAPS.get((city, p['name'])), p) for p in ps]
         for p in ps:
             svg = g.svg_map(p)
             svg = re.sub(r'<figcaption.*?</figcaption>', '', svg, flags=re.S)

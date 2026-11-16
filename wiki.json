@@ -227,7 +227,25 @@
  },
  "Lakeview|Kirkland": null,
  "Market|Kirkland": null,
- "Moss Bay|Kirkland": null,
+ "Moss Bay|Kirkland": {
+  "image": "Kirkland waterfront.jpg",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Kirkland_waterfront.jpg",
+   "artist": "Tradnor",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "mime": "image/jpeg",
+   "width": 800,
+   "height": 518,
+   "thumb_1200": "https://upload.wikimedia.org/wikipedia/commons/7/71/Kirkland_waterfront.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "photo_file": "moss-bay-kirkland.jpg",
+  "photo_h": 518,
+  "photo_added_by": "request",
+  "title": "Moss Bay",
+  "url": "",
+  "extract": ""
+ },
  "Norkirk|Kirkland": null,
  "North Rose Hill|Kirkland": null,
  "South Rose Hill|Kirkland": null,
