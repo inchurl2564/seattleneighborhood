@@ -168,7 +168,25 @@
  },
  "Woodridge|Bellevue": null,
  "Central Issaquah|Issaquah": null,
- "Issaquah Highlands|Issaquah": null,
+ "Issaquah Highlands|Issaquah": {
+  "title": "Issaquah Highlands",
+  "url": "",
+  "extract": "",
+  "image": "Issaquah Highlands aerial, April 2023.png",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:Issaquah_Highlands_aerial,_April_2023.png",
+   "artist": "Spicypepper999",
+   "license": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "mime": "image/png",
+   "width": 2000,
+   "height": 1500,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Issaquah_Highlands_aerial%2C_April_2023.png/1280px-Issaquah_Highlands_aerial%2C_April_2023.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "issaquah-highlands-issaquah.jpg",
+  "photo_h": 900,
+  "photo_added_by": "request"
+ },
  "Issaquah Valley|Issaquah": null,
  "Montreux|Issaquah": null,
  "North Issaquah|Issaquah": null,
