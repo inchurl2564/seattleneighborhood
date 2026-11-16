@@ -71,6 +71,14 @@ main>details.sec{border-top:1px solid var(--line)}main>details.sec>h2{display:no
 main>details.sec>summary::after{content:"+";font-size:26px;color:var(--gold)}main>details.sec[open]>summary::after{content:"–"}main>details.sec>summary::-webkit-details-marker{display:none}
 .leadform .consent input{width:22px;height:22px;flex:none}}
 @media (min-width:601px){main>details.sec>summary{display:none}}
+@media (max-width:600px){
+ main p,.lede,.agent p{font-size:15px!important;line-height:1.6}
+ table{font-size:14px!important}th,td{padding:10px 12px!important}
+ .fact span{font-size:14px!important}.fact b{font-size:24px!important}
+ .note,.hero figcaption,.mapkey{font-size:13px!important}
+ .ownbox .os{font-size:14px!important}
+ ul.near a small{font-size:14px!important}
+}
 @media (max-width:700px){header.site.open .brand .y2{display:block;margin-top:2px}}
 
 @media (max-width:700px){header.site .brand .l2{display:block}header.site .brand{margin-right:20px;min-width:0}.menubtn{flex:none;margin-left:auto}}
