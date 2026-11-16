@@ -14,6 +14,8 @@ for f in json.loads(open(os.path.join(here, 'data.json')).read())['neighborhoods
     if ph:
         make_card_copy(ph['file']); photos[f['properties']['id']] = ph
 t = t.replace('/*PHOTOS*/{}', json.dumps(photos, separators=(',', ':')).replace('</', '<\\/'))
+import site_header
+t = t.replace('<!--SITEHEADER-->', site_header.html('../', 'match')).replace('/*SHDCSS*/', site_header.CSS)
 page = t.replace('/*DATA*/', d).replace('/*AGENT*/null', json.dumps(agent).replace('</', '<\\/') if agent else 'null')
 split = page.index('<div class="wrap">')
 head, body = page[:split], page[split:]

@@ -4,6 +4,7 @@ Reads data.json (built by build.py) and optional config.json (site address and a
 Writes neighborhoods/<slug>/index.html, neighborhoods/index.html, neighborhoods/style.css and sitemap.xml.
 """
 import html, json, math, os, re
+import site_header
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = json.load(open(os.path.join(HERE, 'data.json')))
@@ -214,6 +215,9 @@ main>details.sec>summary::after{content:"+";font-size:26px;color:var(--gold)}mai
  .citybar .cb-p a+a::before,.phonebar .wrap a+span+a::before{content:"·";opacity:.5;margin:0 12px 0 0}
  .phonebar .wrap span{display:none}
 }
+"""+site_header.CSS+"""
+header.shd+main{margin-top:28px}
+
 """
 
 FOOT = """<footer class="site">
@@ -265,6 +269,9 @@ def agent_box(p):
 
 
 from photos import WIKI, wiki_for, broader_area, photo_for
+import site_header
+SH_PAGE = site_header.html('../../')
+SH_INDEX = site_header.html('../')
 
 
 def hero(p):
@@ -316,8 +323,7 @@ def page(p):
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">{json.dumps(ld)}</script>
 </head><body>
-<div class="citybar"><span class="cb-l">Neighborhood guides · from Rachel Yo</span><span class="cb-p"><a href="tel:+15127971935">Mobile 512.797.1935</a> · <a href="tel:+14256585300">Office 425.658.5300</a></span></div><script>(function(){{function fit(){{document.querySelectorAll(".citybar .cb-p,.phonebar .wrap").forEach(function(el){{var as=el.querySelectorAll("a[href^='tel:']");as.forEach(function(a){{a.style.removeProperty("font-size")}});if(innerWidth>700)return;var s=parseFloat(getComputedStyle(as[0]).fontSize)||12.5;while(el.scrollWidth>el.clientWidth+1&&s>8){{s-=.25;as.forEach(function(a){{a.style.setProperty("font-size",s+"px","important")}})}}}})}}fit();addEventListener("resize",fit);addEventListener("load",fit);if(document.fonts)document.fonts.ready.then(fit)}})()</script>
-<header class="site"><a class="brand" href="../../"><span class="b1">Rachel <span class="y2">Yo</span></span><span class="b2">Realogics Sotheby's <span class="l2">International Realty</span></span></a><button class="menubtn" type="button" aria-expanded="false" onclick="var h=this.closest('header');var o=h.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'Close':'Menu'">Menu</button><nav><a href="../../match/">Neighborhood Match</a><a href="../../home-value/">What's My Home Worth?</a><a href="../">All neighborhoods</a></nav></header>
+{SH_PAGE}
 <main>
 <div class="eyebrow">{where}</div>
 <h1>Living in {nm}</h1>
@@ -405,8 +411,7 @@ def index_page():
 <link rel="canonical" href="{BASE}neighborhoods/">
 <link rel="stylesheet" href="style.css">
 </head><body>
-<div class="citybar"><span class="cb-l">Neighborhood guides · from Rachel Yo</span><span class="cb-p"><a href="tel:+15127971935">Mobile 512.797.1935</a> · <a href="tel:+14256585300">Office 425.658.5300</a></span></div><script>(function(){{function fit(){{document.querySelectorAll(".citybar .cb-p,.phonebar .wrap").forEach(function(el){{var as=el.querySelectorAll("a[href^='tel:']");as.forEach(function(a){{a.style.removeProperty("font-size")}});if(innerWidth>700)return;var s=parseFloat(getComputedStyle(as[0]).fontSize)||12.5;while(el.scrollWidth>el.clientWidth+1&&s>8){{s-=.25;as.forEach(function(a){{a.style.setProperty("font-size",s+"px","important")}})}}}})}}fit();addEventListener("resize",fit);addEventListener("load",fit);if(document.fonts)document.fonts.ready.then(fit)}})()</script>
-<header class="site"><a class="brand" href="../"><span class="b1">Rachel <span class="y2">Yo</span></span><span class="b2">Realogics Sotheby's <span class="l2">International Realty</span></span></a><button class="menubtn" type="button" aria-expanded="false" onclick="var h=this.closest('header');var o=h.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'Close':'Menu'">Menu</button><nav><a href="../match/">Neighborhood Match</a><a href="../home-value/">What's My Home Worth?</a></nav></header>
+{SH_INDEX}
 <main>
 <h1>Seattle-area neighborhood guides</h1>
 <p class="lede">Home prices, schools, safety, walkability, transit and parks for {N} neighborhoods, built from public data. Want them ranked for you? <a href="../match/">Answer a few questions</a>.</p>
