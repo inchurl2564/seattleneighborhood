@@ -174,6 +174,7 @@ body{padding-top:0;overflow-x:clip}
 header.site{padding:18px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
 header.site .brand{font:400 19px/1.2 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 header.site .brand .b1{display:block;letter-spacing:.24em}header.site .brand .b2{display:block;font:500 9.5px var(--body);letter-spacing:.2em;color:var(--muted);margin-top:6px}
+.teaser{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:#002349;color:#fff;padding:20px 22px;margin:18px 0 8px}.teaser b{display:block;font:400 21px/1.3 var(--display);color:#fff;margin-bottom:4px}.teaser span{font-size:14px;opacity:.88}.teaser .btn{background:#fff;color:#002349;border-color:#fff}
 .ownbox{border:1px solid var(--line);border-left:3px solid var(--gold);background:var(--surface);padding:18px 20px;margin:18px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
 .ownbox .ok{font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}.ownbox .oh{font:400 22px/1.3 var(--display);color:var(--accent);margin:4px 0}.ownbox .os{font-size:13.5px;color:var(--muted)}
 header.site nav{display:flex;gap:20px;flex-wrap:wrap}header.site nav a{font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
@@ -333,7 +334,7 @@ def page(p):
 {hero(p)}
 {about(p)}
 <p class="lede">{nm} is a neighborhood in {where} with about {p['pop']:,} residents. The typical home value is about <b>{money(p['price'])}</b>{f" ({yoy:+.1f}% over the past year)" if yoy is not None else ''}, and {p['sold_12m']} homes sold in the last 12 months. It is {walk_lvl}, with {crime_lvl}.</p>
-<div class="cta"><a class="btn" href="{app}">See how {nm} fits your priorities</a><a class="btn ghost" href="../../match/">Find your best-matching neighborhoods</a></div>
+<div class="cta"><a class="btn" href="{app}">Is {nm} right for you? Get your personal match score</a><a class="btn ghost" href="../../match/">Find your best-matching neighborhoods</a></div>
 <aside class="ownbox"><div><div class="ok">Own a home in {nm}?</div><div class="oh">Find out what it is worth.</div><div class="os">Schedule a free, in-person home value consultation with Rachel Yo.</div></div><a class="btn" href="../../home-value/">Schedule a consultation</a></aside>
 
 <div class="facts">
@@ -393,6 +394,7 @@ def page(p):
 
 <h2>Nearby neighborhoods</h2>
 <ul class="near">{near}</ul>
+<aside class="teaser"><div><b>Neighborhoods like {nm} that might fit you even better</b><span>Tell Neighborhood Match your budget, commute and priorities, and it ranks all 155 Seattle and Eastside neighborhoods for you. It's free and takes about 3 minutes.</span></div><a class="btn" href="../../match/">Find your top matches →</a></aside>
 
 <p class="note">Data as of: home values Zillow {esc(M['zhvi_month'])}; recorded sales {esc(M['sales_window'])}; schools OSPI {esc(M['ospi_year'])}; Census ACS {esc(M['acs_year'])}. Distances are straight-line from the center of the neighborhood.</p>
 </main>
