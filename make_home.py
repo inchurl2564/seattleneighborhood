@@ -19,7 +19,7 @@ YEAR = datetime.date.today().year
 FEATURED_CITIES = ['Bellevue', 'Kirkland', 'Sammamish']
 PER_CITY = 2
 # Rachel's picks: swap a top-priced neighborhood for another in the same city (kept in that tile's spot)
-SWAPS = {('Kirkland', 'Market'): 'Moss Bay'}
+SWAPS = {}
 DISPLAY_NAMES = {'Lake Sammamish Shore (West)': 'Lake Sammamish Shore'}   # shorter labels that fit on a tile
 
 

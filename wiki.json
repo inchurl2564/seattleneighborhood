@@ -226,7 +226,21 @@
   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/King_County_Washington_Incorporated_and_Unincorporated_areas_Kingsgate_Highlighted.svg/330px-King_County_Washington_Incorporated_and_Unincorporated_areas_Kingsgate_Highlighted.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
  },
  "Lakeview|Kirkland": null,
- "Market|Kirkland": null,
+ "Market|Kirkland": {
+  "title": "Market",
+  "url": "",
+  "extract": "",
+  "image": null,
+  "credit": {
+   "artist": "Cody F",
+   "license": "Unsplash License",
+   "license_url": "https://unsplash.com/license",
+   "file_page": "https://unsplash.com/"
+  },
+  "photo_file": "market-kirkland.jpg",
+  "photo_h": 799,
+  "photo_added_by": "request"
+ },
  "Moss Bay|Kirkland": {
   "image": "Edge of Lake Washington - panoramio.jpg",
   "credit": {
