@@ -41,7 +41,7 @@ header.shd a{{color:#fff;text-decoration:none}}
 }}
 @media(max-width:700px){{
  .shd-brand .l2{{display:block;margin-top:3px}}
- header.shd.open .shd-brand .y2{{display:block;margin-top:2px}}
+ .shd-brand .y2{{display:block;margin-top:2px}}
  .shd-bar{{background:#001a38;padding:0;line-height:1.2}}
  .shd-bar .shd-in{{justify-content:center;flex-wrap:nowrap;gap:0;padding:0 4px;font-size:0;overflow:hidden}}
  .shd-bar a{{display:inline-flex;align-items:center;min-height:44px;padding:0 6px;white-space:nowrap;font:400 clamp(10px,3.3vw,12.5px) {PHONE_FONT};letter-spacing:.05em;color:#fff;opacity:.92}}
