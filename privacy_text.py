@@ -15,11 +15,12 @@ BODY = """
 <p>This site is operated by Rachel Yo, a real estate broker with {brokerage}, 15 Lake Street, Suite 200, Kirkland, WA 98033. In this policy, "I," "me" and "Rachel" mean Rachel Yo. I am responsible for the personal information described here.</p>
 
 <h2>What you share with me</h2>
-<p>This site only collects personal information when you choose to send it through a form: a contact form, an "Ask Rachel" form, or the home value consultation request. Depending on the form, this can include:</p>
+<p>This site only collects personal information when you choose to send it through a form: a contact form, an "Ask Rachel" form, the form that unlocks your full list of Neighborhood Match results, or the home value consultation request. Depending on the form, this can include:</p>
 <ul>
 <li>your name, email address and, if you provide them, your mobile phone number and home address</li>
 <li>details you give about your home or search, such as home type, timeline, best times for a visit and your message</li>
 <li>if you send your Neighborhood Match results, the budget, priorities, matches and saved neighborhoods listed under "What's included"</li>
+<li>if you unlock your full Neighborhood Match list, your name, email, whether you'd like to be kept posted, and your budget, priorities and top matches, so I can email you a copy</li>
 <li>whether you agreed to be contacted and to receive text messages, the wording you agreed to, and the time you sent the form</li>
 </ul>
 
@@ -48,7 +49,7 @@ BODY = """
 </ul>
 
 <h2>Neighborhood Match stays on your device</h2>
-<p>Your Neighborhood Match answers, priorities, filters, matches and saved neighborhoods are stored only in your own web browser on your device, so they're there when you come back. They are not sent to me or anyone else unless you choose to send them with a form. To clear them, use "Start over" in Neighborhood Match or clear your browser's site data.</p>
+<p>Your Neighborhood Match answers, priorities, filters, matches and saved neighborhoods are stored only in your own web browser on your device, so they're there when you come back. They are not sent to me or anyone else unless you choose to send them with a form, including when you enter your email to unlock your full list of matches. To clear them, use "Start over" in Neighborhood Match or clear your browser's site data.</p>
 
 <h2>Cookies, advertising and tracking</h2>
 <p>This site doesn't use cookies, advertising pixels, analytics or other tracking tools, and it doesn't build a profile of your visits or follow you to other websites. I don't sell personal information or share it for targeted ("cross-context behavioral") advertising, so there is nothing you need to opt out of. Browser signals such as Global Privacy Control are respected by default. If this ever changes, I'll update this policy first and give you a way to opt out.</p>
