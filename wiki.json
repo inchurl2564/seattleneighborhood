@@ -167,7 +167,21 @@
   "photo_h": 900
  },
  "Woodridge|Bellevue": null,
- "Central Issaquah|Issaquah": null,
+ "Central Issaquah|Issaquah": {
+  "title": "Central Issaquah",
+  "url": "",
+  "extract": "",
+  "image": "2026 Issaquah Salmon Days - 01.jpg",
+  "credit": {
+   "artist": "SounderBruce",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "file_page": "https://commons.wikimedia.org/wiki/File:2026_Issaquah_Salmon_Days_-_01.jpg"
+  },
+  "photo_file": "central-issaquah-issaquah.jpg",
+  "photo_h": 800,
+  "photo_added_by": "request"
+ },
  "Issaquah Highlands|Issaquah": {
   "title": "Issaquah Highlands",
   "url": "",
