@@ -334,7 +334,7 @@ def page(p):
 {hero(p)}
 {about(p)}
 <p class="lede">{nm} is a neighborhood in {where} with about {p['pop']:,} residents. The typical home value is about <b>{money(p['price'])}</b>{f" ({yoy:+.1f}% over the past year)" if yoy is not None else ''}, and {p['sold_12m']} homes sold in the last 12 months. It is {walk_lvl}, with {crime_lvl}.</p>
-<div class="cta"><a class="btn" href="{app}">Is {nm} right for you? Get your personal match score</a><a class="btn ghost" href="../../match/">Find your best-matching neighborhoods</a></div>
+<div class="cta"><a class="btn" href="../../match/?for={p["id"]}">Is {nm} right for you? Answer a few questions to find out</a></div>
 <aside class="ownbox"><div><div class="ok">Own a home in {nm}?</div><div class="oh">Find out what it is worth.</div><div class="os">Schedule a free, in-person home value consultation with Rachel Yo.</div></div><a class="btn" href="../../home-value/">Schedule a consultation</a></aside>
 
 <div class="facts">
