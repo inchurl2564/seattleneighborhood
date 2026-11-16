@@ -1674,5 +1674,24 @@
   },
   "photo_file": "yesler-terrace-seattle.jpg",
   "photo_h": 800
+ },
+ "Lake Sammamish Shore (West)|Sammamish": {
+  "title": "Lake Sammamish Shore (West)",
+  "url": "",
+  "extract": "",
+  "image": "USA Washington lake sammamish.JPG",
+  "credit": {
+   "file_page": "https://commons.wikimedia.org/wiki/File:USA_Washington_lake_sammamish.JPG",
+   "artist": "Emmanuel BRUNNER",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "mime": "image/jpeg",
+   "width": 2560,
+   "height": 1707,
+   "thumb_1200": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/USA_Washington_lake_sammamish.JPG/1280px-USA_Washington_lake_sammamish.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "photo_file": "lake-sammamish-shore-west-sammamish.jpg",
+  "photo_h": 800,
+  "photo_added_by": "request"
  }
 }
