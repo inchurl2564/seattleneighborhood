@@ -18,7 +18,7 @@ FEATURED_CITIES = ['Bellevue', 'Kirkland', 'Sammamish']
 PER_CITY = 2
 # Rachel's picks: swap a top-priced neighborhood for another in the same city (kept in that tile's spot)
 SWAPS = {('Kirkland', 'Market'): 'Moss Bay'}
-DISPLAY_NAMES = {'Lake Sammamish Shore (West)': 'West Lake Sammamish'}   # shorter labels that fit on a tile
+DISPLAY_NAMES = {'Lake Sammamish Shore (West)': 'Lake Sammamish Shore'}   # shorter labels that fit on a tile
 
 
 def money(v):
