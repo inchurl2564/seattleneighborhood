@@ -71,7 +71,7 @@ jobs:
         run: |
           git config user.name "Monthly data refresh"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data.json index.html match home-value neighborhoods sitemap.xml cache
+          git add data.json index.html match home-value privacy neighborhoods sitemap.xml cache
           if git diff --cached --quiet; then
             echo "No changes this month."
           else

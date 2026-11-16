@@ -14,6 +14,8 @@ A = CFG['agent']
 SITE = CFG['site_url'].rstrip('/') + '/'
 esc = lambda s: html.escape(str(s), quote=True)
 
+import datetime
+YEAR = datetime.date.today().year
 FEATURED_CITIES = ['Bellevue', 'Kirkland', 'Sammamish']
 PER_CITY = 2
 # Rachel's picks: swap a top-priced neighborhood for another in the same city (kept in that tile's spot)
@@ -58,7 +60,7 @@ def consent(purpose):
     who = f'{esc(A["name"])} of {esc(A["brokerage"])}'
     return (f'<label class="cons"><input type="checkbox" name="consent" value="yes" required> I agree to be contacted by {who} by email or phone {purpose}.</label>\n'
             f'    <label class="cons"><input type="checkbox" name="sms_consent" value="yes"> <span><b>Optional: OK to text me.</b> {SMS}</span></label>\n'
-            f'    <p class="priv">Your details go only to {esc(A["name"])} at {esc(A["brokerage"])}. They are not sold or shared, and your mobile number and texting permission are never shared with anyone for marketing.{{EXTRA}}</p>\n'
+            f'    <p class="priv">Your details go only to {esc(A["name"])} at {esc(A["brokerage"])}. They are not sold or shared, and your mobile number and texting permission are never shared with anyone for marketing.{{EXTRA}} <a href="{{PFX}}privacy/">Privacy policy</a></p>\n'
             '    <p class="ferr" role="alert" hidden></p>')
 
 
@@ -71,7 +73,7 @@ def footer(pfx):
   <div><b>Rachel Yo</b>Broker · {esc(A["brokerage"])}<br>15 Lake Street, Suite 200, Kirkland, WA 98033<br><a href="tel:+15127971935">Mobile 512.797.1935</a> · <a href="tel:+14256585300">Office 425.658.5300</a><br><a href="mailto:{esc(A["email"])}">{esc(A["email"])}</a></div>
   <div><a href="{pfx}match/">Neighborhood Match</a><br><a href="{pfx}home-value/">What's My Home Worth?</a><br><a href="{pfx}neighborhoods/">Neighborhood guides</a><br><a href="{esc(A["profile_url"])}" target="_blank" rel="noopener">Sotheby's profile</a></div>
   <div>Your privacy: what you type into Neighborhood Match stays in your browser. Contact forms go only to Rachel.</div>
-  <div class="legal">{esc(A["brokerage"])}. Each office is independently owned and operated. Equal Housing Opportunity. Neighborhood Match rankings use schools, safety, prices and amenities and never race, color, religion, national origin, sex, disability or familial status. Neighborhood data is from public sources and may be incomplete; verify anything important.</div>
+  <div class="legal"><a href="{pfx}privacy/">Privacy policy</a> · © {YEAR} Rachel Yo. Photos and neighborhood descriptions are © their credited authors and used under their licenses. {esc(A["brokerage"])}. Each office is independently owned and operated. Equal Housing Opportunity. Neighborhood Match rankings use schools, safety, prices and amenities and never race, color, religion, national origin, sex, disability or familial status. Neighborhood data is from public sources and may be incomplete; verify anything important.</div>
 </div></footer>'''
 
 
@@ -216,7 +218,7 @@ footer a{color:inherit;border-bottom:1px solid rgba(233,207,143,.4)}
 
 def fill(t, pfx, purpose, extra=''):
     t = t.replace('{{SITE}}', SITE).replace('{{EMAIL}}', esc(A['email']))
-    c = consent(purpose).replace('{EXTRA}', extra)
+    c = consent(purpose).replace('{EXTRA}', extra).replace('{PFX}', pfx)
     t = t.replace('{{CONSENT}}', c).replace('{{CONSENT_VALUE}}', c)
     t = t.replace('{{FOOTER}}', footer(pfx)).replace('{{FORMJS}}', form_js())
     return t.replace('</head>', EXTRA_CSS + '</head>', 1)
@@ -229,6 +231,25 @@ if __name__ == '__main__':
     os.makedirs(os.path.join(HERE, 'home-value'), exist_ok=True)
     open(os.path.join(HERE, 'home-value', 'index.html'), 'w').write(
         fill(val, '../', 'to schedule a home value consultation', ' A consultation provides a broker\'s opinion of value, not an appraisal.'))
-    left = [m for f in ('index.html', 'home-value/index.html') for m in re.findall(r'\{\{[A-Z_]+\}\}', open(os.path.join(HERE, f)).read())]
+    import privacy_text, site_header
+    body = privacy_text.BODY.format(brokerage=esc(A['brokerage']), email=esc(A['email']))
+    os.makedirs(os.path.join(HERE, 'privacy'), exist_ok=True)
+    head = val[:val.index('<style>') + len('<style>')]
+    head = re.sub(r'<title>.*?</title>', '<title>Privacy Policy | Rachel Yo</title>', head, flags=re.S)
+    head = re.sub(r'<meta name="description"[^>]*>', '<meta name="description" content="How this site collects, uses and protects your information.">', head)
+    head = re.sub(r'<link rel="canonical"[^>]*>', '<link rel="canonical" href="{{SITE}}privacy/">', head)
+    css = val[val.index('<style>') + len('<style>'):val.index('</style>')]
+    page = (head + css + """
+.policy{max-width:760px;margin:0 auto;padding:56px 32px 72px}
+.policy h1{font-size:clamp(34px,4vw,46px);margin:0 0 6px}.policy .eff{color:var(--muted);font-size:14px;margin:0 0 26px}
+.policy h2{font-size:24px;margin:34px 0 8px}.policy p,.policy li{font-size:16px;line-height:1.65}.policy .lede{font-size:18px}
+.policy ul{padding-left:20px;margin:8px 0}.policy li{margin:4px 0}.policy a{color:var(--navy);border-bottom:1px solid var(--gold)}
+@media(max-width:760px){.policy{padding:36px 18px 56px}.policy h2{font-size:21px}.policy p,.policy li{font-size:15px}.policy .lede{font-size:16px}}
+</style></head><body>""" + site_header.html('../').replace('<style>', '') +
+            f'<main class="policy"><p class="kick">Privacy</p><h1>Privacy policy</h1><p class="eff">Effective {privacy_text.EFFECTIVE}</p>{body}</main>'
+            '{{FOOTER}}</body></html>')
+    page = page.replace('</head>', '<style>' + site_header.CSS + '</style></head>', 1)
+    open(os.path.join(HERE, 'privacy', 'index.html'), 'w').write(fill(page, '../', 'about my home search'))
+    left = [m for f in ('index.html', 'home-value/index.html', 'privacy/index.html') for m in re.findall(r'\{\{[A-Z_]+\}\}', open(os.path.join(HERE, f)).read())]
     assert not left, left
-    print('wrote index.html and home-value/index.html')
+    print('wrote index.html, home-value/index.html and privacy/index.html')

@@ -32,6 +32,7 @@ average using the visitor's slider settings.
 | `build.py` | Combines the downloaded public data into `data.json`. |
 | `fetch_data.sh`, `fetch_extra.py`, `arcfetch.py` | Download every public dataset into `raw/`. |
 | `make_page.py` | Puts `data.json` into `template.html` and writes `match/index.html`. |
+| `privacy_text.py` | Wording of the Privacy Policy page (`privacy/`). Update it if the site starts collecting or sharing anything new. |
 | `make_home.py` | Writes the home page (with the six featured neighborhoods, the two highest-priced in Bellevue, Kirkland and Sammamish) and the home value page. |
 | `config.json` | Site address and agent details (name, brokerage, email, profile link, optional Formspree form ID) used by the lead forms. |
 | `make_guides.py` | Writes a guide page per neighborhood (`neighborhoods/<name>-<city>/`), the guide index and `sitemap.xml`. |

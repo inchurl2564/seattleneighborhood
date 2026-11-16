@@ -1439,6 +1439,7 @@ header.shd{margin-top:-20px}
     <p><a href="../neighborhoods/">Browse guides to all 155 neighborhoods</a> — home prices, schools, safety, transit and parks for each.</p>
     <p><b>Your privacy.</b> Your answers, matches and saved neighborhoods stay in your browser on this device. They are only shared if you choose to send them to the agent named above.</p>
     <p>Neighborhood rankings use schools, safety, prices, amenities and similar factors. They never use race, color, religion, national origin, sex, disability or familial status, in keeping with the federal Fair Housing Act.</p>
+    <p><a href="../privacy/">Privacy policy</a> · © <span id="cyear"></span> Rachel Yo. Photos and neighborhood descriptions are © their credited authors and used under their licenses.</p>
     <details class="datasrc" id="dataSrc"><summary>Data sources</summary><p>Data: home values, listings and days on market from <a href="https://www.zillow.com/research/data/" target="_blank" rel="noopener">Zillow Research</a>; recorded sales from the King County Assessor; school test scores from the Washington Office of Superintendent of Public Instruction; school locations from NCES; crime from Seattle and Bellevue police open data and the FBI Crime Data Explorer; Census Bureau American Community Survey and TIGER boundaries; EPA National Walkability Index; King County Metro and Sound Transit schedules; King County, Seattle, Bellevue, Kirkland, Redmond and Issaquah GIS; and stores, gyms and restaurants © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors (ODbL). Map library: Leaflet.</p></details>
   </footer>
 </div>
@@ -2449,8 +2450,8 @@ function openContact(kind, p){
   document.getElementById('ctConsentText').textContent = `I agree to be contacted by ${AGENT.name} of ${AGENT.brokerage} by email or phone about my home search.`;
   document.getElementById('ctSms').checked = false;
   document.getElementById('ctSmsText').innerHTML = `<b>Optional: OK to text me.</b> ${escH(smsTerms())}`;
-  document.getElementById('ctPrivacy').textContent = `Your details go only to ${AGENT.name} at ${AGENT.brokerage} to answer your request. They are not sold or shared, and your mobile number and texting permission are never shared with anyone for marketing. Only your message and what's listed under "What's included" are sent, and only when you tap Send.` +
-    (AGENT.formspree_id ? '' : ' Tapping Send opens your email app with the message ready to send.');
+  document.getElementById('ctPrivacy').innerHTML = `Your details go only to ${AGENT.name} at ${AGENT.brokerage} to answer your request. They are not sold or shared, and your mobile number and texting permission are never shared with anyone for marketing. Only your message and what's listed under "What's included" are sent, and only when you tap Send.` +
+    (AGENT.formspree_id ? '' : ' Tapping Send opens your email app with the message ready to send.') + ' <a href="../privacy/" target="_blank">Privacy policy</a>';
   document.getElementById('ctSend').textContent = AGENT.formspree_id ? 'Send' : 'Open email to send';
   document.getElementById('ctErr').hidden = true; document.getElementById('ctDone').hidden = true;
   document.getElementById('contactForm').querySelectorAll('.ct-grid, label[for=ctMsg], .ct-summary, .ct-consent, #ctPrivacy, .ct-actions').forEach(el=>el.hidden = false);
@@ -2508,6 +2509,7 @@ document.addEventListener('click', e=>{ const b = e.target.closest('[data-contac
   openContact(b.dataset.contact, b.dataset.contact==='nb' ? ALLP.find(x=>x.id===selected) : null); });
 
 initGuide(); renderAgentCards();
+document.getElementById('cyear').textContent = new Date().getFullYear();
 if(matchMedia('(min-width: 701px)').matches) document.getElementById('dataSrc').open = true;
 function startOver(){
   const keep = state.saved;

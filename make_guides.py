@@ -4,7 +4,8 @@ Reads data.json (built by build.py) and optional config.json (site address and a
 Writes neighborhoods/<slug>/index.html, neighborhoods/index.html, neighborhoods/style.css and sitemap.xml.
 """
 import html, json, math, os, re
-import site_header
+import site_header, datetime
+YEAR = datetime.date.today().year
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = json.load(open(os.path.join(HERE, 'data.json')))
@@ -225,6 +226,7 @@ FOOT = """<footer class="site">
 <p>Rankings never use race, color, religion, national origin, sex, disability or familial status.</p>
 <p>Data: Zillow Research; King County Assessor; WA OSPI; NCES; Seattle and Bellevue police and the FBI Crime Data Explorer; US Census Bureau; US EPA; King County Metro and Sound Transit; King County and city GIS; © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
 {agent}
+<p><a href="{root}privacy/">Privacy policy</a> · © {year} Rachel Yo. Photos and neighborhood descriptions are © their credited authors and used under their licenses.</p>
 </footer>"""
 
 
@@ -242,7 +244,7 @@ def agent_box(p):
     first = a.get('first_name') or a['name'].split()[0]
     intro = (f'<h2 style="margin-top:0">Thinking about {esc(p["name"])}?</h2>'
              f'<p>{esc(a["name"])}, {esc(a["brokerage"])}, can walk you through homes for sale, recent sales and what to know before you buy here.</p>')
-    privacy = (f'<p class="note">Your details go only to {esc(a["name"])} at {esc(a["brokerage"])} to answer your request. They are not sold or shared, and your mobile number and texting permission are never shared with anyone for marketing.</p>')
+    privacy = (f'<p class="note">Your details go only to {esc(a["name"])} at {esc(a["brokerage"])} to answer your request. They are not sold or shared, and your mobile number and texting permission are never shared with anyone for marketing. <a href="../../privacy/">Privacy policy</a></p>')
     if a.get('formspree_id'):
         sms = (f'I agree to receive text messages from {a["name"]} of {a["brokerage"]} about my home search at the mobile number above. '
                'Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Agreeing is not required to get help with your search.')
@@ -394,7 +396,7 @@ def page(p):
 
 <p class="note">Data as of: home values Zillow {esc(M['zhvi_month'])}; recorded sales {esc(M['sales_window'])}; schools OSPI {esc(M['ospi_year'])}; Census ACS {esc(M['acs_year'])}. Distances are straight-line from the center of the neighborhood.</p>
 </main>
-{FOOT.format(agent=agent_footer())}
+{FOOT.format(agent=agent_footer(), root='../../', year=YEAR)}
 </body></html>
 """
 
@@ -418,7 +420,7 @@ def index_page():
 <p class="lede">Home prices, schools, safety, walkability, transit and parks for {N} neighborhoods, built from public data. Want them ranked for you? <a href="../match/">Answer a few questions</a>.</p>
 <div class="cities">{blocks}</div>
 </main>
-{FOOT.format(agent=agent_footer())}
+{FOOT.format(agent=agent_footer(), root='../', year=YEAR)}
 </body></html>
 """
 
@@ -429,7 +431,7 @@ for p in P:
     d = os.path.join(OUT, p['slug']); os.makedirs(d, exist_ok=True)
     open(os.path.join(d, 'index.html'), 'w').write(page(p))
 open(os.path.join(OUT, 'index.html'), 'w').write(index_page())
-urls = [BASE, BASE + 'match/', BASE + 'home-value/', BASE + 'neighborhoods/'] + [f"{BASE}neighborhoods/{p['slug']}/" for p in P]
+urls = [BASE, BASE + 'match/', BASE + 'home-value/', BASE + 'privacy/', BASE + 'neighborhoods/'] + [f"{BASE}neighborhoods/{p['slug']}/" for p in P]
 open(os.path.join(HERE, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                                    + ''.join(f'  <url><loc>{u}</loc><lastmod>{DATA["generated"]}</lastmod></url>\n' for u in urls) + '</urlset>\n')
 print('wrote', N, 'guide pages, index and sitemap with', len(urls), 'URLs')
