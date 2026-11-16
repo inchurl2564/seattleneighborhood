@@ -278,7 +278,7 @@ def hero(p):
     ph = photo_for(p)
     if ph:
         lic_link = f'<a href="{esc(ph["lic_url"])}">{esc(ph["lic"])}</a>' if ph['lic_url'] else esc(ph['lic'])
-        return (f'<figure class="hero"><img src="../../img/{esc(ph["file"])}" alt="{esc(p["name"])}, {esc(p["city"])}" loading="eager" width="1200" height="{ph["h"]}">'
+        return (f'<figure class="hero"><img src="../../img/{esc(ph["file"])}?v={ph["v"]}" alt="{esc(p["name"])}, {esc(p["city"])}" loading="eager" width="1200" height="{ph["h"]}">'
                 + (f'<figcaption>Photo: {esc(ph["by"])} / <a href="{esc(ph["page"])}">Unsplash</a></figcaption></figure>' if ph['src'] == 'Unsplash' else
                    f'<figcaption>Photo: {esc(ph["by"])} · {lic_link} · via <a href="{esc(ph["page"])}">Wikimedia Commons</a></figcaption></figure>')
                 + f'<figure class="hero">{svg_map(p)}</figure>')

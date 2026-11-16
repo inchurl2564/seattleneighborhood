@@ -38,7 +38,9 @@ def photo_for(p):
     cr = w.get('credit') or {}
     if not (cr.get('license') or '').lower().startswith(OK_LICENSES) or broader_area(p, w): return None
     if not os.path.exists(os.path.join(HERE, 'img', w['photo_file'])): return None
-    return {'file': w['photo_file'], 'h': w.get('photo_h', 675), 'by': cr.get('artist') or 'Unknown author',
+    import hashlib
+    v = hashlib.md5(open(os.path.join(HERE, 'img', w['photo_file']), 'rb').read()).hexdigest()[:8]   # changes whenever the photo does, so browsers fetch the new one
+    return {'v': v, 'file': w['photo_file'], 'h': w.get('photo_h', 675), 'by': cr.get('artist') or 'Unknown author',
             'lic': cr.get('license', ''), 'lic_url': cr.get('license_url', ''), 'page': cr.get('file_page', ''),
             'src': 'Unsplash' if 'unsplash' in (cr.get('license') or '').lower() else 'Wikimedia Commons'}
 

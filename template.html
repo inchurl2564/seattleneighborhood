@@ -1806,7 +1806,7 @@ function miniMap(p){
 }
 function cardMedia(p){
   const ph = PHOTOS[p.id];
-  return ph ? `<img src="../img/card/${ph.file}" alt="" loading="lazy" width="600" height="${Math.round(ph.h/2)}"><span class="pc-credit">Photo: ${escH(ph.by)}${ph.src==='Unsplash' ? ' / Unsplash' : ', '+escH(ph.lic)}</span>` : miniMap(p);
+  return ph ? `<img src="../img/card/${ph.file}?v=${ph.v}" alt="" loading="lazy" width="600" height="${Math.round(ph.h/2)}"><span class="pc-credit">Photo: ${escH(ph.by)}${ph.src==='Unsplash' ? ' / Unsplash' : ', '+escH(ph.lic)}</span>` : miniMap(p);
 }
 function cardHTML(p, s, i, extra){
   return `<li class="pc"><button class="row pcard ${eligible(p)?'':'outside'}" type="button" data-id="${p.id}" aria-current="${p.id===selected}">
@@ -2094,7 +2094,7 @@ function renderDetail(ranked){
   ];
   if(!tabs.some(x=>x[0]===detailTab)) detailTab = 'overview';
   const ph = PHOTOS[p.id];
-  document.getElementById('detailHead').innerHTML = (ph ? `<figure class="d-photo"><img src="../img/${ph.file}" alt="${p.name}, ${p.city}" width="1200" height="${ph.h}"><figcaption>${ph.src==='Unsplash' ? `Photo: ${escH(ph.by)} / <a href="${escH(ph.page)}" target="_blank" rel="noopener">Unsplash</a>` : `Photo: ${escH(ph.by)} · ${ph.lic_url?`<a href="${escH(ph.lic_url)}" target="_blank" rel="noopener">${escH(ph.lic)}</a>`:escH(ph.lic)} · via <a href="${escH(ph.page)}" target="_blank" rel="noopener">Wikimedia Commons</a>`}</figcaption></figure>` : '') + `    <div class="d-head">
+  document.getElementById('detailHead').innerHTML = (ph ? `<figure class="d-photo"><img src="../img/${ph.file}?v=${ph.v}" alt="${p.name}, ${p.city}" width="1200" height="${ph.h}"><figcaption>${ph.src==='Unsplash' ? `Photo: ${escH(ph.by)} / <a href="${escH(ph.page)}" target="_blank" rel="noopener">Unsplash</a>` : `Photo: ${escH(ph.by)} · ${ph.lic_url?`<a href="${escH(ph.lic_url)}" target="_blank" rel="noopener">${escH(ph.lic)}</a>`:escH(ph.lic)} · via <a href="${escH(ph.page)}" target="_blank" rel="noopener">Wikimedia Commons</a>`}</figcaption></figure>` : '') + `    <div class="d-head">
       <div><h2>${p.name}</h2><div class="sub">${p.district && p.district!==p.name ? p.district+', ' : ''}${p.city}${p.approx?' <span class="pill">approximate area</span>':''} · ${p.pop.toLocaleString()} residents</div>
       <div class="sub">${r>=0 ? `Ranked #${r+1} of ${ranked.length} for your priorities` : 'Outside your current filters'}</div></div>
       <div style="display:grid;justify-items:end;gap:4px"><div class="big num">${Math.round(s)}<small>match</small></div><button type="button" class="d-save" data-save-d="${p.id}" aria-pressed="${isSaved(p.id)}">${isSaved(p.id)?'♥ Saved':'♡ Save'}</button></div>

@@ -47,7 +47,7 @@ def tiles():
             ph = photo_for(p)
             if ph:   # a neighborhood photo replaces the map on its tile
                 make_card_copy(ph['file'])
-                svg = (f'<img src="img/card/{esc(ph["file"])}" alt="{esc(p["name"])}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">'
+                svg = (f'<img src="img/card/{esc(ph["file"])}?v={ph["v"]}" alt="{esc(p["name"])}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">'
                        f'<span class="tcredit">Photo: {esc(ph["by"])}{" / Unsplash" if ph["src"] == "Unsplash" else ", " + esc(ph["lic"])}</span>')
             out.append(f'    <a class="tile maptile" href="neighborhoods/{p["slug"]}/"><span class="tmap">{svg}</span>'
                        f'<div><h3>{esc(name)}</h3><small>{esc(city)} · Typical home {money(p["price"])}</small></div></a>')
