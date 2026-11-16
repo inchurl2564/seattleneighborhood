@@ -281,7 +281,21 @@
   "image": null,
   "thumb": null
  },
- "Lake Sammamish Shore (West)|Sammamish": null,
+ "Lake Sammamish Shore (West)|Sammamish": {
+  "title": "Lake Sammamish Shore (West)",
+  "url": "",
+  "extract": "",
+  "image": null,
+  "credit": {
+   "artist": "Zac Gudakov",
+   "license": "Unsplash License",
+   "license_url": "https://unsplash.com/license",
+   "file_page": "https://unsplash.com/"
+  },
+  "photo_file": "lake-sammamish-shore-west-sammamish.jpg",
+  "photo_h": 799,
+  "photo_added_by": "request"
+ },
  "Pine Lake / Town Center|Sammamish": null,
  "Sahalee / Northeast|Sammamish": null,
  "Alki|Seattle": {

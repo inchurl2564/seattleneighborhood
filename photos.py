@@ -10,7 +10,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 WIKI = {}
 _wp = os.path.join(HERE, 'wiki.json')
 if os.path.exists(_wp): WIKI = json.load(open(_wp))
-OK_LICENSES = ('cc by', 'cc-by', 'cc0', 'public domain', 'pd')
+OK_LICENSES = ('cc by', 'cc-by', 'cc0', 'public domain', 'pd', 'unsplash')
 CARD_DIR = 'img/card'          # small copies for result cards (600px wide)
 
 # Articles under another name that describe exactly this neighborhood (not a larger area around it)
@@ -39,7 +39,8 @@ def photo_for(p):
     if not (cr.get('license') or '').lower().startswith(OK_LICENSES) or broader_area(p, w): return None
     if not os.path.exists(os.path.join(HERE, 'img', w['photo_file'])): return None
     return {'file': w['photo_file'], 'h': w.get('photo_h', 675), 'by': cr.get('artist') or 'Unknown author',
-            'lic': cr.get('license', ''), 'lic_url': cr.get('license_url', ''), 'page': cr.get('file_page', '')}
+            'lic': cr.get('license', ''), 'lic_url': cr.get('license_url', ''), 'page': cr.get('file_page', ''),
+            'src': 'Unsplash' if 'unsplash' in (cr.get('license') or '').lower() else 'Wikimedia Commons'}
 
 
 def make_card_copy(fname):
